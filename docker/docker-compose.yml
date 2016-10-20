@@ -1,0 +1,7 @@
+version: '2'
+services:
+    ugroopfrontend:
+         build: ../.
+         command: npm run start
+         ports:
+             - 8080:3000
