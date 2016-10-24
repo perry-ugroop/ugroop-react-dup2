@@ -3,5 +3,7 @@ services:
     ugroopfrontend:
          build: ../.
          command: npm run start
+         volumes:
+             - ../app:/home/ugroop_react/app
          ports:
              - 8080:3000
