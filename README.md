@@ -2,8 +2,8 @@
 
 UGroopReact project uses the structure created by [react-boilerplate](http://www.reactboilerplate.com)
 
-### How to Run
-
+### Local Environment 
+#### How to Run
 Step1:
 Install the missing node packages.
 
@@ -27,6 +27,15 @@ npm build run
 
 
 You can check more script command in the package.json.
+
+### Docker Dev Environment
+
+```
+ cd docker
+ docker-compose up
+```
+
+Your app folder will mount to the app folder inside the container. 
 
 Enjoy!!!
 
