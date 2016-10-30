@@ -60,6 +60,11 @@ export class HomePage extends React.Component {
     this.openRoute('/features');
   };
 
+  openLoginPage = () => {
+    this.openRoute('/login');
+  }
+
+
   render() {
     let mainContent = null;
 
@@ -118,8 +123,11 @@ export class HomePage extends React.Component {
             </form>
             {mainContent}
           </section>
-          <Button handleRoute={this.openFeaturesPage}>
+          <Button className="feature" handleRoute={this.openFeaturesPage}>
             <FormattedMessage {...messages.featuresButton} />
+          </Button>
+          <Button className="login" handleRoute={this.openLoginPage}>
+            <FormattedMessage {...messages.loginButton} />
           </Button>
         </div>
       </article>

@@ -4,6 +4,8 @@ import styles from './styles.css';
 
 function List(props) {
   const ComponentToRender = props.component;
+  const listClassName = props.listClassName;
+  const listWrapperClassName = props.listWrapperClassName;
   let content = (<div></div>);
 
   // If we have items, render them
@@ -17,8 +19,8 @@ function List(props) {
   }
 
   return (
-    <div className={styles.listWrapper}>
-      <ul className={styles.list}>
+    <div className={listWrapperClassName || styles.listWrapper}>
+      <ul className={listClassName || styles.list}>
         {content}
       </ul>
     </div>
@@ -27,6 +29,8 @@ function List(props) {
 
 List.propTypes = {
   component: React.PropTypes.func.isRequired,
+  listClassName: React.PropTypes.string,
+  listWrapperClassName: React.PropTypes.string,
   items: React.PropTypes.array,
 };
 
