@@ -10,6 +10,8 @@ ADD app/ app/
 ADD internals/ internals/
 ADD server/ server/
 ADD package.json .
+ADD .gitignore .
+ADD .gitattributes .
 EXPOSE 8080
 
 #Following step is for React-boilerplate project.
