@@ -14,14 +14,6 @@ export default defineMessages({
     id: 'ugroop.containers.LoginPage.signin.button',
     defaultMessage: 'Sign In',
   },
-  signupButton: {
-    id: 'ugroop.containers.LoginPage.signup.button',
-    defaultMessage: 'Sign Up',
-  },
-  forgetPasswordLabel: {
-    id: 'ugroop.containers.LoginPage.forgetPassword.Label',
-    defaultMessage: 'Forgot your password?',
-  },
   remembermeLabel: {
     id: 'ugroop.containers.LoginPage.rememberme.Label',
     defaultMessage: 'Remember me',
@@ -42,8 +34,12 @@ export default defineMessages({
     id: 'ugroop.containers.LoginPage.LoginForm.passwordplaceholder.Label',
     defaultMessage: 'password',
   },
-  fotgetPasswordLabel: {
+  forgetPasswordLabel: {
     id: 'ugroop.containers.LoginPage.LoginForm.forgetPasswordplaceholder.Label',
     defaultMessage: 'Forget Password?',
+  },
+  signupLabel: {
+    id: 'ugroop.containers.LoginPage.LoginForm.signup.Label',
+    defaultMessage: 'Sign Up',
   },
 });

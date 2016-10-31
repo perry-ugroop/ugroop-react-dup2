@@ -15,7 +15,7 @@ import {
   selectError,
 } from './selectors';
 
-export class LoginForm extends React.Component { // eslint-disable-line react/prefer-stateless-function
+export class LoginForm extends React.Component {
 
   /**
    * Changes the route
@@ -27,12 +27,15 @@ export class LoginForm extends React.Component { // eslint-disable-line react/pr
   };
 
   /**
-   * Changed route to '/features'
+   * Changed route to '/forgetpassword'
    */
   openForgetPasswordPage = () => {
     this.openRoute('/forgetpassword');
   };
 
+  /**
+   * Changed route to '/registeration'
+   */
   openRegistrationPage = () => {
     this.openRoute('/registeration');
   }
@@ -79,11 +82,11 @@ export class LoginForm extends React.Component { // eslint-disable-line react/pr
         <Button {...buttonProps} className="btn btn-primary btn-block ug-flat-border ug-btn-sign" />
         <div className="form-group clearfix ug-login-footer-link">
           <p className="ug-link-lost-password">
-            <A href="#" onClick={() => {}}><FormattedMessage {...messages.forgetPasswordLabel} /></A>
+            <A href="#" onClick={this.openForgetPasswordPage} id="forgetpassword_id"><FormattedMessage {...messages.forgetPasswordLabel} /></A>
           </p>
         </div>
         <p className="ug-link-signup">Don't have an account?
-          <A href="#" onClick={() => {}} >Sign up</A>
+          <A href="#" onClick={this.openRegistrationPage} id="signup_id"><FormattedMessage {...messages.signupLabel} /></A>
         </p>
       </form>
     );
