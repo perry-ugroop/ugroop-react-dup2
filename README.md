@@ -24,9 +24,13 @@ If you want to build project without run, do the below command.
 ```
 npm build run
 ```
-
-
 You can check more script command in the package.json.
+
+#### For Testing
+
+```
+npm test:watch run
+```
 
 ### Docker Dev Environment
 
@@ -36,12 +40,6 @@ You can check more script command in the package.json.
 ```
 
 Your app folder will mount to the app folder inside the container. 
-
-### For Testing
-
-```
-npm test:watch run
-```
 
 Enjoy!!!
 
