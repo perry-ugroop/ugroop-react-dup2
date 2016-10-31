@@ -68,7 +68,7 @@ export default function createRoutes(store) {
       path: '/forgetpassword',
       name: 'forgetpassword',
       getComponent(nextState, cb) {
-        System.import('containers/LoginPage')
+        System.import('containers/ForgetPasswordPage')
           .then(loadModule(cb))
           .catch(errorLoading);
       },
@@ -76,7 +76,7 @@ export default function createRoutes(store) {
       path: '/registeration',
       name: 'registeration',
       getComponent(nextState, cb) {
-        System.import('containers/LoginPage')
+        System.import('containers/RegisterPage')
           .then(loadModule(cb))
           .catch(errorLoading);
       },
