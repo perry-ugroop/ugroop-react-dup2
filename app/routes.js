@@ -68,13 +68,21 @@ export default function createRoutes(store) {
       path: '/forgetpassword',
       name: 'forgetpassword',
       getComponent(nextState, cb) {
-        System.import('containers/ForgetPasswordPage')
-          .then(loadModule(cb))
-          .catch(errorLoading);
+        const importModules = Promise.all([
+          System.import('containers/ForgetPasswordPage/reducer'),
+          System.import('containers/ForgetPasswordPage'),
+        ]);
+        const renderRoute = loadModule(cb);
+        importModules.then(([reducer, component]) => {
+          injectReducer('forgetpassword', reducer.default);
+          renderRoute(component);
+        });
+
+        importModules.catch(errorLoading);
       },
     }, {
-      path: '/registeration',
-      name: 'registeration',
+      path: '/registration',
+      name: 'registration',
       getComponent(nextState, cb) {
         System.import('containers/RegisterPage')
           .then(loadModule(cb))

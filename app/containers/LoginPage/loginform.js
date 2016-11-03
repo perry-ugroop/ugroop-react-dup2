@@ -37,7 +37,7 @@ export class LoginForm extends React.Component {
    * Changed route to '/registeration'
    */
   openRegistrationPage = () => {
-    this.openRoute('/registeration');
+    this.openRoute('/registration');
   }
 
   render() {
@@ -82,11 +82,11 @@ export class LoginForm extends React.Component {
         <Button {...buttonProps} className="btn btn-primary btn-block ug-flat-border ug-btn-sign" />
         <div className="form-group clearfix ug-login-footer-link">
           <p className="ug-link-lost-password">
-            <A href="#" onClick={this.openForgetPasswordPage} id="forgetpassword_id"><FormattedMessage {...messages.forgetPasswordLabel} /></A>
+            <A href="" onClick={this.openForgetPasswordPage} id="forgetpassword_id"><FormattedMessage {...messages.forgetPasswordLabel} /></A>
           </p>
         </div>
         <p className="ug-link-signup">Don't have an account?
-          <A href="#" onClick={this.openRegistrationPage} id="signup_id"><FormattedMessage {...messages.signupLabel} /></A>
+          <A href="" onClick={this.openRegistrationPage} id="signup_id"><FormattedMessage {...messages.signupLabel} /></A>
         </p>
       </form>
     );

@@ -4,7 +4,7 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 import { connect } from 'react-redux';
-import Logo from './assets/logo-ugroop.png';
+import Logo from '../../shareAssets/logo-ugroop.png';
 import FacebookIcon from './assets/icon-facebook.png';
 import GoolgePlusIcon from './assets/icon-google-plus.png';
 import TwitterIcon from './assets/icon-twitter.png';
@@ -32,7 +32,7 @@ export class LoginPage extends React.Component {
 
   render() {
     const listItems = [];
-    const facebookLogin = this.createListItemContent('Sign In With Facebook', FacebookIcon);
+    const facebookLogin = this.createListItemContent('Sign In WxQith Facebook', FacebookIcon);
     const twitterLogin = this.createListItemContent('Sign In With Twitter', TwitterIcon);
     const yahooLogin = this.createListItemContent('Sign In With Yahoo', TwitterIcon);
     const googleLogin = this.createListItemContent('Sign In With Google', GoolgePlusIcon);
