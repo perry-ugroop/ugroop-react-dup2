@@ -1,7 +1,7 @@
 /*
- * HomePage Messages
+ * LoginPage Messages
  *
- * This contains all the text for the HomePage component.
+ * This contains all the text for the LoginPage component.
  */
 import { defineMessages } from 'react-intl';
 

@@ -14,6 +14,7 @@ import {
   selectPassword,
   selectError,
 } from './selectors';
+import { Glyphicon } from 'react-bootstrap';
 
 export class LoginForm extends React.Component {
 
@@ -37,7 +38,7 @@ export class LoginForm extends React.Component {
    * Changed route to '/registeration'
    */
   openRegistrationPage = () => {
-    this.openRoute('/registeration');
+    this.openRoute('/registration');
   }
 
   render() {
@@ -51,28 +52,28 @@ export class LoginForm extends React.Component {
     return (
       <form >
         {errorContent}
-        <div className={`${styles['input-group']} ${styles['input-group-md']}`}>
-          <span className={`${styles['input-group-addon']} ${styles['ug-flat-border']}`}>
-            <i className={`${styles.glyphicon} ${styles['glyphicon-user']}`}></i>
+        <div className={`${'input-group input-group-md'} ${styles['input-group-margin']}`}>
+          <span className={`${'input-group-addon'} ${styles['ug-flat-border']}`}>
+            <Glyphicon glyph="user" />
           </span>
           <input
             id="login-username"
             type="text"
-            className={`${styles['form-control']} ${styles['ug-flat-border']}`}
+            className={`${'form-control'} ${styles['ug-flat-border']}`}
             name={messages.usernameLabel.defaultMessage}
             value={this.props.username}
             placeholder={messages.usernamePlaceholderLabel.defaultMessage}
             onChange={this.props.onChangeUsername}
           />
         </div>
-        <div className={`${styles['input-group']} ${styles['input-group-md']}`}>
-          <span className={`${styles['input-group-addon']} ${styles['ug-flat-border']}`}>
-            <i className={`${styles.glyphicon} ${styles['glyphicon-lock']}`}></i>
+        <div className={`${'input-group input-group-md'} ${styles['input-group-margin']}`}>
+          <span className={`${'input-group-addon'} ${styles['ug-flat-border']}`}>
+            <Glyphicon glyph="lock" />
           </span>
           <input
             id="login-password"
             type="password"
-            className={`${styles['form-control']} ${styles['ug-flat-border']}`}
+            className={`${'form-control'} ${styles['ug-flat-border']}`}
             name={messages.passwordLabel.defaultMessage}
             placeholder={messages.passwordPlaceholderLabel.defaultMessage}
             value={this.props.password}
@@ -82,11 +83,11 @@ export class LoginForm extends React.Component {
         <Button {...buttonProps} className="btn btn-primary btn-block ug-flat-border ug-btn-sign" />
         <div className="form-group clearfix ug-login-footer-link">
           <p className="ug-link-lost-password">
-            <A href="#" onClick={this.openForgetPasswordPage} id="forgetpassword_id"><FormattedMessage {...messages.forgetPasswordLabel} /></A>
+            <A href="forgetpassword" onClick={this.openForgetPasswordPage} id="forgetpassword_id"><FormattedMessage {...messages.forgetPasswordLabel} /></A>
           </p>
         </div>
         <p className="ug-link-signup">Don't have an account?
-          <A href="#" onClick={this.openRegistrationPage} id="signup_id"><FormattedMessage {...messages.signupLabel} /></A>
+          <A href="registration" onClick={this.openRegistrationPage} id="signup_id"><FormattedMessage {...messages.signupLabel} /></A>
         </p>
       </form>
     );

@@ -42,7 +42,7 @@ describe('<LoginForm />', () => {
   it('should link to /registeration', () => {
     const openRouteSpy = expect.createSpy();
     const openRoute = (dest) => {
-      if (dest === '/registeration') {
+      if (dest === '/registration') {
         openRouteSpy();
       }
     };
