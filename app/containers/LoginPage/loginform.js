@@ -14,6 +14,7 @@ import {
   selectPassword,
   selectError,
 } from './selectors';
+import { Glyphicon } from 'react-bootstrap';
 
 export class LoginForm extends React.Component {
 
@@ -51,28 +52,28 @@ export class LoginForm extends React.Component {
     return (
       <form >
         {errorContent}
-        <div className={`${styles['input-group']} ${styles['input-group-md']}`}>
-          <span className={`${styles['input-group-addon']} ${styles['ug-flat-border']}`}>
-            <i className={`${styles.glyphicon} ${styles['glyphicon-user']}`}></i>
+        <div className={`${'input-group input-group-md'} ${styles['input-group-margin']}`}>
+          <span className={`${'input-group-addon'} ${styles['ug-flat-border']}`}>
+            <Glyphicon glyph="user" />
           </span>
           <input
             id="login-username"
             type="text"
-            className={`${styles['form-control']} ${styles['ug-flat-border']}`}
+            className={`${'form-control'} ${styles['ug-flat-border']}`}
             name={messages.usernameLabel.defaultMessage}
             value={this.props.username}
             placeholder={messages.usernamePlaceholderLabel.defaultMessage}
             onChange={this.props.onChangeUsername}
           />
         </div>
-        <div className={`${styles['input-group']} ${styles['input-group-md']}`}>
-          <span className={`${styles['input-group-addon']} ${styles['ug-flat-border']}`}>
-            <i className={`${styles.glyphicon} ${styles['glyphicon-lock']}`}></i>
+        <div className={`${'input-group input-group-md'} ${styles['input-group-margin']}`}>
+          <span className={`${'input-group-addon'} ${styles['ug-flat-border']}`}>
+            <Glyphicon glyph="lock" />
           </span>
           <input
             id="login-password"
             type="password"
-            className={`${styles['form-control']} ${styles['ug-flat-border']}`}
+            className={`${'form-control'} ${styles['ug-flat-border']}`}
             name={messages.passwordLabel.defaultMessage}
             placeholder={messages.passwordPlaceholderLabel.defaultMessage}
             value={this.props.password}
