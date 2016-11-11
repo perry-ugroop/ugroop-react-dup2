@@ -3,8 +3,9 @@
  */
 import { CHANGE_EMAIL, VALID_EMAIL } from './constants';
 import { fromJS } from 'immutable';
-import { validateEmail, isEmptyString } from '../../utils/stringAdditions';
+import { isEmptyString } from '../../utils/stringAdditions';
 import defaultMessage from './messages';
+import validationRule from '../../utils/validationrule';
 
 const initialState = fromJS({
   email: '',
@@ -29,7 +30,8 @@ function validEmail(email, state) {
       .set('error', defaultMessage.emptyEmailError.defaultMessage)
       .set('email', email);
   }
-  if (validateEmail(email)) {
+  const reg = new RegExp(validationRule.emailValidation.defaultMessage);
+  if (reg.test(email)) {
     return state
       .set('error', '')
       .set('email', email);

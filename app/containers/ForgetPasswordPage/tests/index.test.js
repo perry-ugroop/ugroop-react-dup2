@@ -6,7 +6,7 @@ import { shallow, mount } from 'enzyme';
 import React from 'react';
 import { ForgetPasswordPage, mapDispatchToProps } from '../index';
 import { IntlProvider } from 'react-intl';
-import { changeEmail } from '../actions';
+import { changeEmail, validEmail } from '../actions';
 import { push } from 'react-router-redux';
 
 describe('<ForgetPasswordPage />', () => {
@@ -50,6 +50,22 @@ describe('<ForgetPasswordPage />', () => {
         const email = 'mxstbr';
         result.onChangeEmail({ target: { value: email } });
         expect(dispatch).toHaveBeenCalledWith(changeEmail(email));
+      });
+    });
+
+    describe('validEmail', () => {
+      it('should be injected', () => {
+        const dispatch = expect.createSpy();
+        const result = mapDispatchToProps(dispatch);
+        expect(result.onBlurEmail).toExist();
+      });
+
+      it('should dispatch validemail when called', () => {
+        const dispatch = expect.createSpy();
+        const result = mapDispatchToProps(dispatch);
+        const email = 'mxstbr';
+        result.onBlurEmail({ target: { value: email } });
+        expect(dispatch).toHaveBeenCalledWith(validEmail(email));
       });
     });
   });

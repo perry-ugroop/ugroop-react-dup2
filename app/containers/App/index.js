@@ -8,10 +8,11 @@
 
 import React from 'react';
 import Helmet from 'react-helmet';
-
+import Footer from 'components/Footer';
 // Import the CSS reset, which HtmlWebpackPlugin transfers to the build folder
 import 'sanitize.css/sanitize.css';
 import styles from './styles.css';
+
 
 function App(props) {
   return (
@@ -24,6 +25,7 @@ function App(props) {
         ]}
       />
       {React.Children.toArray(props.children)}
+      <Footer />
     </div>
   );
 }

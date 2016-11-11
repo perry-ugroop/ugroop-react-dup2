@@ -32,7 +32,7 @@ export class LoginPage extends React.Component {
 
   render() {
     const listItems = [];
-    const facebookLogin = this.createListItemContent('Sign In WxQith Facebook', FacebookIcon);
+    const facebookLogin = this.createListItemContent('Sign In With Facebook', FacebookIcon);
     const twitterLogin = this.createListItemContent('Sign In With Twitter', TwitterIcon);
     const yahooLogin = this.createListItemContent('Sign In With Yahoo', TwitterIcon);
     const googleLogin = this.createListItemContent('Sign In With Google', GoolgePlusIcon);

@@ -84,9 +84,16 @@ export default function createRoutes(store) {
       path: '/registration',
       name: 'registration',
       getComponent(nextState, cb) {
-        System.import('containers/RegisterPage')
-          .then(loadModule(cb))
-          .catch(errorLoading);
+        const importModules = Promise.all([
+          System.import('containers/RegisterPage/reducer'),
+          System.import('containers/RegisterPage'),
+        ]);
+        const renderRoute = loadModule(cb);
+        importModules.then(([reducer, component]) => {
+          injectReducer('register', reducer.default);
+          renderRoute(component);
+        });
+        importModules.catch(errorLoading);
       },
     }, {
       path: '*',

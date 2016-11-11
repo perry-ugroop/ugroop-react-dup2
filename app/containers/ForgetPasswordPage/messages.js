@@ -2,9 +2,9 @@
  * Created by Yang on 31/10/16.
  */
 /*
- * HomePage Messages
+ * ForgetPassword Messages
  *
- * This contains all the text for the HomePage component.
+ * This contains all the text for the ForgetPassword component.
  */
 import { defineMessages } from 'react-intl';
 

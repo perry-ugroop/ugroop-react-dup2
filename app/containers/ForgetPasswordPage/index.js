@@ -17,7 +17,7 @@ import { selectEmail, selectError } from './selectors';
 import { changeEmail, validEmail } from './actions';
 import { push } from 'react-router-redux';
 
-export class ForgetPasswordPage extends React.Component {  // eslint-disable-line react/prefer-stateless-function
+export class ForgetPasswordPage extends React.Component {
   /**
    * Changes the route
    *
@@ -70,12 +70,12 @@ export class ForgetPasswordPage extends React.Component {  // eslint-disable-lin
                     placeholder={messages.emailPlaceHolder.defaultMessage}
                     value={this.props.email}
                     onChange={this.props.onChangeEmail}
-                    onBlur={this.props.validateEmail}
+                    onBlur={this.props.onBlurEmail}
                   />
                   {errorContent}
                 </div>
                 <p className="ug-link-signup">Don't have an account?
-                  <A href="" onClick={this.openRegistrationPage} id="signup_id"><FormattedMessage {...messages.signupLabel} /></A>
+                  <A href="registration" onClick={this.openRegistrationPage} id="signup_id"><FormattedMessage {...messages.signupLabel} /></A>
                 </p>
               </form>
             </div>
@@ -95,7 +95,7 @@ const mapStateToProps = createStructuredSelector({
 export function mapDispatchToProps(dispatch) {
   return {
     onChangeEmail: (evt) => dispatch(changeEmail(evt.target.value)),
-    validateEmail: (evt) => dispatch(validEmail(evt.target.value)),
+    onBlurEmail: (evt) => dispatch(validEmail(evt.target.value)),
     changeRoute: (url) => dispatch(push(url)),
     dispatch,
   };
@@ -106,8 +106,7 @@ ForgetPasswordPage.propTypes = {
   error: React.PropTypes.string,
   changeRoute: React.PropTypes.func,
   onChangeEmail: React.PropTypes.func,
-  validateEmail: React.PropTypes.func,
+  onBlurEmail: React.PropTypes.func,
 };
-
 
 export default connect(mapStateToProps, mapDispatchToProps)(ForgetPasswordPage);
