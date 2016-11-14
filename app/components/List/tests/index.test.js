@@ -22,20 +22,4 @@ describe('<List />', () => {
     );
     expect(renderedComponent.find(items)).toBeDefined();
   });
-
-  it('should render listWrapper ClassName', () => {
-    const wrappaerClassName = 'test';
-    const renderedComponent = render(
-      <List listWrapperClassName={wrappaerClassName} component={ListItem} />
-    );
-    expect(renderedComponent.find('div').hasClass(wrappaerClassName)).toEqual(true);
-  });
-
-  it('should render list ClassName', () => {
-    const listClassName = 'ultest';
-    const renderedComponent = render(
-      <List listClassName={listClassName} component={ListItem} />
-    );
-    expect(renderedComponent.find('ul').hasClass(listClassName)).toEqual(true);
-  });
 });

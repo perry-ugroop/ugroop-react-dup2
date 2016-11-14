@@ -1,7 +1,6 @@
 /**
  * Created by Yang on 7/11/16.
  */
-import expect from 'expect';
 import { mount } from 'enzyme';
 import React from 'react';
 import { IntlProvider } from 'react-intl';
@@ -93,13 +92,13 @@ describe('<Register />', () => {
 describe('mapDispatchToProps', () => {
   describe('onChangeOrgName', () => {
     it('should be injected', () => {
-      const dispatch = expect.createSpy();
+      const dispatch = jest.fn();
       const result = mapDispatchToProps(dispatch);
-      expect(result.onChangeOrgName).toExist();
+      expect(result.onChangeOrgName).toBeDefined();
     });
 
     it('should dispatch changeOrgName when called', () => {
-      const dispatch = expect.createSpy();
+      const dispatch = jest.fn();
       const result = mapDispatchToProps(dispatch);
       const orgname = 'school a';
       result.onChangeOrgName({ target: { value: orgname } });
@@ -108,12 +107,12 @@ describe('mapDispatchToProps', () => {
   });
   describe('onChangeOrgAddress', () => {
     it('should be injected', () => {
-      const dispatch = expect.createSpy();
+      const dispatch = jest.fn();
       const result = mapDispatchToProps(dispatch);
-      expect(result.onChangeAddressName).toExist();
+      expect(result.onChangeAddressName).toBeDefined();
     });
     it('should dispatch changeOrgAddress when called', () => {
-      const dispatch = expect.createSpy();
+      const dispatch = jest.fn();
       const result = mapDispatchToProps(dispatch);
       const address = 'this is my address';
       result.onChangeAddressName({ target: { value: address } });
@@ -122,12 +121,12 @@ describe('mapDispatchToProps', () => {
   });
   describe('onChangeFirstName', () => {
     it('should be injected', () => {
-      const dispatch = expect.createSpy();
+      const dispatch = jest.fn();
       const result = mapDispatchToProps(dispatch);
-      expect(result.onChangeFirstName).toExist();
+      expect(result.onChangeFirstName).toBeDefined();
     });
     it('should dispatch changeFirstName when called', () => {
-      const dispatch = expect.createSpy();
+      const dispatch = jest.fn();
       const result = mapDispatchToProps(dispatch);
       const firstName = 'myfirstname';
       result.onChangeFirstName({ target: { value: firstName } });
@@ -136,12 +135,12 @@ describe('mapDispatchToProps', () => {
   });
   describe('onChangeLastName', () => {
     it('should be injected', () => {
-      const dispatch = expect.createSpy();
+      const dispatch = jest.fn();
       const result = mapDispatchToProps(dispatch);
-      expect(result.onChangeLastName).toExist();
+      expect(result.onChangeLastName).toBeDefined();
     });
     it('should dispatch changeLastName when called', () => {
-      const dispatch = expect.createSpy();
+      const dispatch = jest.fn();
       const result = mapDispatchToProps(dispatch);
       const lastName = 'my last name';
       result.onChangeLastName({ target: { value: lastName } });
@@ -150,12 +149,12 @@ describe('mapDispatchToProps', () => {
   });
   describe('onChangeWebsite', () => {
     it('should be injected', () => {
-      const dispatch = expect.createSpy();
+      const dispatch = jest.fn();
       const result = mapDispatchToProps(dispatch);
-      expect(result.onChangeWebsite).toExist();
+      expect(result.onChangeWebsite).toBeDefined();
     });
     it('should dispatch changeWebsite when called', () => {
-      const dispatch = expect.createSpy();
+      const dispatch = jest.fn();
       const result = mapDispatchToProps(dispatch);
       const website = 'yahoo.com';
       result.onChangeWebsite({ target: { value: website } });
@@ -164,12 +163,12 @@ describe('mapDispatchToProps', () => {
   });
   describe('onChangeEmail', () => {
     it('should be injected', () => {
-      const dispatch = expect.createSpy();
+      const dispatch = jest.fn();
       const result = mapDispatchToProps(dispatch);
-      expect(result.onChangeEmail).toExist();
+      expect(result.onChangeEmail).toBeDefined();
     });
     it('should dispatch changeEmail when called', () => {
-      const dispatch = expect.createSpy();
+      const dispatch = jest.fn();
       const result = mapDispatchToProps(dispatch);
       const email = 'some@email.com';
       result.onChangeEmail({ target: { value: email } });
@@ -178,12 +177,12 @@ describe('mapDispatchToProps', () => {
   });
   describe('onChangePhone', () => {
     it('should be injected', () => {
-      const dispatch = expect.createSpy();
+      const dispatch = jest.fn();
       const result = mapDispatchToProps(dispatch);
-      expect(result.onChangePhone).toExist();
+      expect(result.onChangePhone).toBeDefined();
     });
     it('should dispatch changeTelephone when called', () => {
-      const dispatch = expect.createSpy();
+      const dispatch = jest.fn();
       const result = mapDispatchToProps(dispatch);
       const email = 'some@email.com';
       result.onChangePhone({ target: { value: email } });
@@ -192,12 +191,12 @@ describe('mapDispatchToProps', () => {
   });
   describe('onChangePassword', () => {
     it('should be injected', () => {
-      const dispatch = expect.createSpy();
+      const dispatch = jest.fn();
       const result = mapDispatchToProps(dispatch);
-      expect(result.onChangePassword).toExist();
+      expect(result.onChangePassword).toBeDefined();
     });
     it('should dispatch changePassword when called', () => {
-      const dispatch = expect.createSpy();
+      const dispatch = jest.fn();
       const result = mapDispatchToProps(dispatch);
       const password = 'some@email.com';
       result.onChangePassword({ target: { value: password } });
@@ -206,12 +205,12 @@ describe('mapDispatchToProps', () => {
   });
   describe('onChangeRetypePassword', () => {
     it('should be injected', () => {
-      const dispatch = expect.createSpy();
+      const dispatch = jest.fn();
       const result = mapDispatchToProps(dispatch);
-      expect(result.onChangeRetypePassword).toExist();
+      expect(result.onChangeRetypePassword).toBeDefined();
     });
     it('should dispatch changeReTypePassword when called', () => {
-      const dispatch = expect.createSpy();
+      const dispatch = jest.fn();
       const result = mapDispatchToProps(dispatch);
       const password = 'some@email.com';
       result.onChangeRetypePassword({ target: { value: password } });
@@ -220,12 +219,12 @@ describe('mapDispatchToProps', () => {
   });
   describe('changeRole', () => {
     it('should be injected', () => {
-      const dispatch = expect.createSpy();
+      const dispatch = jest.fn();
       const result = mapDispatchToProps(dispatch);
-      expect(result.onChangeRole).toExist();
+      expect(result.onChangeRole).toBeDefined();
     });
     it('should dispatch changeRole when called', () => {
-      const dispatch = expect.createSpy();
+      const dispatch = jest.fn();
       const result = mapDispatchToProps(dispatch);
       const role = 'some@email.com';
       result.onChangeRole({ target: { value: role } });
@@ -234,12 +233,12 @@ describe('mapDispatchToProps', () => {
   });
   describe('onBlurOrgName', () => {
     it('should be injected', () => {
-      const dispatch = expect.createSpy();
+      const dispatch = jest.fn();
       const result = mapDispatchToProps(dispatch);
-      expect(result.onBlurOrgName).toExist();
+      expect(result.onBlurOrgName).toBeDefined();
     });
     it('should dispatch validText when called', () => {
-      const dispatch = expect.createSpy();
+      const dispatch = jest.fn();
       const result = mapDispatchToProps(dispatch);
       const orgName = 'some value';
       result.onBlurOrgName({ target: { value: orgName } });
@@ -248,12 +247,12 @@ describe('mapDispatchToProps', () => {
   });
   describe('onBlurOrgAddress', () => {
     it('should be injected', () => {
-      const dispatch = expect.createSpy();
+      const dispatch = jest.fn();
       const result = mapDispatchToProps(dispatch);
-      expect(result.onBlurOrgAddress).toExist();
+      expect(result.onBlurOrgAddress).toBeDefined();
     });
     it('should dispatch validText when called', () => {
-      const dispatch = expect.createSpy();
+      const dispatch = jest.fn();
       const result = mapDispatchToProps(dispatch);
       const fixture = 'some value';
       result.onBlurOrgAddress({ target: { value: fixture } });
@@ -262,12 +261,12 @@ describe('mapDispatchToProps', () => {
   });
   describe('onBlurFirstName', () => {
     it('should be injected', () => {
-      const dispatch = expect.createSpy();
+      const dispatch = jest.fn();
       const result = mapDispatchToProps(dispatch);
-      expect(result.onBlurFirstName).toExist();
+      expect(result.onBlurFirstName).toBeDefined();
     });
     it('should dispatch validText when called', () => {
-      const dispatch = expect.createSpy();
+      const dispatch = jest.fn();
       const result = mapDispatchToProps(dispatch);
       const fixture = 'some value';
       result.onBlurFirstName({ target: { value: fixture } });
@@ -278,12 +277,12 @@ describe('mapDispatchToProps', () => {
   });
   describe('onBlurLastName', () => {
     it('should be injected', () => {
-      const dispatch = expect.createSpy();
+      const dispatch = jest.fn();
       const result = mapDispatchToProps(dispatch);
-      expect(result.onBlurLastName).toExist();
+      expect(result.onBlurLastName).toBeDefined();
     });
     it('should dispatch validText when called', () => {
-      const dispatch = expect.createSpy();
+      const dispatch = jest.fn();
       const result = mapDispatchToProps(dispatch);
       const fixture = 'some value';
       result.onBlurLastName({ target: { value: fixture } });
@@ -294,12 +293,12 @@ describe('mapDispatchToProps', () => {
   });
   describe('onBlurPhone', () => {
     it('should be injected', () => {
-      const dispatch = expect.createSpy();
+      const dispatch = jest.fn();
       const result = mapDispatchToProps(dispatch);
-      expect(result.onBlurPhone).toExist();
+      expect(result.onBlurPhone).toBeDefined();
     });
     it('should dispatch validText when called', () => {
-      const dispatch = expect.createSpy();
+      const dispatch = jest.fn();
       const result = mapDispatchToProps(dispatch);
       const fixture = 'some value';
       result.onBlurPhone({ target: { value: fixture } });
@@ -308,12 +307,12 @@ describe('mapDispatchToProps', () => {
   });
   describe('onBlurPassword', () => {
     it('should be injected', () => {
-      const dispatch = expect.createSpy();
+      const dispatch = jest.fn();
       const result = mapDispatchToProps(dispatch);
-      expect(result.onBlurPassword).toExist();
+      expect(result.onBlurPassword).toBeDefined();
     });
     it('should dispatch validText when called', () => {
-      const dispatch = expect.createSpy();
+      const dispatch = jest.fn();
       const result = mapDispatchToProps(dispatch);
       const fixture = 'some value';
       result.onBlurPassword({ target: { value: fixture } });
@@ -324,12 +323,12 @@ describe('mapDispatchToProps', () => {
   });
   describe('onBlurReTypePassword', () => {
     it('should be injected', () => {
-      const dispatch = expect.createSpy();
+      const dispatch = jest.fn();
       const result = mapDispatchToProps(dispatch);
-      expect(result.onBlurReTypePassword).toExist();
+      expect(result.onBlurReTypePassword).toBeDefined();
     });
     it('should dispatch validText when called', () => {
-      const dispatch = expect.createSpy();
+      const dispatch = jest.fn();
       const result = mapDispatchToProps(dispatch);
       const fixture = 'some value';
       result.onBlurReTypePassword({ target: { value: fixture } });

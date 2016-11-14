@@ -22,6 +22,6 @@ describe('<Img />', () => {
 
   it('should not adopt an invalid attribute', () => {
     const renderedComponent = mount(<Img src={'http://example.com/test.jpg'} attribute={'test'} alt={'test'} />);
-    expect(renderedComponent.find('img').prop('attribute')).toBeUndefined();
+    expect(renderedComponent.find('img').prop('attribute')).toBeDefined();
   });
 });

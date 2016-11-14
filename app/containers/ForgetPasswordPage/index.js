@@ -3,7 +3,7 @@
  */
 import React from 'react';
 import { connect } from 'react-redux';
-import Logo from '../../shareAssets/logo-ugroop.png';
+import Logo from '../../shareAssets/logo-ugroop.jpg';
 /* import messages*/
 import messages from './messages';
 import { FormattedMessage } from 'react-intl';

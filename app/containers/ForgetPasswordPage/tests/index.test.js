@@ -1,7 +1,6 @@
 /**
  * Created by Yang on 2/11/16.
  */
-import expect from 'expect';
 import { shallow, mount } from 'enzyme';
 import React from 'react';
 import { ForgetPasswordPage, mapDispatchToProps } from '../index';
@@ -19,7 +18,7 @@ describe('<ForgetPasswordPage />', () => {
   });
 
   it('should link to /registeration', () => {
-    const openRouteSpy = expect.createSpy();
+    const openRouteSpy = jest.fn();
     const openRoute = (dest) => {
       if (dest === '/registration') {
         openRouteSpy();
@@ -39,13 +38,13 @@ describe('<ForgetPasswordPage />', () => {
   describe('mapDispatchToProps', () => {
     describe('onChangeEmail', () => {
       it('should be injected', () => {
-        const dispatch = expect.createSpy();
+        const dispatch = jest.fn();
         const result = mapDispatchToProps(dispatch);
-        expect(result.onChangeEmail).toExist();
+        expect(result.onChangeEmail).toBeDefined();
       });
 
       it('should dispatch changeEmail when called', () => {
-        const dispatch = expect.createSpy();
+        const dispatch = jest.fn();
         const result = mapDispatchToProps(dispatch);
         const email = 'mxstbr';
         result.onChangeEmail({ target: { value: email } });
@@ -55,13 +54,13 @@ describe('<ForgetPasswordPage />', () => {
 
     describe('validEmail', () => {
       it('should be injected', () => {
-        const dispatch = expect.createSpy();
+        const dispatch = jest.fn();
         const result = mapDispatchToProps(dispatch);
-        expect(result.onBlurEmail).toExist();
+        expect(result.onBlurEmail).toBeDefined();
       });
 
       it('should dispatch validemail when called', () => {
-        const dispatch = expect.createSpy();
+        const dispatch = jest.fn();
         const result = mapDispatchToProps(dispatch);
         const email = 'mxstbr';
         result.onBlurEmail({ target: { value: email } });
@@ -72,13 +71,13 @@ describe('<ForgetPasswordPage />', () => {
 
   describe('changeRoute', () => {
     it('should be injected', () => {
-      const dispatch = expect.createSpy();
+      const dispatch = jest.fn();
       const result = mapDispatchToProps(dispatch);
-      expect(result.changeRoute).toExist();
+      expect(result.changeRoute).toBeDefined();
     });
 
     it('should dispatch push when called', () => {
-      const dispatch = expect.createSpy();
+      const dispatch = jest.fn();
       const result = mapDispatchToProps(dispatch);
       const route = '/';
       result.changeRoute(route);
