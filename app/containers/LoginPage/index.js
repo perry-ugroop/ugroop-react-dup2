@@ -12,7 +12,6 @@ import YahooIcon from './assets/icon-yahoo-transparent.png';
 import Img from 'components/Img';
 import A from 'components/A';
 import H1 from 'components/H1';
-import styles from './styles.css';
 /* import messages*/
 import messages from './messages';
 import { FormattedMessage } from 'react-intl';
@@ -47,25 +46,25 @@ export class LoginPage extends React.Component {
             { name: 'description', content: 'uGroop Login Page' },
           ]}
         />
-        <div className={`${styles['ug-login-body']}`} >
+        <div className={`${'ug-login-body'}`} >
           <div className={'row'}>
-            <div className={`${styles['ug-login-panel']} ${styles['ug-flat-border']}`} >
-              <div className={styles['ug-login-body']}>
-                <H1 className={styles['ug-logo']}>
+            <div className={`${'ug-login-panel ug-flat-border'}`} >
+              <div className={'ug-login-body'}>
+                <H1 className={'ug-logo'}>
                   <Img src={Logo} alt="ügroop" />
                 </H1>
-                <div className={styles['ug-oauth-wrapper']}>
-                  <H1 className={styles['ug-oauth-title']}>
+                <div className={'ug-oauth-wrapper'}>
+                  <H1 className={'ug-oauth-title'}>
                     <p><FormattedMessage {...messages.signinHeader} /></p>
                   </H1>
-                  <ul className={styles['ug-oauth-icon-list']}>
-                    <li className={styles['ug-facebook-oauth']}>{facebookLogin}</li>
-                    <li className={styles['ug-twitter-oauth']}>{twitterLogin}</li>
-                    <li className={styles['ug-yahoo-oauth']}>{yahooLogin}</li>
-                    <li className={styles['ug-googleplus-oauth']}>{googleLogin}</li>
+                  <ul className={'ug-oauth-icon-list'}>
+                    <li className={'ug-facebook-oauth'}>{facebookLogin}</li>
+                    <li className={'ug-twitter-oauth'}>{twitterLogin}</li>
+                    <li className={'ug-yahoo-oauth'}>{yahooLogin}</li>
+                    <li className={'ug-googleplus-oauth'}>{googleLogin}</li>
                   </ul>
                 </div>
-                <H1 className={styles['ug-or-oauth']}>
+                <H1 className={'ug-or-oauth'}>
                   <p><span>OR</span></p>
                 </H1>
                 <LoginForm />

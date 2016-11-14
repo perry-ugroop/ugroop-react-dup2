@@ -4,7 +4,6 @@ import messages from './messages';
 import { FormattedMessage } from 'react-intl';
 import A from 'components/A';
 import Button from 'components/Button';
-import styles from './styles.css';
 import { isEmptyString } from '../../utils/stringAdditions';
 import { changeUsername, changePassword } from './actions';
 import { push } from 'react-router-redux';
@@ -47,33 +46,33 @@ export class LoginForm extends React.Component {
     buttonProps.children = messages.signinButton.defaultMessage;
     buttonProps.handleRoute = this.props.signInSubmit;
     if (!isEmptyString(this.props.error)) {
-      errorContent = (<div className={`${styles.alert} ${styles['alert-danger']}`} role="alert">{this.props.error}</div>);
+      errorContent = (<div className={`${'alert alert-danger'}`} role="alert">{this.props.error}</div>);
     }
     return (
       <form >
         {errorContent}
-        <div className={`${'input-group input-group-md'} ${styles['input-group-margin']}`}>
-          <span className={`${'input-group-addon'} ${styles['ug-flat-border']}`}>
+        <div className={`${'input-group input-group-md input-group-margin'}`}>
+          <span className={`${'input-group-addon ug-flat-border'}`}>
             <Glyphicon glyph="user" />
           </span>
           <input
             id="login-username"
             type="text"
-            className={`${'form-control'} ${styles['ug-flat-border']}`}
+            className={`${'form-control ug-flat-border'}`}
             name={messages.usernameLabel.defaultMessage}
             value={this.props.username}
             placeholder={messages.usernamePlaceholderLabel.defaultMessage}
             onChange={this.props.onChangeUsername}
           />
         </div>
-        <div className={`${'input-group input-group-md'} ${styles['input-group-margin']}`}>
-          <span className={`${'input-group-addon'} ${styles['ug-flat-border']}`}>
+        <div className={`${'input-group input-group-md input-group-margin'}`}>
+          <span className={`${'input-group-addon ug-flat-border'}`}>
             <Glyphicon glyph="lock" />
           </span>
           <input
             id="login-password"
             type="password"
-            className={`${'form-control'} ${styles['ug-flat-border']}`}
+            className={`${'form-control ug-flat-border'}`}
             name={messages.passwordLabel.defaultMessage}
             placeholder={messages.passwordPlaceholderLabel.defaultMessage}
             value={this.props.password}
@@ -86,7 +85,7 @@ export class LoginForm extends React.Component {
             <A href="forgetpassword" onClick={this.openForgetPasswordPage} id="forgetpassword_id"><FormattedMessage {...messages.forgetPasswordLabel} /></A>
           </p>
         </div>
-        <p className="ug-link-signup">Don't have an account?
+        <p className="ug-link-signup">Don&apos;t have an account?
           <A href="registration" onClick={this.openRegistrationPage} id="signup_id"><FormattedMessage {...messages.signupLabel} /></A>
         </p>
       </form>
