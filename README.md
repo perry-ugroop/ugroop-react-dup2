@@ -16,20 +16,20 @@ Step2 :
 Below command will build the project and run the project.
 
 ```
-npm start run
+npm run start
 ```
 
 If you want to build project without run, do the below command.
 
 ```
-npm build run
+npm run build
 ```
 You can check more script command in the package.json.
 
 #### For Testing
 
 ```
-npm test:watch run
+npm run test:watch
 ```
 
 ### Docker Dev Environment
