@@ -8,7 +8,10 @@
 
 import React from 'react';
 import Helmet from 'react-helmet';
-import Footer from 'components/Footer';
+// import Footer from 'components/Footer';
+import UGFooter from 'components/UGFooter';
+import UGHeader from 'components/UGHeader';
+
 // Import the CSS reset, which HtmlWebpackPlugin transfers to the build folder
 import 'sanitize.css/sanitize.css';
 import styles from './styles.css';
@@ -24,8 +27,9 @@ function App(props) {
           { name: 'description', content: 'A React.js Boilerplate application' },
         ]}
       />
+      <UGHeader />
       {React.Children.toArray(props.children)}
-      <Footer />
+      <UGFooter />
     </div>
   );
 }
