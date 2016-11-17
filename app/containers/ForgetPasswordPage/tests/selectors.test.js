@@ -1,7 +1,6 @@
 /**
  * Created by Yang on 2/11/16.
  */
-import expect from 'expect';
 import { fromJS } from 'immutable';
 import {
   selectForgetPasswordPage,

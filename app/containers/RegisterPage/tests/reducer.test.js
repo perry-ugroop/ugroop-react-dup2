@@ -1,7 +1,6 @@
 /**
  * Created by Yang on 8/11/16.
  */
-import expect from 'expect';
 import registerReducer from '../reducer';
 import {
   changeOrgName,

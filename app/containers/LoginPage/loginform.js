@@ -3,18 +3,21 @@ import { connect } from 'react-redux';
 import messages from './messages';
 import { FormattedMessage } from 'react-intl';
 import A from 'components/A';
-import Button from 'components/Button';
-import styles from './styles.css';
 import { isEmptyString } from '../../utils/stringAdditions';
 import { changeUsername, changePassword } from './actions';
 import { push } from 'react-router-redux';
 import { createStructuredSelector } from 'reselect';
+import Span from './Span';
 import {
   selectUsername,
   selectPassword,
   selectError,
 } from './selectors';
 import { Glyphicon } from 'react-bootstrap';
+import AlertDanger from './Alert';
+import InputGroup from './InputGroup';
+import Input from './Input';
+import InputButton from './InputButton';
 
 export class LoginForm extends React.Component {
 
@@ -40,53 +43,47 @@ export class LoginForm extends React.Component {
   openRegistrationPage = () => {
     this.openRoute('/registration');
   }
-
   render() {
     let errorContent = null;
-    const buttonProps = {};
-    buttonProps.children = messages.signinButton.defaultMessage;
-    buttonProps.handleRoute = this.props.signInSubmit;
     if (!isEmptyString(this.props.error)) {
-      errorContent = (<div className={`${styles.alert} ${styles['alert-danger']}`} role="alert">{this.props.error}</div>);
+      errorContent = (<AlertDanger role="alert">{this.props.error}</AlertDanger>);
     }
     return (
       <form >
         {errorContent}
-        <div className={`${'input-group input-group-md'} ${styles['input-group-margin']}`}>
-          <span className={`${'input-group-addon'} ${styles['ug-flat-border']}`}>
+        <InputGroup>
+          <Span>
             <Glyphicon glyph="user" />
-          </span>
-          <input
+          </Span>
+          <Input
             id="login-username"
             type="text"
-            className={`${'form-control'} ${styles['ug-flat-border']}`}
-            name={messages.usernameLabel.defaultMessage}
             value={this.props.username}
+            name={messages.usernameLabel.defaultMessage}
             placeholder={messages.usernamePlaceholderLabel.defaultMessage}
             onChange={this.props.onChangeUsername}
           />
-        </div>
-        <div className={`${'input-group input-group-md'} ${styles['input-group-margin']}`}>
-          <span className={`${'input-group-addon'} ${styles['ug-flat-border']}`}>
+        </InputGroup>
+        <InputGroup>
+          <Span>
             <Glyphicon glyph="lock" />
-          </span>
-          <input
+          </Span>
+          <Input
             id="login-password"
             type="password"
-            className={`${'form-control'} ${styles['ug-flat-border']}`}
             name={messages.passwordLabel.defaultMessage}
             placeholder={messages.passwordPlaceholderLabel.defaultMessage}
             value={this.props.password}
             onChange={this.props.onChangePassword}
           />
-        </div>
-        <Button {...buttonProps} className="btn btn-primary btn-block ug-flat-border ug-btn-sign" />
+        </InputGroup>
+        <InputButton>{messages.signinButton.defaultMessage}</InputButton>
         <div className="form-group clearfix ug-login-footer-link">
           <p className="ug-link-lost-password">
             <A href="forgetpassword" onClick={this.openForgetPasswordPage} id="forgetpassword_id"><FormattedMessage {...messages.forgetPasswordLabel} /></A>
           </p>
         </div>
-        <p className="ug-link-signup">Don't have an account?
+        <p className="ug-link-signup">Don&apos;t have an account?
           <A href="registration" onClick={this.openRegistrationPage} id="signup_id"><FormattedMessage {...messages.signupLabel} /></A>
         </p>
       </form>
@@ -96,7 +93,6 @@ export class LoginForm extends React.Component {
 
 LoginForm.propTypes = {
   error: React.PropTypes.string,
-  signInSubmit: React.PropTypes.func,
   username: React.PropTypes.string,
   password: React.PropTypes.string,
   changeRoute: React.PropTypes.func,
@@ -112,8 +108,8 @@ const mapStateToProps = createStructuredSelector({
 
 export function mapDispatchToProps(dispatch) {
   return {
-    onChangeUsername: (evt) => dispatch(changeUsername(evt.target.value)),
-    onChangePassword: (evt) => dispatch(changePassword(evt.target.value)),
+    onChangeUsername: (evt) => dispatch(changeUsername(evt.value)),
+    onChangePassword: (evt) => dispatch(changePassword(evt.value)),
     changeRoute: (url) => dispatch(push(url)),
     dispatch,
   };

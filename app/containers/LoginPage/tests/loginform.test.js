@@ -1,4 +1,3 @@
-import expect from 'expect';
 import { shallow, mount } from 'enzyme';
 import React from 'react';
 import { LoginForm, mapDispatchToProps } from '../loginform';
@@ -23,7 +22,7 @@ describe('<LoginForm />', () => {
   });
 
   it('should link to /forgetpassword', () => {
-    const openRouteSpy = expect.createSpy();
+    const openRouteSpy = jest.fn();
     const openRoute = (dest) => {
       if (dest === '/forgetpassword') {
         openRouteSpy();
@@ -40,7 +39,7 @@ describe('<LoginForm />', () => {
   });
 
   it('should link to /registeration', () => {
-    const openRouteSpy = expect.createSpy();
+    const openRouteSpy = jest.fn();
     const openRoute = (dest) => {
       if (dest === '/registration') {
         openRouteSpy();
@@ -60,14 +59,14 @@ describe('<LoginForm />', () => {
   describe('mapDispatchToProps', () => {
     describe('onChangeUsername', () => {
       it('should be injected', () => {
-        const dispatch = expect.createSpy();
+        const dispatch = jest.fn();
         const result = mapDispatchToProps(dispatch);
-        expect(result.onChangeUsername).toExist();
-        expect(result.onChangePassword).toExist();
+        expect(result.onChangeUsername).toBeDefined();
+        expect(result.onChangePassword).toBeDefined();
       });
 
       it('should dispatch changeUsername when called', () => {
-        const dispatch = expect.createSpy();
+        const dispatch = jest.fn();
         const result = mapDispatchToProps(dispatch);
         const username = 'mxstbr';
         result.onChangeUsername({ target: { value: username } });
@@ -75,7 +74,7 @@ describe('<LoginForm />', () => {
       });
 
       it('should dispatch changePassword when called', () => {
-        const dispatch = expect.createSpy();
+        const dispatch = jest.fn();
         const result = mapDispatchToProps(dispatch);
         const password = 'pw';
         result.onChangePassword({ target: { value: password } });
@@ -86,13 +85,13 @@ describe('<LoginForm />', () => {
 
   describe('changeRoute', () => {
     it('should be injected', () => {
-      const dispatch = expect.createSpy();
+      const dispatch = jest.fn();
       const result = mapDispatchToProps(dispatch);
-      expect(result.changeRoute).toExist();
+      expect(result.changeRoute).toBeDefined();
     });
 
     it('should dispatch push when called', () => {
-      const dispatch = expect.createSpy();
+      const dispatch = jest.fn();
       const result = mapDispatchToProps(dispatch);
       const route = '/';
       result.changeRoute(route);

@@ -3,7 +3,6 @@
  */
 import React from 'react';
 import { connect } from 'react-redux';
-import styles from './styles.css';
 import messages from './messages';
 import { FormattedMessage } from 'react-intl';
 import { isEmptyString } from '../../utils/stringAdditions';
@@ -18,6 +17,7 @@ validText, validReTypePassword } from './actions';
 import validationRule from '../../utils/validationrule';
 import { ORGNAME_FIELD, ORGADDRESS_FIELD, FIRSTNAME_FIELD,
   LASTNAME_FIELD, EMAIL_FIELD, PASSWORD_FIELD, TELEPHONE_FIELD } from './constants';
+import { Glyphicon } from 'react-bootstrap';
 export class RegisterForm extends React.Component {
 
   wrapErrorMessage(error) {
@@ -66,8 +66,8 @@ export class RegisterForm extends React.Component {
         <div className="row">
           <div className="col-md-6">
             <div className="input-group">
-              <span className={`${styles['input-group-addon']} ${styles['ug-flat-border']}`}>
-                <i className={`${styles.glyphicon} ${styles['glyphicon-chevron-right']}`}></i>
+              <span className={`${'input-group-addon ug-flat-border'}`}>
+                <Glyphicon glyph="chevron-right" />
               </span>
               <input
                 type="text"
@@ -83,8 +83,8 @@ export class RegisterForm extends React.Component {
           </div>
           <div className="col-md-6">
             <div className="input-group">
-              <span className={`${styles['input-group-addon']} ${styles['ug-flat-border']}`}>
-                <i className={`${styles.glyphicon} ${styles['glyphicon-chevron-right']}`}></i>
+              <span className={`${'input-group-addon ug-flat-border'}`}>
+                <Glyphicon glyph="chevron-right" />
               </span>
               <input
                 type="text"
@@ -103,8 +103,8 @@ export class RegisterForm extends React.Component {
         <div className="row">
           <div className="col-md-6">
             <div className="input-group">
-              <span className={`${styles['input-group-addon']} ${styles['ug-flat-border']}`}>
-                <i className={`${styles.glyphicon} ${styles['glyphicon-user']}`}></i>
+              <span className={`${'input-group-addon ug-flat-border'}`}>
+                <Glyphicon glyph="user" />
               </span>
               <input
                 type="text"
@@ -120,8 +120,8 @@ export class RegisterForm extends React.Component {
           </div>
           <div className="col-md-6">
             <div className="input-group">
-              <span className={`${styles['input-group-addon']} ${styles['ug-flat-border']}`}>
-                <i className={`${styles.glyphicon} ${styles['glyphicon-user']}`}></i>
+              <span className={`${'input-group-addon ug-flat-border'}`}>
+                <Glyphicon glyph="user" />
               </span>
               <input
                 type="text"
@@ -140,8 +140,8 @@ export class RegisterForm extends React.Component {
         <div className="row">
           <div className="col-md-6">
             <div className="input-group">
-              <span className={`${styles['input-group-addon']} ${styles['ug-flat-border']}`}>
-                <i className={`${styles.glyphicon} ${styles['glyphicon-chevron-right']}`}></i>
+              <span className={`${'input-group-addon ug-flat-border'}`}>
+                <Glyphicon glyph="chevron-right" />
               </span>
               <input
                 type="password"
@@ -155,8 +155,8 @@ export class RegisterForm extends React.Component {
           </div>
           <div className="col-md-6">
             <div className="input-group">
-              <span className={`${styles['input-group-addon']} ${styles['ug-flat-border']}`}>
-                <i className={`${styles.glyphicon} ${styles['glyphicon-globe']}`}></i>
+              <span className={`${'input-group-addon ug-flat-border'}`}>
+                <Glyphicon glyph="globe" />
               </span>
               <input
                 type="text"
@@ -173,8 +173,8 @@ export class RegisterForm extends React.Component {
         <div className="row">
           <div className="col-md-6">
             <div className="input-group">
-              <span className={`${styles['input-group-addon']} ${styles['ug-flat-border']}`}>
-                <i className={`${styles.glyphicon} ${styles['glyphicon-phone-alt']}`}></i>
+              <span className={`${'input-group-addon ug-flat-border'}`}>
+                <Glyphicon glyph="phone-alt" />
               </span>
               <input
                 type="text"
@@ -190,8 +190,8 @@ export class RegisterForm extends React.Component {
           </div>
           <div className="col-md-6">
             <div className="input-group">
-              <span className={`${styles['input-group-addon']} ${styles['ug-flat-border']}`}>
-                <i className={`${styles.glyphicon} ${styles['glyphicon-envelope']}`}></i>
+              <span className={`${'input-group-addon ug-flat-border'}`}>
+                <Glyphicon glyph="envelope" />
               </span>
               <input
                 type="text"
@@ -210,8 +210,8 @@ export class RegisterForm extends React.Component {
         <div className="row">
           <div className="col-md-6">
             <div className="input-group">
-              <span className={`${styles['input-group-addon']} ${styles['ug-flat-border']}`}>
-                <i className={`${styles.glyphicon} ${styles['glyphicon glyphicon-lock']}`}></i>
+              <span className={`${'input-group-addon ug-flat-border'}`}>
+                <Glyphicon glyph="lock" />
               </span>
               <input
                 type="password"
@@ -225,8 +225,8 @@ export class RegisterForm extends React.Component {
               {this.wrapErrorMessage(passwordErrorContent)}
             </div>
             <div className="input-group">
-              <span className={`${styles['input-group-addon']} ${styles['ug-flat-border']}`}>
-                <i className={`${styles.glyphicon} ${styles['glyphicon glyphicon-lock']}`}></i>
+              <span className={`${'input-group-addon ug-flat-border'}`}>
+                <Glyphicon glyph="lock" />
               </span>
               <input
                 type="password"

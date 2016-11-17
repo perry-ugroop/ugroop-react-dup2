@@ -1,8 +1,6 @@
 /**
  * Created by Yang on 8/11/16.
  */
-import expect from 'expect';
-
 import {
   CHANGE_ORGNAME,
   CHANGE_ORGADDRESS,

@@ -1,7 +1,6 @@
 /**
  * Created by Yang on 29/10/16.
  */
-import expect from 'expect';
 import loginReducer from '../reducer';
 import {
   changeUsername,

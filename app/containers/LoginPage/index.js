@@ -11,13 +11,19 @@ import TwitterIcon from './assets/icon-twitter-transparent.png';
 import YahooIcon from './assets/icon-yahoo-transparent.png';
 import Img from 'components/Img';
 import A from 'components/A';
-import H1 from 'components/H1';
-import styles from './styles.css';
 /* import messages*/
 import messages from './messages';
 import { FormattedMessage } from 'react-intl';
 /* import own login component*/
 import LoginForm from './loginform';
+import LoginBody from './LoginBody';
+import LoginPanel from './LoginPanel';
+import LoginPanelBody from './LoginPanelBody';
+import LogoH1 from './LogoH1';
+import OAuthWrapper from './OAuthWrapper';
+import { OAuthTitleH1, OrTitleH1 } from './TitleH1';
+import OAuthUl from './OAuthUl';
+import OAuthLi from './OAuthLi';
 
 export class LoginPage extends React.Component {
 
@@ -25,7 +31,7 @@ export class LoginPage extends React.Component {
     const props = {};
     props.href = '#';
     props.title = title;
-    return <A {...props} ><Img src={imgSrc} alt={title} width="50" height="50" /></A>;
+    return <A {...props} ><Img src={imgSrc} alt={title} /></A>;
   }
 
   render() {
@@ -34,12 +40,13 @@ export class LoginPage extends React.Component {
     const twitterLogin = this.createListItemContent('Sign In With Twitter', TwitterIcon);
     const yahooLogin = this.createListItemContent('Sign In With Yahoo', YahooIcon);
     const googleLogin = this.createListItemContent('Sign In With Google', GoolgePlusIcon);
-    listItems.push(facebookLogin);
-    listItems.push(twitterLogin);
-    listItems.push(yahooLogin);
-    listItems.push(googleLogin);
+    listItems.push({ content: facebookLogin, icon: 'facebook' });
+    listItems.push({ content: twitterLogin, icon: 'twitter' });
+    listItems.push({ content: yahooLogin, icon: 'yahoo' });
+    listItems.push({ content: googleLogin, icon: 'google' });
 
     return (
+
       <article>
         <Helmet
           title="Login Page"
@@ -47,32 +54,27 @@ export class LoginPage extends React.Component {
             { name: 'description', content: 'uGroop Login Page' },
           ]}
         />
-        <div className={`${styles['ug-login-body']}`} >
+        <LoginBody>
           <div className={'row'}>
-            <div className={`${styles['ug-login-panel']} ${styles['ug-flat-border']}`} >
-              <div className={styles['ug-login-body']}>
-                <H1 className={styles['ug-logo']}>
+            <LoginPanel>
+              <LoginPanelBody>
+                <LogoH1>
                   <Img src={Logo} alt="ügroop" />
-                </H1>
-                <div className={styles['ug-oauth-wrapper']}>
-                  <H1 className={styles['ug-oauth-title']}>
+                </LogoH1>
+                <OAuthWrapper>
+                  <OAuthTitleH1>
                     <p><FormattedMessage {...messages.signinHeader} /></p>
-                  </H1>
-                  <ul className={styles['ug-oauth-icon-list']}>
-                    <li className={styles['ug-facebook-oauth']}>{facebookLogin}</li>
-                    <li className={styles['ug-twitter-oauth']}>{twitterLogin}</li>
-                    <li className={styles['ug-yahoo-oauth']}>{yahooLogin}</li>
-                    <li className={styles['ug-googleplus-oauth']}>{googleLogin}</li>
-                  </ul>
-                </div>
-                <H1 className={styles['ug-or-oauth']}>
-                  <p><span>OR</span></p>
-                </H1>
+                  </OAuthTitleH1>
+                  <OAuthUl component={OAuthLi} items={listItems}></OAuthUl>
+                </OAuthWrapper>
+                <OrTitleH1>
+                  <p><FormattedMessage {...messages.orHeader} /></p>
+                </OrTitleH1>
                 <LoginForm />
-              </div>
-            </div>
+              </LoginPanelBody>
+            </LoginPanel>
           </div>
-        </div>
+        </LoginBody>
       </article>
     );
   }

@@ -2,7 +2,6 @@
  * Created by Yang on 2/11/16.
  */
 import { changeEmail, validEmail } from '../actions';
-import expect from 'expect';
 import { CHANGE_EMAIL, VALID_EMAIL } from '../constants';
 
 describe('changeEmail', () => {
