@@ -108,8 +108,8 @@ const mapStateToProps = createStructuredSelector({
 
 export function mapDispatchToProps(dispatch) {
   return {
-    onChangeUsername: (evt) => dispatch(changeUsername(evt.value)),
-    onChangePassword: (evt) => dispatch(changePassword(evt.value)),
+    onChangeUsername: (evt) => dispatch(changeUsername(evt.target.value)),
+    onChangePassword: (evt) => dispatch(changePassword(evt.target.value)),
     changeRoute: (url) => dispatch(push(url)),
     dispatch,
   };
