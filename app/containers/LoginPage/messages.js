@@ -10,6 +10,10 @@ export default defineMessages({
     id: 'ugroop.containers.LoginPage.signin.header',
     defaultMessage: 'Sign In Via',
   },
+  orHeader: {
+    id: 'ugroop.containers.LoginPage.or.header',
+    defaultMessage: 'OR',
+  },
   signinButton: {
     id: 'ugroop.containers.LoginPage.signin.button',
     defaultMessage: 'Sign In',

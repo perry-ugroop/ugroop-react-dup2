@@ -57,15 +57,7 @@ body {
 
 .ug-logo img { margin: auto; }
 
-.ug-oauth-wrapper {
-  margin: 0 auto;
-}
 
-.ug-flat-border {
-  -moz-border-radius: 0 !important;
-  -webkit-border-radius: 0 !important;
-  border-radius: 0 !important;
-}
 
 .ug_invitation_details {
   font-size: 16px;
