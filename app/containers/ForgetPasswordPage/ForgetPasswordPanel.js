@@ -5,8 +5,8 @@ import styled from 'styled-components';
 import UGLoginPanel from '../BootStrap/UGLoginPanel';
 import UGFlatBorder from '../BootStrap/UGFlatBorder';
 
-const LoginPanel = styled(UGLoginPanel)`
+const FPPanel = styled(UGLoginPanel)`
   ${UGFlatBorder}
 `;
 
-export default LoginPanel;
+export default FPPanel;

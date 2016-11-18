@@ -8,14 +8,26 @@ import Logo from '../../shareAssets/logo-ugroop.jpg';
 import messages from './messages';
 import { FormattedMessage } from 'react-intl';
 import Img from 'components/Img';
-import H1 from 'components/H1';
 import { isEmptyString } from '../../utils/stringAdditions';
 import A from 'components/A';
+import LogoH1 from 'components/LogoH1';
 import { createStructuredSelector } from 'reselect';
 import { selectEmail, selectError } from './selectors';
 import { changeEmail, validEmail } from './actions';
 import { push } from 'react-router-redux';
 import { Glyphicon } from 'react-bootstrap';
+import ForgetPasswordBody from './ForgetPasswordBody';
+import FPPanel from './ForgetPasswordPanel';
+import FPPanelBody from './ForgetPasswordPanelBody';
+import FPWrapper from './FPWrapper';
+import { OAuthTitleH1 } from '../LoginPage/TitleH1';
+import BSTextCenter from '../BootStrap/BSTextCenter';
+import AddOnSpan from './AddOnSpan';
+import Input from './Input';
+import InputGroup from './InputGroup';
+import FooterLinkSignUp from '../LoginPage/FooterLinkSignUp';
+import AlertDanger from '../LoginPage/Alert';
+import InputButton from '../LoginPage/InputButton';
 
 export class ForgetPasswordPage extends React.Component {
   /**
@@ -37,51 +49,50 @@ export class ForgetPasswordPage extends React.Component {
   render() {
     let errorContent = null;
     if (!isEmptyString(this.props.error)) {
-      errorContent = (<div className={`${'text-danger'}`} role="alert">{this.props.error}</div>);
+      errorContent = (<AlertDanger role="alert">{this.props.error}</AlertDanger>);
     }
     return (
-      <div className={`${'container ug-login-body'}`} >
+      <ForgetPasswordBody >
         <div className={'row'}>
-          <div className={`${'ug-login-panel ug-flat-border'}`} >
-            <div className={'ug-login-body'}>
-              <H1 className={'ug-logo'}>
+          <FPPanel >
+            <FPPanelBody>
+              <LogoH1>
                 <Img src={Logo} alt="ügroop" />
-              </H1>
-              <div className={'ug-oauth-wrapper'}>
-                <H1 className={'ug-oauth-title'}>
+              </LogoH1>
+              <FPWrapper>
+                <OAuthTitleH1>
                   <p><FormattedMessage {...messages.findAccountHeader} /></p>
-                </H1>
-              </div>
-              <div className={'text-center'}>
+                </OAuthTitleH1>
+              </FPWrapper>
+              <BSTextCenter>
                 <p><FormattedMessage {...messages.forgetPasswordDescriptionPart1} /></p>
-                <br />
-                <FormattedMessage {...messages.forgetPasswordDescriptionPart2} />
-              </div>
+                <p><FormattedMessage {...messages.forgetPasswordDescriptionPart2} /></p>
+              </BSTextCenter>
               <form>
-                <div>
-                  <span className={`${'input-group-addon ug-flat-border'}`}>
+                {errorContent}
+                <InputGroup>
+                  <AddOnSpan>
                     <Glyphicon glyph="envelope" />
-                  </span>
-                  <input
+                  </AddOnSpan>
+                  <Input
                     id="Email"
                     type="text"
-                    className={`${'form-control ug-flat-border'}`}
                     name="Email"
                     placeholder={messages.emailPlaceHolder.defaultMessage}
                     value={this.props.email}
                     onChange={this.props.onChangeEmail}
                     onBlur={this.props.onBlurEmail}
                   />
-                  {errorContent}
-                </div>
-                <p className="ug-link-signup">Don&apos;t have an account?
+                </InputGroup>
+                <InputButton>{messages.continueButton.defaultMessage}</InputButton>
+                <FooterLinkSignUp>Don&apos;t have an account?
                   <A href="registration" onClick={this.openRegistrationPage} id="signup_id"><FormattedMessage {...messages.signupLabel} /></A>
-                </p>
+                </FooterLinkSignUp>
               </form>
-            </div>
-          </div>
+            </FPPanelBody>
+          </FPPanel>
         </div>
-      </div>
+      </ForgetPasswordBody>
     );
   }
 }

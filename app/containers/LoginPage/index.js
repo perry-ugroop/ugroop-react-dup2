@@ -11,6 +11,7 @@ import TwitterIcon from './assets/icon-twitter-transparent.png';
 import YahooIcon from './assets/icon-yahoo-transparent.png';
 import Img from 'components/Img';
 import A from 'components/A';
+import LogoH1 from 'components/LogoH1';
 /* import messages*/
 import messages from './messages';
 import { FormattedMessage } from 'react-intl';
@@ -19,8 +20,7 @@ import LoginForm from './loginform';
 import LoginBody from './LoginBody';
 import LoginPanel from './LoginPanel';
 import LoginPanelBody from './LoginPanelBody';
-import LogoH1 from './LogoH1';
-import OAuthWrapper from './OAuthWrapper';
+import LoginWrapper from './LoginWrapper';
 import { OAuthTitleH1, OrTitleH1 } from './TitleH1';
 import List from './List';
 import ListItem from './ListItem';
@@ -61,12 +61,12 @@ export class LoginPage extends React.Component {
                 <LogoH1>
                   <Img src={Logo} alt="ügroop" />
                 </LogoH1>
-                <OAuthWrapper>
+                <LoginWrapper>
                   <OAuthTitleH1>
                     <p><FormattedMessage {...messages.signinHeader} /></p>
                   </OAuthTitleH1>
                   <List component={ListItem} items={listItems}></List>
-                </OAuthWrapper>
+                </LoginWrapper>
                 <OrTitleH1>
                   <p><FormattedMessage {...messages.orHeader} /></p>
                 </OrTitleH1>

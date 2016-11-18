@@ -7,7 +7,7 @@ import { isEmptyString } from '../../utils/stringAdditions';
 import { changeUsername, changePassword } from './actions';
 import { push } from 'react-router-redux';
 import { createStructuredSelector } from 'reselect';
-import Span from './Span';
+import AddOnSpan from './AddOnSpan';
 import {
   selectUsername,
   selectPassword,
@@ -55,9 +55,9 @@ export class LoginForm extends React.Component {
       <form >
         {errorContent}
         <InputGroup>
-          <Span>
+          <AddOnSpan>
             <Glyphicon glyph="user" />
-          </Span>
+          </AddOnSpan>
           <Input
             id="login-username"
             type="text"
@@ -68,9 +68,9 @@ export class LoginForm extends React.Component {
           />
         </InputGroup>
         <InputGroup>
-          <Span>
+          <AddOnSpan>
             <Glyphicon glyph="lock" />
-          </Span>
+          </AddOnSpan>
           <Input
             id="login-password"
             type="password"
