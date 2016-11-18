@@ -16,12 +16,13 @@ import LogoH1 from 'components/LogoH1';
 import messages from './messages';
 import { FormattedMessage } from 'react-intl';
 /* import own login component*/
+import BSRow from '../BootStrap/BSRow';
 import LoginForm from './loginform';
 import LoginBody from './LoginBody';
 import LoginPanel from './LoginPanel';
 import LoginPanelBody from './LoginPanelBody';
 import LoginWrapper from './LoginWrapper';
-import { OAuthTitleH1, OrTitleH1 } from './TitleH1';
+import { TitleH1, TitleH1Style1 } from './TitleH1';
 import List from './List';
 import ListItem from './ListItem';
 
@@ -55,25 +56,25 @@ export class LoginPage extends React.Component {
           ]}
         />
         <LoginBody>
-          <div className={'row'}>
+          <BSRow>
             <LoginPanel>
               <LoginPanelBody>
                 <LogoH1>
                   <Img src={Logo} alt="ügroop" />
                 </LogoH1>
                 <LoginWrapper>
-                  <OAuthTitleH1>
+                  <TitleH1>
                     <p><FormattedMessage {...messages.signinHeader} /></p>
-                  </OAuthTitleH1>
+                  </TitleH1>
                   <List component={ListItem} items={listItems}></List>
                 </LoginWrapper>
-                <OrTitleH1>
+                <TitleH1Style1>
                   <p><FormattedMessage {...messages.orHeader} /></p>
-                </OrTitleH1>
+                </TitleH1Style1>
                 <LoginForm />
               </LoginPanelBody>
             </LoginPanel>
-          </div>
+          </BSRow>
         </LoginBody>
       </article>
     );

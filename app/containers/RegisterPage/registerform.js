@@ -18,11 +18,19 @@ import validationRule from '../../utils/validationrule';
 import { ORGNAME_FIELD, ORGADDRESS_FIELD, FIRSTNAME_FIELD,
   LASTNAME_FIELD, EMAIL_FIELD, PASSWORD_FIELD, TELEPHONE_FIELD } from './constants';
 import { Glyphicon } from 'react-bootstrap';
+import BSRow from '../BootStrap/BSRow';
+import BSColumn6 from '../BootStrap/BSColumn6';
+import AddOnSpan from './AddOnSpan';
+import InputGroup from './InputGroup';
+import Input from './Input';
+import InputButton from './InputButton';
+import BSTextDanger from '../BootStrap/BSTextDanger';
+
 export class RegisterForm extends React.Component {
 
   wrapErrorMessage(error) {
     if (error != null) {
-      return <div id={error.id}><FormattedMessage {...error} /></div>;
+      return <BSTextDanger id={error.id}><FormattedMessage {...error} /></BSTextDanger>;
     }
     return '';
   }
@@ -63,189 +71,177 @@ export class RegisterForm extends React.Component {
     return (
       <form className="registrationForm">
         {/* First Row */}
-        <div className="row">
-          <div className="col-md-6">
-            <div className="input-group">
-              <span className={`${'input-group-addon ug-flat-border'}`}>
+        <BSRow>
+          <BSColumn6>
+            <InputGroup>
+              <AddOnSpan>
                 <Glyphicon glyph="chevron-right" />
-              </span>
-              <input
+              </AddOnSpan>
+              <Input
                 type="text"
                 name="OrgName"
-                className="form-control ug-flat-border"
                 placeholder={messages.orgNamePlaceholder.defaultMessage}
                 value={this.props.orgName}
                 onChange={this.props.onChangeOrgName}
                 onBlur={this.props.onBlurOrgName}
               />
-            </div>
+            </InputGroup>
             {this.wrapErrorMessage(orgErrorcontent)}
-          </div>
-          <div className="col-md-6">
-            <div className="input-group">
-              <span className={`${'input-group-addon ug-flat-border'}`}>
+          </BSColumn6>
+          <BSColumn6>
+            <InputGroup>
+              <AddOnSpan>
                 <Glyphicon glyph="chevron-right" />
-              </span>
-              <input
+              </AddOnSpan>
+              <Input
                 type="text"
                 name="OrgAddress"
-                className="form-control ug-flat-border"
                 placeholder={messages.orgAddressPlaceholder.defaultMessage}
                 value={this.props.orgAddress}
                 onChange={this.props.onChangeAddressName}
                 onBlur={this.props.onBlurOrgAddress}
               />
-            </div>
+            </InputGroup>
             {this.wrapErrorMessage(orgAddressErrorContent)}
-          </div>
-        </div>
+          </BSColumn6>
+        </BSRow>
         {/* Second Row */}
-        <div className="row">
-          <div className="col-md-6">
-            <div className="input-group">
-              <span className={`${'input-group-addon ug-flat-border'}`}>
+        <BSRow>
+          <BSColumn6>
+            <InputGroup>
+              <AddOnSpan>
                 <Glyphicon glyph="user" />
-              </span>
-              <input
+              </AddOnSpan>
+              <Input
                 type="text"
                 name="FirstName"
-                className="form-control ug-flat-border"
                 placeholder={messages.firstnamePlaceholder.defaultMessage}
                 value={this.props.firstName}
                 onChange={this.props.onChangeFirstName}
                 onBlur={this.props.onBlurFirstName}
               />
-            </div>
+            </InputGroup>
             {this.wrapErrorMessage(firstNameErrorContent)}
-          </div>
-          <div className="col-md-6">
-            <div className="input-group">
+          </BSColumn6>
+          <BSColumn6>
+            <InputGroup>
               <span className={`${'input-group-addon ug-flat-border'}`}>
                 <Glyphicon glyph="user" />
               </span>
-              <input
+              <Input
                 type="text"
                 name="LastName"
-                className="form-control ug-flat-border"
                 placeholder={messages.lastnamePlaceholder.defaultMessage}
                 value={this.props.lastName}
                 onChange={this.props.onChangeLastName}
                 onBlur={this.props.onBlurLastName}
               />
-            </div>
+            </InputGroup>
             {this.wrapErrorMessage(lastNameErrorContent)}
-          </div>
-        </div>
+          </BSColumn6>
+        </BSRow>
         {/* Third Row */}
-        <div className="row">
-          <div className="col-md-6">
-            <div className="input-group">
-              <span className={`${'input-group-addon ug-flat-border'}`}>
+        <BSRow>
+          <BSColumn6>
+            <InputGroup>
+              <AddOnSpan>
                 <Glyphicon glyph="chevron-right" />
-              </span>
-              <input
+              </AddOnSpan>
+              <Input
                 type="password"
                 name="ConfirmPassword"
-                className="form-control ug-flat-border"
                 placeholder={messages.rolePlaceholder.defaultMessage}
                 onChange={this.props.onChangeRole}
                 value={this.props.role}
               />
-            </div>
-          </div>
-          <div className="col-md-6">
-            <div className="input-group">
-              <span className={`${'input-group-addon ug-flat-border'}`}>
+            </InputGroup>
+          </BSColumn6>
+          <BSColumn6>
+            <InputGroup>
+              <AddOnSpan>
                 <Glyphicon glyph="globe" />
-              </span>
-              <input
+              </AddOnSpan>
+              <Input
                 type="text"
                 name="Website"
-                className="form-control ug-flat-border"
                 placeholder={messages.websitePlaceholder.defaultMessage}
                 value={this.props.website}
                 onChange={this.props.onChangeWebsite}
               />
-            </div>
-          </div>
-        </div>
+            </InputGroup>
+          </BSColumn6>
+        </BSRow>
         {/* Fourth Row */}
-        <div className="row">
-          <div className="col-md-6">
-            <div className="input-group">
-              <span className={`${'input-group-addon ug-flat-border'}`}>
+        <BSRow>
+          <BSColumn6>
+            <InputGroup>
+              <AddOnSpan>
                 <Glyphicon glyph="phone-alt" />
-              </span>
-              <input
+              </AddOnSpan>
+              <Input
                 type="text"
                 name="Telephone"
-                className="form-control ug-flat-border"
                 placeholder={messages.telephonePlaceholder.defaultMessage}
                 value={this.props.telephone}
                 onChange={this.props.onChangePhone}
                 onBlur={this.props.onBlurPhone}
               />
-            </div>
+            </InputGroup>
             {this.wrapErrorMessage(telephoneErrorContent)}
-          </div>
-          <div className="col-md-6">
-            <div className="input-group">
-              <span className={`${'input-group-addon ug-flat-border'}`}>
+          </BSColumn6>
+          <BSColumn6>
+            <InputGroup>
+              <AddOnSpan>
                 <Glyphicon glyph="envelope" />
-              </span>
-              <input
+              </AddOnSpan>
+              <Input
                 type="text"
                 name="Email"
-                className="form-control ug-flat-border"
                 placeholder={messages.emailPlaceholder.defaultMessage}
                 value={this.props.email}
                 onBlur={this.props.onBlurEmail}
                 onChange={this.props.onChangeEmail}
               />
-            </div>
+            </InputGroup>
             {this.wrapErrorMessage(emailErrorContent)}
-          </div>
-        </div>
+          </BSColumn6>
+        </BSRow>
         {/* Fifth Row */}
-        <div className="row">
-          <div className="col-md-6">
-            <div className="input-group">
-              <span className={`${'input-group-addon ug-flat-border'}`}>
+        <BSRow>
+          <BSColumn6>
+            <InputGroup>
+              <AddOnSpan>
                 <Glyphicon glyph="lock" />
-              </span>
-              <input
+              </AddOnSpan>
+              <Input
                 type="password"
                 name="Password"
-                className="form-control ug-flat-border"
                 placeholder={messages.passwordPlaceholder.defaultMessage}
                 onChange={this.props.onChangePassword}
                 onBlur={this.props.onBlurPassword}
                 value={this.props.password}
               />
-              {this.wrapErrorMessage(passwordErrorContent)}
-            </div>
-            <div className="input-group">
-              <span className={`${'input-group-addon ug-flat-border'}`}>
+            </InputGroup>
+            {this.wrapErrorMessage(passwordErrorContent)}
+            <InputGroup>
+              <AddOnSpan>
                 <Glyphicon glyph="lock" />
-              </span>
-              <input
+              </AddOnSpan>
+              <Input
                 type="password"
                 name="ConfirmPassword"
-                className="form-control ug-flat-border"
                 placeholder={messages.reTypePasswordPlaceholder.defaultMessage}
                 onChange={this.props.onChangeRetypePassword}
                 onBlur={this.props.onBlurReTypePassword}
                 value={this.props.retypePassword}
               />
-              {this.wrapErrorMessage(retypePasswordErrorContent)}
-            </div>
-          </div>
-          <div className="col-md-6">
-          </div>
-        </div>
-        <div>
-          <input type="submit" className="btn btn-primary btn-block ug-flat-border ug-btn-sign" value="Register" />
-        </div>
+            </InputGroup>
+            {this.wrapErrorMessage(retypePasswordErrorContent)}
+          </BSColumn6>
+          <BSColumn6>
+          </BSColumn6>
+        </BSRow>
+        <InputButton>{messages.registerButton.defaultMessage}</InputButton>
       </form>
     );
   }

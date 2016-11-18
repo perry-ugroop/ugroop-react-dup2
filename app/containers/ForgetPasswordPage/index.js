@@ -20,7 +20,7 @@ import ForgetPasswordBody from './ForgetPasswordBody';
 import FPPanel from './ForgetPasswordPanel';
 import FPPanelBody from './ForgetPasswordPanelBody';
 import FPWrapper from './FPWrapper';
-import { OAuthTitleH1 } from '../LoginPage/TitleH1';
+import { TitleH1 } from '../LoginPage/TitleH1';
 import BSTextCenter from '../BootStrap/BSTextCenter';
 import AddOnSpan from './AddOnSpan';
 import Input from './Input';
@@ -28,6 +28,7 @@ import InputGroup from './InputGroup';
 import FooterLinkSignUp from '../LoginPage/FooterLinkSignUp';
 import AlertDanger from '../LoginPage/Alert';
 import InputButton from '../LoginPage/InputButton';
+import BSRow from '../BootStrap/BSRow';
 
 export class ForgetPasswordPage extends React.Component {
   /**
@@ -53,16 +54,16 @@ export class ForgetPasswordPage extends React.Component {
     }
     return (
       <ForgetPasswordBody >
-        <div className={'row'}>
+        <BSRow>
           <FPPanel >
             <FPPanelBody>
               <LogoH1>
                 <Img src={Logo} alt="ügroop" />
               </LogoH1>
               <FPWrapper>
-                <OAuthTitleH1>
+                <TitleH1>
                   <p><FormattedMessage {...messages.findAccountHeader} /></p>
-                </OAuthTitleH1>
+                </TitleH1>
               </FPWrapper>
               <BSTextCenter>
                 <p><FormattedMessage {...messages.forgetPasswordDescriptionPart1} /></p>
@@ -91,7 +92,7 @@ export class ForgetPasswordPage extends React.Component {
               </form>
             </FPPanelBody>
           </FPPanel>
-        </div>
+        </BSRow>
       </ForgetPasswordBody>
     );
   }
