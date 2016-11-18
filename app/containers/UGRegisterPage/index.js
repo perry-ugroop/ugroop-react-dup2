@@ -15,7 +15,7 @@ import BSRow from '../BootStrap/BSRow';
 import RegisterPanel from './RegisterPanel';
 import RegisterPanelBody from './RegisterPanelBody';
 import RegisterWrapper from './RegisterWrapper';
-import { TitleH1 } from '../LoginPage/TitleH1';
+import { TitleH1 } from '../UGLoginPage/TitleH1';
 export class RegisterPage extends React.Component {  // eslint-disable-line react/prefer-stateless-function
   render() {
     return (

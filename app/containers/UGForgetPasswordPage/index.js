@@ -20,14 +20,14 @@ import ForgetPasswordBody from './ForgetPasswordBody';
 import FPPanel from './ForgetPasswordPanel';
 import FPPanelBody from './ForgetPasswordPanelBody';
 import FPWrapper from './FPWrapper';
-import { TitleH1 } from '../LoginPage/TitleH1';
+import { TitleH1 } from '../UGLoginPage/TitleH1';
 import BSTextCenter from '../BootStrap/BSTextCenter';
 import AddOnSpan from './AddOnSpan';
 import Input from './Input';
 import InputGroup from './InputGroup';
-import FooterLinkSignUp from '../LoginPage/FooterLinkSignUp';
-import AlertDanger from '../LoginPage/Alert';
-import InputButton from '../LoginPage/InputButton';
+import FooterLinkSignUp from '../UGLoginPage/FooterLinkSignUp';
+import AlertDanger from '../UGLoginPage/Alert';
+import InputButton from '../UGLoginPage/InputButton';
 import BSRow from '../BootStrap/BSRow';
 
 export class ForgetPasswordPage extends React.Component {

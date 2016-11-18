@@ -51,7 +51,7 @@ export default function createRoutes(store) {
       name: 'login',
       getComponent(nextState, cb) {
         const importModules = Promise.all([
-          System.import('containers/LoginPage/reducer'),
+          System.import('containers/UGLoginPage/reducer'),
           System.import('containers/LoginPage'),
         ]);
 
@@ -69,7 +69,7 @@ export default function createRoutes(store) {
       name: 'forgetpassword',
       getComponent(nextState, cb) {
         const importModules = Promise.all([
-          System.import('containers/ForgetPasswordPage/reducer'),
+          System.import('containers/UGForgetPasswordPage/reducer'),
           System.import('containers/ForgetPasswordPage'),
         ]);
         const renderRoute = loadModule(cb);
@@ -85,7 +85,7 @@ export default function createRoutes(store) {
       name: 'registration',
       getComponent(nextState, cb) {
         const importModules = Promise.all([
-          System.import('containers/RegisterPage/reducer'),
+          System.import('containers/UGRegisterPage/reducer'),
           System.import('containers/RegisterPage'),
         ]);
         const renderRoute = loadModule(cb);
