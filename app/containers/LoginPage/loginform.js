@@ -18,6 +18,9 @@ import AlertDanger from './Alert';
 import InputGroup from './InputGroup';
 import Input from './Input';
 import InputButton from './InputButton';
+import LoginFooter from './LoginFooter';
+import FooterLinkSignUp from './FooterLinkSignUp';
+import FooterLinkPassword from './FooterLinkPassword';
 
 export class LoginForm extends React.Component {
 
@@ -78,14 +81,14 @@ export class LoginForm extends React.Component {
           />
         </InputGroup>
         <InputButton>{messages.signinButton.defaultMessage}</InputButton>
-        <div className="form-group clearfix ug-login-footer-link">
-          <p className="ug-link-lost-password">
+        <LoginFooter>
+          <FooterLinkPassword>
             <A href="forgetpassword" onClick={this.openForgetPasswordPage} id="forgetpassword_id"><FormattedMessage {...messages.forgetPasswordLabel} /></A>
-          </p>
-        </div>
-        <p className="ug-link-signup">Don&apos;t have an account?
+          </FooterLinkPassword>
+        </LoginFooter>
+        <FooterLinkSignUp>Don&apos;t have an account?
           <A href="registration" onClick={this.openRegistrationPage} id="signup_id"><FormattedMessage {...messages.signupLabel} /></A>
-        </p>
+        </FooterLinkSignUp>
       </form>
     );
   }
