@@ -4,7 +4,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-function OAuthLi(props) {
+function ListItem(props) {
   const Wrapper = styled.li`
     border-radius: 10px !important;
     display:inline;
@@ -36,9 +36,9 @@ function OAuthLi(props) {
   );
 }
 
-OAuthLi.propTypes = {
+ListItem.propTypes = {
   item: React.PropTypes.any,
   icon: React.PropTypes.string,
 };
 
-export default OAuthLi;
+export default ListItem;

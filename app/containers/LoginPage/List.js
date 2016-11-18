@@ -4,7 +4,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-function OAuthUl(props) {
+function List(props) {
   const ComponentToRender = props.component;
   const Ul = styled.ul`
   display: inline-block; /* the key bit */
@@ -34,9 +34,9 @@ function OAuthUl(props) {
   );
 }
 
-OAuthUl.propTypes = {
+List.propTypes = {
   component: React.PropTypes.func.isRequired,
   items: React.PropTypes.array,
 };
 
-export default OAuthUl;
+export default List;

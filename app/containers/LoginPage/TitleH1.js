@@ -11,7 +11,7 @@ const title = css`
   margin-bottom: 30px;
 `;
 
-const OAuthTitleH1 = styled(H1)`
+const TitleH1 = styled(H1)`
   ${title}
   > p {
     font-size: 70%;
@@ -26,7 +26,7 @@ const OAuthTitleH1 = styled(H1)`
   }
 `;
 
-const OrTitleH1 = styled(H1)`
+const TitleH1Style1 = styled(H1)`
   ${title}
   > p {
     font-size: 70%;
@@ -48,4 +48,4 @@ const OrTitleH1 = styled(H1)`
   }
 `;
 
-export { OAuthTitleH1, OrTitleH1 };
+export { TitleH1, TitleH1Style1 };

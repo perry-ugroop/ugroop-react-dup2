@@ -11,19 +11,20 @@ import TwitterIcon from './assets/icon-twitter-transparent.png';
 import YahooIcon from './assets/icon-yahoo-transparent.png';
 import Img from 'components/Img';
 import A from 'components/A';
+import LogoH1 from 'components/LogoH1';
 /* import messages*/
 import messages from './messages';
 import { FormattedMessage } from 'react-intl';
 /* import own login component*/
+import BSRow from '../BootStrap/BSRow';
 import LoginForm from './loginform';
 import LoginBody from './LoginBody';
 import LoginPanel from './LoginPanel';
 import LoginPanelBody from './LoginPanelBody';
-import LogoH1 from './LogoH1';
-import OAuthWrapper from './OAuthWrapper';
-import { OAuthTitleH1, OrTitleH1 } from './TitleH1';
-import OAuthUl from './OAuthUl';
-import OAuthLi from './OAuthLi';
+import LoginWrapper from './LoginWrapper';
+import { TitleH1, TitleH1Style1 } from './TitleH1';
+import List from './List';
+import ListItem from './ListItem';
 
 export class LoginPage extends React.Component {
 
@@ -55,25 +56,25 @@ export class LoginPage extends React.Component {
           ]}
         />
         <LoginBody>
-          <div className={'row'}>
+          <BSRow>
             <LoginPanel>
               <LoginPanelBody>
                 <LogoH1>
                   <Img src={Logo} alt="ügroop" />
                 </LogoH1>
-                <OAuthWrapper>
-                  <OAuthTitleH1>
+                <LoginWrapper>
+                  <TitleH1>
                     <p><FormattedMessage {...messages.signinHeader} /></p>
-                  </OAuthTitleH1>
-                  <OAuthUl component={OAuthLi} items={listItems}></OAuthUl>
-                </OAuthWrapper>
-                <OrTitleH1>
+                  </TitleH1>
+                  <List component={ListItem} items={listItems}></List>
+                </LoginWrapper>
+                <TitleH1Style1>
                   <p><FormattedMessage {...messages.orHeader} /></p>
-                </OrTitleH1>
+                </TitleH1Style1>
                 <LoginForm />
               </LoginPanelBody>
             </LoginPanel>
-          </div>
+          </BSRow>
         </LoginBody>
       </article>
     );

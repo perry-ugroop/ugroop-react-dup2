@@ -6,31 +6,36 @@ import { connect } from 'react-redux';
 import { FormattedMessage } from 'react-intl';
 import messages from './messages';
 /* import components */
-import H1 from '../../components/H1';
+import LogoH1 from '../../components/LogoH1';
 import Img from '../../components/Img';
 import Logo from '../../shareAssets/logo-ugroop.png';
 import RegisterForm from './registerform';
-
+import RegisterBody from './RegisterBody';
+import BSRow from '../BootStrap/BSRow';
+import RegisterPanel from './RegisterPanel';
+import RegisterPanelBody from './RegisterPanelBody';
+import RegisterWrapper from './RegisterWrapper';
+import { TitleH1 } from '../LoginPage/TitleH1';
 export class RegisterPage extends React.Component {  // eslint-disable-line react/prefer-stateless-function
   render() {
     return (
-      <div className={`${'container ug-login-body'}`} >
-        <div className={'row'}>
-          <div className={`${'ug-login-panel ug-flat-border'}`} >
-            <div className={'ug-login-body'}>
-              <H1 className={'ug-logo'}>
+      <RegisterBody >
+        <BSRow>
+          <RegisterPanel wide>
+            <RegisterPanelBody >
+              <LogoH1>
                 <Img src={Logo} alt="ügroop" />
-              </H1>
-              <div className={'ug-oauth-wrapper'}>
-                <H1 className={'ug-oauth-title'}>
+              </LogoH1>
+              <RegisterWrapper>
+                <TitleH1>
                   <p><FormattedMessage {...messages.registerHeader} /></p>
-                </H1>
-              </div>
+                </TitleH1>
+              </RegisterWrapper>
               <RegisterForm />
-            </div>
-          </div>
-        </div>
-      </div>
+            </RegisterPanelBody>
+          </RegisterPanel>
+        </BSRow>
+      </RegisterBody>
     );
   }
 }
