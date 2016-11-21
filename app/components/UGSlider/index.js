@@ -8,7 +8,7 @@ import imgStudents from './assets/ugroop-group-student-sufing-ugroop-site.png';
 
 function Slider() {
   return (
-    <div className={"da-slider"}>
+    <div className={'da-slider'}>
       <Carousel>
         <Carousel.Item>
           <img src={imgStudents} alt="" />
@@ -53,7 +53,7 @@ function Slider() {
         </Carousel.Item>
       </Carousel>
     </div>
-    );
+  );
 }
 
 export default Slider;

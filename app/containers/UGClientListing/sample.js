@@ -11,8 +11,7 @@ export class UGClientListingSample extends React.Component {
     // const numbers = [1, 2, 3, 4, 5, 6];
 
     return (
-      <div className={"clients"}>
-
+      <div className={'clients'}>s
         <div className="container">
           <h1>Our Clients</h1>
           <ul className="client-logo">

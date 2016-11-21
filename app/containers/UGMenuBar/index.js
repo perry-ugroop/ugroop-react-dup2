@@ -19,7 +19,6 @@ import MenuItem from 'components/UGMenuItem';
 import messages from './messages';
 import { createStructuredSelector } from 'reselect';
 
-import menuStyles from './styles.css';
 
 export class UGMenuBar extends React.Component {
   openRoute = (route) => {
@@ -69,57 +68,45 @@ export class UGMenuBar extends React.Component {
     //   mainContent = (<List items={this.props.repos} component={RepoListItem} />);
     // }
     return (
-      <div className={"navbar-collapse collapse navbar-right nav-admin"}>
-        <ul className={"nav navbar-nav"}>
+      <div className={'navbar-collapse collapse navbar-right nav-admin'}>
+        <ul className={'nav navbar-nav'}>
           <li>
-            <MenuItem className={`${menuStyles.menuItem}`} handleRoute={this.openUGHomePage}>
+            <MenuItem className={'menuItem'} handleRoute={this.openUGHomePage}>
               <FormattedMessage {...messages.homeButton} />
             </MenuItem>
           </li>
           <li>
-            <MenuItem
-              className={`${menuStyles.menuItem}`}
-              handleRoute={this.openUGFeaturesPage}
-            >
+            <MenuItem handleRoute={this.openUGFeaturesPage}>
               <FormattedMessage {...messages.featuresButton} />
             </MenuItem>
           </li>
           <li>
-            <MenuItem
-              className={`${menuStyles.menuItem}`}
-              handleRoute={this.openUGPricingPage}
-            >
+            <MenuItem handleRoute={this.openUGPricingPage}>
               <FormattedMessage {...messages.pricingButton} />
             </MenuItem>
           </li>
           <li>
-            <MenuItem className={`${menuStyles.menuItem}`} handleRoute={this.openUGBlogPage}>
+            <MenuItem handleRoute={this.openUGBlogPage}>
               <FormattedMessage {...messages.blogButton} />
             </MenuItem>
           </li>
           <li>
-            <MenuItem className={`${menuStyles.menuItem}`} handleRoute={this.openUGFaqPage}>
+            <MenuItem handleRoute={this.openUGFaqPage}>
               <FormattedMessage {...messages.faqButton} />
             </MenuItem>
           </li>
           <li>
-            <MenuItem
-              className={`${menuStyles.menuItem}`}
-              handleRoute={this.openContactsPage}
-            >
+            <MenuItem handleRoute={this.openContactsPage}>
               <FormattedMessage {...messages.contactsButton} />
             </MenuItem>
           </li>
           <li>
-            <MenuItem
-              className={`${menuStyles.menuItem}`}
-              handleRoute={this.openRegistrationPage}
-            >
+            <MenuItem handleRoute={this.openRegistrationPage}>
               <FormattedMessage {...messages.registerButton} />
             </MenuItem>
           </li>
           <li>
-            <MenuItem className={`${menuStyles.menuItem}`} handleRoute={this.openLoginPage}>
+            <MenuItem handleRoute={this.openLoginPage}>
               <FormattedMessage {...messages.loginButton} />
             </MenuItem>
           </li>

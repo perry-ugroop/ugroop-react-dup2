@@ -11,7 +11,7 @@ function ClientDisplay(props) {
     </li>
   );
   return (
-    <ul className={"client-logo fademe"}>{ listItems}</ul>
+    <ul className={'client-logo fademe'}>{ listItems }</ul>
   );
 }
 
@@ -28,8 +28,8 @@ export class UGClientListing extends React.Component {
 
   render() {
     return (
-      <div className={"clients"}>
-        <div className={"container"}>
+      <div className={'clients'}>
+        <div className={'container'}>
           <h1> Our Clients </h1>
           <ClientDisplay listing={clientList} />
         </div>

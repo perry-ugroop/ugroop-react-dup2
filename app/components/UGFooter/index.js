@@ -1,21 +1,21 @@
 import React from 'react';
 
 import messages from './messages';
-import styles from './styles.css';
 import { FormattedMessage } from 'react-intl';
+import BSContainer from '../../containers/BootStrap/BSContainer';
 
 function Footer() {
   return (
-    <footer className={styles.footer}>
+    <footer>
       <div><p></p></div>
-      <div className={"container"}>
+      <BSContainer>
         <p><FormattedMessage {...messages.copyrightMessage} /></p>
-        <button type="button" className={"btn btn-default goto-up"}>
-          <div className={"glyphicon glyphicon-chevron-up"} aria-hidden="true"></div>
+        <button type="button" className={'btn btn-default goto-up'}>
+          <div className={'glyphicon glyphicon-chevron-up'} aria-hidden="true"></div>
         </button>
-      </div>
+      </BSContainer>
     </footer>
-    );
+  );
 }
 
 export default Footer;

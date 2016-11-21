@@ -21,7 +21,7 @@ export class UGBlogPage extends React.Component {
                 <h1>Blog Title</h1>
                 <span className="blog-date">January 10, 2015</span>
                 <p className="top-10">
-                  <img src="./assets/photo2.png" width="243" height="244" className={"thumbnail pull-left blog-photo"} style={{ margin: '0 20px 20px 0' }} alt="" />
+                  <img src="./assets/photo2.png" width="243" height="244" className={'thumbnail pull-left blog-photo'} style={{ margin: '0 20px 20px 0' }} alt="" />
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel arcu ante. Quisque venenatis, risus eu varius ultricies, augue nunc ultrices odio.orci nibh vitae nunc.
                   Nullam dignissim consectetur felis in sodales. Duis volutpat gravida hendrerit. Nullam pellentesque pulvinar porta. Cras tortor dui, ornare et blandit vel, molestie eu
                   lectus. Sed nisi ligula, aliquam sit amet feugiat eu, mattis in tortor. Donec fermentum massa nec quam scelerisque efficitur.
