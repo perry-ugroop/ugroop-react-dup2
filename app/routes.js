@@ -83,8 +83,8 @@ export default function createRoutes(store) {
       name: 'registration',
       getComponent(nextState, cb) {
         const importModules = Promise.all([
-          System.import('containers/RegisterPage/reducer'),
-          System.import('containers/RegisterPage'),
+          System.import('containers/UGRegisterPage/reducer'),
+          System.import('containers/UGRegisterPage'),
         ]);
         const renderRoute = loadModule(cb);
         importModules.then(([reducer, component]) => {
