@@ -7,14 +7,14 @@ import messages from './messages';
 import { FormattedMessage } from 'react-intl';
 import { isEmptyString } from '../../utils/stringAdditions';
 import { createStructuredSelector } from 'reselect';
-/*
- import { selectAddTourPage, selectTourName, selectDestCity, selectDepartDate, selectArrivalDate, selectParticipantFlag,
+import DateInput from './DateInput';
+import { selectTourName, selectDestCity, selectDepartDate, selectArrivalDate, selectParticipantFlag,
  selectTourPhoto, selectTourNameError, selectDestCityError, selectDepartDateError, selectArrivalDateError,
- selectParticipantFlagError, selectTourPhotoError } from './selectors';
- */
-// import {  } from './actions';
-// import validationRule from '../../utils/validationrule';
-// import { CHANGE_TOURNAME } from './constants';
+} from './selectors';
+
+import { changeTourName, changeDestCity, validText, validDate } from './actions';
+import validationRule from '../../utils/validationrule';
+import { TOURNAME_FIELD, DESTCITY_FIELD, DEPARTDATE_FIELD, ARRIVALDATE_FIELD } from './constants';
 
 import { Glyphicon } from 'react-bootstrap';
 
@@ -46,32 +46,23 @@ export class AddTourForm extends React.Component {
   }
 
   render() {
-    let tourName;
+    let tourNameError;
     if (!isEmptyString(this.props.tourNameError)) {
-      tourName = { id: 'tourNameError', defaultMessage: this.props.tourNameError };
+      tourNameError = { id: 'tourNameError', defaultMessage: this.props.tourNameError };
     }
-    console.log(tourName);
-    let destCity;
+    let destCityError;
     if (!isEmptyString(this.props.destCityError)) {
-      destCity = { id: 'destCityError', defaultMessage: this.props.destCityError };
+      destCityError = { id: 'destCityError', defaultMessage: this.props.destCityError };
     }
-    console.log(destCity);
-    let departDate;
+
+    let departDateError;
     if (!isEmptyString(this.props.departDateError)) {
-      departDate = { id: 'departDateError', defaultMessage: this.props.departDateError };
+      departDateError = { id: 'departDateError', defaultMessage: this.props.departDateError };
     }
-    console.log(departDate);
-    let arrivalDate;
+    let arrivalDateError;
     if (!isEmptyString(this.props.arrivalDateError)) {
-      arrivalDate = { id: 'arrivalDateError', defaultMessage: this.props.arrivalDateError };
+      arrivalDateError = { id: 'arrivalDateError', defaultMessage: this.props.arrivalDateError };
     }
-    console.log(arrivalDate);
-    const tourDesc = null;
-    const participantFlag = null;
-    const tourPhoto = null;
-    console.log(tourDesc);
-    console.log(participantFlag);
-    console.log(tourPhoto);
     return (
       <form>
         <UGBoxBodyWrapper>
@@ -89,6 +80,7 @@ export class AddTourForm extends React.Component {
                     onChange={this.props.onChangeTourName}
                     onBlur={this.props.onBlurTourName}
                   />
+                  {this.wrapErrorMessage(tourNameError)}
                 </BSFormGroup>
               </BSColumnHalf>
 
@@ -103,6 +95,7 @@ export class AddTourForm extends React.Component {
                     onChange={this.props.onChangeDestCity}
                     onBlur={this.props.onBlurDestCity}
                   />
+                  {this.wrapErrorMessage(destCityError)}
                 </BSFormGroup>
               </BSColumnHalf>
             </BSRow>
@@ -115,7 +108,7 @@ export class AddTourForm extends React.Component {
                     <AddOnSpan>
                       <Glyphicon glyph="calendar" />
                     </AddOnSpan>
-                    <Input
+                    <DateInput
                       type="text"
                       name="DepartDate"
                       placeholder={messages.departDatePlaceholder.defaultMessage}
@@ -124,6 +117,7 @@ export class AddTourForm extends React.Component {
                       onBlur={this.props.onBlurDepartDate}
                     />
                   </BSInputGroup>
+                  {this.wrapErrorMessage(departDateError)}
                 </BSFormGroup>
               </BSColumnHalf>
 
@@ -134,7 +128,7 @@ export class AddTourForm extends React.Component {
                     <AddOnSpan>
                       <Glyphicon glyph="calendar" />
                     </AddOnSpan>
-                    <Input
+                    <DateInput
                       type="text"
                       name="ArrivalDate"
                       placeholder={messages.arrivalDatePlaceholder.defaultMessage}
@@ -143,6 +137,7 @@ export class AddTourForm extends React.Component {
                       onBlur={this.props.onBlurArrivalDate}
                     />
                   </BSInputGroup>
+                  {this.wrapErrorMessage(arrivalDateError)}
                 </BSFormGroup>
               </BSColumnHalf>
             </BSRow>
@@ -184,9 +179,6 @@ export class AddTourForm extends React.Component {
                   <Input
                     type="text"
                     name="txtfilephoto"
-                    value={this.props.departDate}
-                    onChange={this.props.onChangeDepartDate}
-                    onBlur={this.props.onBlurDepartDate}
                     readOnly="readOnly"
                   />
                 </BSInputGroup>
@@ -240,10 +232,32 @@ AddTourForm.propTypes = {
   tourDesc: React.PropTypes.string,
 };
 
-const mapStateToProps = createStructuredSelector({});
+const mapStateToProps = createStructuredSelector({
+  tourName: selectTourName(),
+  tourNameError: selectTourNameError(),
+  destCity: selectDestCity(),
+  destCityError: selectDestCityError(),
+  departDate: selectDepartDate(),
+  departDateError: selectDepartDateError(),
+  arrivalDate: selectArrivalDate(),
+  arrivalDateError: selectArrivalDateError(),
+});
 
 export function mapDispatchToProps(dispatch) {
   return {
+    onChangeTourName: (evt) => dispatch(changeTourName(evt.target.value)),
+    onChangeDestCity: (evt) => dispatch(changeDestCity(evt.target.value)),
+    onChangeDepartDate: (evt) => dispatch(validDate({ date: evt, field: DEPARTDATE_FIELD })),
+    onChangeArrivalDate: (evt) => dispatch(validDate({ date: evt, field: ARRIVALDATE_FIELD })),
+    onBlurTourName: (evt) => dispatch(validText({ text: evt.target.value,
+      regExps: [validationRule.characterConstraints],
+      field: TOURNAME_FIELD })),
+    onBlurDestCity: (evt) => dispatch(validText({ text: evt.target.value,
+      regExps: [validationRule.characterConstraints],
+      field: DESTCITY_FIELD })),
+    onBlurDepartDate: (evt) => dispatch(validDate({ date: evt.target.value, field: DEPARTDATE_FIELD })),
+    onBlurArrivalDate: (evt) => dispatch(validDate({ date: evt.target.value, field: ARRIVALDATE_FIELD })),
+
     dispatch,
   };
 }

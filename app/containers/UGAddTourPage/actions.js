@@ -2,8 +2,10 @@
  * Created by Yang on 28/10/16.
  */
 import {
-  CHANGE_USERNAME,
-  CHANGE_PASSWORD,
+  CHANGE_TOURNAME,
+  CHANGE_DESTCITY,
+  VALIDATE_FIELD,
+  VALIDATE_DATE,
 } from './constants';
 
 /**
@@ -13,9 +15,9 @@ import {
  *
  * @return {object}    An action object with a type of CHANGE_USERNAME
  */
-function changeUsername(name) {
+function changeTourName(name) {
   return {
-    type: CHANGE_USERNAME,
+    type: CHANGE_TOURNAME,
     name,
   };
 }
@@ -28,11 +30,27 @@ function changeUsername(name) {
  * @return {object}    An action object with a type of CHANGE_PASSWORD
  */
 
-function changePassword(password) {
+function changeDestCity(name) {
   return {
-    type: CHANGE_PASSWORD,
-    password,
+    type: CHANGE_DESTCITY,
+    name,
   };
 }
 
-export { changeUsername, changePassword };
+function validText({ text, field, regExps }) {
+  return {
+    type: VALIDATE_FIELD,
+    field,
+    text,
+    regExps,
+  };
+}
+
+function validDate({ date, field }) {
+  return {
+    type: VALIDATE_DATE,
+    date,
+    field,
+  };
+}
+export { changeTourName, changeDestCity, validText, validDate };

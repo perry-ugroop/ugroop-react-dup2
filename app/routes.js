@@ -96,6 +96,36 @@ export default function createRoutes(store) {
         importModules.catch(errorLoading);
       },
     }, {
+      path: '/tour',
+      name: 'tour',
+      getComponent(nextState, cb) {
+        const importModules = Promise.all([
+          System.import('containers/UGTourPage/reducer'),
+          System.import('containers/UGTourPage'),
+        ]);
+        const renderRoute = loadModule(cb);
+        importModules.then(([reducer, component]) => {
+          injectReducer('tour', reducer.default);
+          renderRoute(component);
+        });
+        importModules.catch(errorLoading);
+      },
+    }, {
+      path: '/addTour',
+      name: 'addTour',
+      getComponent(nextState, cb) {
+        const importModules = Promise.all([
+          System.import('containers/UGAddTourPage/reducer'),
+          System.import('containers/UGAddTourPage'),
+        ]);
+        const renderRoute = loadModule(cb);
+        importModules.then(([reducer, component]) => {
+          injectReducer('addATour', reducer.default);
+          renderRoute(component);
+        });
+        importModules.catch(errorLoading);
+      },
+    }, {
       path: '*',
       name: 'notfound',
       getComponent(nextState, cb) {

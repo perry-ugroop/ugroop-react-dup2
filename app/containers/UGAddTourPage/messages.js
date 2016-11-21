@@ -20,7 +20,7 @@ export default defineMessages({
   },
   destCityLabel: {
     id: 'ugroop.containers.AddTourForm.destCity.label',
-    defaultMessage: 'Destination City*',
+    defaultMessage: 'Destination City',
   },
   destCityPlaceholder: {
     id: 'ugroop.containers.AddTourForm.destCity.field',
@@ -32,7 +32,7 @@ export default defineMessages({
   },
   departDatePlaceholder: {
     id: 'ugroop.containers.AddTourForm.departDate.field',
-    defaultMessage: 'dd/mm/yy',
+    defaultMessage: 'DD/MM/YYYY',
   },
   arrivalDateLabel: {
     id: 'ugroop.containers.AddTourForm.arrivalDate.label',
@@ -40,7 +40,7 @@ export default defineMessages({
   },
   arrivalDatePlaceholder: {
     id: 'ugroop.containers.AddTourForm.arrivalDate.field',
-    defaultMessage: 'dd/mm/yy',
+    defaultMessage: 'DD/MM/YYYY',
   },
   tourDescLabel: {
     id: 'ugroop.containers.AddTourForm.tourDesc.label',
@@ -65,5 +65,13 @@ export default defineMessages({
   cancelButton: {
     id: 'ugroop.containers.AddTourForm.cancel.field',
     defaultMessage: 'Cancel',
+  },
+  cannotbeEmptyError: {
+    id: 'ugroop.containers.AddTourForm.add.cannotBeEmpty',
+    defaultMessage: 'Field cannot be empty',
+  },
+  cannotbeBeforeCurrentDateError: {
+    id: 'ugroop.containers.AddTourForm.add.cannotBeBeforeCurrentDate',
+    defaultMessage: 'Must be greater than or equal the current date',
   },
 });

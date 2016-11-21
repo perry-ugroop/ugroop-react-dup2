@@ -6,7 +6,7 @@ import { TOURNAME_FIELD, DESTCITY_FIELD, DEPARTDATE_FIELD, ARRIVALDATE_FIELD, PA
   ADDTOUR_STATEKEY, ADDTOURERROR_STATEKEY } from './constants';
 
 
-const selectAddTourPage = () => (state) => state.get('addtour');
+const selectAddTourPage = () => (state) => state.get('addATour');
 
 const selectTourName = () => createSelector(
   selectAddTourPage(),

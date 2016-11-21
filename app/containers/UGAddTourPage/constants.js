@@ -21,7 +21,8 @@ export const CHANGE_TOURDESC = 'ugroop/AddTour/CHANGE_TOURDESC';
 export const CHANGE_PARTICIPANTFLAG = 'ugroop/AddTour/PARTICIPANTFLAG';
 export const CHANGE_TOURPHOTO = 'ugroop/AddTour/CHANGE_TOURPHOTO';
 export const VALIDATE_FIELD = 'ugroop/AddTour/VALIDATE_FIELD';
-export const VALIDATE_TOURNAME = 'ugroop/AddTour/VALIDATE_TOURNAME';
+export const VALIDATE_DATE = 'ugroop/AddTour/VALIDATE_DATE';
+
 
 // action payload key
 export const TOURNAME_FIELD = 'tourName';
@@ -30,6 +31,6 @@ export const DEPARTDATE_FIELD = 'departDate';
 export const ARRIVALDATE_FIELD = 'arrivalDate';
 export const PARTICIPANTFLAG_FIELD = 'participantFlag';
 export const TOURPHOTO_FIELD = 'tourPhoto';
-export const ADDTOUR_STATEKEY = 'addTour';
-export const ADDTOURERROR_STATEKEY = 'addTourError';
+export const ADDTOUR_STATEKEY = 'addTourState';
+export const ADDTOURERROR_STATEKEY = 'addTourStateError';
 
