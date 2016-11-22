@@ -42,64 +42,17 @@ export default function createRoutes(store) {
       path: '/features',
       name: 'features',
       getComponent(nextState, cb) {
-        System.import('containers/UGFeaturePage')
+        System.import('containers/FeaturePage')
           .then(loadModule(cb))
           .catch(errorLoading);
-      },
-    }, {
-      path: '/blog',
-      name: 'blog',
-      getComponent(nextState, cb) {
-        System.import('containers/UGBlogPage')
-          .then(loadModule(cb))
-          .catch(errorLoading);
-      },
-    }, {
-      path: '/pricing',
-      name: 'pricing',
-      getComponent(nextState, cb) {
-        System.import('containers/UGPricingPage')
-          .then(loadModule(cb))
-          .catch(errorLoading);
-      },
-    }, {
-      path: '/contacts',
-      name: 'contacts',
-      getComponent(nextState, cb) {
-        System.import('containers/UGContactsPage')
-          .then(loadModule(cb))
-          .catch(errorLoading);
-      },
-    }, {
-      path: '/faq',
-      name: 'faq',
-      getComponent(nextState, cb) {
-        System.import('containers/UGFaqPage')
-          .then(loadModule(cb))
-          .catch(errorLoading);
-      },
-    }, {
-      path: '/registration',
-      name: 'registration',
-      getComponent(nextState, cb) {
-        const importModules = Promise.all([
-          System.import('containers/UGRegisterPage/reducer'),
-          System.import('containers/UGRegisterPage'),
-        ]);
-        const renderRoute = loadModule(cb);
-        importModules.then(([reducer, component]) => {
-          injectReducer('register', reducer.default);
-          renderRoute(component);
-        });
-        importModules.catch(errorLoading);
       },
     }, {
       path: '/login',
       name: 'login',
       getComponent(nextState, cb) {
         const importModules = Promise.all([
-          System.import('containers/UGLoginPage/reducer'),
-          System.import('containers/UGLoginPage'),
+          System.import('containers/LoginPage/reducer'),
+          System.import('containers/LoginPage'),
         ]);
 
         const renderRoute = loadModule(cb);
@@ -116,8 +69,8 @@ export default function createRoutes(store) {
       name: 'forgetpassword',
       getComponent(nextState, cb) {
         const importModules = Promise.all([
-          System.import('containers/UGForgetPasswordPage/reducer'),
-          System.import('containers/UGForgetPasswordPage'),
+          System.import('containers/ForgetPasswordPage/reducer'),
+          System.import('containers/ForgetPasswordPage'),
         ]);
         const renderRoute = loadModule(cb);
         importModules.then(([reducer, component]) => {
@@ -132,46 +85,12 @@ export default function createRoutes(store) {
       name: 'registration',
       getComponent(nextState, cb) {
         const importModules = Promise.all([
-          System.import('containers/UGRegisterPage/reducer'),
-          System.import('containers/UGRegisterPage'),
+          System.import('containers/RegisterPage/reducer'),
+          System.import('containers/RegisterPage'),
         ]);
         const renderRoute = loadModule(cb);
         importModules.then(([reducer, component]) => {
           injectReducer('register', reducer.default);
-          renderRoute(component);
-        });
-        importModules.catch(errorLoading);
-      },
-    },
-    /*
-    {
-      path: '/tour',
-      name: 'tour',
-      getComponent(nextState, cb) {
-        const importModules = Promise.all([
-          System.import('containers/UGTourPage/reducer'),
-          System.import('containers/UGTourPage'),
-        ]);
-        const renderRoute = loadModule(cb);
-        importModules.then(([reducer, component]) => {
-          injectReducer('tour', reducer.default);
-          renderRoute(component);
-        });
-        importModules.catch(errorLoading);
-      },
-    },
-    */
-    {
-      path: '/addTour',
-      name: 'addTour',
-      getComponent(nextState, cb) {
-        const importModules = Promise.all([
-          System.import('containers/UGAddTourPage/reducer'),
-          System.import('containers/UGAddTourPage'),
-        ]);
-        const renderRoute = loadModule(cb);
-        importModules.then(([reducer, component]) => {
-          injectReducer('addATour', reducer.default);
           renderRoute(component);
         });
         importModules.catch(errorLoading);
