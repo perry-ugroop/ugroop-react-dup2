@@ -15,10 +15,10 @@ import {
  *
  * @return {object}    An action object with a type of CHANGE_USERNAME
  */
-function changeTourName(name) {
+function changeTourName(tourName) {
   return {
     type: CHANGE_TOURNAME,
-    name,
+    tourName,
   };
 }
 
@@ -30,10 +30,10 @@ function changeTourName(name) {
  * @return {object}    An action object with a type of CHANGE_PASSWORD
  */
 
-function changeDestCity(name) {
+function changeDestCity(destCity) {
   return {
     type: CHANGE_DESTCITY,
-    name,
+    destCity,
   };
 }
 
@@ -46,7 +46,7 @@ function validText({ text, field, regExps }) {
   };
 }
 
-function validDate({ date, field }) {
+function  validDate({ date, field }) {
   return {
     type: VALIDATE_DATE,
     date,

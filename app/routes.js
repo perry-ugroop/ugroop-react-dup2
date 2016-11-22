@@ -95,7 +95,9 @@ export default function createRoutes(store) {
         });
         importModules.catch(errorLoading);
       },
-    }, {
+    },
+    /*
+    {
       path: '/tour',
       name: 'tour',
       getComponent(nextState, cb) {
@@ -110,7 +112,9 @@ export default function createRoutes(store) {
         });
         importModules.catch(errorLoading);
       },
-    }, {
+    },
+    */
+    {
       path: '/addTour',
       name: 'addTour',
       getComponent(nextState, cb) {

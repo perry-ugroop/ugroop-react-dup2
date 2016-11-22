@@ -55,6 +55,7 @@ function addTourReducer(state = initialState, action) {
   }
 }
 function validateDate(date, field, state) {
+  state = state.setIn([ADDTOUR_STATEKEY, field], date);
   const fieldError = field.concat('Error');
   if (isEmptyString(date)) {
     return state.setIn([ADDTOURERROR_STATEKEY, fieldError], messages.cannotbeEmptyError.defaultMessage);

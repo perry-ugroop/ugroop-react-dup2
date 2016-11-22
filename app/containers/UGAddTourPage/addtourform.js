@@ -12,7 +12,7 @@ import { selectTourName, selectDestCity, selectDepartDate, selectArrivalDate, se
  selectTourPhoto, selectTourNameError, selectDestCityError, selectDepartDateError, selectArrivalDateError,
 } from './selectors';
 
-import { changeTourName, changeDestCity, validText, validDate } from './actions';
+import { changeTourName, changeDestCity, changeDepartDate, validText, validDate } from './actions';
 import validationRule from '../../utils/validationrule';
 import { TOURNAME_FIELD, DESTCITY_FIELD, DEPARTDATE_FIELD, ARRIVALDATE_FIELD } from './constants';
 
@@ -109,7 +109,7 @@ export class AddTourForm extends React.Component {
                       <Glyphicon glyph="calendar" />
                     </AddOnSpan>
                     <DateInput
-                      type="text"
+                      dateFormat={messages.departDatePlaceholder.defaultMessage}
                       name="DepartDate"
                       placeholder={messages.departDatePlaceholder.defaultMessage}
                       value={this.props.departDate}
@@ -129,7 +129,7 @@ export class AddTourForm extends React.Component {
                       <Glyphicon glyph="calendar" />
                     </AddOnSpan>
                     <DateInput
-                      type="text"
+                      dateFormat={messages.departDatePlaceholder.defaultMessage}
                       name="ArrivalDate"
                       placeholder={messages.arrivalDatePlaceholder.defaultMessage}
                       value={this.props.arrivalDate}
@@ -149,7 +149,7 @@ export class AddTourForm extends React.Component {
                   <Textarea
                     type="text"
                     name="TourDesc"
-                    rows={5}
+                    rows={"5"}
                     value={this.props.tourDesc}
                     onChange={this.props.onChangeTourDesc}
                     onBlur={this.props.onBlurTourDesc}
