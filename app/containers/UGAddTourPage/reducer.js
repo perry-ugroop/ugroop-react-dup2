@@ -32,8 +32,6 @@ const initialState = fromJS({
     destCityError: '',
     departDateError: '',
     arrivalDateError: '',
-    participantFlagError: '',
-    tourDescError: '',
     tourPhotoError: '',
   }),
 });
@@ -55,19 +53,19 @@ function addTourReducer(state = initialState, action) {
   }
 }
 function validateDate(date, field, state) {
-  state = state.setIn([ADDTOUR_STATEKEY, field], date);
+  const newState = state.setIn([ADDTOUR_STATEKEY, field], date);
   const fieldError = field.concat('Error');
   if (isEmptyString(date)) {
     return state.setIn([ADDTOURERROR_STATEKEY, fieldError], messages.cannotbeEmptyError.defaultMessage);
   }
   const a = new Date(date);
   const today = new Date();
-  const msDateA = Date.UTC(a.getFullYear(), a.getMonth()+1, a.getDate());
-  const msDateB = Date.UTC(today.getFullYear(), today.getMonth()+1, today.getDate());
+  const msDateA = Date.UTC(a.getFullYear(), a.getMonth() + 1, a.getDate());
+  const msDateB = Date.UTC(today.getFullYear(), today.getMonth() + 1, today.getDate());
   if (msDateA < msDateB) {
-    return state.setIn([ADDTOURERROR_STATEKEY, fieldError], messages.cannotbeBeforeCurrentDateError.defaultMessage);
+    return newState.setIn([ADDTOURERROR_STATEKEY, fieldError], messages.cannotbeBeforeCurrentDateError.defaultMessage);
   }
-  return state.setIn([ADDTOURERROR_STATEKEY, fieldError], '');
+  return newState.setIn([ADDTOURERROR_STATEKEY, fieldError], '');
 }
 
 function validateText(text, field, regExps, state) {

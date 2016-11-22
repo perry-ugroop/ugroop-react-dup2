@@ -2,8 +2,8 @@
  * Created by yunzhou on 20/11/2016.
  */
 import { createSelector } from 'reselect';
-import { TOURNAME_FIELD, DESTCITY_FIELD, DEPARTDATE_FIELD, ARRIVALDATE_FIELD, PARTICIPANTFLAG_FIELD, TOURPHOTO_FIELD,
-  ADDTOUR_STATEKEY, ADDTOURERROR_STATEKEY } from './constants';
+import { TOURNAME_FIELD, DESTCITY_FIELD, DEPARTDATE_FIELD, ARRIVALDATE_FIELD, TOURDESC_FIELD,
+  PARTICIPANTFLAG_FIELD, TOURPHOTO_FIELD, ADDTOUR_STATEKEY, ADDTOURERROR_STATEKEY } from './constants';
 
 
 const selectAddTourPage = () => (state) => state.get('addATour');
@@ -26,6 +26,11 @@ const selectDepartDate = () => createSelector(
 const selectArrivalDate = () => createSelector(
   selectAddTourPage(),
   (addTourState) => addTourState.getIn([ADDTOUR_STATEKEY, ARRIVALDATE_FIELD])
+);
+
+const selectTourDesc = () => createSelector(
+  selectAddTourPage(),
+  (addTourState) => addTourState.getIn([ADDTOUR_STATEKEY, TOURDESC_FIELD])
 );
 
 const selectParticipantFlag = () => createSelector(
@@ -59,11 +64,6 @@ const selectArrivalDateError = () => createSelector(
   (addTourState) => addTourState.getIn([ADDTOURERROR_STATEKEY, ARRIVALDATE_FIELD.concat('Error')])
 );
 
-const selectParticipantFlagError = () => createSelector(
-  selectAddTourPage(),
-  (addTourState) => addTourState.getIn([ADDTOURERROR_STATEKEY, PARTICIPANTFLAG_FIELD.concat('Error')])
-);
-
 const selectTourPhotoError = () => createSelector(
   selectAddTourPage(),
   (addTourState) => addTourState.getIn([ADDTOURERROR_STATEKEY, TOURPHOTO_FIELD.concat('Error')])
@@ -76,12 +76,12 @@ export {
   selectDestCity,
   selectDepartDate,
   selectArrivalDate,
+  selectTourDesc,
   selectParticipantFlag,
   selectTourPhoto,
   selectTourNameError,
   selectDestCityError,
   selectDepartDateError,
   selectArrivalDateError,
-  selectParticipantFlagError,
   selectTourPhotoError,
 };

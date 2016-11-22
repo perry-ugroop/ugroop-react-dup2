@@ -8,13 +8,7 @@ import {
   VALIDATE_DATE,
 } from './constants';
 
-/**
- * Changes the input field of the form
- *
- * @param  {name} name The new text of the input field
- *
- * @return {object}    An action object with a type of CHANGE_USERNAME
- */
+
 function changeTourName(tourName) {
   return {
     type: CHANGE_TOURNAME,
@@ -22,13 +16,6 @@ function changeTourName(tourName) {
   };
 }
 
-/**
- * Changes the input field of the form
- *
- * @param  {password} password The new text of the input field
- *
- * @return {object}    An action object with a type of CHANGE_PASSWORD
- */
 
 function changeDestCity(destCity) {
   return {
@@ -46,7 +33,7 @@ function validText({ text, field, regExps }) {
   };
 }
 
-function  validDate({ date, field }) {
+function validDate({ date, field }) {
   return {
     type: VALIDATE_DATE,
     date,

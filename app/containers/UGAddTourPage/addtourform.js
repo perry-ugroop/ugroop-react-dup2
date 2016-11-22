@@ -8,11 +8,11 @@ import { FormattedMessage } from 'react-intl';
 import { isEmptyString } from '../../utils/stringAdditions';
 import { createStructuredSelector } from 'reselect';
 import DateInput from './DateInput';
-import { selectTourName, selectDestCity, selectDepartDate, selectArrivalDate, selectParticipantFlag,
- selectTourPhoto, selectTourNameError, selectDestCityError, selectDepartDateError, selectArrivalDateError,
+import { selectTourName, selectDestCity, selectDepartDate, selectArrivalDate,
+  selectTourNameError, selectDestCityError, selectDepartDateError, selectArrivalDateError,
 } from './selectors';
 
-import { changeTourName, changeDestCity, changeDepartDate, validText, validDate } from './actions';
+import { changeTourName, changeDestCity, validText, validDate } from './actions';
 import validationRule from '../../utils/validationrule';
 import { TOURNAME_FIELD, DESTCITY_FIELD, DEPARTDATE_FIELD, ARRIVALDATE_FIELD } from './constants';
 
@@ -149,7 +149,7 @@ export class AddTourForm extends React.Component {
                   <Textarea
                     type="text"
                     name="TourDesc"
-                    rows={"5"}
+                    rows={5}
                     value={this.props.tourDesc}
                     onChange={this.props.onChangeTourDesc}
                     onBlur={this.props.onBlurTourDesc}

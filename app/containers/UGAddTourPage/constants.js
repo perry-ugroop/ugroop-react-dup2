@@ -15,11 +15,11 @@
 // action type const
 export const CHANGE_TOURNAME = 'ugroop/AddTour/CHANGE_TOURNAME';
 export const CHANGE_DESTCITY = 'ugroop/AddTour/CHANGE_DESTCITY';
-export const CHANGE_DEPARTDATE = 'ugroop/AddTour/CHANGE_DEPARTDATE';
-export const CHANGE_ARRIVALDATE = 'ugroop/AddTour/CHANGE_ARRIVALDATE';
-export const CHANGE_TOURDESC = 'ugroop/AddTour/CHANGE_TOURDESC';
-export const CHANGE_PARTICIPANTFLAG = 'ugroop/AddTour/PARTICIPANTFLAG';
-export const CHANGE_TOURPHOTO = 'ugroop/AddTour/CHANGE_TOURPHOTO';
+// export const CHANGE_DEPARTDATE = 'ugroop/AddTour/CHANGE_DEPARTDATE';
+// export const CHANGE_ARRIVALDATE = 'ugroop/AddTour/CHANGE_ARRIVALDATE';
+// export const CHANGE_TOURDESC = 'ugroop/AddTour/CHANGE_TOURDESC';
+// export const CHANGE_PARTICIPANTFLAG = 'ugroop/AddTour/PARTICIPANTFLAG';
+// export const CHANGE_TOURPHOTO = 'ugroop/AddTour/CHANGE_TOURPHOTO';
 export const VALIDATE_FIELD = 'ugroop/AddTour/VALIDATE_FIELD';
 export const VALIDATE_DATE = 'ugroop/AddTour/VALIDATE_DATE';
 
@@ -29,6 +29,7 @@ export const TOURNAME_FIELD = 'tourName';
 export const DESTCITY_FIELD = 'destCity';
 export const DEPARTDATE_FIELD = 'departDate';
 export const ARRIVALDATE_FIELD = 'arrivalDate';
+export const TOURDESC_FIELD = 'tourDesc';
 export const PARTICIPANTFLAG_FIELD = 'participantFlag';
 export const TOURPHOTO_FIELD = 'tourPhoto';
 export const ADDTOUR_STATEKEY = 'addTourState';
