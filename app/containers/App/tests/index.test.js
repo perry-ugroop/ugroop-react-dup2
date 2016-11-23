@@ -1,6 +1,6 @@
 import App from '../index';
-import Header from 'components/Header';
-import Footer from 'components/Footer';
+import UGHeader from 'components/UGHeader';
+import UGFooter from 'components/UGFooter';
 
 import { shallow } from 'enzyme';
 import React from 'react';
@@ -10,7 +10,7 @@ describe('<App />', () => {
     const renderedComponent = shallow(
       <App />
     );
-    expect(renderedComponent.find(Header).length).toBe(1);
+    expect(renderedComponent.find(UGHeader).length).toBe(1);
   });
 
   it('should render its children', () => {
@@ -27,6 +27,6 @@ describe('<App />', () => {
     const renderedComponent = shallow(
       <App />
     );
-    expect(renderedComponent.find(Footer).length).toBe(1);
+    expect(renderedComponent.find(UGFooter).length).toBe(1);
   });
 });
