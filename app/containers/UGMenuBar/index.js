@@ -2,30 +2,15 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { push } from 'react-router-redux';
 import { FormattedMessage } from 'react-intl';
-
-import { selectRepos, selectLoading, selectError } from 'containers/App/selectors';
-
-import { selectUsername } from './selectors';
-
-import { changeUsername } from './actions';
-import { loadRepos } from '../App/actions';
-
-// import RepoListItem from 'containers/RepoListItem';
-// import List from 'components/List';
-// import ListItem from 'components/ListItem';
-// import LoadingIndicator from 'components/LoadingIndicator';
-
 import MenuItem from 'components/UGMenuItem';
 import messages from './messages';
 import { createStructuredSelector } from 'reselect';
-
-
 export class UGMenuBar extends React.Component {
+
   openRoute = (route) => {
-    this
-      .props
-      .changeRoute(route);
+    this.props.changeRoute(route);
   };
+
   openUGHomePage = () => {
     this.openRoute('/');
   };
@@ -52,21 +37,6 @@ export class UGMenuBar extends React.Component {
   }
 
   render() {
-    // let mainContent = null;
-
-    // // Show a loading indicator when we're loading
-    // if (this.props.loading) {
-    //   mainContent = (<List component={LoadingIndicator} />);
-
-    //   // Show an error if there is one
-    // } else if (this.props.error !== false) {
-    //   const ErrorComponent = () => (<ListItem item={'Something went wrong, please try again!'} />);
-    //   mainContent = (<List component={ErrorComponent} />);
-
-    //   // If we're not loading, don't have an error and there are repos, show the repos
-    // } else if (this.props.repos !== false) {
-    //   mainContent = (<List items={this.props.repos} component={RepoListItem} />);
-    // }
     return (
       <div className={'navbar-collapse collapse navbar-right nav-admin'}>
         <ul className={'nav navbar-nav'}>
@@ -96,7 +66,7 @@ export class UGMenuBar extends React.Component {
             </MenuItem>
           </li>
           <li>
-            <MenuItem handleRoute={this.openContactsPage}>
+            <MenuItem handleRoute={this.openUGContactsPage}>
               <FormattedMessage {...messages.contactsButton} />
             </MenuItem>
           </li>
@@ -118,34 +88,17 @@ export class UGMenuBar extends React.Component {
 
 UGMenuBar.propTypes = {
   changeRoute: React.PropTypes.func,
-  // loading: React.PropTypes.bool,
-  // error: React
-  //   .PropTypes
-  //   .oneOfType([React.PropTypes.object, React.PropTypes.bool]),
-  // repos: React
-  //   .PropTypes
-  //   .oneOfType([React.PropTypes.array, React.PropTypes.bool]),
-  // onSubmitForm: React.PropTypes.func,
-  // username: React.PropTypes.string,
-  // onChangeUsername: React.PropTypes.func,
 };
+
+const mapStateToProps = createStructuredSelector({
+});
 
 export function mapDispatchToProps(dispatch) {
   return {
-    onChangeUsername: (evt) => dispatch(changeUsername(evt.target.value)),
     changeRoute: (url) => dispatch(push(url)),
-    onSubmitForm: (evt) => {
-      if (evt !== undefined && evt.preventDefault) {
-        evt.preventDefault();
-      }
-      dispatch(loadRepos());
-    },
-
     dispatch,
   };
 }
-
-const mapStateToProps = createStructuredSelector({ repos: selectRepos(), username: selectUsername(), loading: selectLoading(), error: selectError() });
 
 /* Styles ==================================================================== */
 /* const menuStyle = StyleSheet.create({
