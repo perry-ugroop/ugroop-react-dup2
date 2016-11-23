@@ -4,8 +4,7 @@ import { push } from 'react-router-redux';
 
 
 function ClientDisplay(props) {
-  const clientItems = props.listing;
-  const listItems = clientItems.map((url) =>
+  const listItems = props.listing.map((url) =>
     <li key={url.toString()}>
       <img src={url} alt={props.Text} className={props.cosmetic} />{url}
     </li>

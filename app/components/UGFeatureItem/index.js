@@ -4,7 +4,6 @@
 
 import React, { PropTypes } from 'react';
 
-
 function UGFeatureItem(props) {
   const item = (
     <div className={'col-md-3 col-sm-6'}>

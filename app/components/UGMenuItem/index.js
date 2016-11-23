@@ -1,9 +1,7 @@
 import React, { PropTypes, Children } from 'react';
 
 function MenuItem(props) {
-  const className = props.className
-    ? props.className
-    : '';
+  const className = props.className;
 
   // Render an anchor tag
   let item = (
@@ -22,9 +20,9 @@ function MenuItem(props) {
   }
 
   return (
-    <div>
+    <li>
       {item}
-    </div>
+    </li>
   );
 }
 

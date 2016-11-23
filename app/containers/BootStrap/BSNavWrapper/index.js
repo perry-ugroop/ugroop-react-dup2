@@ -2,16 +2,13 @@
 import React from 'react';
 
 const BSNavWrapper = (props) => <div className={`container ${props.className}`}>
-  <div className={'nav-wrapper'}>
-    <nav className={'navbar navbar-default'} role={'navigation'}>
-      <div className={'container'}>
-        <div className={'navbar-header'}>
-          {props.children}
-        </div>
-      </div>
-    </nav>
-  </div>
+  <nav className={'navbar yamm navbar-default navbar-fixed-top'} role={'navigation'}>
+    <div className={'container'}>
+      {props.children}
+    </div>
+  </nav>
 </div>;
+
 
 BSNavWrapper.propTypes = {
   className: React.PropTypes.any,

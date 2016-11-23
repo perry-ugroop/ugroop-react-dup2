@@ -1,7 +1,12 @@
 
-import { css } from 'styled-components';
+/* ************************************************************ */
+/* Created by Vince 2016-11-23                                  */
+/* Description: Format style items/links in the navigation bar  */
+/* ************************************************************ */
 
-const UGMenuItemStyle = css`
+import styled from 'styled-components';
+
+const UGMenuItemStyle = styled.div`
   display: inline-block;
   box-sizing: border-box;
   padding: 0.25em 2em;
@@ -14,10 +19,18 @@ const UGMenuItemStyle = css`
   cursor: pointer;
   outline: 0;
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-weight: bold;
-  font-size: 16px;
-  border: 2px solid #41ADDD;
-  color: #41ADDD;
+  font-weight: 600;
+  font-size: 76%; 
+  margin-top: 10px;
+  background: none;
+  color: #EF5C3C;
+  float: left;
+  text-transform: uppercase;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
 `;
 
 export default UGMenuItemStyle;
+
+
+// a:hover, a:focus {color:#2A6496; text-decoration: underline;}
