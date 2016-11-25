@@ -1,5 +1,5 @@
 import React from 'react';
-import CompanyLogo from './asset/logo-ugroop.png';
+import CompanyLogo from '../../shareAssets/logo-ugroop.png';
 import UGMenuBar from '../../containers/UGMenuBar';
 import BSNavWrapper from '../../containers/BootStrap/BSNavWrapper';
 
