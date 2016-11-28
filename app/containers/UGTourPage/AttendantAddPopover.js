@@ -20,7 +20,6 @@ export class AttendantAddPopover extends React.Component {
   handleClick() {
     const tourId = this.props.tourId;
     const attendType = this.props.attendType;
-    console.log(this);
     this.refs[`popover_${attendType}_${tourId}`].hide();
   }
 
@@ -74,7 +73,7 @@ export class AttendantAddPopover extends React.Component {
                 <BSFormGroup>
                   <SubmitButton onClick={this.props.onClickSave} value={messages.saveButton.defaultMessage} /> &nbsp;
                   <button onClick={this.handleClick.bind(this)}>{messages.cancelButton.defaultMessage}</button>
-                  <CancelButton onClick={this.handleClick.bind(this)}>{messages.cancelButton.defaultMessage}</CancelButton>
+                  <CancelButton close={this.handleClick.bind(this)}>{messages.cancelButton.defaultMessage}</CancelButton>
                 </BSFormGroup>
               </BSColumnAll>
             </BSRow>
