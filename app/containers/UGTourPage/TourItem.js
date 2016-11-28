@@ -57,8 +57,6 @@ function TourItem(props) {
             <Tab eventKey={4} title={`${messages.newsFeedTabTitle.defaultMessage}(${newsFeed.length})`}>News Feed TODO</Tab>
           </Tabs>
         </UGMainHeading>
-
-
       </div>
     </div>
   );

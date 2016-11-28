@@ -106,6 +106,26 @@ export default defineMessages({
     id: 'ugroop.containers.tours.attendant.status.decline',
     defaultMessage: 'DECLINE',
   },
+  saveButton: {
+    id: 'ugroop.containers.tours.save.field',
+    defaultMessage: 'Save',
+  },
+  cancelButton: {
+    id: 'ugroop.containers.tours.cancel.field',
+    defaultMessage: 'Cancel',
+  },
+  firstNameField: {
+    id: 'ugroop.containers.tour.firstName.field',
+    defaultMessage: 'Firstname',
+  },
+  lastNameField: {
+    id: 'ugroop.containers.tour.lastName.field',
+    defaultMessage: 'Lastname',
+  },
+  emailField: {
+    id: 'ugroop.containers.tour.email.field',
+    defaultMessage: 'Email',
+  },
 
 
 });
