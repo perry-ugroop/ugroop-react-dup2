@@ -16,7 +16,7 @@ export class UGFaqPage extends React.Component {
           <div className={'container'}>
             <ol className={'breadcrumb'}>
               <li>
-                <a href="">Home</a>
+                <a href="/">Home</a>
               </li>
               <li className={'active'}>
                 <a href="">FAQ</a>
