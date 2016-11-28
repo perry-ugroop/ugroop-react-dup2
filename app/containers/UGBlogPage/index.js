@@ -2,7 +2,10 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { push } from 'react-router-redux';
-import H1 from 'components/H1';
+// import H1 from 'components/H1';
+import UGSubpagesHeader from '../../components/UGSubpagesHeader';
+
+// import CommentForm from './CommentForm';
 
 export class UGBlogPage extends React.Component {
   openUGBlogPage = () => {
@@ -12,8 +15,19 @@ export class UGBlogPage extends React.Component {
   render() {
     return (
       <div className="Blogs">
-
-        <H1>BLOGS</H1>
+        <UGSubpagesHeader title="Blogs" />
+        <div className={'breadcrumb-container'}>
+          <div className={'container'}>
+            <ol className={'breadcrumb'}>
+              <li>
+                <a href="/">Home</a>
+              </li>
+              <li className={'active'}>
+                <a href="">Blogs</a>
+              </li>
+            </ol>
+          </div>
+        </div>
         <div className="subpages-body-content container">
           <div className="row">
             <div className="container">

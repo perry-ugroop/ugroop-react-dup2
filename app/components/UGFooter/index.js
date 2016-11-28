@@ -2,19 +2,20 @@ import React from 'react';
 
 import messages from './messages';
 import { FormattedMessage } from 'react-intl';
-import BSContainer from '../../containers/BootStrap/BSContainer';
+import UGContainer from './UGContainer';
+import UGFooter from './UGFooter';
+import UGGotoUp from './UGGotoUp';
 
 function Footer() {
   return (
-    <footer>
-      <div><p></p></div>
-      <BSContainer>
+    <UGFooter>
+      <UGContainer>
         <p><FormattedMessage {...messages.copyrightMessage} /></p>
-        <button type="button" className={'btn btn-default goto-up'}>
+        <UGGotoUp type="button" className={'btn btn-default'}>
           <div className={'glyphicon glyphicon-chevron-up'} aria-hidden="true"></div>
-        </button>
-      </BSContainer>
-    </footer>
+        </UGGotoUp>
+      </UGContainer>
+    </UGFooter>
   );
 }
 

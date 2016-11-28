@@ -19,7 +19,8 @@ import 'file?name=[name].[ext]!./.htaccess';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
-import { applyRouterMiddleware, Router, browserHistory } from 'react-router';
+import ReactStormpath, { Router } from 'react-stormpath';
+import { applyRouterMiddleware, Route, browserHistory } from 'react-router';
 import { syncHistoryWithStore } from 'react-router-redux';
 import FontFaceObserver from 'fontfaceobserver';
 import { useScroll } from 'react-router-scroll';
@@ -49,7 +50,6 @@ import { translationMessages } from './i18n';
 // Import the CSS reset, which HtmlWebpackPlugin transfers to the build folder
 // import 'sanitize.css/sanitize.css';
 import 'bootstrap-css-only/css/bootstrap.min.css';
-
 // Create redux store with history
 // this uses the singleton browserHistory provided by react-router
 // Optionally, this could be changed to leverage a created history
@@ -68,12 +68,10 @@ const history = syncHistoryWithStore(browserHistory, store, {
 // Set up the router, wrapping all Routes in the App component
 import App from 'containers/App';
 import createRoutes from './routes';
-const rootRoute = {
-  component: App,
-  childRoutes: createRoutes(store),
-};
+const rootRoute = <Route component={App}>{createRoutes(store)}</Route>;
 
 const render = (messages) => {
+  ReactStormpath.init();
   ReactDOM.render(
     <Provider store={store}>
       <LanguageProvider messages={messages}>

@@ -12,7 +12,6 @@ import FeatureListing from 'containers/UGFeatureListing';
 import ClientListing from 'containers/UGClientListing';
 import Slider from 'components/UGSlider';
 
-
 export class UGHomePage extends React.Component {
 
   openUGHomePage = () => {
@@ -22,18 +21,18 @@ export class UGHomePage extends React.Component {
   };
   render() {
     return (
-      <div className="homeContent">
+      <div>
         <Helmet
           title="uGroop Homepage"
           meta={[
             { name: 'description', content: 'This is a uGroop homepage implemented using React.js Boilerplate application framework' },
           ]}
         />
-        <div>
-          <Slider />
-          <FeatureListing />
-          <ClientListing />
-        </div>
+
+        <Slider />
+        <FeatureListing />
+        <ClientListing />
+
       </div>
     );
   }

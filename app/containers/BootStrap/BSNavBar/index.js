@@ -1,13 +1,15 @@
-/* *********************************************************** */
-/* Created by Vince on 2016-11-22                              */
-/* *********************************************************** */
+/**
+ * Created by Ber on 23/11/16.
+ */
 import React from 'react';
+import { Navbar } from 'react-bootstrap';
 
-const BSNavBar = (props) => <div className={'navbar-collapse collapse navbar-right'}>
+const BSNavBar = (props) => <Navbar className={`navbar-fixed-top ${props.className}`}>
   {props.children}
-</div>;
+</Navbar>;
 
 BSNavBar.propTypes = {
+  className: React.PropTypes.any,
   children: React.PropTypes.any,
 };
 

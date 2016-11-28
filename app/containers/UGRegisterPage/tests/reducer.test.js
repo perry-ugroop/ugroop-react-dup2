@@ -59,8 +59,7 @@ describe('registerReducer', () => {
   });
 
   it('should return the initial state', () => {
-    const expectedResult = state;
-    expect(registerReducer(undefined, {})).toEqual(expectedResult);
+    expect(registerReducer(undefined, {})).toEqual(state);
   });
 
   it('should handle the changeOrgName action correctly', () => {
@@ -156,7 +155,7 @@ describe('registerReducer', () => {
     const field = FIRSTNAME_FIELD;
     let expectedResult = state.setIn([SIGNUPERROR_STATEKEY, 'firstNameError'], validationRule.characterConstraints.description);
     expect(registerReducer(state, validText({ text, field, regExps }))).toEqual(expectedResult);
-    text = 'a2';
+    text = 'qqa2';
     expectedResult = state.setIn([SIGNUPERROR_STATEKEY, 'firstNameError'], validationRule.nameValidation.description);
     expect(registerReducer(state, validText({ text, field, regExps }))).toEqual(expectedResult);
     text = 'oww';
@@ -175,7 +174,7 @@ describe('registerReducer', () => {
     const field = LASTNAME_FIELD;
     let expectedResult = state.setIn([SIGNUPERROR_STATEKEY, 'lastNameError'], validationRule.characterConstraints.description);
     expect(registerReducer(state, validText({ text, field, regExps }))).toEqual(expectedResult);
-    text = 'a2';
+    text = 'aaa2';
     expectedResult = state.setIn([SIGNUPERROR_STATEKEY, 'lastNameError'], validationRule.nameValidation.description);
     expect(registerReducer(state, validText({ text, field, regExps }))).toEqual(expectedResult);
     text = 'o\'brien';

@@ -11,8 +11,8 @@ export default defineMessages({
   },
   characterConstraints: {
     id: 'ugroop.utils.validation.characterConstraint',
-    description: 'Must be between 2 and 30 characters long.',
-    defaultMessage: '^.{2,30}$',
+    description: 'Must be between 3 and 30 characters long.',
+    defaultMessage: '^.{3,30}$',
   },
   characterOnly: {
     id: 'ugroop.utils.validation.characterOnly',
