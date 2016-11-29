@@ -9,9 +9,10 @@ const CancelButtonTmp = (props) => <button
   className={`btn btn-default ${props.className}`}
   id={props.id}
   name={props.name}
-  onClick={props.close}>
-    {props.children}
-  </button>
+  onClick={props.close}
+>
+  {props.children}
+</button>
 ;
 
 CancelButtonTmp.propTypes = {
@@ -19,7 +20,7 @@ CancelButtonTmp.propTypes = {
   id: React.PropTypes.any,
   close: React.PropTypes.func,
   name: React.PropTypes.string,
-  value: React.PropTypes.string,
+  children: React.PropTypes.any,
 };
 
 const CancelButton = styled(CancelButtonTmp)`${UGFlatBorder}`;

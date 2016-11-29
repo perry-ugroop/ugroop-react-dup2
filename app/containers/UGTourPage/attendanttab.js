@@ -8,8 +8,9 @@ import A from 'components/A';
 import AttendantList from './AttendantList';
 import AttendantListItem from './AttendantListItem';
 import AttendantListItemImg from './AttendantListItemImg';
-import AttendantAddPopover from './AttendantAddPopover';
+import AttendantAddPopover from './attendantaddpopover';
 import AttendantImportopover from './AttendantImportPopover';
+import AttendantListModal from './attendantlistmodal';
 import messages from './messages';
 
 export class AttendantTab extends React.Component {
@@ -73,7 +74,7 @@ export class AttendantTab extends React.Component {
         <hr />
         <div className="row">
           <div className="col-sm-6">
-            <A href="#">{viewAllLink}</A>
+            <AttendantListModal tourId={tourId} attendType={attendType} show={false} />
           </div>
           <div className="col-sm-6">
             <div className="pull-right">

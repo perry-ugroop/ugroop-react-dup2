@@ -3,7 +3,7 @@
  */
 import React from 'react';
 import UGBoxBody from '../BootStrap/UGBoxBody';
-import TourItem from './TourItem';
+import TourItem from './touritem';
 
 function TourList(props) {
   const tours = props.items;

@@ -14,13 +14,14 @@ import SubmitButton from './SubmitButton';
 import CancelButton from './CancelButton';
 import BSColumnLG6 from '../BootStrap/BSColumnLG6';
 import BSColumnAll from '../BootStrap/BSColumnAll';
-// function AttendantAddPopover(props) {
+
 export class AttendantAddPopover extends React.Component {
 
   handleClick() {
     const tourId = this.props.tourId;
     const attendType = this.props.attendType;
     this.refs[`popover_${attendType}_${tourId}`].hide();
+    // this.refs[`popover_${attendType}_${tourId}`].setState({show:false});
   }
 
   render() {
@@ -91,3 +92,4 @@ AttendantAddPopover.propTypes = {
   attendType: React.PropTypes.string,
 };
 export default connect(null, null, null, { withRef: true })(AttendantAddPopover);
+

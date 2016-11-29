@@ -3,28 +3,25 @@
  */
 
 import {
-  CHANGE_USERNAME,
-  CHANGE_PASSWORD,
+  TOGGLE_ATTENDENT_MODAL,
+  TOGGLE_ATTENDENT_MODAL_STATEKEY,
+  CUTTENT_TOUR_ATTEND_MODAL_STATEKEY,
 } from './constants';
 import { fromJS } from 'immutable';
 
 // The initial state of the App
 const initialState = fromJS({
-  username: '',
-  password: '',
+  displayAttendList: false,
+  currentTourAttendModal: '',
 });
 
-function loginReducer(state = initialState, action) {
+function tourListReducer(state = initialState, action) {
   switch (action.type) {
-    case CHANGE_USERNAME:
-      return state
-        .set('username', action.name);
-    case CHANGE_PASSWORD:
-      return state
-        .set('password', action.password);
+    case TOGGLE_ATTENDENT_MODAL:
+      return state.set(TOGGLE_ATTENDENT_MODAL_STATEKEY + action.tourId + action.attendantType, action.toggle);
     default:
       return state;
   }
 }
 
-export default loginReducer;
+export default tourListReducer;

@@ -12,7 +12,7 @@ import TourDate from './TourDate';
 import TourDescText from './TourDescText';
 import TourImg from './TourImg';
 import TourHead from './TourHead';
-import AttendantTab from './AttendantTab';
+import AttendantTab from './attendanttab';
 
 function TourItem(props) {
   const tour = props.item;

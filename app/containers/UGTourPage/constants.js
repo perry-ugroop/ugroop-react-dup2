@@ -12,7 +12,6 @@
  * export const YOUR_ACTION_CONSTANT = 'yourproject/YourContainer/YOUR_ACTION_CONSTANT';
  */
 
-export const CHANGE_USERNAME = 'ugroop/Tour/CHANGE_USERNAME';
-export const CHANGE_PASSWORD = 'ugroop/Tour/CHANGE_PASSWORD';
-export const SIGNIN_SUBMIT = 'ugroop/Tour/SIGNIN_SUBMIT';
-
+export const TOGGLE_ATTENDENT_MODAL = 'ugroop/tourlist/TOGGLE_ATTENDENT_MODAL';
+export const TOGGLE_ATTENDENT_MODAL_STATEKEY = 'displayAttendList';
+export const CUTTENT_TOUR_ATTEND_MODAL_STATEKEY= 'currentTourAttendModal';
