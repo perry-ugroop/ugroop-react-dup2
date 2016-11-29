@@ -13,3 +13,4 @@ BSTextDanger.propTypes = {
 };
 
 export default BSTextDanger;
+

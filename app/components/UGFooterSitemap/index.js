@@ -1,4 +1,5 @@
 import React from 'react';
+import UGFooterSitemap from './UGFooterSitemap';
 
 // import A from 'components/A';
 // import styles from './styles.css';
@@ -6,7 +7,7 @@ import React from 'react';
 
 function FooterSiteMap() {
   return (
-    <div className={'footer-sitemap'}>
+    <UGFooterSitemap className={'footer-sitemap'}>
       <div className={'container'}>
         <div className={'row'}>
           <div className={'col-md-3 col-sm-6'}>
@@ -23,7 +24,6 @@ function FooterSiteMap() {
               </li>
             </ul>
           </div>
-
           <div className={'col-md-3 col-sm-6'}>
             <h3>About Us</h3>
             <ul className={'normal-link-list'}>
@@ -85,7 +85,7 @@ function FooterSiteMap() {
 
         </div>
       </div>
-    </div>
+    </UGFooterSitemap>
   );
 }
 

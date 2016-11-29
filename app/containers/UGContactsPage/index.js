@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { push } from 'react-router-redux';
+import UGSubpagesHeader from '../../components/UGSubpagesHeader';
 
 export class UGContactsPage extends React.Component {
 
@@ -11,16 +12,12 @@ export class UGContactsPage extends React.Component {
   render() {
     return (
       <div className={'pageBody'}>
-        <div className={'subpages-header'}>
-          <div className={'container subpages-header-around-the-world'}>
-            <h1 className={'icon-title-contactus'}>Contact Us</h1>
-          </div>
-        </div>
+        <UGSubpagesHeader title="Contact Us" />
         <div className={'breadcrumb-container'}>
           <div className={'container'}>
             <ol className={'breadcrumb'}>
               <li>
-                <a href="">Home</a>
+                <a href="/">Home</a>
               </li>
               <li className={'active'}>
                 <a href="">Contact Us</a>
