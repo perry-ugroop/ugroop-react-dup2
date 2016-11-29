@@ -5,7 +5,7 @@ import Slider from '../../../components/UGSlider';
 describe('<Slider />', () => {
   it('should render the Slider component', () => {
     const renderedComponent = render(
-      <Slider />
+      <div><Slider /></div>
     );
     expect(renderedComponent.type()).toEqual('Slider');
   });

@@ -28,7 +28,6 @@ export class UGHomePage extends React.Component {
             { name: 'description', content: 'This is a uGroop homepage implemented using React.js Boilerplate application framework' },
           ]}
         />
-
         <Slider />
         <FeatureListing />
         <ClientListing />

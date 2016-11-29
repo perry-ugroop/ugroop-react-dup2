@@ -1,8 +1,6 @@
-/*
- * FeaturePage
- *
- * List all the features
- */
+// ************************************************************************
+// Feature Listing component for the homepage - Vinz 2016-11-28
+// ************************************************************************
 import React from 'react';
 import { connect } from 'react-redux';
 import { push } from 'react-router-redux';
@@ -10,14 +8,16 @@ import Helmet from 'react-helmet';
 
 import featureList from '../UGFeatureListing/list';
 import UGSubpagesHeader from '../../components/UGSubpagesHeader';
+import BSColumn6 from '../BootStrap/BSColumn6';
 
 const FeatureList = featureList.map((item) =>
-  <div className={'col-md-6'}>
+  <BSColumn6>
     <div className={'icon-features icon-feature-one'}>
+      <p><img src={item.iconImage} alt="" /></p>
       <h3 className={'featured-header'}>{item.title}</h3>
       <p>{item.description}</p>
     </div>
-  </div>
+  </BSColumn6>
 );
 
 export class UGFeaturePage extends React.Component {
