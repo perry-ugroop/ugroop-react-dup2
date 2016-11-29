@@ -25,6 +25,13 @@ import InputGroup from './InputGroup';
 import Input from './Input';
 import InputButton from './InputButton';
 import BSTextDanger from '../BootStrap/BSTextDanger';
+import ReCaptcha from 'react-google-recaptcha';
+
+
+function onChange(value) {
+  // console.log('Captcha value:', value);
+  return <div> {value} </div>;
+}
 
 export class RegisterForm extends React.Component {
 
@@ -239,6 +246,16 @@ export class RegisterForm extends React.Component {
             {this.wrapErrorMessage(retypePasswordErrorContent)}
           </BSColumn6>
           <BSColumn6>
+            {/* Recaptcha Container */}
+            <InputGroup>
+              <ReCaptcha
+                sitekey="6Ldh9AwUAAAAAG5tjfsEGaTe0XL0hzb400U5Upwg"
+                onChange={onChange}
+                type="image"
+                theme="light"
+                style={{ transform: 'scale(0.77)' }}
+              />
+            </InputGroup>
           </BSColumn6>
         </BSRow>
         <InputButton>{messages.registerButton.defaultMessage}</InputButton>

@@ -1,59 +1,119 @@
 import React from 'react';
+import { push } from 'react-router-redux';
 import { Carousel } from 'react-bootstrap';
+import BackgroundImage from './assets/ugroop-pattern.jpg';
 
-import imgWorld from './assets/ugroop-around-the-world.png';
-import imgFamily from './assets/ugroop-family-school.png';
+// import imgWorld from './assets/ugroop-around-the-world.png';
+// import imgFamily from './assets/ugroop-family-school.spng';
 // import imgGroup from './assets/ugroop-group-icon.png';
-import imgStudents from './assets/ugroop-group-student-sufing-ugroop-site.png';
+// import imgStudents from './assets/ugroop-group-student-sufing-ugroop-site.png';
 
-function Slider() {
-  return (
-    <div className={'da-slider'}>
-      <Carousel>
-        <Carousel.Item>
-          <img src={imgStudents} alt="" />
-          <Carousel.Caption>
-            <h2
-              style={{ textTransform: 'uppercase' }}
-            > MANAGE ALL YOUR SCHOOL STUDY TOURS</h2>
-            <p
-              style={{ top: '150px' }}
-            > ügroop – a
-                one-stop-shop solution for group tours organisers, teachers, students, parents
-                and relatives to quickly and efficiently plan, prepare and promote upcoming
-                tours, easily communicate during the tour and finally evaluate the tour
-                outcomes, issues and experiences.
-            </p>
-            <a href="" className="da-link">Read more</a>
-          </Carousel.Caption>
-        </Carousel.Item>
-        <Carousel.Item>
-          <img src={imgFamily} alt="" />
-          <Carousel.Caption>
-            <h2
-              style={{ textTransform: 'uppercase' }}
-            >WORRY-FREE FAMILY</h2>
-            <p
-              style={{ top: '150px' }}
-            >
-                ügroop –
-                Understandably parents would be concerned about sending their child overseas;
-                safety and security is foremost in everyone’s thoughts. The ability to keep
-                track of where they are, what is happening, how things are going and just to
-                stay in touch, from any device, is key to peace of mind.
-            </p>
-          </Carousel.Caption>
-        </Carousel.Item>
-        <Carousel.Item>
-          <img alt="900x500" src={imgWorld} />
-          <Carousel.Caption>
-            <h3>Third slide label</h3>
-            <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-          </Carousel.Caption>
-        </Carousel.Item>
-      </Carousel>
-    </div>
-  );
+import slideList from './list';
+import styled from 'styled-components';
+import BSContainer from '../../containers/BootStrap/BSContainer';
+
+const UGContainer = styled(BSContainer)`
+  position:relative;
+`;
+const UGSliderStyle = styled.div`
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  background-color: #11314d;
+  color: #7C88A1;
+  margin: 30px auto;
+  padding: 20px 0 12px 0;
+  text-align: center;  
+  background:url(${BackgroundImage}) #2e5da5 ;
+  border-top: 3px solid #EF5B3C;
+  min-height: 438px;
+`;
+
+const UGSliderTitleStyle = styled.div`
+  text-align: left;
+  position: relative;
+  margin-top: 80px;
+`;
+
+const UGSliderCaptionStyle = styled.div`  
+  color: #7C88A1;   
+  padding: 2px 20px 0px; 
+  top: 150px !important;
+  color: #FFF; 
+  width: 50%;
+  text-align: left;
+`;
+
+const UGSliderButtonStyle = styled.div`
+  position: absolute;
+  color: #FFF;
+  top: 270px;
+  border-radius: 30px;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 1);
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2)
+  border: 3px solid #FFF;
+  padding: 2px 20px 0px;
+  font-size: 18px;
+  line-height: 30px;
+  text-align: left;
+  background: #5f83b9;
+`;
+
+const UGSliderImageStyle = styled.div`
+  &&{ 
+  text-align: right;
+  height:150px;
+  }
+  && img.ugsliderimg{
+    position:absolute;
+    top:10px;
+    right:20px;
+  }
+`;
+
+// function RenderList() {
+//   const SlidesListing = slideList.map((slide, key) => <Carousel.Item>
+//     <BSContainer><UGSliderTitleStyle><h2> { slide.title } </h2></UGSliderTitleStyle>
+//       <UGSliderCaptionStyle> { slide.description }</UGSliderCaptionStyle>
+//       <UGSliderButtonStyle><a href="" className="da-link">{slide.label}</a></UGSliderButtonStyle>
+//       <UGSliderImageStyle><img src={slide.iconImage} alt={key} /></UGSliderImageStyle></BSContainer>
+//   </Carousel.Item>
+// );
+//   return (
+//     {
+//       SlidesListing,
+//     }
+//   );
+// }
+
+const SlidesListing = slideList.map((slide, key) => <Carousel.Item>
+  <UGContainer><UGSliderTitleStyle><h2> { slide.title } </h2></UGSliderTitleStyle>
+    <UGSliderCaptionStyle> { slide.description }</UGSliderCaptionStyle>
+    <UGSliderButtonStyle><a href="" className="da-link">{slide.label}</a></UGSliderButtonStyle>
+    <UGSliderImageStyle><img src={slide.iconImage} alt={key} className="ugsliderimg" /></UGSliderImageStyle></UGContainer>
+</Carousel.Item>
+);
+
+
+export class Slider extends React.Component {
+  openUGHomePage = () => {
+    this.props.dispatch(push('/'));
+  };
+  render() {
+    return (
+      <UGSliderStyle>
+        <Carousel>
+          {SlidesListing}
+        </Carousel>
+      </UGSliderStyle>
+    );
+  }
+
 }
+
+Slider.propTypes = {
+  dispatch: React.PropTypes.func,
+};
+
 
 export default Slider;
