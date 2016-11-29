@@ -5,20 +5,13 @@
  */
 
 import React from 'react';
-import { connect } from 'react-redux';
-import { push } from 'react-router-redux';
 import Helmet from 'react-helmet';
 import FeatureListing from 'containers/UGFeatureListing';
 import ClientListing from 'containers/UGClientListing';
 import Slider from 'components/UGSlider';
 
-export class UGHomePage extends React.Component {
+export class UGHomePage extends React.Component { // eslint-disable-line react/prefer-stateless-function
 
-  openUGHomePage = () => {
-    this
-      .props
-      .dispatch(push('/'));
-  };
   render() {
     return (
       <div>
@@ -37,9 +30,4 @@ export class UGHomePage extends React.Component {
   }
 }
 
-UGHomePage.propTypes = {
-  dispatch: React.PropTypes.func,
-};
-
-// Wrap the component to inject dispatch and state into it
-export default connect()(UGHomePage);
+export default UGHomePage;

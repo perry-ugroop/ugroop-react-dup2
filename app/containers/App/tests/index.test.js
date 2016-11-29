@@ -1,7 +1,4 @@
 import App from '../index';
-// import Header from 'components/Header';
-// import Footer from 'components/Footer';
-import UGHeader from 'components/UGHeader';
 import UGFooter from 'components/UGFooter';
 import UGNavBar from 'components/UGNavBar';
 
@@ -11,9 +8,9 @@ import React from 'react';
 describe('<AppWrapper />', () => {
   it('should render the Navigation Bar', () => {
     const renderedComponent = shallow(
-      <UGNavBar />
+      <App />
     );
-    expect(renderedComponent.find(UGHeader).length).toBe(1);
+    expect(renderedComponent.find(UGNavBar).length).toBe(1);
   });
 
   it('should render its children', () => {
@@ -28,7 +25,7 @@ describe('<AppWrapper />', () => {
 
   it('should render the footer', () => {
     const renderedComponent = shallow(
-      <UGFooter />
+      <App />
     );
     expect(renderedComponent.find(UGFooter).length).toBe(1);
   });

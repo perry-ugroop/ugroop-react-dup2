@@ -1,12 +1,15 @@
 import React from 'react';
-import { render } from 'enzyme';
+import { shallow } from 'enzyme';
 import Slider from '../../../components/UGSlider';
+import UGHomePage from '../index';
 
-describe('<Slider />', () => {
+describe('<UGHomePage />', () => {
   it('should render the Slider component', () => {
-    const renderedComponent = render(
-      <div><Slider /></div>
+    const renderedComponent = shallow(
+      <UGHomePage />
     );
-    expect(renderedComponent.type()).toEqual('Slider');
+    expect(renderedComponent.contains(
+      <Slider />
+    )).toBe(true);
   });
 });
