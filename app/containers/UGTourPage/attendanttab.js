@@ -4,89 +4,57 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-import A from 'components/A';
+// import A from 'components/A';
 import AttendantList from './AttendantList';
 import AttendantListItem from './AttendantListItem';
 import AttendantListItemImg from './AttendantListItemImg';
 import AttendantAddPopover from './attendantaddpopover';
 import AttendantImportopover from './AttendantImportPopover';
 import AttendantListModal from './attendantlistmodal';
-import messages from './messages';
+// import messages from './messages';
+import AttendantStatusSpan from './attedantStatusSpan';
+import BSRow from '../BootStrap/BSRow';
 
-export class AttendantTab extends React.Component {
+function AttendantTab(props) {
+  const tourId = props.tourId;
+  const attendType = props.attendType;
+  const attendants = props.items;
+  const defaultImg = 'http://dev-175.ugroop.com.au/Content/images/default-tour-photo.jpg';
 
-  getStatusSpan(status) {
-    if (status === '0') {
-      return (
-        <span className="label label-primary">
-          {messages.waitingStatus.defaultMessage}
-        </span>
-      );
-    } else if (status === '1') {
-      return (
-        <span className="label label-success">
-          {messages.joinedStatus.defaultMessage}
-        </span>
-      );
-    } else if (status === '2') {
-      return (
-        <span className="label label-default">
-          {messages.declineStatus.defaultMessage}
-        </span>
-      );
-    }
-    return '';
-  }
-
-  render() {
-    const tourId = this.props.tourId;
-    const attendType = this.props.attendType;
-    const attendants = this.props.items;
-    const defaultImg = 'http://dev-175.ugroop.com.au/Content/images/default-tour-photo.jpg';
-    let viewAllLink = '';
-    if (attendType === 'participant') {
-      viewAllLink = messages.viewAllParticipantsLink.defaultMessage;
-    } else if (attendType === 'organizer') {
-      viewAllLink = messages.viewAllOrganizerLink.defaultMessage;
-    } else if (attendType === 'viewer') {
-      viewAllLink = messages.viewAllViewersLink.defaultMessage;
-    }
-
-    return (
+  return (
+    <div>
       <div>
-        <div>
-          <AttendantList>
-            {
+        <AttendantList>
+          {
               attendants.map((p, index) => (
                 <AttendantListItem key={index}>
                   <AttendantListItemImg src={p.src || defaultImg} />
                   <span><strong>{p.name}</strong></span>
                   <br />
-                  {this.getStatusSpan(p.status)}
+                  <AttendantStatusSpan status={p.status} />
                   <br />
                   <br />
                   <br />
                 </AttendantListItem>
               ))
             }
-          </AttendantList>
-        </div>
-        <hr />
-        <div className="row">
-          <div className="col-sm-6">
-            <AttendantListModal tourId={tourId} attendType={attendType} show={false} />
-          </div>
-          <div className="col-sm-6">
-            <div className="pull-right">
-              <AttendantAddPopover tourId={tourId} attendType={attendType} />
-              <AttendantImportopover tourId={tourId} attendType={attendType} />
-            </div>
-          </div>
-        </div>
+        </AttendantList>
       </div>
+      <hr />
+      <BSRow>
+        <div className="col-sm-6">
+          <AttendantListModal tourId={tourId} attendType={attendType} attendants={attendants} />
+        </div>
+        <div className="col-sm-6">
+          <div className="pull-right">
+            <AttendantAddPopover tourId={tourId} attendType={attendType} />
+            <AttendantImportopover tourId={tourId} attendType={attendType} />
+          </div>
+        </div>
+      </BSRow>
+    </div>
 
-    );
-  }
+  );
 }
 
 AttendantTab.propTypes = {

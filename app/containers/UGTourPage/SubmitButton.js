@@ -11,6 +11,7 @@ const SubmitButtonTmp = (props) => <input
   type={'submit'}
   name={props.name}
   value={props.value}
+  onClick={props.onClick}
 />;
 
 SubmitButtonTmp.propTypes = {
@@ -18,6 +19,7 @@ SubmitButtonTmp.propTypes = {
   id: React.PropTypes.any,
   name: React.PropTypes.string,
   value: React.PropTypes.string,
+  onClick: React.PropTypes.func,
 };
 
 const SubmitButton = styled(SubmitButtonTmp)`${UGFlatBorder}`;

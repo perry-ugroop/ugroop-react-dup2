@@ -3,9 +3,8 @@
  */
 import React from 'react';
 import A from 'components/A';
-import { OverlayTrigger, Popover } from 'react-bootstrap';
+import { Overlay } from 'react-bootstrap';
 import messages from './messages';
-import AddAttendantForm from './addattendantform';
 import { connect } from 'react-redux';
 import BSRow from '../BootStrap/BSRow';
 import BSFormGroup from '../BootStrap/BSFormGroup';
@@ -17,15 +16,26 @@ import BSColumnAll from '../BootStrap/BSColumnAll';
 
 export class AttendantAddPopover extends React.Component {
 
-  handleClick() {
-    const tourId = this.props.tourId;
-    const attendType = this.props.attendType;
-    this.refs[`popover_${attendType}_${tourId}`].hide();
-    // this.refs[`popover_${attendType}_${tourId}`].setState({show:false});
+  constructor(props) {
+    super(props);
+    this.state = {
+      showPopover: false,
+    };
+  }
+
+  closeCancel() {
+    this.setState({ showPopover: false });
+  }
+  closeSave() {
+    this.setState({ showPopover: false });
+  }
+
+  open() {
+    this.setState({ showPopover: true });
   }
 
   render() {
-    const tourId = this.props.tourId;
+    // const tourId = this.props.tourId;
     const attendType = this.props.attendType;
     let title = '';
     if (attendType === 'participant') {
@@ -35,61 +45,68 @@ export class AttendantAddPopover extends React.Component {
     } else if (attendType === 'viewer') {
       title = messages.addViewersLink.defaultMessage;
     }
-
-    // const attendantPopover = (
-    //
-    // );
     return (
+      <div >
 
-      <OverlayTrigger
-        ref={`popover_${attendType}_${tourId}`}
-        trigger="click"
-        placement="bottom"
-        overlay={
-        <Popover id={`add${attendType}_popover${tourId}`} title={title}>
-          <form>
+        <A onClick={() => this.open()}>{title}</A>
+
+        <Overlay
+          show={this.state.showPopover}
+          onHide={() => this.setState({ showPopover: false })}
+          placement="bottom"
+          container={this}
+        >
+
+          <div
+            style={{
+              ...this.props.style,
+              backgroundColor: '#EEE',
+              boxShadow: '0 5px 10px rgba(0, 0, 0, 0.2)',
+              border: '1px solid #CCC',
+              borderRadius: 3,
+              marginLeft: -5,
+              marginTop: 5,
+              padding: 10,
+            }}
+          >
             <BSRow>
               <BSColumnLG6>
                 <BSFormGroup>
-                  <Input type="text" name="firstname" placeholder={messages.firstNameField.defaultMessage}
-                    value={this.props.firstName}
-                  />
+                  <Input type="text" name="firstname" placeholder={messages.firstNameField.defaultMessage} value={this.props.firstName} />
                 </BSFormGroup>
               </BSColumnLG6>
               <BSColumnLG6>
                 <BSFormGroup>
-                  <Input type="text" name="lastName" placeholder={messages.lastNameField.defaultMessage}
-                    value={this.props.lastName}
-                  />
+                  <Input type="text" name="lastName" placeholder={messages.lastNameField.defaultMessage} value={this.props.lastName} />
                 </BSFormGroup>
               </BSColumnLG6>
               <BSColumnAll>
                 <BSFormGroup>
-                  <Input type="text" name="email" placeholder={messages.emailField.defaultMessage}
-                    value={this.props.email}
-                  />
+                  <Input type="text" name="email" placeholder={messages.emailField.defaultMessage} value={this.props.email} />
                 </BSFormGroup>
               </BSColumnAll>
               <BSColumnAll>
                 <BSFormGroup>
-                  <SubmitButton onClick={this.props.onClickSave} value={messages.saveButton.defaultMessage} /> &nbsp;
-                  <button onClick={this.handleClick.bind(this)}>{messages.cancelButton.defaultMessage}</button>
-                  <CancelButton close={this.handleClick.bind(this)}>{messages.cancelButton.defaultMessage}</CancelButton>
+                  <SubmitButton onClick={() => this.closeSave()} value={messages.saveButton.defaultMessage} /> &nbsp;
+                  <CancelButton onClick={() => this.closeCancel()}>{messages.cancelButton.defaultMessage}</CancelButton>
                 </BSFormGroup>
               </BSColumnAll>
             </BSRow>
-          </form>
-        </Popover>
-      }>
-        <A href="#">{title}</A>
-      </OverlayTrigger>
+          </div>
+
+        </Overlay>
+      </div>
     );
   }
 }
 
 AttendantAddPopover.propTypes = {
-  tourId: React.PropTypes.string,
+  // tourId: React.PropTypes.string,
+  style: React.PropTypes.any,
   attendType: React.PropTypes.string,
+  firstName: React.PropTypes.string,
+  lastName: React.PropTypes.string,
+  email: React.PropTypes.string,
 };
-export default connect(null, null, null, { withRef: true })(AttendantAddPopover);
+export default connect()(AttendantAddPopover);
 

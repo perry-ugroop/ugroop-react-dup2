@@ -12,6 +12,6 @@
  * export const YOUR_ACTION_CONSTANT = 'yourproject/YourContainer/YOUR_ACTION_CONSTANT';
  */
 
-export const TOGGLE_ATTENDENT_MODAL = 'ugroop/tourlist/TOGGLE_ATTENDENT_MODAL';
-export const TOGGLE_ATTENDENT_MODAL_STATEKEY = 'displayAttendList';
-export const CUTTENT_TOUR_ATTEND_MODAL_STATEKEY= 'currentTourAttendModal';
+export const ATTENDANT_DECLINE = 'DECLINE';
+export const ATTENDANT_JOINED = 'JOINED';
+export const ATTENDANT_WAITING = 'WAITING';

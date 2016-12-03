@@ -1,53 +1,152 @@
 /**
  * Created by yunzhou on 26/11/2016.
  */
+import AvatarIcon from './assets/avatar-member.png';
+import Img from 'components/Img';
 import React from 'react';
 import { connect } from 'react-redux';
-
-// import A from 'components/A';
-import Button from 'components/Button';
-import { ButtonToolbar, Modal } from 'react-bootstrap';
-import { toggleAttendListModal } from './actions';
-// import messages from './messages';
-import { selectShowModal } from './selectors';
-import { createStructuredSelector } from 'reselect';
+import { ATTENDANT_DECLINE, ATTENDANT_JOINED, ATTENDANT_WAITING } from './constants';
+import A from 'components/A';
+// import Button from 'components/Button';
+import UGBadge from './UGBadge';
+import AttendantStatusSpan from './attedantStatusSpan';
+import BSColumnLG4 from '../BootStrap/BSColumnLG4';
+import BSColumnAll from '../BootStrap/BSColumnAll';
+import BSRow from '../BootStrap/BSRow';
+import { ButtonToolbar, Modal, Table } from 'react-bootstrap';
+import CloseButton from './CloseButton';
+// import { toggleAttendListModal } from './actions';
+import messages from './messages';
+// import { selectShowModal } from './selectors';
+// import { createStructuredSelector } from 'reselect';
 
 export class AttendantListModal extends React.Component {
-  dummy() {
-
+// class Contacts extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      showModal: false,
+    };
   }
+
+  getStatusP(status, count = 0) {
+    if (status === ATTENDANT_WAITING) {
+      return (
+        <p className="label label-primary">
+          {messages.waitingStatus.defaultMessage} &nbsp;
+          <UGBadge>{count}</UGBadge>
+        </p>
+      );
+    } else if (status === ATTENDANT_JOINED) {
+      return (
+        <p className="label label-success">
+          {messages.joinedStatus.defaultMessage} &nbsp;
+          <UGBadge>{count}</UGBadge>
+        </p>
+      );
+    } else if (status === ATTENDANT_DECLINE) {
+      return (
+        <p className="label label-default">
+          {messages.declineStatus.defaultMessage} &nbsp;
+          <UGBadge>{count}</UGBadge>
+        </p>
+      );
+    }
+    return '';
+  }
+
+
+  computeAttendantStatusCount(attendants) {
+    const attendantsCount = {
+      DECLINE: 0,
+      JOINED: 0,
+      WAITING: 0,
+    };
+    for (const i of attendants) {
+      if (i.status) {
+        attendantsCount[i.status] += 1;
+      }
+    }
+    return attendantsCount;
+  }
+
+
+  close() {
+    this.setState({ showModal: false });
+  }
+
+  open() {
+    this.setState({ showModal: true });
+  }
+
   render() {
+    // const tourId = this.props.tourId;
+    const attendType = this.props.attendType;
+    let linkText = '';
+    let titleText = '';
+    if (attendType === 'participant') {
+      linkText = messages.viewAllParticipantsLink.defaultMessage;
+      titleText = messages.viewAllParticipantsModalTitle.defaultMessage;
+    } else if (attendType === 'organizer') {
+      linkText = messages.viewAllOrganizerLink.defaultMessage;
+      titleText = messages.viewAllOrganizerModalTitle.defaultMessage;
+    } else if (attendType === 'viewer') {
+      linkText = messages.viewAllViewersLink.defaultMessage;
+      titleText = messages.viewAllViewerModalTitle.defaultMessage;
+    }
+
+    const attendantsCount = this.computeAttendantStatusCount(this.props.attendants);
     return (
       <ButtonToolbar>
-        <Button bsStyle="primary" onClick={this.props.onShowModal}>
-          Launch demo modal
-        </Button>
+        <A bsStyle="primary" onClick={() => this.open()}>
+          {linkText}
+        </A>
 
-        <Modal show={this.props.displayModalFlag}
-          dialogClassName="custom-modal"
-        >
+        <Modal show={this.state.showModal} onHide={() => this.close()} dialogClassName="custom-modal">
           <Modal.Header closeButton>
-            <Modal.Title id="contained-modal-title-lg">Modal heading</Modal.Title>
+            <Modal.Title id="contained-modal-title-lg">{titleText}</Modal.Title>
           </Modal.Header>
           <Modal.Body>
-            <h4>Wrapped Text {this.props.tourId}</h4>
-            <p>Ipsum molestiae natus adipisci modi eligendi? Debitis amet quae unde dolor assumenda
-              ipsam veritatis quasi. Esse! Sit consectetur hic et sunt iste! Accusantium atque
-              elit voluptate asperiores corrupti temporibus mollitia! Placeat soluta odio ad
-              blanditiis nisi. Eius reiciendis id quos dolorum eaque suscipit
-              magni delectus maxime. Sit odit provident vel magnam quod. Possimus eligendi
-              non corrupti tenetur culpa accusantium quod quis. Voluptatum quaerat animi dolore
-              maiores molestias voluptate? Necessitatibus illo omnis laborum hic enim minima!
-              Similique. Dolor voluptatum reprehenderit nihil adipisci aperiam voluptatem soluta
-              magnam accusamus iste incidunt tempore consequatur illo illo odit. Asperiores nesciunt
-              iusto nemo animi ratione. Sunt odit similique doloribus temporibus reiciendis! Ullam.
-              Dolor dolores veniam animi sequi dolores molestias voluptatem iure velit. Elit dolore
-              quaerat incidunt enim aut distinctio. Ratione molestiae laboriosam
-              similique laboriosam eum
-            </p>
+            <BSRow>
+              <BSColumnLG4>{this.getStatusP(ATTENDANT_DECLINE, attendantsCount[ATTENDANT_DECLINE])}</BSColumnLG4>
+              <BSColumnLG4>{this.getStatusP(ATTENDANT_JOINED, attendantsCount[ATTENDANT_JOINED])}</BSColumnLG4>
+              <BSColumnLG4>{this.getStatusP(ATTENDANT_WAITING, attendantsCount[ATTENDANT_WAITING])}</BSColumnLG4>
+              <BSColumnAll>
+                <div>
+                  <Table striped bordered condensed hover>
+                    <thead>
+                      <tr>
+                        <th>{messages.photoField.defaultMessage}</th>
+                        <th>{messages.nameField.defaultMessage}</th>
+                        <th>{messages.emailField.defaultMessage}</th>
+                        <th>{messages.statusField.defaultMessage}</th>
+                        <th>{messages.addressField.defaultMessage}</th>
+                        <th>{messages.optionField.defaultMessage}</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {
+                      this.props.attendants.map((at, id) => (
+                        <tr key={id}>
+                          <td>
+                            <Img src={at.src ? at.src : AvatarIcon} width="24" height="24" className="img-rounded" alt={at.name} />
+                          </td>
+                          <td>{at.name ? at.name : ''}</td>
+                          <td>{at.email ? at.email : ''}</td>
+                          <td><AttendantStatusSpan status={at.status} /> </td>
+                          <td>{at.address ? at.address : ''}</td>
+                          <td><strong><A href="#" >{messages.deleteOptionField.defaultMessage}</A></strong></td>
+                        </tr>
+                      ))
+                    }
+                    </tbody>
+                  </Table>
+                </div>
+              </BSColumnAll>
+            </BSRow>
           </Modal.Body>
           <Modal.Footer>
-            <Button onClick={this.props.onHideModal}>Close</Button>
+            <CloseButton onClick={() => this.close()}>Close</CloseButton>
           </Modal.Footer>
         </Modal>
       </ButtonToolbar>
@@ -55,23 +154,11 @@ export class AttendantListModal extends React.Component {
   }
 }
 
-export function mapDispatchToProps(dispatch) {
-  return {
-    onShowModal: (evt) => dispatch(toggleAttendListModal(evt, null, true)),
-    onHideModal: (evt) => dispatch(toggleAttendListModal(evt, null, false)),
-    dispatch,
-  };
-}
-const mapStateToProps = createStructuredSelector({
-  displayModalFlag: selectShowModal(),
-});
 
 AttendantListModal.propTypes = {
-  onShowModal: React.PropTypes.func,
-  onHideModal: React.PropTypes.func,
-  displayModalFlag: React.PropTypes.bool,
-  tourId: React.PropTypes.string,
+  // tourId: React.PropTypes.string,
   attendType: React.PropTypes.string,
+  attendants: React.PropTypes.any,
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(AttendantListModal);
+export default connect()(AttendantListModal);

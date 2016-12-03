@@ -66,6 +66,18 @@ export default defineMessages({
     id: 'ugroop.containers.tours.link.viewAllParticipants',
     defaultMessage: 'View All Participants',
   },
+  viewAllParticipantsModalTitle: {
+    id: 'ugroop.containers.tours.modal.viewAllParticipants',
+    defaultMessage: 'View Participants',
+  },
+  viewAllOrganizerModalTitle: {
+    id: 'ugroop.containers.tours.modal.viewAllOrganizors',
+    defaultMessage: 'View Organizers',
+  },
+  viewAllViewerModalTitle: {
+    id: 'ugroop.containers.tours.modal.viewAllViews',
+    defaultMessage: 'View Viewers',
+  },
   importParticipantsLink: {
     id: 'ugroop.containers.tours.link.importParticipants',
     defaultMessage: 'Import Participants',
@@ -126,6 +138,31 @@ export default defineMessages({
     id: 'ugroop.containers.tour.email.field',
     defaultMessage: 'Email',
   },
+  photoField: {
+    id: 'ugroop.containers.tour.photo.field',
+    defaultMessage: 'Photo',
 
+  },
+  nameField: {
+    id: 'ugroop.containers.tour.name.field',
+    defaultMessage: 'Name',
+
+  },
+  statusField: {
+    id: 'ugroop.containers.tour.status.field',
+    defaultMessage: 'Status',
+  },
+  addressField: {
+    id: 'ugroop.containers.tour.address.field',
+    defaultMessage: 'Address',
+  },
+  optionField: {
+    id: 'ugroop.containers.tour.option.field',
+    defaultMessage: 'Option',
+  },
+  deleteOptionField: {
+    id: 'ugroop.containers.tour.delete.field',
+    defaultMessage: 'Delete',
+  },
 
 });

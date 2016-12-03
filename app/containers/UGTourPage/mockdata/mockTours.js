@@ -1,6 +1,7 @@
 /**
  * Created by yunzhou on 26/11/2016.
  */
+import { ATTENDANT_DECLINE, ATTENDANT_JOINED, ATTENDANT_WAITING } from '../constants';
 const tours = [
   {
     tourId: '1011',
@@ -15,32 +16,32 @@ const tours = [
     Participants: [
       {
         name: 'Robert Smith',
-        status: '1',
+        status: ATTENDANT_DECLINE,
         src: 'http://dev-175.ugroop.com.au/Content/TourImage/AcountPic_1004.png',
       },
       {
         name: 'Mark V',
-        status: '1',
+        status: ATTENDANT_DECLINE,
       },
       {
         name: 'Young I',
-        status: '0',
+        status: ATTENDANT_JOINED,
       },
     ],
     Organizer: [
       {
         name: 'Adam Y',
-        status: '1',
+        status: ATTENDANT_WAITING,
       },
       {
         name: 'Lucas Z',
-        status: '0',
+        status: ATTENDANT_WAITING,
       },
     ],
     Viewers: [
       {
         name: 'David C',
-        status: '1',
+        status: ATTENDANT_WAITING,
       },
     ],
     NewsFeed: [
