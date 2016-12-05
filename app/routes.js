@@ -116,7 +116,7 @@ export default function createRoutes(store) {
         importModules.catch(errorLoading);
       }}
     />,
-    /*
+
     <Route
       path={'/tour'}
       name={'tour'}
@@ -128,13 +128,13 @@ export default function createRoutes(store) {
         ]);
         const renderRoute = loadModule(cb);
         importModules.then(([reducer, component]) => {
-          injectReducer('tour', reducer.default);
+          injectReducer('tourlist', reducer.default);
           renderRoute(component);
         });
         importModules.catch(errorLoading);
       }}
     />,
-    */
+
     <Route
       path={'/addTour'}
       name={'addTour'}
