@@ -6,6 +6,7 @@ import {
   selectLoginpage,
   selectUsername,
   selectPassword,
+  selectShallLoginSuccessRedirect,
 } from '../selectors';
 
 describe('selectLoginpage', () => {
@@ -44,5 +45,18 @@ describe('selectPassword', () => {
       },
     });
     expect(selectPasswordSelector(mockedState)).toEqual(password);
+  });
+});
+
+
+describe('selectLoginSuccessRedirect', () => {
+  const shallLoginSuccessRedirect = selectShallLoginSuccessRedirect();
+  it('should select the login state', () => {
+    const mockedState = fromJS({
+      login: {
+        loginSuccessRedirect: true,
+      },
+    });
+    expect(shallLoginSuccessRedirect(mockedState)).toEqual(true);
   });
 });

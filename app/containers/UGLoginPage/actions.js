@@ -4,6 +4,8 @@
 import {
   CHANGE_USERNAME,
   CHANGE_PASSWORD,
+  LOGIN_SUBMIT,
+  LOAD_LOGINERROR,
 } from './constants';
 
 /**
@@ -35,4 +37,25 @@ function changePassword(password) {
   };
 }
 
-export { changeUsername, changePassword };
+function submitLogin() {
+  return {
+    type: LOGIN_SUBMIT,
+  };
+}
+
+/**
+ * Dispatched when loading the repositories fails
+ *
+ * @param  {object} error The error
+ *
+ * @return {object}       An action object with a type of LOAD_REPOS_ERROR passing the error
+ */
+function loginError(error) {
+  return {
+    type: LOAD_LOGINERROR,
+    error,
+  };
+}
+
+
+export { changeUsername, changePassword, submitLogin, loginError };
