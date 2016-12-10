@@ -36,6 +36,7 @@ import SpanButton from './SpanButton';
 import RightSpan from './RightSpan';
 import SubmitButton from './SubmitButton';
 import FileInput from './FileInput';
+
 export class AddTourForm extends React.Component {
 
   wrapErrorMessage(error) {
@@ -167,7 +168,7 @@ export class AddTourForm extends React.Component {
             </BSRow>
             {/* Fifth Row*/}
             <BSRow>
-              <BSColumnHalf className={'col-12'}>
+              <BSColumnHalf>
                 <label htmlFor="BSInputGroup">{messages.tourPhotoLabel.defaultMessage}</label>
                 <BSInputGroup>
                   <span className="input-group-btn">
@@ -184,7 +185,7 @@ export class AddTourForm extends React.Component {
                 </BSInputGroup>
               </BSColumnHalf>
 
-              <BSColumnHalf className={'col-12'}>
+              <BSColumnHalf>
                 <RightSpan>
                   <BSInputGroup>
                     <SubmitButton

@@ -4,7 +4,14 @@
 import BSTextAreaFormControl from '../BootStrap/BSTextAreaFormControl';
 import UGFlatBorder from '../BootStrap/UGFlatBorder';
 import styled from 'styled-components';
-const Textarea = styled(BSTextAreaFormControl)`
+import React from 'react';
+const TextareaTmp = (props) => <BSTextAreaFormControl
+  rows={props.rows}
+/>;
+TextareaTmp.propTypes = {
+  rows: React.PropTypes.number,
+};
+const Textarea = styled(TextareaTmp)`
   &&{
     ${UGFlatBorder}
     height: 30px;
