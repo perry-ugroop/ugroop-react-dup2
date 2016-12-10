@@ -87,13 +87,12 @@ export class AttendantAddPopover extends React.Component {
               </BSColumnAll>
               <BSColumnAll>
                 <BSFormGroup>
-                  <SubmitButton onClick={() => this.closeSave()} value={messages.saveButton.defaultMessage} /> &nbsp;
+                  <SubmitButton onClick={() => this.closeSave()}> {messages.saveButton.defaultMessage} </SubmitButton> &nbsp;
                   <CancelButton onClick={() => this.closeCancel()}>{messages.cancelButton.defaultMessage}</CancelButton>
                 </BSFormGroup>
               </BSColumnAll>
             </BSRow>
           </div>
-
         </Overlay>
       </div>
     );

@@ -188,15 +188,9 @@ export class AddTourForm extends React.Component {
               <BSColumnHalf>
                 <RightSpan>
                   <BSInputGroup>
-                    <SubmitButton
-                      name="cancelTour"
-                      value={messages.cancelButton.defaultMessage}
-                    />
+                    <SubmitButton name="cancelTour">{messages.cancelButton.defaultMessage}</SubmitButton>
                     &nbsp;
-                    <SubmitButton
-                      name="saveTour"
-                      value={messages.saveButton.defaultMessage}
-                    />
+                    <SubmitButton name="saveTour">{messages.saveButton.defaultMessage}</SubmitButton>
                   </BSInputGroup>
                 </RightSpan>
               </BSColumnHalf>

@@ -63,15 +63,15 @@ export class AddNewsModal extends React.Component {
               <BSColumnAll>
                 <BSFormGroup>
                   <Label>{messages.addNewsFeedContentLabel.defaultMessage}</Label>
-                  <Textarea type="text" name="newsContent" row={5} value={this.props.newsContent} />
+                  <Textarea type="text" name="newsContent" rows={5} value={this.props.newsContent} />
                 </BSFormGroup>
               </BSColumnAll>
             </BSRow>
           </Modal.Body>
           <Modal.Footer>
             <BSFormGroup>
-              <SubmitButton onClick={() => this.close(tourId)} value={messages.saveButton.defaultMessage} /> &nbsp;
-              <CancelButton onClick={() => this.close()}>{messages.cancelButton.defaultMessage}</CancelButton>
+              <SubmitButton onClick={() => this.close(tourId)} >{messages.saveButton.defaultMessage}</SubmitButton> &nbsp;
+              <CancelButton onClick={() => this.close()} >{messages.cancelButton.defaultMessage} </CancelButton>
             </BSFormGroup>
 
           </Modal.Footer>

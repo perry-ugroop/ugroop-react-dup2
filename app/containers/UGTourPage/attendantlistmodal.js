@@ -14,7 +14,7 @@ import BSColumnLG4 from '../BootStrap/BSColumnLG4';
 import BSColumnAll from '../BootStrap/BSColumnAll';
 import BSRow from '../BootStrap/BSRow';
 import { ButtonToolbar, Modal, Table } from 'react-bootstrap';
-import CloseButton from './CloseButton';
+import CancelButton from './CancelButton';
 // import { toggleAttendListModal } from './actions';
 import messages from './messages';
 // import { selectShowModal } from './selectors';
@@ -145,7 +145,7 @@ export class AttendantListModal extends React.Component {
             </BSRow>
           </Modal.Body>
           <Modal.Footer>
-            <CloseButton onClick={() => this.close()}>Close</CloseButton>
+            <CancelButton onClick={() => this.close()}>Close</CancelButton>
           </Modal.Footer>
         </Modal>
       </ButtonToolbar>
