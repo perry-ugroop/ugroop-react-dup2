@@ -164,5 +164,29 @@ export default defineMessages({
     id: 'ugroop.containers.tour.delete.field',
     defaultMessage: 'Delete',
   },
+  viewAllNewsFeedModelTitle: {
+    id: 'ugroop.containers.tours.modal.viewAllNewsFeed',
+    defaultMessage: 'View All Newsfeeds',
+  },
+  viewAllNewsFeedLink: {
+    id: 'ugroop.containers.tours.link.viewAllNewsFeed',
+    defaultMessage: 'View All Newsfeeds',
+  },
+  addNewsFeedModelTitle: {
+    id: 'ugroop.containers.tours.modal.addNewsFeed',
+    defaultMessage: 'Add Newsfeed',
+  },
+  addNewsFeedLink: {
+    id: 'ugroop.containers.tours.link.addNewsFeed',
+    defaultMessage: 'Add News Feed',
+  },
+  addNewsFeedSubjectLabel: {
+    id: 'ugroop.containers.tours.modal.addNewsFeed.subject.label',
+    defaultMessage: 'Subject',
+  },
+  addNewsFeedContentLabel: {
+    id: 'ugroop.containers.tours.link.addNewsFeed.content.label',
+    defaultMessage: 'Cotent',
+  },
 
 });

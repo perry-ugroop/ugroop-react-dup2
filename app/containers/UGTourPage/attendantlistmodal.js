@@ -21,7 +21,6 @@ import messages from './messages';
 // import { createStructuredSelector } from 'reselect';
 
 export class AttendantListModal extends React.Component {
-// class Contacts extends React.Component {
   constructor(props) {
     super(props);
     this.state = {

@@ -37,7 +37,7 @@ function AttendantTab(props) {
                   <br />
                 </AttendantListItem>
               ))
-            }
+          }
         </AttendantList>
       </div>
       <hr />

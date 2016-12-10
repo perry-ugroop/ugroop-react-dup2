@@ -13,7 +13,8 @@ import TourDescText from './TourDescText';
 import TourImg from './TourImg';
 import TourHead from './TourHead';
 import AttendantTab from './attendanttab';
-
+import NewsFeedTab from './newsfeedtab';
+import MockNewsFeed from './mockdata/mockNewsFeed';
 function TourItem(props) {
   const tour = props.item;
   const tourImg = tour.tourImg;
@@ -54,7 +55,9 @@ function TourItem(props) {
             <Tab eventKey={3} title={`${messages.viewerTabTitle.defaultMessage}(${viewers.length})`}>
               <AttendantTab items={viewers} tourId={tour.tourId} attendType="viewer" />
             </Tab>
-            <Tab eventKey={4} title={`${messages.newsFeedTabTitle.defaultMessage}(${newsFeed.length})`}>News Feed TODO</Tab>
+            <Tab eventKey={4} title={`${messages.newsFeedTabTitle.defaultMessage}(${newsFeed.length})`}>
+              <NewsFeedTab tourId={tour.tourId} items={MockNewsFeed} />
+            </Tab>
           </Tabs>
         </UGMainHeading>
       </div>
