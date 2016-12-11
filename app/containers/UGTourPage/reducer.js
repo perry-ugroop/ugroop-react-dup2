@@ -7,8 +7,6 @@ import { fromJS } from 'immutable';
 
 // The initial state of the App
 const initialState = fromJS({
-  displayAttendList: false,
-  currentTourAttendModal: '',
 });
 
 function tourListReducer(state = initialState, action) {

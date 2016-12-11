@@ -2,7 +2,7 @@
  * Created by yunzhou on 26/11/2016.
  */
 import React from 'react';
-import A from 'components/A';
+import A from '../../components/A';
 import { Overlay } from 'react-bootstrap';
 import messages from './messages';
 import { connect } from 'react-redux';
@@ -13,6 +13,7 @@ import SubmitButton from './SubmitButton';
 import CancelButton from './CancelButton';
 import BSColumnLG6 from '../BootStrap/BSColumnLG6';
 import BSColumnAll from '../BootStrap/BSColumnAll';
+import { PARTICIPANT_ATTENDANT, PARTICIPANT_ORGANIZER, PARTICIPANT_VIEWER } from './constants';
 
 export class AttendantAddPopover extends React.Component {
 
@@ -38,15 +39,15 @@ export class AttendantAddPopover extends React.Component {
     // const tourId = this.props.tourId;
     const attendType = this.props.attendType;
     let title = '';
-    if (attendType === 'participant') {
+    if (attendType === PARTICIPANT_ATTENDANT) {
       title = messages.addParticipantsLink.defaultMessage;
-    } else if (attendType === 'organizer') {
+    } else if (attendType === PARTICIPANT_ORGANIZER) {
       title = messages.addOrganizerLink.defaultMessage;
-    } else if (attendType === 'viewer') {
+    } else if (attendType === PARTICIPANT_VIEWER) {
       title = messages.addViewersLink.defaultMessage;
     }
     return (
-      <div >
+      <span >
 
         <A onClick={() => this.open()}>{title}</A>
 
@@ -59,7 +60,6 @@ export class AttendantAddPopover extends React.Component {
 
           <div
             style={{
-              ...this.props.style,
               backgroundColor: '#EEE',
               boxShadow: '0 5px 10px rgba(0, 0, 0, 0.2)',
               border: '1px solid #CCC',
@@ -94,14 +94,13 @@ export class AttendantAddPopover extends React.Component {
             </BSRow>
           </div>
         </Overlay>
-      </div>
+      </span>
     );
   }
 }
 
 AttendantAddPopover.propTypes = {
   // tourId: React.PropTypes.string,
-  style: React.PropTypes.any,
   attendType: React.PropTypes.string,
   firstName: React.PropTypes.string,
   lastName: React.PropTypes.string,

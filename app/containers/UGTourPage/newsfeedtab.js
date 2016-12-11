@@ -11,7 +11,7 @@ import NewsFeedList from './newsfeedlist';
 import NewsFeedListModal from './newsfeedlistmodal';
 import AddNewsModal from './addnewsmodal';
 
-function NewsFeedTab(props) {
+export function NewsFeedTab(props) {
   const tourId = props.tourId;
   const newsfeedlist = props.items[tourId];
 

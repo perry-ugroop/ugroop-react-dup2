@@ -188,5 +188,8 @@ export default defineMessages({
     id: 'ugroop.containers.tours.link.addNewsFeed.content.label',
     defaultMessage: 'Cotent',
   },
-
+  uploadButton: {
+    id: 'ugroop.containers.tours.upload.field',
+    defaultMessage: 'Upload',
+  },
 });

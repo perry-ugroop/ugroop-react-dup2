@@ -15,3 +15,6 @@
 export const ATTENDANT_DECLINE = 'DECLINE';
 export const ATTENDANT_JOINED = 'JOINED';
 export const ATTENDANT_WAITING = 'WAITING';
+export const PARTICIPANT_ATTENDANT = 'participant';
+export const PARTICIPANT_ORGANIZER = 'organizer';
+export const PARTICIPANT_VIEWER = 'viewer';
