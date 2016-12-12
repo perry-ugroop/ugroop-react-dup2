@@ -5,7 +5,7 @@ import React from 'react';
 import messages from './messages';
 import { ATTENDANT_DECLINE, ATTENDANT_JOINED, ATTENDANT_WAITING } from './constants';
 
-function AttendantStatusSpan(props) {
+export function AttendantStatusSpan(props) {
   const status = props.status;
   if (status === ATTENDANT_WAITING) {
     return (

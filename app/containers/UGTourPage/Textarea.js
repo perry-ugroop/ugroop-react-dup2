@@ -1,5 +1,5 @@
 /**
- * Created by Yang on 17/11/16.
+ * Created by Yun on 17/11/16.
  */
 import BSTextAreaFormControl from '../BootStrap/BSTextAreaFormControl';
 import UGFlatBorder from '../BootStrap/UGFlatBorder';
@@ -9,7 +9,7 @@ const TextareaTmp = (props) => <BSTextAreaFormControl
   rows={props.rows}
 />;
 TextareaTmp.propTypes = {
-  rows: React.PropTypes.number,
+  rows: React.PropTypes.any,
 };
 const Textarea = styled(TextareaTmp)`
   &&{
