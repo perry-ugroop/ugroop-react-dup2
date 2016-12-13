@@ -1,0 +1,38 @@
+/**
+ * Created by yunzhou on 11/12/2016.
+ */
+import { mount } from 'enzyme';
+
+import React from 'react';
+import { IntlProvider } from 'react-intl';
+import { AttendantImportopover } from '../attendantimportpopover';
+import { PARTICIPANT_ATTENDANT, PARTICIPANT_ORGANIZER, PARTICIPANT_VIEWER } from '../constants';
+
+describe('<AttendantImportopover />', () => {
+  it('should render participant attendant ', () => {
+    const renderedComponent = mount(
+      <IntlProvider locale="en">
+        <AttendantImportopover attendType={PARTICIPANT_ATTENDANT} />
+      </IntlProvider>
+    );
+    expect(renderedComponent.find('a').text()).toEqual('Import Participants');
+  });
+
+  it('should render organizer attendant ', () => {
+    const renderedComponent = mount(
+      <IntlProvider locale="en">
+        <AttendantImportopover attendType={PARTICIPANT_ORGANIZER} />
+      </IntlProvider>
+    );
+    expect(renderedComponent.find('a').text()).toEqual('Import Organizer');
+  });
+
+  it('should render viewer attendant ', () => {
+    const renderedComponent = mount(
+      <IntlProvider locale="en">
+        <AttendantImportopover attendType={PARTICIPANT_VIEWER} />
+      </IntlProvider>
+    );
+    expect(renderedComponent.find('a').text()).toEqual('Import Viewers');
+  });
+});

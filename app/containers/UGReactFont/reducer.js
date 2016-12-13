@@ -9,11 +9,11 @@ import { fromJS } from 'immutable';
 const initialState = fromJS({
 });
 
-function tourListReducer(state = initialState, action) {
+function fontReducer(state = initialState, action) {
   switch (action.type) {
     default:
       return state;
   }
 }
 
-export default tourListReducer;
+export default fontReducer;

@@ -161,7 +161,23 @@ export default function createRoutes(store) {
         importModules.catch(errorLoading);
       }}
     />,
-
+    <Route
+      path={'/svgfont'}
+      name={'svgfont'}
+      key={'svgfont'}
+      getComponent={(nextState, cb) => {
+        const importModules = Promise.all([
+          System.import('containers/UGReactFont/reducer'),
+          System.import('containers/UGReactFont'),
+        ]);
+        const renderRoute = loadModule(cb);
+        importModules.then(([reducer, component]) => {
+          injectReducer('svgfonttrial', reducer.default);
+          renderRoute(component);
+        });
+        importModules.catch(errorLoading);
+      }}
+    />,
     <Route
       path={'/registration'}
       name={'registration'}
