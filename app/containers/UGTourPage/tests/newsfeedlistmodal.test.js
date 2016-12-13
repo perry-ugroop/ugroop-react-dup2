@@ -45,6 +45,6 @@ describe('<NewsFeedListModal />', () => {
         <NewsFeedListModal tourId={tour1ID} newsfeedlist={tour1Newsfeed} />
       </IntlProvider>
     );
-    expect(renderedComponent.find('ButtonToolbar').length).toEqual(1);
+    expect(renderedComponent.find('div').length).toEqual(1);
   });
 });
