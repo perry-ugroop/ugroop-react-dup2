@@ -8,30 +8,31 @@
 
 import React from 'react';
 import Helmet from 'react-helmet';
-import styled from 'styled-components';
+<<<<<<< Updated upstream
 
 import UGNavBar from 'components/UGNavBar';
 import UGFooter from 'components/UGFooter';
 import UGFooterSitemap from '../../components/UGFooterSitemap';
+import UGAppWrapper from '../BootStrap/UGAppWrapper';
+import UGAppContentWrapper from '../BootStrap/UGAppContentWrapper';
 
-const AppWrapper = styled.div` 
-  margin: 0 auto;
-  display: flex;
+=======
+import UGNavBar from 'components/UGNavBar';
+import UGFooterSitemap from 'components/UGFooterSitemap';
+import UGFooter from 'components/UGFooter';
+import styled from 'styled-components';
+import Slider from '../../components/UGSlider';
+
+const AppWrapper = styled.div`
+  margin-top:50px;
   min-height: 100%;
-  padding: 0 16px;
-  flex-direction: column;
 `;
+>>>>>>> Stashed changes
 
-const AppContentWrapper = styled.div` 
-  margin-top: 50px;
-  display: flex;
-  min-height: 100%;
-  flex-direction: column;
-`;
 
-function App(props) {
+function App() {
   return (
-    <AppWrapper>
+    <UGAppWrapper>
       <Helmet
         titleTemplate="%s - React.js Boilerplate"
         defaultTitle="React.js Boilerplate"
@@ -40,12 +41,16 @@ function App(props) {
         ]}
       />
       <UGNavBar />
-      <AppContentWrapper>
+<<<<<<< Updated upstream
+      <UGAppContentWrapper>
         {React.Children.toArray(props.children)}
-      </AppContentWrapper>
+      </UGAppContentWrapper>
+=======
+      <Slider />
+>>>>>>> Stashed changes
       <UGFooterSitemap />
       <UGFooter />
-    </AppWrapper>
+    </UGAppWrapper>
   );
 }
 
@@ -55,6 +60,8 @@ App.propTypes = {
 
 export default App;
 
+<<<<<<< Updated upstream
+=======
 
 // <div className={{ 'text-align': 'center' }}>
 //         <ReCaptcha
@@ -62,9 +69,7 @@ export default App;
 //           onChange={onChange}
 //           type="image"
 //           theme="light"
+//           grecaptcha={greCaptchaObject}
 //         />
 //       </div>
-
-// const AppWrapper = styled.div`
-//   // max-width: calc(768px + 16px * 2);
-// `;
+>>>>>>> Stashed changes
