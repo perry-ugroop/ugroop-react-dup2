@@ -1,21 +1,17 @@
 
 import React from 'react';
 import { connect } from 'react-redux';
-import { push } from 'react-router-redux';
+// import { push } from 'react-router-redux';
 // import H1 from 'components/H1';
 import UGSubpagesHeader from '../../components/UGSubpagesHeader';
 
 // import CommentForm from './CommentForm';
 
-export class UGBlogPage extends React.Component {
-  openUGBlogPage = () => {
-    this.props.dispatch(push('/'));
-  };
-
+export class UGBlogPage extends React.Component {  // eslint-disable-line react/prefer-stateless-function
   render() {
     return (
       <div className="Blogs">
-        <UGSubpagesHeader title="Blogs" />
+        <UGSubpagesHeader label="Blogs" />
         <div className={'breadcrumb-container'}>
           <div className={'container'}>
             <ol className={'breadcrumb'}>

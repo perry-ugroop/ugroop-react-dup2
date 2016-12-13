@@ -1,25 +1,26 @@
 import React from 'react';
-import { connect } from 'react-redux';
+// import { connect } from 'react-redux';
 import { push } from 'react-router-redux';
-import BSRow from '../BootStrap/BSRow';
+import { Col, Row } from 'react-bootstrap';
+// import BSRow from '../BootStrap/BSRow';
 
 import priceList from './list';
 import UGSubpagesHeader from '../../components/UGSubpagesHeader';
 
-const PriceListing = priceList.map((item) => <div className={'col-md-4'}>
-  <BSRow>
+const PriceListing = priceList.map((item, index) => <Col md={4}>
+  <Row>
     <div className={'col-lg-9 col-xs-offset-3 top-10'}>
       <div className={'panel panel-default panel-price'}>
         <div className={'panel-heading text-center'}>
-          <h1>{item.plan}
+          <h1 key={index}>{item.plan}
             <p>
               <sup>$</sup>{item.price}
             </p><span>{item.term}</span>
           </h1>
           <ul className={'list-group text-center'}>
             {
-            item.details.map((packageItem, index) =>
-              <li className={'list-group-item'} key={index}>{packageItem}</li>
+            item.details.map((packageItem, index2) =>
+              <li className={'list-group-item'} key={index2}>{packageItem}</li>
             )
           }
           </ul>
@@ -27,8 +28,8 @@ const PriceListing = priceList.map((item) => <div className={'col-md-4'}>
         </div>
       </div>
     </div>
-  </BSRow>
-</div>
+  </Row>
+</Col>
 
 );
 
@@ -75,5 +76,5 @@ UGPricingPage.propTypes = {
   dispatch: React.PropTypes.func,
 };
 
-export default connect()(UGPricingPage);
+export default UGPricingPage;
 

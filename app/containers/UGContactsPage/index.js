@@ -1,5 +1,5 @@
 import React from 'react';
-import { connect } from 'react-redux';
+// import { connect } from 'react-redux';
 import { push } from 'react-router-redux';
 import UGSubpagesHeader from '../../components/UGSubpagesHeader';
 
@@ -123,4 +123,4 @@ UGContactsPage.propTypes = {
   dispatch: React.PropTypes.func,
 };
 
-export default connect()(UGContactsPage);
+export default UGContactsPage;

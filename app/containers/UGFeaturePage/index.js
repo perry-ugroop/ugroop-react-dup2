@@ -2,22 +2,26 @@
 // Feature Listing component for the homepage - Vinz 2016-11-28
 // ************************************************************************
 import React from 'react';
-import { connect } from 'react-redux';
+// import { connect } from 'react-redux';
 import { push } from 'react-router-redux';
 import Helmet from 'react-helmet';
 
 import featureList from '../UGFeatureListing/list';
 import UGSubpagesHeader from '../../components/UGSubpagesHeader';
-import BSColumn6 from '../BootStrap/BSColumn6';
+import UGBreadcrumbStyle from './UGBreadcrumbStyle';
+import UGSubpagesContainerStyle from './UGSubpagesContainerStyle';
+
+import { Grid, Row, Col, Breadcrumb } from 'react-bootstrap';
+
 
 const FeatureList = featureList.map((item) =>
-  <BSColumn6>
+  <Col md={6}>
     <div className={'icon-features icon-feature-one'}>
       <p><img src={item.iconImage} alt="" /></p>
       <h3 className={'featured-header'}>{item.title}</h3>
       <p>{item.description}</p>
     </div>
-  </BSColumn6>
+  </Col>
 );
 
 export class UGFeaturePage extends React.Component {
@@ -39,25 +43,26 @@ export class UGFeaturePage extends React.Component {
           ]}
         />
         <UGSubpagesHeader title="Features" />
-        <div className={'breadcrumb-container'}>
-          <div className={'container'}>
-            <ol className={'breadcrumb'}>
-              <li>
-                <a href="/">Home</a>
-              </li>
-              <li className="active">
-                <a href="">Features</a>
-              </li>
-            </ol>
-          </div>
-        </div>
+        <UGBreadcrumbStyle>
+          <Grid>
+            <Breadcrumb>
+              <Breadcrumb.Item href="#">
+                Home
+              </Breadcrumb.Item>
+              <Breadcrumb.Item href="#" active>
+                Features
+              </Breadcrumb.Item>
+            </Breadcrumb>
+          </Grid>
+        </UGBreadcrumbStyle>
 
-        <div className={'subpages-body-content container'}>
-          <div className={'row'}>
-            {FeatureList}
-          </div>
-        </div>
-
+        <Grid>
+          <UGSubpagesContainerStyle>
+            <Row>
+              {FeatureList}
+            </Row>
+          </UGSubpagesContainerStyle>
+        </Grid>
       </div>
     );
   }
@@ -67,4 +72,4 @@ UGFeaturePage.propTypes = {
   dispatch: React.PropTypes.func,
 };
 
-export default connect()(UGFeaturePage);
+export default UGFeaturePage;

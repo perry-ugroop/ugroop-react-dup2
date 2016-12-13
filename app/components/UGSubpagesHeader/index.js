@@ -4,31 +4,68 @@
 
 import React, { PropTypes } from 'react';
 import styled from 'styled-components';
-import BSContainer from '../../containers/BootStrap/BSContainer';
+import { Grid } from 'react-bootstrap';
 
-const UGSubpagesTitleBox = styled.div`
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-  background-color: #11314d;
-  color: #FFF;
-  color: #7C88A1;
-  margin: 0;
-  padding: 20px 0 12px 0; 
-  background: #2e5da5;
-  border-top: 3px solid #EF5B3C;
+import bgSubpages from './assets/bg-subpages-header.png';
+import bgAroundTheWorldSubpages from './assets/bg-subpages-header-around-the-world.png';
+import iconBlog from './assets/icon-blog.png';
+import iconFeatures from './assets/icon-features.png';
+import iconPricing from './assets/icon-price.png';
+import iconFAQ from './assets/icon-faq.png';
+import iconContactus from './assets/icon-contactus.png';
+
+const UGSubpagesHeaderWrapper = styled.div`
+ &{
+    background: url(${bgSubpages}) left top #0073CE;
+    border-bottom: 3px solid #EF5B3C;
+    margin-top: 20px;
+    min-height: 155px;
+    position: relative;
+  }
+  & .container{
+    background: url(${bgAroundTheWorldSubpages}) right center no-repeat;
+    min-height: 155px;    
+  }
 `;
 
 function UGSubpagesHeader(props) {
-  const item = (
-    <h1 className="">{props.title}</h1>
-    );
+  const UGSubpagesTitleBox = styled.h1`
+    bottom:10px;
+    color: #fff;
+    font-size: 216%;
+    font-weight: 600;
+    line-height: 50px;
+    text-transform: uppercase;
+    
+    padding-left: 60px;
+    position:absolute;
+    background: url()
+    ${() => {
+      if (props.title === 'Features') {
+        return `background: url(${ iconFeatures}) left center no-repeat;`;
+      }
+      if (props.title === 'Pricing') {
+        return `background: url(${ iconPricing}) left center no-repeat;`;
+      }
+      if (props.title === 'Blogs') {
+        return `background: url(${ iconBlog}) left center no-repeat;`;
+      }
+      if (props.title === 'FAQ') {
+        return `background: url(${ iconFAQ}) left center no-repeat;`;
+      }
+      if (props.title === 'Contact Us') {
+        return `background: url(${ iconContactus}) left center no-repeat;`;
+      }
+      return '';
+    }};   
+  `;
+
   return (
-    <div className="subpages-header">
-      <UGSubpagesTitleBox>
-        <BSContainer>{item}</BSContainer>
-      </UGSubpagesTitleBox>
-    </div>
+    <UGSubpagesHeaderWrapper>
+      <Grid>
+        <UGSubpagesTitleBox>{props.title}</UGSubpagesTitleBox>
+      </Grid>
+    </UGSubpagesHeaderWrapper>
   );
 }
 

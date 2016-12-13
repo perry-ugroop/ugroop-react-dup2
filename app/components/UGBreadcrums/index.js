@@ -3,13 +3,14 @@
 /* ************************************************************************** */
 
 import React from 'react';
-import BSContainer from '../../containers/BootStrap/BSContainer';
+// import BSContainer from '../../containers/BootStrap/BSContainer';
+import { Grid, Row } from 'react-bootstrap';
 
 function UGBreadcrumbs(props) {
   return (
-    <BSContainer>
+    <Grid fluid><Row>
       {props.children}
-    </BSContainer>
+    </Row></Grid>
   );
 }
 
@@ -19,16 +20,3 @@ UGBreadcrumbs.propTypes = {
 
 export default UGBreadcrumbs;
 
-
-//  <div className={'breadcrumb-container'}>
-//           <div className={'container'}>
-//             <ol className={'breadcrumb'}>
-//               <li>
-//                 <a href="/">Home</a>
-//               </li>
-//               <li className={'active'}>
-//                 <a href="">Blogs</a>
-//               </li>
-//             </ol>
-//           </div>
-//         </div>
