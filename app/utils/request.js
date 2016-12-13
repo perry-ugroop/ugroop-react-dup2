@@ -18,13 +18,17 @@ function parseJSON(response) {
  *
  * @return {object|undefined} Returns either the response, or throws an error
  */
+
 function checkStatus(response) {
   if (response.status >= 200 && response.status < 300) {
     return response;
   }
-  const error = new Error(response.statusText);
-  error.response = response;
-  throw error;
+  return Promise.resolve(response.json())
+    .then((value) => {
+      const error = new Error(response.status);
+      error.response = value;
+      throw error;
+    });
 }
 
 /**
@@ -49,7 +53,10 @@ export function postJSONRequest(url, options) {
       'Accept': 'application/json', /*eslint quote-props: ["error", "consistent-as-needed"]*/
     },
   };
-  const opts = Object.assign({}, postHeaders, options);
+  const bodyContent = {
+    body: JSON.stringify(options),
+  };
+  const opts = Object.assign({}, postHeaders, bodyContent);
   return fetch(url, opts)
     .then(checkStatus)
     .then(parseJSON);

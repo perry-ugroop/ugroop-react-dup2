@@ -14,6 +14,9 @@ import {
   CHANGE_RETYPEPASSWORD,
   VALIDATE_FIELD,
   VALIDATE_RETYPEPASSWORD,
+  SUBMIT_REGISTERATION,
+  USER_ORG_SIGNUP_SUCCESS,
+  USER_ORG_SIGNUP_ERROR,
 } from '../constants';
 
 import {
@@ -29,6 +32,9 @@ import {
   changeRetypePassword,
   validText,
   validReTypePassword,
+  submitUserSignUp,
+  registerError,
+  registerSuccess,
 } from '../actions';
 
 describe('Register Actions', () => {
@@ -155,7 +161,7 @@ describe('Register Actions', () => {
       expect(validText(fixture)).toEqual(expectedResult);
     });
   });
-  describe('validate_retypepasswird', () => {
+  describe('validate_retypepassword', () => {
     it('should return the correct type and the passed reTypePassword', () => {
       const fixture = 'pw';
       const expectedResult = {
@@ -163,6 +169,32 @@ describe('Register Actions', () => {
         password: fixture,
       };
       expect(validReTypePassword(fixture)).toEqual(expectedResult);
+    });
+  });
+  describe('submit user org sign up action', () => {
+    it('should return the correct type', () => {
+      const expectedResult = {
+        type: SUBMIT_REGISTERATION,
+      };
+      expect(submitUserSignUp()).toEqual(expectedResult);
+    });
+  });
+  describe('server validation', () => {
+    it('should return the correct type and success response', () => {
+      const fixture = 'data';
+      const expectedResult = {
+        type: USER_ORG_SIGNUP_SUCCESS,
+        response: fixture,
+      };
+      expect(registerSuccess(fixture)).toEqual(expectedResult);
+    });
+    it('should return the correct type and error', () => {
+      const fixture = 'some error';
+      const expectedResult = {
+        type: USER_ORG_SIGNUP_ERROR,
+        serverError: fixture,
+      };
+      expect(registerError(fixture)).toEqual(expectedResult);
     });
   });
 });

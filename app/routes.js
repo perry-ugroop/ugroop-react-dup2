@@ -169,11 +169,13 @@ export default function createRoutes(store) {
       getComponent={(nextState, cb) => {
         const importModules = Promise.all([
           System.import('containers/UGRegisterPage/reducer'),
+          System.import('containers/UGRegisterPage/sagas'),
           System.import('containers/UGRegisterPage'),
         ]);
         const renderRoute = loadModule(cb);
-        importModules.then(([reducer, component]) => {
+        importModules.then(([reducer, sagas, component]) => {
           injectReducer('register', reducer.default);
+          injectSagas(sagas.default);
           renderRoute(component);
         });
         importModules.catch(errorLoading);

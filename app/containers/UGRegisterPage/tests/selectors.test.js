@@ -15,6 +15,7 @@ import {
   selectRole, selectWebsite,
   selectPassword, selectPasswordError,
   selectReTypePassword, selectReTypePasswordError,
+  selectServerValidationError,
 } from '../selectors';
 
 describe('selectRegisterpage', () => {
@@ -284,3 +285,19 @@ describe('selectReTypePasswordError', () => {
     expect(selector(mockedState)).toEqual(expectedResult);
   });
 });
+
+describe('selectServerValidationeError', () => {
+  const selector = selectServerValidationError();
+  it('should select the selectServerValidation state', () => {
+    const expectedResult = 'error';
+    const mockedState = fromJS({
+      register: {
+        signUpError: fromJS({
+          serverValidationError: expectedResult,
+        }),
+      },
+    });
+    expect(selector(mockedState)).toEqual(expectedResult);
+  });
+});
+
