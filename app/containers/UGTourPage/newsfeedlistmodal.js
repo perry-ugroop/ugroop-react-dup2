@@ -6,7 +6,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import A from '../../components/A';
 // import Button from 'components/Button';
-import { ButtonToolbar, Modal } from 'react-bootstrap';
+import { Modal } from 'react-bootstrap';
 import CancelButton from './CancelButton';
 // import { toggleAttendListModal } from './actions';
 import messages from './messages';
