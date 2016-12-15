@@ -12,7 +12,7 @@ import { changeOrgName, changeOrgAddress, changeFirstName, changeLastName,
 changeWebsite, changeEmail, changeTelephone, changePassword,
 changeRetypePassword, changeRole, validText, validReTypePassword } from '../actions';
 
-describe('<Register />', () => {
+describe('<RegisterForm />', () => {
   const orgError = 'org name error';
   const orgAddressError = 'org address error';
   const firstNameError = 'firstname error';

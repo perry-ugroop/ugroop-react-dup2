@@ -57,6 +57,7 @@ describe('registerReducer', () => {
         retypePasswordError: '',
         serverValidationError: '',
       }),
+      isRegisterSuccess: false,
     });
   });
 

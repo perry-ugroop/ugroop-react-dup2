@@ -85,6 +85,6 @@ describe('userOrgSignUp Saga', () => {
     const error = new Error();
     error.response = { message: errorMsg };
     const putDescriptor = getUserOrgSignUpGenerator.throw(error).value;
-    expect(putDescriptor).toEqual(put(registerError(error)));
+    expect(putDescriptor).toEqual(put(registerError(errorMsg)));
   });
 });

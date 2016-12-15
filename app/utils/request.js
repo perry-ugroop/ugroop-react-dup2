@@ -24,10 +24,18 @@ function checkStatus(response) {
     return response;
   }
   return Promise.resolve(response.json())
-    .then((value) => {
+    .then((jsonError) => {
       const error = new Error(response.status);
-      error.response = value;
+      error.response = jsonError;
+      error.code = 'jsonerror';
       throw error;
+    }).catch((error) => { // only due to the response is not JSON format, then throw the original error
+      if (error.code === 'jsonerror') {
+        throw error;
+      }
+      const otherError = new Error(response.statusText);
+      otherError.response = response;
+      throw otherError;
     });
 }
 

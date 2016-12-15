@@ -104,6 +104,11 @@ const selectServerValidationError = () => createSelector(
   (registerState) => registerState.getIn([SIGNUP_ERROR_STATEKEY, SERVER_VALIDATION_ERROR])
 );
 
+const selectIsRegisterSuccess = () => createSelector(
+  selectRegisterpage(),
+  (registerState) => registerState.get('isRegisterSuccess')
+);
+
 export {
   selectRegisterpage,
   selectOrgName,
@@ -125,4 +130,5 @@ export {
   selectPasswordError,
   selectReTypePasswordError,
   selectServerValidationError,
+  selectIsRegisterSuccess,
 };

@@ -17,7 +17,7 @@ import {
   VALIDATE_RETYPEPASSWORD,
   VALIDATE_FIELD,
   ORGNAME_FIELD, ORGADDRESS_FIELD, FIRSTNAME_FIELD, LASTNAME_FIELD, EMAIL_FIELD, PASSWORD_FIELD, WEBSITE_FIELD,
-  ROLE_FIELD, TELEPHONE_FIELD, RETYPE_PASSWORD_FIELD,
+  ROLE_FIELD, TELEPHONE_FIELD, RETYPE_PASSWORD_FIELD, USER_ORG_SIGNUP_SUCCESS,
   USER_ORG_SIGNUP_ERROR, SERVER_VALIDATION_ERROR,
 } from './constants';
 import { fromJS } from 'immutable';
@@ -49,6 +49,7 @@ const initialState = fromJS({
     retypePasswordError: '',
     serverValidationError: '',
   }),
+  isRegisterSuccess: false,
 });
 
 function registerReducer(state = initialState, action) {
@@ -87,8 +88,13 @@ function registerReducer(state = initialState, action) {
       return validateReTypePassword(action.password, state);
     case VALIDATE_FIELD:
       return validateText(action.text, action.field, action.regExps, state);
+    case USER_ORG_SIGNUP_SUCCESS:
+      return state
+        .set('isRegisterSuccess', true);
     case USER_ORG_SIGNUP_ERROR:
-      return state.setIn([SIGNUP_ERROR_STATEKEY, SERVER_VALIDATION_ERROR], action.serverError);
+      return state
+        .setIn([SIGNUP_ERROR_STATEKEY, SERVER_VALIDATION_ERROR], action.serverError)
+        .set('isRegisterSuccess', false);
     default:
       return state;
   }

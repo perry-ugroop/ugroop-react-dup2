@@ -15,9 +15,19 @@ import BSRow from '../BootStrap/BSRow';
 import RegisterPanel from './RegisterPanel';
 import RegisterPanelBody from './RegisterPanelBody';
 import RegisterWrapper from './RegisterWrapper';
+import RegisterSuccess from './registerSuccess';
 import { TitleH1 } from '../UGLoginPage/TitleH1';
+import { selectIsRegisterSuccess } from './selectors';
+import { createStructuredSelector } from 'reselect';
+
 export class RegisterPage extends React.Component {  // eslint-disable-line react/prefer-stateless-function
   render() {
+    let mainContent;
+    if (this.props.isRegisterSuccess) {
+      mainContent = <RegisterSuccess />;
+    } else {
+      mainContent = <RegisterForm />;
+    }
     return (
       <RegisterBody >
         <BSRow>
@@ -31,7 +41,7 @@ export class RegisterPage extends React.Component {  // eslint-disable-line reac
                   <p><FormattedMessage {...messages.registerHeader} /></p>
                 </TitleH1>
               </RegisterWrapper>
-              <RegisterForm />
+              {mainContent}
             </RegisterPanelBody>
           </RegisterPanel>
         </BSRow>
@@ -40,4 +50,12 @@ export class RegisterPage extends React.Component {  // eslint-disable-line reac
   }
 }
 
-export default connect()(RegisterPage);
+RegisterPage.propTypes = {
+  isRegisterSuccess: React.PropTypes.bool,
+};
+
+const mapStateToProps = createStructuredSelector({
+  isRegisterSuccess: selectIsRegisterSuccess(),
+});
+
+export default connect(mapStateToProps)(RegisterPage);

@@ -10,7 +10,8 @@ import { createStructuredSelector } from 'reselect';
 import { selectOrgName, selectOrgAddress, selectFirstName,
 selectLastName, selectEmail, selectRole, selectWebsite, selectTelephone, selectPassword, selectReTypePassword,
 selectOrgAddressError, selectOrgNameError, selectFirstNameError, selectLastNameError, selectTelephoneError,
-selectReTypePasswordError, selectPasswordError, selectEmailError, selectServerValidationError } from './selectors';
+selectReTypePasswordError, selectPasswordError, selectEmailError, selectServerValidationError,
+  selectIsRegisterSuccess } from './selectors';
 import { changeOrgName, changeOrgAddress, changeFirstName, changeLastName, changeWebsite,
 changeEmail, changeTelephone, changePassword, changeRetypePassword, changeRole,
 validText, validReTypePassword, submitUserSignUp } from './actions';
@@ -334,6 +335,7 @@ const mapStateToProps = createStructuredSelector({
   passwordError: selectPasswordError(),
   retypePasswordError: selectReTypePasswordError(),
   serverValidationError: selectServerValidationError(),
+  isRegisterSuccess: selectIsRegisterSuccess(),
 });
 
 export function mapDispatchToProps(dispatch) {

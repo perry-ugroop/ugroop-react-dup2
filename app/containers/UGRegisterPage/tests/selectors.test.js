@@ -301,3 +301,18 @@ describe('selectServerValidationeError', () => {
   });
 });
 
+describe('selectIsRegisterSuccess', () => {
+  const selector = selectServerValidationError();
+  it('should select the selectIsRegisterSuccess state', () => {
+    const expectedResult = 'error';
+    const mockedState = fromJS({
+      register: {
+        signUpError: fromJS({
+          serverValidationError: expectedResult,
+        }),
+      },
+    });
+    expect(selector(mockedState)).toEqual(expectedResult);
+  });
+});
+

@@ -1,0 +1,11 @@
+#This is one of our StormPath Testing Account.
+#For testing purpose, please sign up your own stormpath dev account.
+#And change those values.
+#Please refer this link to create your initial data
+# https://github.com/ugr00p/UGroopReact/wiki/Stormpath-Dev-Account-Initial-Setup
+client:
+  apiKey:
+    id: 1D72V2Q2G9WZIDO4PFK95QRNG
+    secret: YQB7Mq3DVg7sfQfY2+dmckuE27TpfNJTt05wmN4FkIU
+  application:
+    href: https://api.stormpath.com/v1/applications/5GGRPxGj7096TWlR4ALl2x

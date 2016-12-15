@@ -179,7 +179,7 @@ describe('Register Actions', () => {
       expect(submitUserSignUp()).toEqual(expectedResult);
     });
   });
-  describe('server validation', () => {
+  describe('register server validation', () => {
     it('should return the correct type and success response', () => {
       const fixture = 'data';
       const expectedResult = {
