@@ -1,7 +1,10 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { push } from 'react-router-redux';
+
 import UGSubpagesHeader from '../../components/UGSubpagesHeader';
+import UGBreadcrumbs from '../../components/UGBreadcrums';
+import UGSubpagesContainer from '../../components/UGSubpagesContainer';
 
 export class UGFaqPage extends React.Component {
   openUGFaqPage = () => {
@@ -12,23 +15,9 @@ export class UGFaqPage extends React.Component {
     return (
       <div>
         <UGSubpagesHeader title="FAQ" />
-        <div className={'breadcrumb-container'}>
-          <div className={'container'}>
-            <ol className={'breadcrumb'}>
-              <li>
-                <a href="/">Home</a>
-              </li>
-              <li className={'active'}>
-                <a href="">FAQ</a>
-              </li>
-            </ol>
-          </div>
-        </div>
-
-        <div className={'subpages-body-content container'}>
-          <div className={'row'}>
-            <div className={'container'}>
-              <article className={'col-md-12'}>
+        <UGBreadcrumbs title="FAQ" />
+        <UGSubpagesContainer>
+          <article className={'col-md-12'}>
                 <p className={'top-10'}>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                   Nam vel arcu ante. Quisque venenatis, risus eu varius ultricies, augue nunc
                   ultrices odio.orci nibh vitae nunc. Nullam dignissim consectetur felis in
@@ -82,10 +71,8 @@ export class UGFaqPage extends React.Component {
                   </li>
                 </ul>
               </article>
-            </div>
-          </div>
-        </div>
 
+        </UGSubpagesContainer>
       </div>
     );
   }

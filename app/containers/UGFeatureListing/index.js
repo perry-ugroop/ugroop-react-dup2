@@ -24,8 +24,8 @@ import UGFeatureBox from './UGFeatureBox';
 import UGFeatureHeader from './UGFeatureHeader';
 
 
-const FeaturesListing = featureList.map((items) =>
-  <UGFeatureWrapper>
+const FeaturesListing = featureList.map((items, index) =>
+  <UGFeatureWrapper key={index}>
     <Col md={3} sm={6}>
       <UGFeatureBox>
         <UGFeatureFixHeight>

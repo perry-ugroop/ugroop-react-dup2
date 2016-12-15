@@ -16,10 +16,10 @@ import UGSliderWrapper from './UGSliderWrapper';
 import slideList from './list';
 
 
-const SlidesListing = slideList.map((slide, key) => <Carousel.Item>
+const SlidesListing = slideList.map((slide, index) => <Carousel.Item key={index}>
   <UGSliderWrapper>
     <UGSliderTitleStyle>
-      <H2 key={key}> { slide.title } </H2>
+      <H2> { slide.title } </H2>
     </UGSliderTitleStyle>
     <UGSliderCaptionStyle>
       { slide.description }

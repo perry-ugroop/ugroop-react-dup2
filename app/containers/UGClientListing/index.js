@@ -15,9 +15,10 @@ import UGClientListingBox from './UGClientListingBox';
 // Wrapper Components
 // ************************************************************************
 
-const cList = clientList.map((items, key) => <a href={items.url} alt={items.clientName}>
-  <img key={key} src={items.logo} alt={items.description} width="131" height="132" />
-</a>
+const cList = clientList.map((items, key) =>
+  <a href={items.url} alt={items.clientName} key={key}>
+    <img src={items.logo} alt={items.description} width="131" height="132" />
+  </a>
 );
 
 export class UGClientListing extends React.Component {
@@ -37,7 +38,6 @@ export class UGClientListing extends React.Component {
     );
   }
 }
-
 
 // ************************************************************************
 // Components Props type definition

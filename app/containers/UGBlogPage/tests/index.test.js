@@ -1,9 +1,11 @@
-// import UGBlogPage from '../index';
-import UGSubpagesHeader from '../../../components/UGSubpagesHeader';
-
 // import { render } from 'enzyme';
 import React from 'react';
 import { shallow } from 'enzyme';
+
+// import UGBlogPage from '../index';
+import UGBreadcrumbs from '../../../components/UGBreadcrums';
+import UGSubpagesHeader from '../../../components/UGSubpagesHeader';
+import UGSubpagesContainer from '../../../components/UGSubpagesContainer';
 
 describe('<UGSubpageHeader> component', () => {
   const labelProp = { label: 'Blogs' };
@@ -13,6 +15,19 @@ describe('<UGSubpageHeader> component', () => {
       ).length).toEqual(1);
   });
 
-  it('displays the breadcrumbs');
+  it('should render the breadcrumbs ', () => {
+    const renderedComponent = shallow(<UGBreadcrumbs />);
+    expect(renderedComponent.length).toBe(1);
+  });
+
+  it('should render the subpage header ', () => {
+    const renderedComponent = shallow(<UGSubpagesHeader />);
+    expect(renderedComponent.length).toBe(1);
+  });
+
+  it('should render the container', () => {
+    const renderedComponent = shallow(<UGSubpagesContainer />);
+    expect(renderedComponent.length).toBe(1);
+  });
 });
 

@@ -26,6 +26,6 @@ describe('Feature items', () => {
 
   it('should have children', () => {
     const renderedComponent = renderComponent();
-    expect(renderedComponent.contains(children)).toEqual(true);
+    expect(renderedComponent.length).toBe(1);
   });
 });
