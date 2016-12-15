@@ -2,8 +2,7 @@
  * Test store addons
  */
 
-
-import configureStore from '../store'; // eslint-disable-line
+import configureStore from '../store';
 import { browserHistory } from 'react-router';
 
 describe('configureStore', () => {
@@ -15,13 +14,13 @@ describe('configureStore', () => {
 
   describe('asyncReducers', () => {
     it('should contain an object for async reducers', () => {
-      expect(typeof store.asyncReducers).toEqual('object');
+      expect(typeof store.asyncReducers).toBe('object');
     });
   });
 
   describe('runSaga', () => {
     it('should contain a hook for `sagaMiddleware.run`', () => {
-      expect(typeof store.runSaga).toEqual('function');
+      expect(typeof store.runSaga).toBe('function');
     });
   });
 });

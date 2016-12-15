@@ -1,0 +1,17 @@
+.da-slider {
+  width: 100%;
+  min-width: 520px;
+  height: 438px;
+  position: relative;
+  margin: 30px auto;
+  overflow: hidden;
+  background: transparent url(./assets/ugroop-pattern.jpg) repeat 0% 50%;
+  border-top: 3px solid #EF5B3C;
+  border-bottom: 3px solid #EF5B3C;
+  box-shadow: 1px 1px rgba(0, 0, 0, 0.2), -2px 1px #FFF;
+  -webkit-transition: background-position 1.4s ease-in-out 0.3s;
+  -moz-transition: background-position 1.4s ease-in-out 0.3s;
+  -o-transition: background-position 1.4s ease-in-out 0.3s;
+  -ms-transition: background-position 1.4s ease-in-out 0.3s;
+  transition: background-position 1.4s ease-in-out 0.3s;
+}
