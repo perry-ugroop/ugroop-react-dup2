@@ -36,11 +36,12 @@ const AppContentWrapper = styled.div`
 function App(props) {
 
   var links = LINKS;
-  
   if (selectCurrentUserAccount() && links.indexOf(SIGNOUT) == -1)
     links.push(SIGNOUT);
-  else if (links.indexOf(SIGNIN) == -1)
-    links.push(SIGNIN);
+  else {
+    if (links.indexOf(SIGNIN) == -1)
+      links.push(SIGNIN);
+  }
 
   return (
     <AppWrapper>
