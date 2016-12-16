@@ -1,6 +1,5 @@
 import React from 'react';
 import { push } from 'react-router-redux';
-<<<<<<< Updated upstream
 
 // **********  Data Content for Feature Page and Homepage Feature List
 import featureList from './list';
@@ -54,38 +53,12 @@ const FeaturesListing = featureList.map((items, index) =>
 // Main Feature Listing component
 // ************************************************************************
 
-=======
-import BSRow from '../BootStrap/BSRow';
-import BSContainer from '../BootStrap/BSContainer';
-import ButtonStyle from '../BootStrap/BSButtonPrimaryBlock';
-// import BSColumn6 from '../BootStrap/BSColumn6';
-import featureList from './list';
-
-const FeaturesListing = featureList.map((items) => <div>
-  <p>
-    <img
-      src={items.iconImage}
-      width="250"
-      height="134"
-      alt=""
-      className={'img-responsive'}
-    />
-  </p>
-  <h3 className={'featured-header'}>{items.title}</h3>
-  <p>{items.description}</p>
-  <ButtonStyle><a href="">{items.label}</a></ButtonStyle>
-</div>
-);
-
-
->>>>>>> Stashed changes
 export class UGFeatureListing extends React.Component {
   openUGFeatureListing = () => {
     this.props.dispatch(push('/'));
   };
   render() {
     return (
-<<<<<<< Updated upstream
       <UGFourRowWrapper>
         <Grid>
           <Row>
@@ -99,20 +72,6 @@ export class UGFeatureListing extends React.Component {
           </Row>
         </Grid>
       </UGFourRowWrapper>
-=======
-      <BSContainer>
-        <BSRow>
-          <div className={'top-30 text-center'}>
-            <h1>ugroop Features</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eu ante mattis</p>
-          </div>
-        </BSRow>
-        <BSRow>
-          {FeaturesListing}
-        </BSRow>
-      </BSContainer>
-
->>>>>>> Stashed changes
     );
   }
 }
