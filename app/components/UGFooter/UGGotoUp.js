@@ -1,10 +1,10 @@
 /**
  * Created by Ber on 25/11/16.
  */
-import BTNGotoUp from './BTNGotoUp';
+import BSButtonDefault from '../../containers/BootStrap/BSButtonDefault';
 import styled from 'styled-components';
 
-const UGGotoUp = styled(BTNGotoUp)`
+const UGGotoUp = styled(BSButtonDefault)`
   &&{
   background-color:#1C2536;
   border:1px solid #7C88A1;
