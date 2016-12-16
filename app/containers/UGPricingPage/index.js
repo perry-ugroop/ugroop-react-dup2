@@ -31,7 +31,6 @@ const PriceListing = priceList.map((item, index) =>
       </div>
     </Row>
   </Col>
-
 );
 
 export class UGPricingPage extends React.Component {
@@ -48,6 +47,7 @@ export class UGPricingPage extends React.Component {
           <p className={'text-center'}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eu antem<br />venenatis metus nec, scelerisque quam. Integer at ornare est. Sed sagittis cursus diam sed ornare.</p>
           {PriceListing}
         </UGSubpagesContainer>
+
       </div>
     );
   }

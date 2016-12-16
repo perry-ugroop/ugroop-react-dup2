@@ -41,9 +41,37 @@ export class UGFeaturePage extends React.Component { // eslint-disable-line reac
           },
           ]}
         />
+<<<<<<< Updated upstream
         <UGSubpagesHeader title="Features" />
         <UGBreadcrumbs title="Features" />
         <UGSubpagesContainer> {FeatureList}</UGSubpagesContainer>
+=======
+
+        <div className={'subpages-header'}>
+          <div className={'container subpages-header-around-the-world'}>
+            <h1 className={'icon-title-features'}>Features</h1>
+          </div>
+        </div>
+        <div className={'breadcrumb-container'}>
+          <div className={'container'}>
+            <ol className={'breadcrumb'}>
+              <li>
+                <a href="">Home</a>
+              </li>
+              <li className="active">
+                <a href="">Features</a>
+              </li>
+            </ol>
+          </div>
+        </div>
+
+        <div className={'subpages-body-content container'}>
+          <div className={'row'}>
+            {FeatureList}
+          </div>
+        </div>
+
+>>>>>>> Stashed changes
       </div>
     );
   }
