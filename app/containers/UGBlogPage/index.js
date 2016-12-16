@@ -1,6 +1,12 @@
 
 import React from 'react';
 import { connect } from 'react-redux';
+<<<<<<< Updated upstream
+=======
+import { push } from 'react-router-redux';
+import H1 from 'components/H1';
+import CommentForm from './CommentForm';
+>>>>>>> Stashed changes
 
 import UGSubpagesHeader from '../../components/UGSubpagesHeader';
 import UGBreadcrumbs from '../../components/UGBreadcrums';
@@ -13,6 +19,7 @@ export class UGBlogPage extends React.Component {  // eslint-disable-line react/
   render() {
     return (
       <div className="Blogs">
+<<<<<<< Updated upstream
         <UGSubpagesHeader title="Blogs" />
         <UGBreadcrumbs title="Blogs" />
         <UGSubpagesContainer>
@@ -21,6 +28,18 @@ export class UGBlogPage extends React.Component {  // eslint-disable-line react/
             <span className="blog-date">January 10, 2015</span>
             <p className="top-10">
               <img src="./assets/photo2.png" width="243" height="244" className={'thumbnail pull-left blog-photo'} style={{ margin: '0 20px 20px 0' }} alt="" />
+=======
+        <CommentForm />
+        <H1>BLOGS</H1>
+        <div className="subpages-body-content container">
+          <div className="row">
+            <div className="container">
+              <article className="col-md-9">
+                <h1>Blog Title</h1>
+                <span className="blog-date">January 10, 2015</span>
+                <p className="top-10">
+                  <img src="./assets/photo2.png" width="243" height="244" className={'thumbnail pull-left blog-photo'} style={{ margin: '0 20px 20px 0' }} alt="" />
+>>>>>>> Stashed changes
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel arcu ante. Quisque venenatis, risus eu varius ultricies, augue nunc ultrices odio.orci nibh vitae nunc.
                   Nullam dignissim consectetur felis in sodales. Duis volutpat gravida hendrerit. Nullam pellentesque pulvinar porta. Cras tortor dui, ornare et blandit vel, molestie eu
                   lectus. Sed nisi ligula, aliquam sit amet feugiat eu, mattis in tortor. Donec fermentum massa nec quam scelerisque efficitur.

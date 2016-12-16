@@ -10,8 +10,18 @@ import FeatureListing from 'containers/UGFeatureListing';
 import ClientListing from 'containers/UGClientListing';
 import Slider from 'components/UGSlider';
 
+<<<<<<< Updated upstream
 export class UGHomePage extends React.Component { // eslint-disable-line react/prefer-stateless-function
 
+=======
+export class UGHomePage extends React.Component {
+
+  openUGHomePage = () => {
+    this
+      .props
+      .dispatch(push('/'));
+  };
+>>>>>>> Stashed changes
   render() {
     return (
       <div>
