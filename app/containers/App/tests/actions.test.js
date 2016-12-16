@@ -12,9 +12,10 @@ describe('App Actions', () => {
     it('should return the correct type', () => {
       const expectedResult = {
         type: LOAD_LOGINSUCCESS,
+        result: 'test',
       };
 
-      expect(loginAccountLoaded()).toEqual(expectedResult);
+      expect(loginAccountLoaded('test')).toEqual(expectedResult);
     });
   });
 });
