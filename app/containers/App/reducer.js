@@ -11,19 +11,19 @@
  */
 
 import { fromJS } from 'immutable';
-import { LOAD_LOGINSUCCESS } from './actions';
+import { LOAD_LOGINSUCCESS } from './constants';
 
 // The initial state of the App
 const initialState = fromJS({
   loading: false,
   error: false,
-  currentUser: false,
+  currentUser: null,
 });
 
 function appReducer(state = initialState, action) {
   switch (action.type) {
     case LOAD_LOGINSUCCESS:
-      return state;
+      return state.set('currentUser', action.result);
     default:
       return state;
   }
