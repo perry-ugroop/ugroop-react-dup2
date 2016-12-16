@@ -10,4 +10,4 @@
  */
 
 export const DEFAULT_LOCALE = 'en';
-export const LOAD_LOGINSUCCESS = 'ugroop/App/LOAD_LOGINSUCCESS';
+export const LOAD_LOGINSUCCESS = 'ugroop/app/LOAD_LOGINSUCCESS';
