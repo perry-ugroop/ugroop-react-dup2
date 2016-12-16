@@ -14,7 +14,9 @@ import UGNavBar from 'components/UGNavBar';
 import UGFooter from 'components/UGFooter';
 import UGFooterSitemap from '../../components/UGFooterSitemap';
 
-const AppWrapper = styled.div` 
+import {LINKS, SIGNIN, SIGNOUT} from './constants';
+
+const AppWrapper = styled.div`
   margin: 0 auto;
   display: flex;
   min-height: 100%;
@@ -30,6 +32,14 @@ const AppContentWrapper = styled.div`
 `;
 
 function App(props) {
+
+  var links = LINKS;
+  
+  if (props.hasOwnProperty('selectCurrentUserAccount') && props.selectCurrentUserAccount())
+    links.push(SIGNOUT);
+  else
+    links.push(SIGNIN);
+
   return (
     <AppWrapper>
       <Helmet
@@ -39,7 +49,7 @@ function App(props) {
           { name: 'description', content: 'A React.js Boilerplate application' },
         ]}
       />
-      <UGNavBar />
+      <UGNavBar links={links}/>
       <AppContentWrapper>
         {React.Children.toArray(props.children)}
       </AppContentWrapper>

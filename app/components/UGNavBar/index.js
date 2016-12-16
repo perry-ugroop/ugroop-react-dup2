@@ -8,7 +8,16 @@ import UGNavLogo from './UGNavLogo';
 import { LinkContainer } from 'react-router-bootstrap';
 
 // import UGMenuBar from '../../containers/UGMenuBar';
-function UGNavBar() {
+function UGNavBar(props) {
+  var links = props.links;
+  var nav_lists = links.map(function (link, index) {
+    var active = link.active ? "active" : "";
+
+    return <LinkContainer to={link.route}>
+      <NavItem className={active} eventKey={index+1} href="">{link.text}</NavItem>
+    </LinkContainer>
+  });
+
   return (
     <div>
       <CustomNavBar collapseOnSelect className="customnav">
@@ -22,14 +31,7 @@ function UGNavBar() {
         </Navbar.Header>
         <Navbar.Collapse>
           <UGNavParentItem pullRight>
-            <LinkContainer to="/"><NavItem className="active" eventKey={1} href="">Home</NavItem></LinkContainer>
-            <LinkContainer to="/features"><NavItem eventKey={2} href="">Features</NavItem></LinkContainer>
-            <LinkContainer to="/pricing"><NavItem eventKey={3} href="">Pricing</NavItem></LinkContainer>
-            <LinkContainer to="/blog"><NavItem eventKey={4} href="">Blog</NavItem></LinkContainer>
-            <LinkContainer to="/faq"><NavItem eventKey={5} href="">FAQ</NavItem></LinkContainer>
-            <LinkContainer to="/contacts"><NavItem eventKey={6} href="">Contact Us</NavItem></LinkContainer>
-            <LinkContainer to="/registration"><NavItem eventKey={7} href="">Register</NavItem></LinkContainer>
-            <LinkContainer to="/login"><NavItem eventKey={8} href="#">Sign In</NavItem></LinkContainer>
+            {nav_lists}
           </UGNavParentItem>
         </Navbar.Collapse>
       </CustomNavBar>
