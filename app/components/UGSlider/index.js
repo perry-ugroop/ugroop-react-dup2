@@ -15,7 +15,6 @@ import UGSliderWrapper from './UGSliderWrapper';
 
 import slideList from './list';
 
-
 const SlidesListing = slideList.map((slide, index) => <Carousel.Item key={index}>
   <UGSliderWrapper>
     <UGSliderTitleStyle>
@@ -33,7 +32,6 @@ const SlidesListing = slideList.map((slide, index) => <Carousel.Item key={index}
   </UGSliderWrapper>
 </Carousel.Item>
 );
-
 
 export class Slider extends React.Component {
   openUGHomePage = () => {

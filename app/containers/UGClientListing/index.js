@@ -39,6 +39,7 @@ export class UGClientListing extends React.Component {
   }
 }
 
+
 // ************************************************************************
 // Components Props type definition
 // ************************************************************************

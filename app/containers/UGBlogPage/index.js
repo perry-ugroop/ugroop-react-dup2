@@ -5,8 +5,8 @@ import { connect } from 'react-redux';
 import UGSubpagesHeader from '../../components/UGSubpagesHeader';
 import UGBreadcrumbs from '../../components/UGBreadcrums';
 import UGSubpagesContainer from '../../components/UGSubpagesContainer';
-// import blogPic from './assets/photo2.png';
 
+// import blogPic from './assets/photo2.png';
 // import CommentForm from './CommentForm';
 
 export class UGBlogPage extends React.Component {  // eslint-disable-line react/prefer-stateless-function

@@ -11,10 +11,11 @@ function UGFooter() {
     <UGFooterStyle>
       <UGContainer>
         <p><FormattedMessage {...messages.copyrightMessage} /></p>
-        <UGGotoUp type="button" className={'btn btn-default'}>
+        <UGGotoUp>
           <div className={'glyphicon glyphicon-chevron-up'} aria-hidden="true"></div>
         </UGGotoUp>
       </UGContainer>
+
     </UGFooterStyle>
   );
 }

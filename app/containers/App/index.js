@@ -8,15 +8,13 @@
 
 import React from 'react';
 import Helmet from 'react-helmet';
-
 import UGNavBar from 'components/UGNavBar';
 import UGFooter from 'components/UGFooter';
 import UGFooterSitemap from '../../components/UGFooterSitemap';
 import UGAppWrapper from '../BootStrap/UGAppWrapper';
 import UGAppContentWrapper from '../BootStrap/UGAppContentWrapper';
 
-
-function App(props) {
+function App() {
   return (
     <UGAppWrapper>
       <Helmet
@@ -41,4 +39,3 @@ App.propTypes = {
 };
 
 export default App;
-
