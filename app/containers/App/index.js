@@ -16,7 +16,7 @@ import UGFooterSitemap from '../../components/UGFooterSitemap';
 
 import {selectCurrentUserAccount} from './selectors';
 
-import {LINKS, SIGNIN, SIGNOUT} from './constants';
+import {LINKS, SIGNIN, SIGNOUT} from './navbar_define';
 
 const AppWrapper = styled.div`
   margin: 0 auto;
