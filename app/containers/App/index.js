@@ -13,8 +13,7 @@ import styled from 'styled-components';
 import UGNavBar from 'components/UGNavBar';
 import UGFooter from 'components/UGFooter';
 import UGFooterSitemap from '../../components/UGFooterSitemap';
-import { selectCurrentUserAccount } from './selectors';
-import { LINKS, SIGNIN, SIGNOUT } from './navbar_define';
+import { LINKS } from './navbar_define';
 
 const AppWrapper = styled.div`
   margin: 0 auto;
@@ -33,11 +32,6 @@ const AppContentWrapper = styled.div`
 
 function App(props) {
   const links = LINKS;
-  if (selectCurrentUserAccount() && links.indexOf(SIGNOUT) === -1) {
-    links.push(SIGNOUT);
-  } else if (links.indexOf(SIGNIN) === -1) {
-    links.push(SIGNIN);
-  }
 
   return (
     <AppWrapper>

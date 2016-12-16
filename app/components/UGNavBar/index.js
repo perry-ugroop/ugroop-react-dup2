@@ -6,6 +6,7 @@ import CustomNavBar from './CustomNavBar';
 import UGNavBarBrand from './UGNavBarBrand';
 import UGNavLogo from './UGNavLogo';
 import { LinkContainer } from 'react-router-bootstrap';
+import { Authenticated, NotAuthenticated, LoginLink, LogoutLink } from 'react-stormpath';
 
 // import UGMenuBar from '../../containers/UGMenuBar';
 function UGNavBar(props) {
@@ -32,6 +33,19 @@ function UGNavBar(props) {
         <Navbar.Collapse>
           <UGNavParentItem pullRight>
             {navLists}
+
+            <Authenticated>
+              <LinkContainer to="/logout">
+                <NavItem eventKey={navLists.length} href="">Signout</NavItem>
+              </LinkContainer>
+            </Authenticated>
+
+            <NotAuthenticated>
+              <LinkContainer to="/login">
+                <NavItem eventKey={navLists.length} href="">Signin</NavItem>
+              </LinkContainer>
+            </NotAuthenticated>
+            
           </UGNavParentItem>
         </Navbar.Collapse>
       </CustomNavBar>
