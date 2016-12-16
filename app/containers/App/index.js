@@ -14,7 +14,7 @@ import UGFooterSitemap from '../../components/UGFooterSitemap';
 import UGAppWrapper from '../BootStrap/UGAppWrapper';
 import UGAppContentWrapper from '../BootStrap/UGAppContentWrapper';
 
-function App() {
+function App(props) {
   return (
     <UGAppWrapper>
       <Helmet

@@ -8,8 +8,6 @@ describe('Component: APP testing', () => {
     expect(renderedComponent.length).toBe(1);
   });
 
-  it('should render the Navigation Bar');
-
   it('should render its children', () => {
     const children = (<h1>Test</h1>);
     const renderedComponent = shallow(
