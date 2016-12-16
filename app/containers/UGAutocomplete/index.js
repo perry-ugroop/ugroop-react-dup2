@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import GoogleMapLoader from 'react-google-maps-loader';
 import GooglePlacesSuggest from 'react-google-places-suggest';
 // import "react-google-places-suggest/lib/index.css";
 
