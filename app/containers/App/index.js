@@ -13,10 +13,8 @@ import styled from 'styled-components';
 import UGNavBar from 'components/UGNavBar';
 import UGFooter from 'components/UGFooter';
 import UGFooterSitemap from '../../components/UGFooterSitemap';
-
-import {selectCurrentUserAccount} from './selectors';
-
-import {LINKS, SIGNIN, SIGNOUT} from './navbar_define';
+import { selectCurrentUserAccount } from './selectors';
+import { LINKS, SIGNIN, SIGNOUT } from './navbar_define';
 
 const AppWrapper = styled.div`
   margin: 0 auto;
@@ -34,13 +32,11 @@ const AppContentWrapper = styled.div`
 `;
 
 function App(props) {
-
-  var links = LINKS;
-  if (selectCurrentUserAccount() && links.indexOf(SIGNOUT) == -1)
+  const links = LINKS;
+  if (selectCurrentUserAccount() && links.indexOf(SIGNOUT) === -1) {
     links.push(SIGNOUT);
-  else {
-    if (links.indexOf(SIGNIN) == -1)
-      links.push(SIGNIN);
+  } else if (links.indexOf(SIGNIN) === -1) {
+    links.push(SIGNIN);
   }
 
   return (
@@ -52,7 +48,7 @@ function App(props) {
           { name: 'description', content: 'A React.js Boilerplate application' },
         ]}
       />
-      <UGNavBar links={links}/>
+      <UGNavBar links={links} />
       <AppContentWrapper>
         {React.Children.toArray(props.children)}
       </AppContentWrapper>
@@ -67,17 +63,3 @@ App.propTypes = {
 };
 
 export default App;
-
-
-// <div className={{ 'text-align': 'center' }}>
-//         <ReCaptcha
-//           sitekey="6Ldh9AwUAAAAAG5tjfsEGaTe0XL0hzb400U5Upwg"
-//           onChange={onChange}
-//           type="image"
-//           theme="light"
-//         />
-//       </div>
-
-// const AppWrapper = styled.div`
-//   // max-width: calc(768px + 16px * 2);
-// `;

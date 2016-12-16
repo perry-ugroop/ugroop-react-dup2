@@ -9,13 +9,13 @@ import { LinkContainer } from 'react-router-bootstrap';
 
 // import UGMenuBar from '../../containers/UGMenuBar';
 function UGNavBar(props) {
-  var links = props.links;
-  var nav_lists = links.map(function (link, index) {
-    var active = link.active ? "active" : "";
+  const links = props.links;
+  const navLists = links.map((link, index) => {
+    const active = link.active ? 'active' : '';
 
-    return <LinkContainer to={link.route}>
-      <NavItem className={active} eventKey={index+1} href="">{link.text}</NavItem>
-    </LinkContainer>
+    return (<LinkContainer to={link.route}>
+      <NavItem className={active} eventKey={index} href="">{link.text}</NavItem>
+    </LinkContainer>);
   });
 
   return (
@@ -31,12 +31,16 @@ function UGNavBar(props) {
         </Navbar.Header>
         <Navbar.Collapse>
           <UGNavParentItem pullRight>
-            {nav_lists}
+            {navLists}
           </UGNavParentItem>
         </Navbar.Collapse>
       </CustomNavBar>
     </div>
   );
 }
+
+UGNavBar.propTypes = {
+  links: React.PropTypes.array,
+};
 
 export default UGNavBar;
