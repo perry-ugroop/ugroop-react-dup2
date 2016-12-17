@@ -92,9 +92,9 @@ export default function createRoutes(store) {
     />,
     <AuthenticatedRoute key={'authRoute'}>
       <HomeRoute
-        path={'/Tour'}
-        key={'Tour'}
-        name={'Tour'}
+        path={'/addTour'}
+        key={'addTour'}
+        name={'addTour'}
         getComponent={dynamicLoadAddTour}
       />
       <Route
