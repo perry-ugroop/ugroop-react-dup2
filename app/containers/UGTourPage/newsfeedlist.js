@@ -10,7 +10,7 @@ import NewsFeedAccountImg from './NewsFeedAccountImg';
 import NewsFeedHead from './NewsFeedHead';
 
 
-function NewsFeedList(props) {
+export function NewsFeedList(props) {
   const tourId = props.tourId;
   const newsfeeds = props.items;
   const defaultImg = 'http://dev-175.ugroop.com.au/Content/images/default-tour-photo.jpg';

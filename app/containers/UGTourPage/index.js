@@ -9,7 +9,7 @@ import { FormattedMessage } from 'react-intl';
 import TourIcon from './assets/icon-tour.png';
 import UGBodyContent from './UGBodyContent';
 import TourBox from './TourBox';
-import Img from 'components/Img';
+import Img from '../../components/Img';
 import messages from './messages';
 import UGBoxTitle from '../BootStrap/UGBoxTitle';
 import UGBoxBodyWrapper from '../BootStrap/UGBoxBodyWrapper';

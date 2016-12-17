@@ -5,9 +5,10 @@ import React from 'react';
 // import { connect } from 'react-redux';
 import messages from './messages';
 // import { FormattedMessage } from 'react-intl';
-import { Tab, Tabs, NavDropdown, MenuItem } from 'react-bootstrap';
-import A from 'components/A';
-import UGMainHeading from 'components/UGMainHeading';
+import { Tabs, NavDropdown, MenuItem } from 'react-bootstrap';
+import UGTab from './UGTab';
+import A from '../../components/A';
+import UGMainHeading from '../../components/UGMainHeading';
 import TourDate from './TourDate';
 import TourDescText from './TourDescText';
 import TourImg from './TourImg';
@@ -15,7 +16,7 @@ import TourHead from './TourHead';
 import AttendantTab from './attendanttab';
 import NewsFeedTab from './newsfeedtab';
 import MockNewsFeed from './mockdata/mockNewsFeed';
-function TourItem(props) {
+export function TourItem(props) {
   const tour = props.item;
   const tourImg = tour.tourImg;
   const participants = tour.Participants || [];
@@ -45,19 +46,19 @@ function TourItem(props) {
             {tour.tourDesc}
           </TourDescText>
           <p />
-          <Tabs className="nav nav-tabs" defaultActiveKey={1} animation={false} id="tour-users">
-            <Tab eventKey={1} title={`${messages.participantTabTitle.defaultMessage}(${participants.length})`}>
+          <Tabs className="nav nav-tabs" defaultActiveKey={1} animation={false} id="tour-users" style={{ background: 'white' }} >
+            <UGTab eventKey={1} title={`${messages.participantTabTitle.defaultMessage}(${participants.length})`} style={{ paddingTop: '10px' }} >
               <AttendantTab items={participants} tourId={tour.tourId} attendType="participant" />
-            </Tab>
-            <Tab eventKey={2} title={`${messages.organizerTabTitle.defaultMessage}(${organizer.length})`}>
+            </UGTab>
+            <UGTab eventKey={2} title={`${messages.organizerTabTitle.defaultMessage}(${organizer.length})`}>
               <AttendantTab items={organizer} tourId={tour.tourId} attendType="organizer" />
-            </Tab>
-            <Tab eventKey={3} title={`${messages.viewerTabTitle.defaultMessage}(${viewers.length})`}>
+            </UGTab>
+            <UGTab eventKey={3} title={`${messages.viewerTabTitle.defaultMessage}(${viewers.length})`}>
               <AttendantTab items={viewers} tourId={tour.tourId} attendType="viewer" />
-            </Tab>
-            <Tab eventKey={4} title={`${messages.newsFeedTabTitle.defaultMessage}(${newsFeed.length})`}>
+            </UGTab>
+            <UGTab eventKey={4} title={`${messages.newsFeedTabTitle.defaultMessage}(${newsFeed.length})`}>
               <NewsFeedTab tourId={tour.tourId} items={MockNewsFeed} />
-            </Tab>
+            </UGTab>
           </Tabs>
         </UGMainHeading>
       </div>

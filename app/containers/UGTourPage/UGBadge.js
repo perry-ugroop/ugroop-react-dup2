@@ -12,8 +12,6 @@ BadgeDefault.propTypes = {
 const UGBadge = styled(BadgeDefault)`
   {
     background-color:#666;color:#fff;float:right;font-size:10px;margin-top:1px;
-    
-  
   }
 `;
 export default UGBadge;

@@ -9,7 +9,7 @@ const TextareaTmp = (props) => <BSTextAreaFormControl
   rows={props.rows}
 />;
 TextareaTmp.propTypes = {
-  rows: React.PropTypes.number,
+  rows: React.PropTypes.any,
 };
 const Textarea = styled(TextareaTmp)`
   &&{

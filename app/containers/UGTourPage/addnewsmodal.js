@@ -3,10 +3,10 @@
  */
 import React from 'react';
 import { connect } from 'react-redux';
-import A from 'components/A';
-// import Button from 'components/Button';
+import A from '../../components/A';
 
-import { ButtonToolbar, Modal } from 'react-bootstrap';
+
+import { Modal } from 'react-bootstrap';
 // import { toggleAttendListModal } from './actions';
 import messages from './messages';
 // import { selectShowModal } from './selectors';
@@ -43,7 +43,7 @@ export class AddNewsModal extends React.Component {
     const linkText = messages.addNewsFeedLink.defaultMessage;
 
     return (
-      <ButtonToolbar>
+      <div id={`newsfeedForTour${tourId}`} >
         <A bsStyle="primary" onClick={() => this.open()}>
           {linkText}
         </A>
@@ -63,20 +63,20 @@ export class AddNewsModal extends React.Component {
               <BSColumnAll>
                 <BSFormGroup>
                   <Label>{messages.addNewsFeedContentLabel.defaultMessage}</Label>
-                  <Textarea type="text" name="newsContent" row={5} value={this.props.newsContent} />
+                  <Textarea type="text" name="newsContent" rows={5} value={this.props.newsContent} />
                 </BSFormGroup>
               </BSColumnAll>
             </BSRow>
           </Modal.Body>
           <Modal.Footer>
             <BSFormGroup>
-              <SubmitButton onClick={() => this.close(tourId)} value={messages.saveButton.defaultMessage} /> &nbsp;
-              <CancelButton onClick={() => this.close()}>{messages.cancelButton.defaultMessage}</CancelButton>
+              <SubmitButton onClick={() => this.close()} >{messages.saveButton.defaultMessage}</SubmitButton> &nbsp;
+              <CancelButton onClick={() => this.close()} >{messages.cancelButton.defaultMessage} </CancelButton>
             </BSFormGroup>
 
           </Modal.Footer>
         </Modal>
-      </ButtonToolbar>
+      </div>
     );
   }
 }

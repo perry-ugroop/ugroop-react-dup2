@@ -10,10 +10,11 @@ import { createStructuredSelector } from 'reselect';
 import { selectOrgName, selectOrgAddress, selectFirstName,
 selectLastName, selectEmail, selectRole, selectWebsite, selectTelephone, selectPassword, selectReTypePassword,
 selectOrgAddressError, selectOrgNameError, selectFirstNameError, selectLastNameError, selectTelephoneError,
-selectReTypePasswordError, selectPasswordError, selectEmailError } from './selectors';
+selectReTypePasswordError, selectPasswordError, selectEmailError, selectServerValidationError,
+  selectIsRegisterSuccess } from './selectors';
 import { changeOrgName, changeOrgAddress, changeFirstName, changeLastName, changeWebsite,
 changeEmail, changeTelephone, changePassword, changeRetypePassword, changeRole,
-validText, validReTypePassword } from './actions';
+validText, validReTypePassword, submitUserSignUp } from './actions';
 import validationRule from '../../utils/validationrule';
 import { ORGNAME_FIELD, ORGADDRESS_FIELD, FIRSTNAME_FIELD,
   LASTNAME_FIELD, EMAIL_FIELD, PASSWORD_FIELD, TELEPHONE_FIELD } from './constants';
@@ -26,7 +27,7 @@ import Input from './Input';
 import InputButton from './InputButton';
 import BSTextDanger from '../BootStrap/BSTextDanger';
 import ReCaptcha from 'react-google-recaptcha';
-
+import AlertDanger from './Alert';
 
 function onChange(value) {
   // console.log('Captcha value:', value);
@@ -35,7 +36,14 @@ function onChange(value) {
 
 export class RegisterForm extends React.Component {
 
-  wrapErrorMessage(error) {
+  wrapServerValidationErrorMessage(error) {
+    if (!isEmptyString(error)) {
+      return (<AlertDanger role="alert">{error}</AlertDanger>);
+    }
+    return '';
+  }
+
+  wrapLocalValidationErrorMessage(error) {
     if (error != null) {
       return <BSTextDanger id={error.id}><FormattedMessage {...error} /></BSTextDanger>;
     }
@@ -75,8 +83,10 @@ export class RegisterForm extends React.Component {
     if (!isEmptyString(this.props.retypePasswordError)) {
       retypePasswordErrorContent = { id: 'retypePasswordError', defaultMessage: this.props.retypePasswordError };
     }
+
     return (
-      <form className="registrationForm">
+      <form onSubmit={this.props.submitUserSignUp}>
+        {this.wrapServerValidationErrorMessage(this.props.serverValidationError)}
         {/* First Row */}
         <BSRow>
           <BSColumn6>
@@ -93,7 +103,7 @@ export class RegisterForm extends React.Component {
                 onBlur={this.props.onBlurOrgName}
               />
             </InputGroup>
-            {this.wrapErrorMessage(orgErrorcontent)}
+            {this.wrapLocalValidationErrorMessage(orgErrorcontent)}
           </BSColumn6>
           <BSColumn6>
             <InputGroup>
@@ -109,7 +119,7 @@ export class RegisterForm extends React.Component {
                 onBlur={this.props.onBlurOrgAddress}
               />
             </InputGroup>
-            {this.wrapErrorMessage(orgAddressErrorContent)}
+            {this.wrapLocalValidationErrorMessage(orgAddressErrorContent)}
           </BSColumn6>
         </BSRow>
         {/* Second Row */}
@@ -128,7 +138,7 @@ export class RegisterForm extends React.Component {
                 onBlur={this.props.onBlurFirstName}
               />
             </InputGroup>
-            {this.wrapErrorMessage(firstNameErrorContent)}
+            {this.wrapLocalValidationErrorMessage(firstNameErrorContent)}
           </BSColumn6>
           <BSColumn6>
             <InputGroup>
@@ -144,7 +154,7 @@ export class RegisterForm extends React.Component {
                 onBlur={this.props.onBlurLastName}
               />
             </InputGroup>
-            {this.wrapErrorMessage(lastNameErrorContent)}
+            {this.wrapLocalValidationErrorMessage(lastNameErrorContent)}
           </BSColumn6>
         </BSRow>
         {/* Third Row */}
@@ -155,8 +165,8 @@ export class RegisterForm extends React.Component {
                 <Glyphicon glyph="chevron-right" />
               </AddOnSpan>
               <Input
-                type="password"
-                name="ConfirmPassword"
+                type="text"
+                name="Role"
                 placeholder={messages.rolePlaceholder.defaultMessage}
                 onChange={this.props.onChangeRole}
                 value={this.props.role}
@@ -194,7 +204,7 @@ export class RegisterForm extends React.Component {
                 onBlur={this.props.onBlurPhone}
               />
             </InputGroup>
-            {this.wrapErrorMessage(telephoneErrorContent)}
+            {this.wrapLocalValidationErrorMessage(telephoneErrorContent)}
           </BSColumn6>
           <BSColumn6>
             <InputGroup>
@@ -210,7 +220,7 @@ export class RegisterForm extends React.Component {
                 onChange={this.props.onChangeEmail}
               />
             </InputGroup>
-            {this.wrapErrorMessage(emailErrorContent)}
+            {this.wrapLocalValidationErrorMessage(emailErrorContent)}
           </BSColumn6>
         </BSRow>
         {/* Fifth Row */}
@@ -229,7 +239,7 @@ export class RegisterForm extends React.Component {
                 value={this.props.password}
               />
             </InputGroup>
-            {this.wrapErrorMessage(passwordErrorContent)}
+            {this.wrapLocalValidationErrorMessage(passwordErrorContent)}
             <InputGroup>
               <AddOnSpan>
                 <Glyphicon glyph="lock" />
@@ -243,7 +253,7 @@ export class RegisterForm extends React.Component {
                 value={this.props.retypePassword}
               />
             </InputGroup>
-            {this.wrapErrorMessage(retypePasswordErrorContent)}
+            {this.wrapLocalValidationErrorMessage(retypePasswordErrorContent)}
           </BSColumn6>
           <BSColumn6>
             {/* Recaptcha Container */}
@@ -258,7 +268,7 @@ export class RegisterForm extends React.Component {
             </InputGroup>
           </BSColumn6>
         </BSRow>
-        <InputButton>{messages.registerButton.defaultMessage}</InputButton>
+        <InputButton><FormattedMessage {...messages.registerButton} /></InputButton>
       </form>
     );
   }
@@ -301,6 +311,8 @@ RegisterForm.propTypes = {
   telephoneError: React.PropTypes.string,
   passwordError: React.PropTypes.string,
   retypePasswordError: React.PropTypes.string,
+  serverValidationError: React.PropTypes.any,
+  submitUserSignUp: React.PropTypes.func,
 };
 
 const mapStateToProps = createStructuredSelector({
@@ -322,6 +334,8 @@ const mapStateToProps = createStructuredSelector({
   telephoneError: selectTelephoneError(),
   passwordError: selectPasswordError(),
   retypePasswordError: selectReTypePasswordError(),
+  serverValidationError: selectServerValidationError(),
+  isRegisterSuccess: selectIsRegisterSuccess(),
 });
 
 export function mapDispatchToProps(dispatch) {
@@ -352,6 +366,10 @@ export function mapDispatchToProps(dispatch) {
       regExps: [validationRule.passwordValidation],
       field: PASSWORD_FIELD })),
     onBlurReTypePassword: (evt) => dispatch(validReTypePassword(evt.target.value)),
+    submitUserSignUp: (evt) => {
+      if (evt !== undefined && evt.preventDefault) evt.preventDefault();
+      dispatch(submitUserSignUp());
+    },
     dispatch,
   };
 }

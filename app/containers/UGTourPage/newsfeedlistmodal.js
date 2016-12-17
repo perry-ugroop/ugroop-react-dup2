@@ -4,10 +4,10 @@
 
 import React from 'react';
 import { connect } from 'react-redux';
-import A from 'components/A';
+import A from '../../components/A';
 // import Button from 'components/Button';
-import { ButtonToolbar, Modal } from 'react-bootstrap';
-import CloseButton from './CloseButton';
+import { Modal } from 'react-bootstrap';
+import CancelButton from './CancelButton';
 // import { toggleAttendListModal } from './actions';
 import messages from './messages';
 // import { selectShowModal } from './selectors';
@@ -37,7 +37,7 @@ export class NewsFeedListModal extends React.Component {
     const linkText = messages.viewAllNewsFeedLink.defaultMessage;
 
     return (
-      <ButtonToolbar>
+      <div >
         <A bsStyle="primary" onClick={() => this.open()}>
           {linkText}
         </A>
@@ -50,10 +50,10 @@ export class NewsFeedListModal extends React.Component {
             <NewsFeedList tourId={tourId} items={newsfeedlist} />
           </Modal.Body>
           <Modal.Footer>
-            <CloseButton onClick={() => this.close()}>Close</CloseButton>
+            <CancelButton onClick={() => this.close()}>Close</CancelButton>
           </Modal.Footer>
         </Modal>
-      </ButtonToolbar>
+      </div>
     );
   }
 }

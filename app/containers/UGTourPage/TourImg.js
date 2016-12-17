@@ -3,7 +3,7 @@
  */
 
 import styled from 'styled-components';
-import Img from 'components/Img';
+import Img from '../../components/Img';
 const TourImg = styled(Img)`
   &&{
       width: 75px !important;

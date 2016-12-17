@@ -2,19 +2,19 @@
  * Created by yunzhou on 26/11/2016.
  */
 import AvatarIcon from './assets/avatar-member.png';
-import Img from 'components/Img';
+import Img from '../../components/Img';
 import React from 'react';
 import { connect } from 'react-redux';
 import { ATTENDANT_DECLINE, ATTENDANT_JOINED, ATTENDANT_WAITING } from './constants';
-import A from 'components/A';
+import A from '../../components/A';
 // import Button from 'components/Button';
 import UGBadge from './UGBadge';
 import AttendantStatusSpan from './attedantStatusSpan';
 import BSColumnLG4 from '../BootStrap/BSColumnLG4';
 import BSColumnAll from '../BootStrap/BSColumnAll';
 import BSRow from '../BootStrap/BSRow';
-import { ButtonToolbar, Modal, Table } from 'react-bootstrap';
-import CloseButton from './CloseButton';
+import { Modal, Table } from 'react-bootstrap';
+import CancelButton from './CancelButton';
 // import { toggleAttendListModal } from './actions';
 import messages from './messages';
 // import { selectShowModal } from './selectors';
@@ -96,7 +96,7 @@ export class AttendantListModal extends React.Component {
 
     const attendantsCount = this.computeAttendantStatusCount(this.props.attendants);
     return (
-      <ButtonToolbar>
+      <div>
         <A bsStyle="primary" onClick={() => this.open()}>
           {linkText}
         </A>
@@ -145,10 +145,10 @@ export class AttendantListModal extends React.Component {
             </BSRow>
           </Modal.Body>
           <Modal.Footer>
-            <CloseButton onClick={() => this.close()}>Close</CloseButton>
+            <CancelButton onClick={() => this.close()}>Close</CancelButton>
           </Modal.Footer>
         </Modal>
-      </ButtonToolbar>
+      </div>
     );
   }
 }
