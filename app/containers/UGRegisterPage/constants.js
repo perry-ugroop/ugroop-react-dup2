@@ -23,7 +23,10 @@ export const ROLE_FIELD = 'role';
 export const EMAIL_FIELD = 'email';
 export const WEBSITE_FIELD = 'website';
 export const PASSWORD_FIELD = 'password';
-export const RETYPEPASSWORD_FIELD = 'retypePassword';
-export const SIGNUPUSER_STATEKEY = 'signUpUser';
-export const SIGNUPERROR_STATEKEY = 'signUpError';
-
+export const RETYPE_PASSWORD_FIELD = 'retypePassword';
+export const SIGNUP_USER_STATEKEY = 'signUpUser';
+export const SIGNUP_ERROR_STATEKEY = 'signUpError';
+export const SERVER_VALIDATION_ERROR = 'serverValidationError';
+export const USER_ORG_SIGNUP_SUCCESS = 'ugroop/Register/userOrgSignUpSuccess';
+export const USER_ORG_SIGNUP_ERROR = 'ugroop/Register/userOrgSignUpError';
+export const SUBMIT_REGISTERATION = 'ugroop/Register/submitRegistration';

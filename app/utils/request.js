@@ -18,14 +18,25 @@ function parseJSON(response) {
  *
  * @return {object|undefined} Returns either the response, or throws an error
  */
+
 function checkStatus(response) {
   if (response.status >= 200 && response.status < 300) {
     return response;
   }
-
-  const error = new Error(response.statusText);
-  error.response = response;
-  throw error;
+  return Promise.resolve(response.json())
+    .then((jsonError) => {
+      const error = new Error(response.status);
+      error.response = jsonError;
+      error.code = 'jsonerror';
+      throw error;
+    }).catch((error) => { // only due to the response is not JSON format, then throw the original error
+      if (error.code === 'jsonerror') {
+        throw error;
+      }
+      const otherError = new Error(response.statusText);
+      otherError.response = response;
+      throw otherError;
+    });
 }
 
 /**
@@ -38,6 +49,23 @@ function checkStatus(response) {
  */
 export default function request(url, options) {
   return fetch(url, options)
+    .then(checkStatus)
+    .then(parseJSON);
+}
+
+export function postJSONRequest(url, options) {
+  const postHeaders = {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'Accept': 'application/json', /*eslint quote-props: ["error", "consistent-as-needed"]*/
+    },
+  };
+  const bodyContent = {
+    body: JSON.stringify(options),
+  };
+  const opts = Object.assign({}, postHeaders, bodyContent);
+  return fetch(url, opts)
     .then(checkStatus)
     .then(parseJSON);
 }

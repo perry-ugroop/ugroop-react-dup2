@@ -1,7 +1,7 @@
 /**
  * Created by Yang on 7/11/16.
  */
-import { mount } from 'enzyme';
+import { mount, shallow } from 'enzyme';
 import React from 'react';
 import { IntlProvider } from 'react-intl';
 import { RegisterForm, mapDispatchToProps } from '../registerform';
@@ -12,7 +12,7 @@ import { changeOrgName, changeOrgAddress, changeFirstName, changeLastName,
 changeWebsite, changeEmail, changeTelephone, changePassword,
 changeRetypePassword, changeRole, validText, validReTypePassword } from '../actions';
 
-describe('<Register />', () => {
+describe('<RegisterForm />', () => {
   const orgError = 'org name error';
   const orgAddressError = 'org address error';
   const firstNameError = 'firstname error';
@@ -86,6 +86,12 @@ describe('<Register />', () => {
       </IntlProvider>
     );
     expect(renderedComponent.find('#retypePasswordError').length).toEqual(1);
+  });
+  it('should render serverValidation Error', () => {
+    const renderedComponent = shallow(
+      <RegisterForm serverValidationError={'conflict'} />
+    );
+    expect(renderedComponent.find('[role="alert"]').length).toEqual(1);
   });
 });
 

@@ -14,5 +14,5 @@
 
 export const CHANGE_USERNAME = 'ugroop/Login/CHANGE_USERNAME';
 export const CHANGE_PASSWORD = 'ugroop/Login/CHANGE_PASSWORD';
-export const SIGNIN_SUBMIT = 'ugroop/Login/SIGNIN_SUBMIT';
-
+export const LOGIN_SUBMIT = 'ugroop/Login/LOGIN_SUBMIT';
+export const LOAD_LOGINERROR = 'ugroop/Login/LOAD_LOGINERROR';

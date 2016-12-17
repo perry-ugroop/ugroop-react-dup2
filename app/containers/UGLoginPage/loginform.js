@@ -4,7 +4,7 @@ import messages from './messages';
 import { FormattedMessage } from 'react-intl';
 import A from 'components/A';
 import { isEmptyString } from '../../utils/stringAdditions';
-import { changeUsername, changePassword } from './actions';
+import { changeUsername, changePassword, submitLogin } from './actions';
 import { push } from 'react-router-redux';
 import { createStructuredSelector } from 'reselect';
 import AddOnSpan from './AddOnSpan';
@@ -12,6 +12,7 @@ import {
   selectUsername,
   selectPassword,
   selectError,
+  selectShallLoginSuccessRedirect,
 } from './selectors';
 import { Glyphicon } from 'react-bootstrap';
 import AlertDanger from './Alert';
@@ -46,13 +47,24 @@ export class LoginForm extends React.Component {
   openRegistrationPage = () => {
     this.openRoute('/registration');
   }
+
+  /**
+   * Changed route to our Future LoginHome Page
+   */
+  openLoginHomePage = () => {
+    this.openRoute('/addTour');
+  }
+
   render() {
     let errorContent = null;
     if (!isEmptyString(this.props.error)) {
       errorContent = (<AlertDanger role="alert">{this.props.error}</AlertDanger>);
     }
+    if (this.props.redirect) {
+      this.openLoginHomePage();
+    }
     return (
-      <form >
+      <form onSubmit={this.props.submitLogin}>
         {errorContent}
         <InputGroup>
           <AddOnSpan>
@@ -80,7 +92,7 @@ export class LoginForm extends React.Component {
             onChange={this.props.onChangePassword}
           />
         </InputGroup>
-        <InputButton>{messages.signinButton.defaultMessage}</InputButton>
+        <InputButton><FormattedMessage {...messages.signinButton} /></InputButton>
         <LoginFooter>
           <FooterLinkPassword>
             <A href="forgetpassword" onClick={this.openForgetPasswordPage} id="forgetpassword_id"><FormattedMessage {...messages.forgetPasswordLabel} /></A>
@@ -101,12 +113,15 @@ LoginForm.propTypes = {
   changeRoute: React.PropTypes.func,
   onChangeUsername: React.PropTypes.func,
   onChangePassword: React.PropTypes.func,
+  submitLogin: React.PropTypes.func,
+  redirect: React.PropTypes.bool,
 };
 
 const mapStateToProps = createStructuredSelector({
   username: selectUsername(),
   password: selectPassword(),
   error: selectError(),
+  redirect: selectShallLoginSuccessRedirect(),
 });
 
 export function mapDispatchToProps(dispatch) {
@@ -114,6 +129,10 @@ export function mapDispatchToProps(dispatch) {
     onChangeUsername: (evt) => dispatch(changeUsername(evt.target.value)),
     onChangePassword: (evt) => dispatch(changePassword(evt.target.value)),
     changeRoute: (url) => dispatch(push(url)),
+    submitLogin: (evt) => {
+      if (evt !== undefined && evt.preventDefault) evt.preventDefault();
+      dispatch(submitLogin());
+    },
     dispatch,
   };
 }
