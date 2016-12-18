@@ -3,21 +3,22 @@ import React from 'react';
 import messages from './messages';
 import { FormattedMessage } from 'react-intl';
 import UGContainer from './UGContainer';
-import UGFooter from './UGFooter';
+import UGFooterStyle from './UGFooterStyle';
 import UGGotoUp from './UGGotoUp';
 
-function Footer() {
+function UGFooter() {
   return (
-    <UGFooter>
+    <UGFooterStyle>
       <UGContainer>
         <p><FormattedMessage {...messages.copyrightMessage} /></p>
         <UGGotoUp>
           <div className={'glyphicon glyphicon-chevron-up'} aria-hidden="true"></div>
         </UGGotoUp>
       </UGContainer>
-    </UGFooter>
+
+    </UGFooterStyle>
   );
 }
 
-export default Footer;
+export default UGFooter;
 
