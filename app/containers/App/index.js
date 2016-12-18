@@ -14,7 +14,6 @@ import UGNavBar from 'components/UGNavBar';
 import UGFooter from 'components/UGFooter';
 import UGFooterSitemap from '../../components/UGFooterSitemap';
 
-
 const AppWrapper = styled.div` 
   margin: 0 auto;
   display: flex;
