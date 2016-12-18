@@ -35,12 +35,14 @@ function UGNavBar(props) {
             {navLists}
 
             <Authenticated>
-              <LogoutLink>Signout</LogoutLink>
-
+              <LogoutLink>Logout</LogoutLink>
             </Authenticated>
 
             <NotAuthenticated>
-              <LoginLink>Signin</LoginLink>
+              <LinkContainer to="/registration">
+                <NavItem eventKey={7} href="">Register</NavItem>
+              </LinkContainer>
+              <LoginLink />
             </NotAuthenticated>
 
           </UGNavParentItem>
