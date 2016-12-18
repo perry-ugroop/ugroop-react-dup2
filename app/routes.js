@@ -181,6 +181,21 @@ export default function createRoutes(store) {
       }}
     />,
     <Route
+      path={'/verify'}
+      name={'verify'}
+      key={'verify'}
+      getComponent={(nextState, cb) => {
+        const importModules = Promise.all([
+          System.import('containers/UGVerifyEmailPage'),
+        ]);
+        const renderRoute = loadModule(cb);
+        importModules.then(([component]) => {
+          renderRoute(component);
+        });
+        importModules.catch(errorLoading);
+      }}
+    />,
+    <Route
       path={'*'}
       name={'notfound'}
       key={'notfound'}
