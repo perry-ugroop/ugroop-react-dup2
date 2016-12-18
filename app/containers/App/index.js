@@ -15,7 +15,7 @@ import UGFooter from 'components/UGFooter';
 import UGFooterSitemap from '../../components/UGFooterSitemap';
 import { LINKS } from './navbar_define';
 
-const AppWrapper = styled.div`
+const AppWrapper = styled.div` 
   margin: 0 auto;
   display: flex;
   min-height: 100%;
@@ -32,7 +32,6 @@ const AppContentWrapper = styled.div`
 
 function App(props) {
   const links = LINKS;
-
   return (
     <AppWrapper>
       <Helmet
@@ -57,3 +56,17 @@ App.propTypes = {
 };
 
 export default App;
+
+
+// <div className={{ 'text-align': 'center' }}>
+//         <ReCaptcha
+//           sitekey="6Ldh9AwUAAAAAG5tjfsEGaTe0XL0hzb400U5Upwg"
+//           onChange={onChange}
+//           type="image"
+//           theme="light"
+//         />
+//       </div>
+
+// const AppWrapper = styled.div`
+//   // max-width: calc(768px + 16px * 2);
+// `;
