@@ -15,7 +15,7 @@ export class UGHomePage extends React.Component { // eslint-disable-line react/p
     return (
       <div>
         <Helmet
-          title="uGroop Homepage"
+          title="uGroop Homepage "
           meta={[
             { name: 'description', content: 'This is a uGroop homepage implemented using React.js Boilerplate application framework' },
           ]}

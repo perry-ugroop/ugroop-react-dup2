@@ -10,7 +10,7 @@ import MainContainer from './MainContainer';
 import AddTourBox from './AddTourBox';
 import AddTourIcon from './assets/icon-addatour.png';
 import AddTourForm from './addtourform';
-import Img from 'components/Img';
+import Img from '../../components/Img';
 import messages from './messages';
 import UGBoxTitle from '../BootStrap/UGBoxTitle';
 /* import components */

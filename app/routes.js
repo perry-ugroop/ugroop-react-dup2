@@ -5,7 +5,7 @@
 import { getAsyncInjectors } from './utils/asyncInjectors';
 import { Route } from 'react-router';
 import React from 'react';
-
+import { HomeRoute, LoginRoute, AuthenticatedRoute } from 'react-stormpath';
 const errorLoading = (err) => {
   console.error('Dynamic page loading failed', err); // eslint-disable-line no-console
 };
@@ -16,10 +16,21 @@ const loadModule = (cb) => (componentModule) => {
 
 export default function createRoutes(store) {
   // create reusable async injectors using getAsyncInjectors factory
-  const { injectReducer } = getAsyncInjectors(store);
-
+  const { injectReducer, injectSagas } = getAsyncInjectors(store);
+  const dynamicLoadAddTour = (nextState, cb) => {
+    const importModules = Promise.all([
+      System.import('containers/UGAddTourPage/reducer'),
+      System.import('containers/UGAddTourPage'),
+    ]);
+    const renderRoute = loadModule(cb);
+    importModules.then(([reducer, component]) => {
+      injectReducer('addATour', reducer.default);
+      renderRoute(component);
+    });
+    importModules.catch(errorLoading);
+  };
   return ([
-    <Route
+    <HomeRoute
       path={'/'}
       name={'home'}
       key={'home'}
@@ -79,6 +90,20 @@ export default function createRoutes(store) {
           .catch(errorLoading);
       }}
     />,
+    <AuthenticatedRoute key={'authRoute'}>
+      <HomeRoute
+        path={'/addTour'}
+        key={'addTour'}
+        name={'addTour'}
+        getComponent={dynamicLoadAddTour}
+      />
+      <Route
+        path={'/addTour'}
+        name={'addTour'}
+        key={'addTour'}
+        getComponent={dynamicLoadAddTour}
+      />,
+    </AuthenticatedRoute>,
     <Route
       path={'/forgetpassword'}
       name={'forgetpassword'}
@@ -96,20 +121,22 @@ export default function createRoutes(store) {
         importModules.catch(errorLoading);
       }}
     />,
-    <Route
+    <LoginRoute
       path={'/login'}
       name={'login'}
       key={'login'}
       getComponent={(nextState, cb) => {
         const importModules = Promise.all([
           System.import('containers/UGLoginPage/reducer'),
+          System.import('containers/UGLoginPage/sagas'),
           System.import('containers/UGLoginPage'),
         ]);
 
         const renderRoute = loadModule(cb);
 
-        importModules.then(([reducer, component]) => {
+        importModules.then(([reducer, sagas, component]) => {
           injectReducer('login', reducer.default);
+          injectSagas(sagas.default);
           renderRoute(component);
         });
 
@@ -134,19 +161,18 @@ export default function createRoutes(store) {
         importModules.catch(errorLoading);
       }}
     />,
-
     <Route
-      path={'/addTour'}
-      name={'addTour'}
-      key={'addTour'}
+      path={'/svgfont'}
+      name={'svgfont'}
+      key={'svgfont'}
       getComponent={(nextState, cb) => {
         const importModules = Promise.all([
-          System.import('containers/UGAddTourPage/reducer'),
-          System.import('containers/UGAddTourPage'),
+          System.import('containers/UGReactFont/reducer'),
+          System.import('containers/UGReactFont'),
         ]);
         const renderRoute = loadModule(cb);
         importModules.then(([reducer, component]) => {
-          injectReducer('addATour', reducer.default);
+          injectReducer('svgfonttrial', reducer.default);
           renderRoute(component);
         });
         importModules.catch(errorLoading);
@@ -159,11 +185,13 @@ export default function createRoutes(store) {
       getComponent={(nextState, cb) => {
         const importModules = Promise.all([
           System.import('containers/UGRegisterPage/reducer'),
+          System.import('containers/UGRegisterPage/sagas'),
           System.import('containers/UGRegisterPage'),
         ]);
         const renderRoute = loadModule(cb);
-        importModules.then(([reducer, component]) => {
+        importModules.then(([reducer, sagas, component]) => {
           injectReducer('register', reducer.default);
+          injectSagas(sagas.default);
           renderRoute(component);
         });
         importModules.catch(errorLoading);

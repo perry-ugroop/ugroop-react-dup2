@@ -8,29 +8,13 @@
 
 import React from 'react';
 import Helmet from 'react-helmet';
-<<<<<<< Updated upstream
-
 import UGNavBar from 'components/UGNavBar';
 import UGFooter from 'components/UGFooter';
 import UGFooterSitemap from '../../components/UGFooterSitemap';
 import UGAppWrapper from '../BootStrap/UGAppWrapper';
 import UGAppContentWrapper from '../BootStrap/UGAppContentWrapper';
 
-=======
-import UGNavBar from 'components/UGNavBar';
-import UGFooterSitemap from 'components/UGFooterSitemap';
-import UGFooter from 'components/UGFooter';
-import styled from 'styled-components';
-import Slider from '../../components/UGSlider';
-
-const AppWrapper = styled.div`
-  margin-top:50px;
-  min-height: 100%;
-`;
->>>>>>> Stashed changes
-
-
-function App() {
+function App(props) {
   return (
     <UGAppWrapper>
       <Helmet
@@ -41,13 +25,9 @@ function App() {
         ]}
       />
       <UGNavBar />
-<<<<<<< Updated upstream
       <UGAppContentWrapper>
         {React.Children.toArray(props.children)}
       </UGAppContentWrapper>
-=======
-      <Slider />
->>>>>>> Stashed changes
       <UGFooterSitemap />
       <UGFooter />
     </UGAppWrapper>
@@ -59,17 +39,3 @@ App.propTypes = {
 };
 
 export default App;
-
-<<<<<<< Updated upstream
-=======
-
-// <div className={{ 'text-align': 'center' }}>
-//         <ReCaptcha
-//           sitekey="6Ldh9AwUAAAAAG5tjfsEGaTe0XL0hzb400U5Upwg"
-//           onChange={onChange}
-//           type="image"
-//           theme="light"
-//           grecaptcha={greCaptchaObject}
-//         />
-//       </div>
->>>>>>> Stashed changes

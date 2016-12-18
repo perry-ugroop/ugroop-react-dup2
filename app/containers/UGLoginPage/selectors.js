@@ -20,9 +20,15 @@ const selectError = () => createSelector(
   (loginState) => loginState.get('error')
 );
 
+const selectShallLoginSuccessRedirect = () => createSelector(
+  selectLoginpage(),
+  (loginState) => loginState.get('loginSuccessRedirect')
+);
+
 export {
   selectLoginpage,
   selectUsername,
   selectPassword,
   selectError,
+  selectShallLoginSuccessRedirect,
 };

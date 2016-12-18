@@ -14,5 +14,6 @@ SpanButtonTmp.propTypes = {
   children: React.PropTypes.any,
 };
 
-const SpanButton = styled(SpanButtonTmp)`${UGFlatBorder}`;
+const SpanButton = styled(SpanButtonTmp
+)`${UGFlatBorder}`;
 export default SpanButton;
