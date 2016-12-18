@@ -29,6 +29,18 @@ export default function createRoutes(store) {
     });
     importModules.catch(errorLoading);
   };
+  const dynamicLoadTour = (nextState, cb) => {
+    const importModules = Promise.all([
+      System.import('containers/UGTourPage/reducer'),
+      System.import('containers/UGTourPage'),
+    ]);
+    const renderRoute = loadModule(cb);
+    importModules.then(([reducer, component]) => {
+      injectReducer('Tour', reducer.default);
+      renderRoute(component);
+    });
+    importModules.catch(errorLoading);
+  };
   return ([
     <HomeRoute
       path={'/'}
@@ -92,10 +104,10 @@ export default function createRoutes(store) {
     />,
     <AuthenticatedRoute key={'authRoute'}>
       <HomeRoute
-        path={'/addTour'}
-        key={'addTour'}
-        name={'addTour'}
-        getComponent={dynamicLoadAddTour}
+        path={'/Tour'}
+        key={'Tour'}
+        name={'Tour'}
+        getComponent={dynamicLoadTour}
       />
       <Route
         path={'/addTour'}
