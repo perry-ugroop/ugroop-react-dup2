@@ -8,15 +8,30 @@
 
 import React from 'react';
 import Helmet from 'react-helmet';
+import styled from 'styled-components';
+
 import UGNavBar from 'components/UGNavBar';
 import UGFooter from 'components/UGFooter';
 import UGFooterSitemap from '../../components/UGFooterSitemap';
-import UGAppWrapper from '../BootStrap/UGAppWrapper';
-import UGAppContentWrapper from '../BootStrap/UGAppContentWrapper';
+
+const AppWrapper = styled.div` 
+  margin: 0 auto;
+  display: flex;
+  min-height: 100%;
+  padding: 0 16px;
+  flex-direction: column;
+`;
+
+const AppContentWrapper = styled.div` 
+  margin-top: 50px;
+  display: flex;
+  min-height: 100%;
+  flex-direction: column;
+`;
 
 function App(props) {
   return (
-    <UGAppWrapper>
+    <AppWrapper>
       <Helmet
         titleTemplate="%s - React.js Boilerplate"
         defaultTitle="React.js Boilerplate"
@@ -25,12 +40,12 @@ function App(props) {
         ]}
       />
       <UGNavBar />
-      <UGAppContentWrapper>
+      <AppContentWrapper>
         {React.Children.toArray(props.children)}
-      </UGAppContentWrapper>
+      </AppContentWrapper>
       <UGFooterSitemap />
       <UGFooter />
-    </UGAppWrapper>
+    </AppWrapper>
   );
 }
 
@@ -39,3 +54,17 @@ App.propTypes = {
 };
 
 export default App;
+
+
+// <div className={{ 'text-align': 'center' }}>
+//         <ReCaptcha
+//           sitekey="6Ldh9AwUAAAAAG5tjfsEGaTe0XL0hzb400U5Upwg"
+//           onChange={onChange}
+//           type="image"
+//           theme="light"
+//         />
+//       </div>
+
+// const AppWrapper = styled.div`
+//   // max-width: calc(768px + 16px * 2);
+// `;

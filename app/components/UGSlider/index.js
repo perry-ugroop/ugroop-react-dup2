@@ -1,37 +1,99 @@
 import React from 'react';
 import { push } from 'react-router-redux';
 import { Carousel } from 'react-bootstrap';
+import BackgroundImage from './assets/ugroop-pattern.jpg';
 
-import H2 from '../H2';
-import Img from '../Img';
-import A from '../A';
-
-import UGSliderStyle from './UGSliderStyle';
-import UGSliderTitleStyle from './UGSliderTitleStyle';
-import UGSliderCaptionStyle from './UGSliderCaptionStyle';
-import UGSliderButtonStyle from './UGSliderButtonStyle';
-import UGSliderImageStyle from './UGSliderImageStyle';
-import UGSliderWrapper from './UGSliderWrapper';
+// import imgWorld from './assets/ugroop-around-the-world.png';
+// import imgFamily from './assets/ugroop-family-school.spng';
+// import imgGroup from './assets/ugroop-group-icon.png';
+// import imgStudents from './assets/ugroop-group-student-sufing-ugroop-site.png';
 
 import slideList from './list';
+import styled from 'styled-components';
+import BSContainer from '../../containers/BootStrap/BSContainer';
 
-const SlidesListing = slideList.map((slide, index) => <Carousel.Item key={index}>
-  <UGSliderWrapper>
-    <UGSliderTitleStyle>
-      <H2> { slide.title } </H2>
-    </UGSliderTitleStyle>
-    <UGSliderCaptionStyle>
-      { slide.description }
-    </UGSliderCaptionStyle>
-    <UGSliderButtonStyle>
-      <A href="" className="da-link">{slide.label}</A>
-    </UGSliderButtonStyle>
-    <UGSliderImageStyle>
-      <Img src={slide.iconImage} alt="" className="ugsliderimg" />
-    </UGSliderImageStyle>
-  </UGSliderWrapper>
+const UGContainer = styled(BSContainer)`
+  position:relative;
+`;
+const UGSliderStyle = styled.div`
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  background-color: #11314d;
+  color: #7C88A1;
+  margin: 30px auto;
+  padding: 20px 0 12px 0;
+  text-align: center;  
+  background:url(${BackgroundImage}) #2e5da5 ;
+  border-top: 3px solid #EF5B3C;
+  min-height: 438px;
+`;
+
+const UGSliderTitleStyle = styled.div`
+  text-align: left;
+  position: relative;
+  margin-top: 80px;
+`;
+
+const UGSliderCaptionStyle = styled.div`  
+  color: #7C88A1;   
+  padding: 2px 20px 0px; 
+  top: 150px !important;
+  color: #FFF; 
+  width: 50%;
+  text-align: left;
+`;
+
+const UGSliderButtonStyle = styled.div`
+  position: absolute;
+  color: #FFF;
+  top: 270px;
+  border-radius: 30px;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 1);
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2)
+  border: 3px solid #FFF;
+  padding: 2px 20px 0px;
+  font-size: 18px;
+  line-height: 30px;
+  text-align: left;
+  background: #5f83b9;
+`;
+
+const UGSliderImageStyle = styled.div`
+  &&{ 
+  text-align: right;
+  height:150px;
+  }
+  && img.ugsliderimg{
+    position:absolute;
+    top:10px;
+    right:20px;
+  }
+`;
+
+// function RenderList() {
+//   const SlidesListing = slideList.map((slide, key) => <Carousel.Item>
+//     <BSContainer><UGSliderTitleStyle><h2> { slide.title } </h2></UGSliderTitleStyle>
+//       <UGSliderCaptionStyle> { slide.description }</UGSliderCaptionStyle>
+//       <UGSliderButtonStyle><a href="" className="da-link">{slide.label}</a></UGSliderButtonStyle>
+//       <UGSliderImageStyle><img src={slide.iconImage} alt={key} /></UGSliderImageStyle></BSContainer>
+//   </Carousel.Item>
+// );
+//   return (
+//     {
+//       SlidesListing,
+//     }
+//   );
+// }
+
+const SlidesListing = slideList.map((slide, key) => <Carousel.Item>
+  <UGContainer><UGSliderTitleStyle><h2> { slide.title } </h2></UGSliderTitleStyle>
+    <UGSliderCaptionStyle> { slide.description }</UGSliderCaptionStyle>
+    <UGSliderButtonStyle><a href="" className="da-link">{slide.label}</a></UGSliderButtonStyle>
+    <UGSliderImageStyle><img src={slide.iconImage} alt={key} className="ugsliderimg" /></UGSliderImageStyle></UGContainer>
 </Carousel.Item>
 );
+
 
 export class Slider extends React.Component {
   openUGHomePage = () => {

@@ -1,4 +1,3 @@
-
 import UGFooter from '../index';
 import messages from '../messages';
 import { FormattedMessage } from 'react-intl';
@@ -17,4 +16,3 @@ describe('<UGFooter />', () => {
     )).toBe(true);
   });
 });
-

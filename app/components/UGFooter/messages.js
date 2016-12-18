@@ -12,7 +12,7 @@ export default defineMessages({
   },
   copyrightMessage: {
     id: 'boilerplate.components.Footer.copyright.message',
-    defaultMessage: 'Copyright © 2014. ügroop ®.',
+    defaultMessage: 'Copyright &copy 2014. ügroop ®.',
   },
   authorMessage: {
     id: 'boilerplate.components.Footer.author.message',

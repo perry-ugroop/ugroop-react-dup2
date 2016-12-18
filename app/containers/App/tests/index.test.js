@@ -1,11 +1,16 @@
 import App from '../index';
+import UGFooter from 'components/UGFooter';
+import UGNavBar from 'components/UGNavBar';
+
 import { shallow } from 'enzyme';
 import React from 'react';
 
-describe('Component: APP testing', () => {
-  it('renders without exploding', () => {
-    const renderedComponent = shallow(<App />);
-    expect(renderedComponent.length).toBe(1);
+describe('<AppWrapper />', () => {
+  it('should render the Navigation Bar', () => {
+    const renderedComponent = shallow(
+      <App />
+    );
+    expect(renderedComponent.find(UGNavBar).length).toBe(1);
   });
 
   it('should render its children', () => {
@@ -17,5 +22,11 @@ describe('Component: APP testing', () => {
     );
     expect(renderedComponent.contains(children)).toBe(true);
   });
-});
 
+  it('should render the footer', () => {
+    const renderedComponent = shallow(
+      <App />
+    );
+    expect(renderedComponent.find(UGFooter).length).toBe(1);
+  });
+});

@@ -6,7 +6,7 @@ import styled from 'styled-components';
 
 const UGNavParentItem = styled(BSNavParentItem)`
   &&{
-  background:rgba(255, 255, 255, 1) !important;
+  background:rgba(255,255,255,1) !important;
   margin-top:10px; 
   }
   && li.active{
@@ -29,7 +29,7 @@ const UGNavParentItem = styled(BSNavParentItem)`
       text-transform:uppercase !important;      
     };   
   && a:hover{
-      background-color: #FFF !important;
+      background: none !important;
       -webkit-box-shadow: none;
       -moz-box-shadow: none;
       box-shadow: none;

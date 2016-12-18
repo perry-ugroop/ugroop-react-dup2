@@ -2,28 +2,25 @@
 // Feature Listing component for the homepage - Vinz 2016-11-28
 // ************************************************************************
 import React from 'react';
-// import { connect } from 'react-redux';
+import { connect } from 'react-redux';
 import { push } from 'react-router-redux';
 import Helmet from 'react-helmet';
 
 import featureList from '../UGFeatureListing/list';
 import UGSubpagesHeader from '../../components/UGSubpagesHeader';
-import UGBreadcrumbs from '../../components/UGBreadcrums';
-import UGSubpagesContainer from '../../components/UGSubpagesContainer';
-import { Col } from 'react-bootstrap';
+import BSColumn6 from '../BootStrap/BSColumn6';
 
-
-const FeatureList = featureList.map((item, index) =>
-  <Col md={6} key={index}>
+const FeatureList = featureList.map((item) =>
+  <BSColumn6>
     <div className={'icon-features icon-feature-one'}>
       <p><img src={item.iconImage} alt="" /></p>
       <h3 className={'featured-header'}>{item.title}</h3>
       <p>{item.description}</p>
     </div>
-  </Col>
+  </BSColumn6>
 );
 
-export class UGFeaturePage extends React.Component { // eslint-disable-line react/prefer-stateless-function
+export class UGFeaturePage extends React.Component {
   openHomePage = () => {
     this
       .props
@@ -41,10 +38,26 @@ export class UGFeaturePage extends React.Component { // eslint-disable-line reac
           },
           ]}
         />
-
         <UGSubpagesHeader title="Features" />
-        <UGBreadcrumbs title="Features" />
-        <UGSubpagesContainer> {FeatureList}</UGSubpagesContainer>
+        <div className={'breadcrumb-container'}>
+          <div className={'container'}>
+            <ol className={'breadcrumb'}>
+              <li>
+                <a href="/">Home</a>
+              </li>
+              <li className="active">
+                <a href="">Features</a>
+              </li>
+            </ol>
+          </div>
+        </div>
+
+        <div className={'subpages-body-content container'}>
+          <div className={'row'}>
+            {FeatureList}
+          </div>
+        </div>
+
       </div>
     );
   }
@@ -54,4 +67,4 @@ UGFeaturePage.propTypes = {
   dispatch: React.PropTypes.func,
 };
 
-export default UGFeaturePage;
+export default connect()(UGFeaturePage);

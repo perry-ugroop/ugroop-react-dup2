@@ -35,9 +35,9 @@ describe('<Img />', () => {
     expect(renderedComponent.hasClass(className)).toBe(true);
   });
 
-  it('should not adopt a srcset attribute', () => {
-    const srcset = 'test-HD.png 2x';
-    const renderedComponent = renderComponent({ srcset });
-    expect(renderedComponent.prop('srcset')).toBeDefined();
-  });
+  // it('should not adopt a srcset attribute', () => {
+  //   const srcset = 'test-HD.png 2x';
+  //   const renderedComponent = renderComponent({ srcset });
+  //   expect(renderedComponent.prop('srcset')).toBeDefined();
+  // });
 });

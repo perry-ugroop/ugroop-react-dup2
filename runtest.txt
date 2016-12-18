@@ -1,2522 +1,0 @@
-
-> react-boilerplate@3.3.3 pretest C:\Users\win8\Documents\UGroopGIT\Development
-> npm run test:clean && npm run lint
-
-
-> react-boilerplate@3.3.3 test:clean C:\Users\win8\Documents\UGroopGIT\Development
-> rimraf ./coverage
-
-
-> react-boilerplate@3.3.3 lint C:\Users\win8\Documents\UGroopGIT\Development
-> npm run lint:js
-
-
-> react-boilerplate@3.3.3 lint:js C:\Users\win8\Documents\UGroopGIT\Development
-> npm run lint:eslint -- . 
-
-
-> react-boilerplate@3.3.3 lint:eslint C:\Users\win8\Documents\UGroopGIT\Development
-> eslint --ignore-path .gitignore --ignore-pattern internals/scripts "."
-
-
-> react-boilerplate@3.3.3 test C:\Users\win8\Documents\UGroopGIT\Development
-> cross-env NODE_ENV=test jest --coverage
-
-
- RUNS  ...registerform.test.js
- RUNS  ...reducer.test.js
- RUNS  ...selectors.test.js
- RUNS  ...addtourform.test.js
- RUNS  ...reducer.test.js
- RUNS  ...selectors.test.js
- RUNS  ...actions.test.js
-
-Test Suites: 0 of 83 total
-Tests:       0 total
-Snapshots:   0 total
-Time:        0s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
- RUNS  ...registerform.test.js
- RUNS  ...reducer.test.js
- RUNS  ...selectors.test.js
- RUNS  ...addtourform.test.js
- RUNS  ...reducer.test.js
- RUNS  ...selectors.test.js
- RUNS  ...actions.test.js
-
-Test Suites: 0 of 83 total
-Tests:       0 total
-Snapshots:   0 total
-Time:        1s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
- RUNS  ...registerform.test.js
- RUNS  ...reducer.test.js
- RUNS  ...selectors.test.js
- RUNS  ...addtourform.test.js
- RUNS  ...reducer.test.js
- RUNS  ...selectors.test.js
- RUNS  ...actions.test.js
-
-Test Suites: 0 of 83 total
-Tests:       0 total
-Snapshots:   0 total
-Time:        2s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
- RUNS  ...registerform.test.js
- RUNS  ...reducer.test.js
- RUNS  ...selectors.test.js
- RUNS  ...addtourform.test.js
- RUNS  ...reducer.test.js
- RUNS  ...selectors.test.js
- RUNS  ...actions.test.js
-
-Test Suites: 0 of 83 total
-Tests:       0 total
-Snapshots:   0 total
-Time:        3s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
- RUNS  ...registerform.test.js
- RUNS  ...reducer.test.js
- RUNS  ...selectors.test.js
- RUNS  ...addtourform.test.js
- RUNS  ...reducer.test.js
- RUNS  ...selectors.test.js
- RUNS  ...actions.test.js
-
-Test Suites: 0 of 83 total
-Tests:       0 total
-Snapshots:   0 total
-Time:        4s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
- RUNS  ...registerform.test.js
- RUNS  ...reducer.test.js
- RUNS  ...selectors.test.js
- RUNS  ...addtourform.test.js
- RUNS  ...reducer.test.js
- RUNS  ...selectors.test.js
- RUNS  ...actions.test.js
-
-Test Suites: 0 of 83 total
-Tests:       0 total
-Snapshots:   0 total
-Time:        5s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
- RUNS  ...registerform.test.js
- RUNS  ...reducer.test.js
- RUNS  ...selectors.test.js
- RUNS  ...addtourform.test.js
- RUNS  ...reducer.test.js
- RUNS  ...selectors.test.js
- RUNS  ...actions.test.js
-
-Test Suites: 0 of 83 total
-Tests:       0 total
-Snapshots:   0 total
-Time:        6s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
- RUNS  ...registerform.test.js
- RUNS  ...reducer.test.js
- RUNS  ...selectors.test.js
- RUNS  ...addtourform.test.js
- RUNS  ...reducer.test.js
- RUNS  ...selectors.test.js
- RUNS  ...actions.test.js
-
-Test Suites: 0 of 83 total
-Tests:       0 total
-Snapshots:   0 total
-Time:        7s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
- RUNS  ...registerform.test.js
- RUNS  ...reducer.test.js
- RUNS  ...selectors.test.js
- RUNS  ...addtourform.test.js
- RUNS  ...reducer.test.js
- RUNS  ...selectors.test.js
- RUNS  ...actions.test.js
-
-Test Suites: 0 of 83 total
-Tests:       0 total
-Snapshots:   0 total
-Time:        8s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
- RUNS  ...registerform.test.js
- RUNS  ...reducer.test.js
- RUNS  ...selectors.test.js
- RUNS  ...addtourform.test.js
- RUNS  ...reducer.test.js
- RUNS  ...selectors.test.js
- RUNS  ...actions.test.js
-
-Test Suites: 0 of 83 total
-Tests:       0 total
-Snapshots:   0 total
-Time:        9s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
- RUNS  ...registerform.test.js
- RUNS  ...reducer.test.js
- RUNS  ...selectors.test.js
- RUNS  ...addtourform.test.js
- RUNS  ...reducer.test.js
- RUNS  ...selectors.test.js
- RUNS  ...actions.test.js
-
-Test Suites: 0 of 83 total
-Tests:       0 total
-Snapshots:   0 total
-Time:        10s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
- RUNS  ...registerform.test.js
- RUNS  ...reducer.test.js
- RUNS  ...selectors.test.js
- RUNS  ...addtourform.test.js
- RUNS  ...reducer.test.js
- RUNS  ...selectors.test.js
- RUNS  ...actions.test.js
-
-Test Suites: 0 of 83 total
-Tests:       0 total
-Snapshots:   0 total
-Time:        11s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
- RUNS  ...registerform.test.js
- RUNS  ...reducer.test.js
- RUNS  ...selectors.test.js
- RUNS  ...addtourform.test.js
- RUNS  ...reducer.test.js
- RUNS  ...selectors.test.js
- RUNS  ...actions.test.js
-
-Test Suites: 0 of 83 total
-Tests:       0 total
-Snapshots:   0 total
-Time:        12s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
- RUNS  ...registerform.test.js
- RUNS  ...reducer.test.js
- RUNS  ...selectors.test.js
- RUNS  ...addtourform.test.js
- RUNS  ...reducer.test.js
- RUNS  ...selectors.test.js
- RUNS  ...actions.test.js
-
-Test Suites: 0 of 83 total
-Tests:       0 total
-Snapshots:   0 total
-Time:        13s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
- RUNS  ...registerform.test.js
- RUNS  ...reducer.test.js
- RUNS  ...selectors.test.js
- RUNS  ...addtourform.test.js
- RUNS  ...reducer.test.js
- RUNS  ...selectors.test.js
- RUNS  ...actions.test.js
-
-Test Suites: 0 of 83 total
-Tests:       0 total
-Snapshots:   0 total
-Time:        14s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
- RUNS  ...registerform.test.js
- RUNS  ...reducer.test.js
- RUNS  ...selectors.test.js
- RUNS  ...addtourform.test.js
- RUNS  ...reducer.test.js
- RUNS  ...selectors.test.js
- RUNS  ...actions.test.js
-
-Test Suites: 0 of 83 total
-Tests:       0 total
-Snapshots:   0 total
-Time:        15s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
- RUNS  ...registerform.test.js
- RUNS  ...reducer.test.js
- RUNS  ...selectors.test.js
- RUNS  ...addtourform.test.js
- RUNS  ...reducer.test.js
- RUNS  ...selectors.test.js
- RUNS  ...actions.test.js
-
-Test Suites: 0 of 83 total
-Tests:       0 total
-Snapshots:   0 total
-Time:        16s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
- RUNS  ...registerform.test.js
- RUNS  ...reducer.test.js
- RUNS  ...selectors.test.js
- RUNS  ...addtourform.test.js
- RUNS  ...reducer.test.js
- RUNS  ...selectors.test.js
- RUNS  ...actions.test.js
-
-Test Suites: 0 of 83 total
-Tests:       0 total
-Snapshots:   0 total
-Time:        17s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
- RUNS  ...registerform.test.js
- RUNS  ...reducer.test.js
- RUNS  ...selectors.test.js
- RUNS  ...addtourform.test.js
- RUNS  ...reducer.test.js
- RUNS  ...selectors.test.js
- RUNS  ...actions.test.js
-
-Test Suites: 0 of 83 total
-Tests:       0 total
-Snapshots:   0 total
-Time:        18s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
- RUNS  ...registerform.test.js
- RUNS  ...reducer.test.js
- RUNS  ...selectors.test.js
- RUNS  ...addtourform.test.js
- RUNS  ...reducer.test.js
- RUNS  ...selectors.test.js
- RUNS  ...actions.test.js
-
-Test Suites: 0 of 83 total
-Tests:       0 total
-Snapshots:   0 total
-Time:        19s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
- RUNS  ...registerform.test.js
- RUNS  ...reducer.test.js
- RUNS  ...selectors.test.js
- RUNS  ...addtourform.test.js
- RUNS  ...reducer.test.js
- RUNS  ...selectors.test.js
- RUNS  ...actions.test.js
-
-Test Suites: 0 of 83 total
-Tests:       0 total
-Snapshots:   0 total
-Time:        20s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
- RUNS  ...registerform.test.js
- RUNS  ...reducer.test.js
- RUNS  ...selectors.test.js
- RUNS  ...addtourform.test.js
- RUNS  ...reducer.test.js
- RUNS  ...selectors.test.js
- RUNS  ...actions.test.js
-
-Test Suites: 0 of 83 total
-Tests:       0 total
-Snapshots:   0 total
-Time:        21s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
- RUNS  ...registerform.test.js
- RUNS  ...reducer.test.js
- RUNS  ...selectors.test.js
- RUNS  ...addtourform.test.js
- RUNS  ...reducer.test.js
- RUNS  ...selectors.test.js
- RUNS  ...actions.test.js
-
-Test Suites: 0 of 83 total
-Tests:       0 total
-Snapshots:   0 total
-Time:        22s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
- RUNS  ...registerform.test.js
- RUNS  ...reducer.test.js
- RUNS  ...selectors.test.js
- RUNS  ...addtourform.test.js
- RUNS  ...reducer.test.js
- RUNS  ...selectors.test.js
- RUNS  ...actions.test.js
-
-Test Suites: 0 of 83 total
-Tests:       0 total
-Snapshots:   0 total
-Time:        23s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
- RUNS  ...registerform.test.js
- RUNS  ...reducer.test.js
- RUNS  ...selectors.test.js
- RUNS  ...addtourform.test.js
- RUNS  ...reducer.test.js
- RUNS  ...selectors.test.js
- RUNS  ...actions.test.js
-
-Test Suites: 0 of 83 total
-Tests:       0 total
-Snapshots:   0 total
-Time:        24s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
- RUNS  ...registerform.test.js
- RUNS  ...reducer.test.js
- RUNS  ...selectors.test.js
- RUNS  ...addtourform.test.js
- RUNS  ...reducer.test.js
- RUNS  ...selectors.test.js
- RUNS  ...actions.test.js
-
-Test Suites: 0 of 83 total
-Tests:       0 total
-Snapshots:   0 total
-Time:        24s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
- RUNS  ...registerform.test.js
- RUNS  ...reducer.test.js
- RUNS  ...selectors.test.js
- RUNS  ...addtourform.test.js
- RUNS  ...reducer.test.js
- RUNS  ...selectors.test.js
- RUNS  ...asyncInjectors.test.js
-
-Test Suites: 1 passed, 1 of 83 total
-Tests:       13 passed, 13 total
-Snapshots:   0 total
-Time:        24s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
- RUNS  ...registerform.test.js
- RUNS  ...reducer.test.js
- RUNS  ...selectors.test.js
- RUNS  ...addtourform.test.js
- RUNS  ...reducer.test.js
- RUNS  ...selectors.test.js
- RUNS  ...asyncInjectors.test.js
-
-Test Suites: 1 passed, 1 of 83 total
-Tests:       13 passed, 13 total
-Snapshots:   0 total
-Time:        24s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
- RUNS  ...registerform.test.js
- RUNS  ...reducer.test.js
- RUNS  ...selectors.test.js
- RUNS  ...addtourform.test.js
- RUNS  ...reducer.test.js
- RUNS  ...index.test.js
- RUNS  ...asyncInjectors.test.js
-
-Test Suites: 2 passed, 2 of 83 total
-Tests:       26 passed, 26 total
-Snapshots:   0 total
-Time:        24s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
- RUNS  ...registerform.test.js
- RUNS  ...reducer.test.js
- RUNS  ...selectors.test.js
- RUNS  ...addtourform.test.js
- RUNS  ...reducer.test.js
- RUNS  ...index.test.js
- RUNS  ...asyncInjectors.test.js
-
-Test Suites: 2 passed, 2 of 83 total
-Tests:       26 passed, 26 total
-Snapshots:   0 total
-Time:        24s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
- RUNS  ...registerform.test.js
- RUNS  ...reducer.test.js
- RUNS  ...addtourform.test.js
- RUNS  ...reducer.test.js
- RUNS  ...loginform.test.js
- RUNS  ...index.test.js
- RUNS  ...asyncInjectors.test.js
-
-Test Suites: 3 passed, 3 of 83 total
-Tests:       44 passed, 44 total
-Snapshots:   0 total
-Time:        25s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
- RUNS  ...registerform.test.js
- RUNS  ...reducer.test.js
- RUNS  ...addtourform.test.js
- RUNS  ...reducer.test.js
- RUNS  ...loginform.test.js
- RUNS  ...index.test.js
- RUNS  ...asyncInjectors.test.js
-
-Test Suites: 3 passed, 3 of 83 total
-Tests:       44 passed, 44 total
-Snapshots:   0 total
-Time:        25s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
- RUNS  ...registerform.test.js
- RUNS  ...reducer.test.js
- RUNS  ...addtourform.test.js
- RUNS  ...reducer.test.js
- RUNS  ...loginform.test.js
- RUNS  ...index.test.js
- RUNS  ...asyncInjectors.test.js
-
-Test Suites: 3 passed, 3 of 83 total
-Tests:       44 passed, 44 total
-Snapshots:   0 total
-Time:        25s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
- RUNS  ...registerform.test.js
- RUNS  ...sagas.test.js
- RUNS  ...index.test.js
- RUNS  ...addtourform.test.js
- RUNS  ...loginform.test.js
- RUNS  ...index.test.js
- RUNS  ...asyncInjectors.test.js
-
-Test Suites: 5 passed, 5 of 83 total
-Tests:       82 passed, 82 total
-Snapshots:   0 total
-Time:        25s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
- RUNS  ...registerform.test.js
- RUNS  ...sagas.test.js
- RUNS  ...index.test.js
- RUNS  ...addtourform.test.js
- RUNS  ...loginform.test.js
- RUNS  ...index.test.js
- RUNS  ...asyncInjectors.test.js
-
-Test Suites: 5 passed, 5 of 83 total
-Tests:       82 passed, 82 total
-Snapshots:   0 total
-Time:        26s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
- RUNS  ...registerform.test.js
- RUNS  ...sagas.test.js
- RUNS  ...index.test.js
- RUNS  ...addtourform.test.js
- RUNS  ...loginform.test.js
- RUNS  ...index.test.js
- RUNS  ...asyncInjectors.test.js
-
-Test Suites: 5 passed, 5 of 83 total
-Tests:       82 passed, 82 total
-Snapshots:   0 total
-Time:        27s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
- RUNS  ...registerform.test.js
- RUNS  ...sagas.test.js
- RUNS  ...index.test.js
- RUNS  ...addtourform.test.js
- RUNS  ...loginform.test.js
- RUNS  ...index.test.js
- RUNS  ...asyncInjectors.test.js
-
-Test Suites: 5 passed, 5 of 83 total
-Tests:       82 passed, 82 total
-Snapshots:   0 total
-Time:        27s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
- RUNS  ...registerform.test.js
- RUNS  ...sagas.test.js
- RUNS  ...index.test.js
- RUNS  ...addtourform.test.js
- RUNS  ...selectors.test.js
- RUNS  ...loginform.test.js
- RUNS  ...index.test.js
-
-Test Suites: 6 passed, 6 of 83 total
-Tests:       89 passed, 89 total
-Snapshots:   0 total
-Time:        27s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
- RUNS  ...registerform.test.js
- RUNS  ...sagas.test.js
- RUNS  ...index.test.js
- RUNS  ...addtourform.test.js
- RUNS  ...selectors.test.js
- RUNS  ...loginform.test.js
- RUNS  ...index.test.js
-
-Test Suites: 6 passed, 6 of 83 total
-Tests:       89 passed, 89 total
-Snapshots:   0 total
-Time:        27s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
- RUNS  ...registerform.test.js
- RUNS  ...index.test.js
- RUNS  ...addtourform.test.js
- RUNS  ...selectors.test.js
- RUNS  ...loginform.test.js
- RUNS  ...index.test.js
- RUNS  ...index.test.js
-
-Test Suites: 7 passed, 7 of 83 total
-Tests:       94 passed, 94 total
-Snapshots:   4 passed, 4 total
-Time:        27s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
- RUNS  ...registerform.test.js
- RUNS  ...index.test.js
- RUNS  ...addtourform.test.js
- RUNS  ...selectors.test.js
- RUNS  ...loginform.test.js
- RUNS  ...index.test.js
- RUNS  ...index.test.js
-
-Test Suites: 7 passed, 7 of 83 total
-Tests:       94 passed, 94 total
-Snapshots:   4 passed, 4 total
-Time:        28s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
- RUNS  ...registerform.test.js
- RUNS  ...index.test.js
- RUNS  ...addtourform.test.js
- RUNS  ...selectors.test.js
- RUNS  ...loginform.test.js
- RUNS  ...index.test.js
- RUNS  ...index.test.js
-
-Test Suites: 7 passed, 7 of 83 total
-Tests:       94 passed, 94 total
-Snapshots:   4 passed, 4 total
-Time:        29s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
- RUNS  ...registerform.test.js
- RUNS  ...index.test.js
- RUNS  ...addtourform.test.js
- RUNS  ...selectors.test.js
- RUNS  ...loginform.test.js
- RUNS  ...index.test.js
- RUNS  ...index.test.js
-
-Test Suites: 7 passed, 7 of 83 total
-Tests:       94 passed, 94 total
-Snapshots:   4 passed, 4 total
-Time:        29s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
- RUNS  ...registerform.test.js
- RUNS  ...index.test.js
- RUNS  ...addtourform.test.js
- RUNS  ...selectors.test.js
- RUNS  ...loginform.test.js
- RUNS  ...index.test.js
- RUNS  ...index.test.js
-
-Test Suites: 7 passed, 7 of 83 total
-Tests:       94 passed, 94 total
-Snapshots:   4 passed, 4 total
-Time:        29s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
- RUNS  ...registerform.test.js
- RUNS  ...index.test.js
- RUNS  ...index.test.js
- RUNS  ...index.test.js
- RUNS  ...loginform.test.js
- RUNS  ...index.test.js
- RUNS  ...index.test.js
-
-Test Suites: 9 passed, 9 of 83 total
-Tests:       120 passed, 120 total
-Snapshots:   4 passed, 4 total
-Time:        29s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
- RUNS  ...registerform.test.js
- RUNS  ...index.test.js
- RUNS  ...index.test.js
- RUNS  ...index.test.js
- RUNS  ...loginform.test.js
- RUNS  ...index.test.js
- RUNS  ...index.test.js
-
-Test Suites: 9 passed, 9 of 83 total
-Tests:       120 passed, 120 total
-Snapshots:   4 passed, 4 total
-Time:        29s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
- RUNS  ...registerform.test.js
- RUNS  ...index.test.js
- RUNS  ...index.test.js
- RUNS  ...index.test.js
- RUNS  ...actions.test.js
- RUNS  ...loginform.test.js
- RUNS  ...index.test.js
-
-Test Suites: 10 passed, 10 of 83 total
-Tests:       129 passed, 129 total
-Snapshots:   4 passed, 4 total
-Time:        29s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
- RUNS  ...registerform.test.js
- RUNS  ...index.test.js
- RUNS  ...index.test.js
- RUNS  ...index.test.js
- RUNS  ...actions.test.js
- RUNS  ...loginform.test.js
- RUNS  ...index.test.js
-
-Test Suites: 10 passed, 10 of 83 total
-Tests:       129 passed, 129 total
-Snapshots:   4 passed, 4 total
-Time:        29s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
- RUNS  ...registerform.test.js
- RUNS  ...index.test.js
- RUNS  ...index.test.js
- RUNS  ...index.test.js
- RUNS  ...actions.test.js
- RUNS  ...loginform.test.js
- RUNS  ...reducer.test.js
-
-Test Suites: 11 passed, 11 of 83 total
-Tests:       135 passed, 135 total
-Snapshots:   4 passed, 4 total
-Time:        30s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
- RUNS  ...registerform.test.js
- RUNS  ...index.test.js
- RUNS  ...index.test.js
- RUNS  ...index.test.js
- RUNS  ...actions.test.js
- RUNS  ...loginform.test.js
- RUNS  ...reducer.test.js
-
-Test Suites: 11 passed, 11 of 83 total
-Tests:       135 passed, 135 total
-Snapshots:   4 passed, 4 total
-Time:        30s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
- RUNS  ...registerform.test.js
- RUNS  ...index.test.js
- RUNS  ...index.test.js
- RUNS  ...index.test.js
- RUNS  ...actions.test.js
- RUNS  ...loginform.test.js
- RUNS  ...reducer.test.js
-
-Test Suites: 11 passed, 11 of 83 total
-Tests:       135 passed, 135 total
-Snapshots:   4 passed, 4 total
-Time:        30s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
- RUNS  ...registerform.test.js
- RUNS  ...index.test.js
- RUNS  ...index.test.js
- RUNS  ...actions.test.js
- RUNS  ...loginform.test.js
- RUNS  ...reducer.test.js
- RUNS  ...request.test.js
-
-Test Suites: 12 passed, 12 of 83 total
-Tests:       142 passed, 142 total
-Snapshots:   4 passed, 4 total
-Time:        30s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
- RUNS  ...registerform.test.js
- RUNS  ...index.test.js
- RUNS  ...index.test.js
- RUNS  ...actions.test.js
- RUNS  ...loginform.test.js
- RUNS  ...reducer.test.js
- RUNS  ...request.test.js
-
-Test Suites: 12 passed, 12 of 83 total
-Tests:       142 passed, 142 total
-Snapshots:   4 passed, 4 total
-Time:        30s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
- RUNS  ...registerform.test.js
- RUNS  ...index.test.js
- RUNS  ...index.test.js
- RUNS  ...index.test.js
- RUNS  ...loginform.test.js
- RUNS  ...reducer.test.js
- RUNS  ...request.test.js
-
-Test Suites: 13 passed, 13 of 83 total
-Tests:       146 passed, 146 total
-Snapshots:   4 passed, 4 total
-Time:        30s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
- RUNS  ...registerform.test.js
- RUNS  ...index.test.js
- RUNS  ...index.test.js
- RUNS  ...index.test.js
- RUNS  ...loginform.test.js
- RUNS  ...reducer.test.js
- RUNS  ...request.test.js
-
-Test Suites: 13 passed, 13 of 83 total
-Tests:       146 passed, 146 total
-Snapshots:   4 passed, 4 total
-Time:        30s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
- RUNS  ...registerform.test.js
- RUNS  ...index.test.js
- RUNS  ...index.test.js
- RUNS  ...index.test.js
- RUNS  ...index.test.js
- RUNS  ...loginform.test.js
- RUNS  ...request.test.js
-
-Test Suites: 14 passed, 14 of 83 total
-Tests:       150 passed, 150 total
-Snapshots:   4 passed, 4 total
-Time:        30s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
- RUNS  ...registerform.test.js
- RUNS  ...index.test.js
- RUNS  ...index.test.js
- RUNS  ...index.test.js
- RUNS  ...index.test.js
- RUNS  ...loginform.test.js
- RUNS  ...request.test.js
-
-Test Suites: 14 passed, 14 of 83 total
-Tests:       150 passed, 150 total
-Snapshots:   4 passed, 4 total
-Time:        31s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
- RUNS  ...registerform.test.js
- RUNS  ...index.test.js
- RUNS  ...index.test.js
- RUNS  ...index.test.js
- RUNS  ...index.test.js
- RUNS  ...loginform.test.js
- RUNS  ...request.test.js
-
-Test Suites: 14 passed, 14 of 83 total
-Tests:       150 passed, 150 total
-Snapshots:   4 passed, 4 total
-Time:        31s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
- RUNS  ...index.test.js
- RUNS  ...index.test.js
- RUNS  ...index.test.js
- RUNS  ...index.test.js
- RUNS  ...loginform.test.js
- RUNS  ...selectors.test.js
- RUNS  ...request.test.js
-
-Test Suites: 15 passed, 15 of 83 total
-Tests:       192 passed, 192 total
-Snapshots:   4 passed, 4 total
-Time:        31s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
- RUNS  ...index.test.js
- RUNS  ...index.test.js
- RUNS  ...index.test.js
- RUNS  ...index.test.js
- RUNS  ...loginform.test.js
- RUNS  ...selectors.test.js
- RUNS  ...request.test.js
-
-Test Suites: 15 passed, 15 of 83 total
-Tests:       192 passed, 192 total
-Snapshots:   4 passed, 4 total
-Time:        31s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
- RUNS  ...index.test.js
- RUNS  ...index.test.js
- RUNS  ...index.test.js
- RUNS  ...index.test.js
- RUNS  ...loginform.test.js
- RUNS  ...selectors.test.js
- RUNS  ...request.test.js
-
-Test Suites: 15 passed, 15 of 83 total
-Tests:       192 passed, 192 total
-Snapshots:   4 passed, 4 total
-Time:        31s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
- RUNS  ...index.test.js
- RUNS  ...index.test.js
- RUNS  ...index.test.js
- RUNS  ...index.test.js
- RUNS  ...loginform.test.js
- RUNS  ...selectors.test.js
- RUNS  ...request.test.js
-
-Test Suites: 15 passed, 15 of 83 total
-Tests:       192 passed, 192 total
-Snapshots:   4 passed, 4 total
-Time:        31s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
- RUNS  ...actions.test.js
- RUNS  ...index.test.js
- RUNS  ...index.test.js
- RUNS  ...reducer.test.js
- RUNS  ...index.test.js
- RUNS  ...selectors.test.js
- RUNS  ...selectors.test.js
-
-Test Suites: 18 passed, 18 of 83 total
-Tests:       209 passed, 209 total
-Snapshots:   4 passed, 4 total
-Time:        31s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
- RUNS  ...actions.test.js
- RUNS  ...index.test.js
- RUNS  ...index.test.js
- RUNS  ...reducer.test.js
- RUNS  ...index.test.js
- RUNS  ...selectors.test.js
- RUNS  ...selectors.test.js
-
-Test Suites: 18 passed, 18 of 83 total
-Tests:       209 passed, 209 total
-Snapshots:   4 passed, 4 total
-Time:        31s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
- RUNS  ...actions.test.js
- RUNS  ...index.test.js
- RUNS  ...index.test.js
- RUNS  ...reducer.test.js
- RUNS  ...selectors.test.js
- RUNS  ...selectors.test.js
- RUNS  ...index.test.js
-
-Test Suites: 19 passed, 19 of 83 total
-Tests:       214 passed, 214 total
-Snapshots:   4 passed, 4 total
-Time:        31s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
- RUNS  ...actions.test.js
- RUNS  ...index.test.js
- RUNS  ...index.test.js
- RUNS  ...reducer.test.js
- RUNS  ...selectors.test.js
- RUNS  ...selectors.test.js
- RUNS  ...index.test.js
-
-Test Suites: 19 passed, 19 of 83 total
-Tests:       214 passed, 214 total
-Snapshots:   4 passed, 4 total
-Time:        31s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
- RUNS  ...actions.test.js
- RUNS  ...index.test.js
- RUNS  ...reducer.test.js
- RUNS  ...Img.test.js
- RUNS  ...selectors.test.js
- RUNS  ...selectors.test.js
- RUNS  ...index.test.js
-
-Test Suites: 20 passed, 20 of 83 total
-Tests:       222 passed, 222 total
-Snapshots:   4 passed, 4 total
-Time:        32s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
- RUNS  ...actions.test.js
- RUNS  ...index.test.js
- RUNS  ...reducer.test.js
- RUNS  ...Img.test.js
- RUNS  ...selectors.test.js
- RUNS  ...selectors.test.js
- RUNS  ...index.test.js
-
-Test Suites: 20 passed, 20 of 83 total
-Tests:       222 passed, 222 total
-Snapshots:   4 passed, 4 total
-Time:        32s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
- RUNS  ...actions.test.js
- RUNS  ...index.test.js
- RUNS  ...reducer.test.js
- RUNS  ...reducer.test.js
- RUNS  ...Img.test.js
- RUNS  ...selectors.test.js
- RUNS  ...index.test.js
-
-Test Suites: 21 passed, 21 of 83 total
-Tests:       225 passed, 225 total
-Snapshots:   4 passed, 4 total
-Time:        32s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
- RUNS  ...actions.test.js
- RUNS  ...index.test.js
- RUNS  ...reducer.test.js
- RUNS  ...reducer.test.js
- RUNS  ...Img.test.js
- RUNS  ...selectors.test.js
- RUNS  ...index.test.js
-
-Test Suites: 21 passed, 21 of 83 total
-Tests:       225 passed, 225 total
-Snapshots:   4 passed, 4 total
-Time:        32s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
- RUNS  ...actions.test.js
- RUNS  ...index.test.js
- RUNS  ...reducer.test.js
- RUNS  ...reducer.test.js
- RUNS  ...Img.test.js
- RUNS  ...selectors.test.js
- RUNS  ...index.test.js
-
-Test Suites: 21 passed, 21 of 83 total
-Tests:       225 passed, 225 total
-Snapshots:   4 passed, 4 total
-Time:        32s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
- RUNS  ...index.test.js
- RUNS  ...reducer.test.js
- RUNS  ...reducer.test.js
- RUNS  ...Img.test.js
- RUNS  ...CenteredSection.test.js
- RUNS  ...index.test.js
- RUNS  ...index.test.js
-
-Test Suites: 23 passed, 23 of 83 total
-Tests:       231 passed, 231 total
-Snapshots:   4 passed, 4 total
-Time:        32s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
- RUNS  ...index.test.js
- RUNS  ...reducer.test.js
- RUNS  ...reducer.test.js
- RUNS  ...Img.test.js
- RUNS  ...CenteredSection.test.js
- RUNS  ...index.test.js
- RUNS  ...index.test.js
-
-Test Suites: 23 passed, 23 of 83 total
-Tests:       231 passed, 231 total
-Snapshots:   4 passed, 4 total
-Time:        32s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
- RUNS  ...index.test.js
- RUNS  ...reducer.test.js
- RUNS  ...reducer.test.js
- RUNS  ...Img.test.js
- RUNS  ...CenteredSection.test.js
- RUNS  ...index.test.js
- RUNS  ...index.test.js
-
-Test Suites: 23 passed, 23 of 83 total
-Tests:       231 passed, 231 total
-Snapshots:   4 passed, 4 total
-Time:        32s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
- RUNS  ...StyledButton.test.js
- RUNS  ...index.test.js
- RUNS  ...reducer.test.js
- RUNS  ...reducer.test.js
- RUNS  ...CenteredSection.test.js
- RUNS  ...index.test.js
- RUNS  ...index.test.js
-
-Test Suites: 24 passed, 24 of 83 total
-Tests:       235 passed, 235 total
-Snapshots:   4 passed, 4 total
-Time:        33s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
- RUNS  ...StyledButton.test.js
- RUNS  ...index.test.js
- RUNS  ...reducer.test.js
- RUNS  ...reducer.test.js
- RUNS  ...CenteredSection.test.js
- RUNS  ...index.test.js
- RUNS  ...index.test.js
-
-Test Suites: 24 passed, 24 of 83 total
-Tests:       235 passed, 235 total
-Snapshots:   4 passed, 4 total
-Time:        33s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
- RUNS  ...StyledButton.test.js
- RUNS  ...index.test.js
- RUNS  ...reducer.test.js
- RUNS  ...reducer.test.js
- RUNS  ...CenteredSection.test.js
- RUNS  ...index.test.js
- RUNS  ...index.test.js
-
-Test Suites: 24 passed, 24 of 83 total
-Tests:       235 passed, 235 total
-Snapshots:   4 passed, 4 total
-Time:        33s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
- RUNS  ...StyledButton.test.js
- RUNS  ...index.test.js
- RUNS  ...reducer.test.js
- RUNS  ...ListItemTitle.test.js
- RUNS  ...index.test.js
- RUNS  ...index.test.js
- RUNS  ...index.test.js
-
-Test Suites: 26 passed, 26 of 83 total
-Tests:       242 passed, 242 total
-Snapshots:   4 passed, 4 total
-Time:        33s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
- RUNS  ...StyledButton.test.js
- RUNS  ...index.test.js
- RUNS  ...reducer.test.js
- RUNS  ...ListItemTitle.test.js
- RUNS  ...index.test.js
- RUNS  ...index.test.js
- RUNS  ...index.test.js
-
-Test Suites: 26 passed, 26 of 83 total
-Tests:       242 passed, 242 total
-Snapshots:   4 passed, 4 total
-Time:        33s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
- RUNS  ...StyledButton.test.js
- RUNS  ...index.test.js
- RUNS  ...reducer.test.js
- RUNS  ...ListItemTitle.test.js
- RUNS  ...index.test.js
- RUNS  ...index.test.js
- RUNS  ...index.test.js
-
-Test Suites: 26 passed, 26 of 83 total
-Tests:       242 passed, 242 total
-Snapshots:   4 passed, 4 total
-Time:        33s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
- RUNS  ...StyledButton.test.js
- RUNS  ...IssueLink.test.js
- RUNS  ...reducer.test.js
- RUNS  ...ListItemTitle.test.js
- RUNS  ...index.test.js
- RUNS  ...index.test.js
- RUNS  ...RepoLink.test.js
-
-Test Suites: 28 passed, 28 of 83 total
-Tests:       247 passed, 247 total
-Snapshots:   4 passed, 4 total
-Time:        33s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
- RUNS  ...StyledButton.test.js
- RUNS  ...IssueLink.test.js
- RUNS  ...reducer.test.js
- RUNS  ...ListItemTitle.test.js
- RUNS  ...index.test.js
- RUNS  ...index.test.js
- RUNS  ...RepoLink.test.js
-
-Test Suites: 28 passed, 28 of 83 total
-Tests:       247 passed, 247 total
-Snapshots:   4 passed, 4 total
-Time:        33s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
- RUNS  ...StyledButton.test.js
- RUNS  ...IssueLink.test.js
- RUNS  ...reducer.test.js
- RUNS  ...ListItemTitle.test.js
- RUNS  ...index.test.js
- RUNS  ...index.test.js
- RUNS  ...RepoLink.test.js
-
-Test Suites: 28 passed, 28 of 83 total
-Tests:       247 passed, 247 total
-Snapshots:   4 passed, 4 total
-Time:        33s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
- RUNS  ...IssueIcon.test.js
- RUNS  ...IssueLink.test.js
- RUNS  ...index.test.js
- RUNS  ...ListItemTitle.test.js
- RUNS  ...index.test.js
- RUNS  ...index.test.js
- RUNS  ...RepoLink.test.js
-
-Test Suites: 30 passed, 30 of 83 total
-Tests:       254 passed, 254 total
-Snapshots:   4 passed, 4 total
-Time:        34s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
- RUNS  ...IssueIcon.test.js
- RUNS  ...IssueLink.test.js
- RUNS  ...index.test.js
- RUNS  ...ListItemTitle.test.js
- RUNS  ...index.test.js
- RUNS  ...index.test.js
- RUNS  ...RepoLink.test.js
-
-Test Suites: 30 passed, 30 of 83 total
-Tests:       254 passed, 254 total
-Snapshots:   4 passed, 4 total
-Time:        34s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
- RUNS  ...IssueIcon.test.js
- RUNS  ...IssueLink.test.js
- RUNS  ...index.test.js
- RUNS  ...ListItemTitle.test.js
- RUNS  ...index.test.js
- RUNS  ...index.test.js
- RUNS  ...RepoLink.test.js
-
-Test Suites: 30 passed, 30 of 83 total
-Tests:       254 passed, 254 total
-Snapshots:   4 passed, 4 total
-Time:        34s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
- RUNS  ...IssueIcon.test.js
- RUNS  ...IssueLink.test.js
- RUNS  ...index.test.js
- RUNS  ...ListItemTitle.test.js
- RUNS  ...index.test.js
- RUNS  ...index.test.js
- RUNS  ...RepoLink.test.js
-
-Test Suites: 30 passed, 30 of 83 total
-Tests:       254 passed, 254 total
-Snapshots:   4 passed, 4 total
-Time:        34s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
- RUNS  ...IssueIcon.test.js
- RUNS  ...IssueLink.test.js
- RUNS  ...index.test.js
- RUNS  ...ListItemTitle.test.js
- RUNS  ...index.test.js
- RUNS  ...index.test.js
- RUNS  ...RepoLink.test.js
-
-Test Suites: 30 passed, 30 of 83 total
-Tests:       254 passed, 254 total
-Snapshots:   4 passed, 4 total
-Time:        34s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
- RUNS  ...AtPrefix.test.js
- RUNS  ...IssueIcon.test.js
- RUNS  ...Section.test.js
- RUNS  ...index.test.js
- RUNS  ...index.test.js
- RUNS  ...index.test.js
- RUNS  ...Wrapper.test.js
-
-Test Suites: 33 passed, 33 of 83 total
-Tests:       266 passed, 266 total
-Snapshots:   4 passed, 4 total
-Time:        34s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
- RUNS  ...AtPrefix.test.js
- RUNS  ...IssueIcon.test.js
- RUNS  ...Section.test.js
- RUNS  ...index.test.js
- RUNS  ...index.test.js
- RUNS  ...index.test.js
- RUNS  ...Wrapper.test.js
-
-Test Suites: 33 passed, 33 of 83 total
-Tests:       266 passed, 266 total
-Snapshots:   4 passed, 4 total
-Time:        34s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
- RUNS  ...AtPrefix.test.js
- RUNS  ...IssueIcon.test.js
- RUNS  ...Section.test.js
- RUNS  ...index.test.js
- RUNS  ...ListItem.test.js
- RUNS  ...index.test.js
- RUNS  ...Wrapper.test.js
-
-Test Suites: 34 passed, 34 of 83 total
-Tests:       268 passed, 268 total
-Snapshots:   4 passed, 4 total
-Time:        34s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
- RUNS  ...AtPrefix.test.js
- RUNS  ...IssueIcon.test.js
- RUNS  ...Section.test.js
- RUNS  ...index.test.js
- RUNS  ...ListItem.test.js
- RUNS  ...index.test.js
- RUNS  ...Wrapper.test.js
-
-Test Suites: 34 passed, 34 of 83 total
-Tests:       268 passed, 268 total
-Snapshots:   4 passed, 4 total
-Time:        34s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
- RUNS  ...AtPrefix.test.js
- RUNS  ...Section.test.js
- RUNS  ...index.test.js
- RUNS  ...ListItem.test.js
- RUNS  ...Wrapper.test.js
- RUNS  ...index.test.js
- RUNS  ...Wrapper.test.js
-
-Test Suites: 35 passed, 35 of 83 total
-Tests:       272 passed, 272 total
-Snapshots:   4 passed, 4 total
-Time:        35s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
- RUNS  ...AtPrefix.test.js
- RUNS  ...Section.test.js
- RUNS  ...index.test.js
- RUNS  ...ListItem.test.js
- RUNS  ...Wrapper.test.js
- RUNS  ...index.test.js
- RUNS  ...Wrapper.test.js
-
-Test Suites: 35 passed, 35 of 83 total
-Tests:       272 passed, 272 total
-Snapshots:   4 passed, 4 total
-Time:        35s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
- RUNS  ...Wrapper.test.js
- RUNS  ...Section.test.js
- RUNS  ...index.test.js
- RUNS  ...ListItem.test.js
- RUNS  ...Wrapper.test.js
- RUNS  ...index.test.js
- RUNS  ...Wrapper.test.js
-
-Test Suites: 36 passed, 36 of 83 total
-Tests:       276 passed, 276 total
-Snapshots:   4 passed, 4 total
-Time:        35s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
- RUNS  ...Wrapper.test.js
- RUNS  ...Section.test.js
- RUNS  ...index.test.js
- RUNS  ...ListItem.test.js
- RUNS  ...Wrapper.test.js
- RUNS  ...index.test.js
- RUNS  ...Wrapper.test.js
-
-Test Suites: 36 passed, 36 of 83 total
-Tests:       276 passed, 276 total
-Snapshots:   4 passed, 4 total
-Time:        35s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
- RUNS  ...Wrapper.test.js
- RUNS  ...Section.test.js
- RUNS  ...index.test.js
- RUNS  ...ListItem.test.js
- RUNS  ...Wrapper.test.js
- RUNS  ...index.test.js
- RUNS  ...Wrapper.test.js
-
-Test Suites: 36 passed, 36 of 83 total
-Tests:       276 passed, 276 total
-Snapshots:   4 passed, 4 total
-Time:        35s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
- RUNS  ...Wrapper.test.js
- RUNS  ...Wrapper.test.js
- RUNS  ...Wrapper.test.js
- RUNS  ...ListItem.test.js
- RUNS  ...Wrapper.test.js
- RUNS  ...index.test.js
- RUNS  ...Wrapper.test.js
-
-Test Suites: 38 passed, 38 of 83 total
-Tests:       281 passed, 281 total
-Snapshots:   4 passed, 4 total
-Time:        35s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
- RUNS  ...Wrapper.test.js
- RUNS  ...Wrapper.test.js
- RUNS  ...Wrapper.test.js
- RUNS  ...ListItem.test.js
- RUNS  ...Wrapper.test.js
- RUNS  ...index.test.js
- RUNS  ...Wrapper.test.js
-
-Test Suites: 38 passed, 38 of 83 total
-Tests:       281 passed, 281 total
-Snapshots:   4 passed, 4 total
-Time:        35s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
- RUNS  ...Wrapper.test.js
- RUNS  ...Wrapper.test.js
- RUNS  ...Wrapper.test.js
- RUNS  ...Wrapper.test.js
- RUNS  ...ListItem.test.js
- RUNS  ...Wrapper.test.js
- RUNS  ...index.test.js
-
-Test Suites: 39 passed, 39 of 83 total
-Tests:       285 passed, 285 total
-Snapshots:   4 passed, 4 total
-Time:        35s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
- RUNS  ...Wrapper.test.js
- RUNS  ...Wrapper.test.js
- RUNS  ...Wrapper.test.js
- RUNS  ...Wrapper.test.js
- RUNS  ...ListItem.test.js
- RUNS  ...Wrapper.test.js
- RUNS  ...index.test.js
-
-Test Suites: 39 passed, 39 of 83 total
-Tests:       285 passed, 285 total
-Snapshots:   4 passed, 4 total
-Time:        35s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
- RUNS  ...Wrapper.test.js
- RUNS  ...Wrapper.test.js
- RUNS  ...Wrapper.test.js
- RUNS  ...Wrapper.test.js
- RUNS  ...Wrapper.test.js
- RUNS  ...index.test.js
- RUNS  ...Select.test.js
-
-Test Suites: 40 passed, 40 of 83 total
-Tests:       289 passed, 289 total
-Snapshots:   4 passed, 4 total
-Time:        35s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
- RUNS  ...Wrapper.test.js
- RUNS  ...Wrapper.test.js
- RUNS  ...Wrapper.test.js
- RUNS  ...Wrapper.test.js
- RUNS  ...Wrapper.test.js
- RUNS  ...index.test.js
- RUNS  ...Select.test.js
-
-Test Suites: 40 passed, 40 of 83 total
-Tests:       289 passed, 289 total
-Snapshots:   4 passed, 4 total
-Time:        35s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
- RUNS  ...Wrapper.test.js
- RUNS  ...Wrapper.test.js
- RUNS  ...Wrapper.test.js
- RUNS  ...Wrapper.test.js
- RUNS  ...Wrapper.test.js
- RUNS  ...index.test.js
- RUNS  ...Select.test.js
-
-Test Suites: 40 passed, 40 of 83 total
-Tests:       289 passed, 289 total
-Snapshots:   4 passed, 4 total
-Time:        35s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
- RUNS  ...Wrapper.test.js
- RUNS  ...Wrapper.test.js
- RUNS  ...Wrapper.test.js
- RUNS  ...Wrapper.test.js
- RUNS  ...A.test.js
- RUNS  ...index.test.js
- RUNS  ...Select.test.js
-
-Test Suites: 42 passed, 42 of 83 total
-Tests:       297 passed, 297 total
-Snapshots:   4 passed, 4 total
-Time:        36s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
- RUNS  ...Wrapper.test.js
- RUNS  ...Wrapper.test.js
- RUNS  ...Wrapper.test.js
- RUNS  ...Wrapper.test.js
- RUNS  ...A.test.js
- RUNS  ...index.test.js
- RUNS  ...Select.test.js
-
-Test Suites: 42 passed, 42 of 83 total
-Tests:       297 passed, 297 total
-Snapshots:   4 passed, 4 total
-Time:        36s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
- RUNS  ...actions.test.js
- RUNS  ...Wrapper.test.js
- RUNS  ...Wrapper.test.js
- RUNS  ...Wrapper.test.js
- RUNS  ...A.test.js
- RUNS  ...index.test.js
- RUNS  ...Select.test.js
-
-Test Suites: 43 passed, 43 of 83 total
-Tests:       301 passed, 301 total
-Snapshots:   4 passed, 4 total
-Time:        36s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
- RUNS  ...actions.test.js
- RUNS  ...Wrapper.test.js
- RUNS  ...Wrapper.test.js
- RUNS  ...Wrapper.test.js
- RUNS  ...A.test.js
- RUNS  ...index.test.js
- RUNS  ...Select.test.js
-
-Test Suites: 43 passed, 43 of 83 total
-Tests:       301 passed, 301 total
-Snapshots:   4 passed, 4 total
-Time:        36s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
- RUNS  ...actions.test.js
- RUNS  ...Wrapper.test.js
- RUNS  ...Wrapper.test.js
- RUNS  ...Wrapper.test.js
- RUNS  ...A.test.js
- RUNS  ...index.test.js
- RUNS  ...Select.test.js
-
-Test Suites: 43 passed, 43 of 83 total
-Tests:       301 passed, 301 total
-Snapshots:   4 passed, 4 total
-Time:        36s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
- RUNS  ...actions.test.js
- RUNS  ...Wrapper.test.js
- RUNS  ...Wrapper.test.js
- RUNS  ...Wrapper.test.js
- RUNS  ...A.test.js
- RUNS  ...index.test.js
- RUNS  ...Select.test.js
-
-Test Suites: 43 passed, 43 of 83 total
-Tests:       301 passed, 301 total
-Snapshots:   4 passed, 4 total
-Time:        36s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
- RUNS  ...Input.test.js
- RUNS  ...actions.test.js
- RUNS  ...Item.test.js
- RUNS  ...Form.test.js
- RUNS  ...Wrapper.test.js
- RUNS  ...A.test.js
- RUNS  ...index.test.js
-
-Test Suites: 46 passed, 46 of 83 total
-Tests:       313 passed, 313 total
-Snapshots:   4 passed, 4 total
-Time:        36s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
- RUNS  ...Input.test.js
- RUNS  ...actions.test.js
- RUNS  ...Item.test.js
- RUNS  ...Form.test.js
- RUNS  ...Wrapper.test.js
- RUNS  ...A.test.js
- RUNS  ...index.test.js
-
-Test Suites: 46 passed, 46 of 83 total
-Tests:       313 passed, 313 total
-Snapshots:   4 passed, 4 total
-Time:        36s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
- RUNS  ...Input.test.js
- RUNS  ...actions.test.js
- RUNS  ...Item.test.js
- RUNS  ...Form.test.js
- RUNS  ...A.test.js
- RUNS  ...index.test.js
- RUNS  ...List.test.js
-
-Test Suites: 47 passed, 47 of 83 total
-Tests:       317 passed, 317 total
-Snapshots:   4 passed, 4 total
-Time:        36s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
- RUNS  ...Input.test.js
- RUNS  ...actions.test.js
- RUNS  ...Item.test.js
- RUNS  ...Form.test.js
- RUNS  ...A.test.js
- RUNS  ...index.test.js
- RUNS  ...List.test.js
-
-Test Suites: 47 passed, 47 of 83 total
-Tests:       317 passed, 317 total
-Snapshots:   4 passed, 4 total
-Time:        36s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
- RUNS  ...Input.test.js
- RUNS  ...actions.test.js
- RUNS  ...Item.test.js
- RUNS  ...Form.test.js
- RUNS  ...A.test.js
- RUNS  ...index.test.js
- RUNS  ...List.test.js
-
-Test Suites: 47 passed, 47 of 83 total
-Tests:       317 passed, 317 total
-Snapshots:   4 passed, 4 total
-Time:        36s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
- RUNS  ...Input.test.js
- RUNS  ...Item.test.js
- RUNS  ...Form.test.js
- RUNS  ...Ul.test.js
- RUNS  ...A.test.js
- RUNS  ...index.test.js
- RUNS  ...List.test.js
-
-Test Suites: 49 passed, 49 of 83 total
-Tests:       323 passed, 323 total
-Snapshots:   4 passed, 4 total
-Time:        37s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
- RUNS  ...Input.test.js
- RUNS  ...Item.test.js
- RUNS  ...Form.test.js
- RUNS  ...Ul.test.js
- RUNS  ...A.test.js
- RUNS  ...index.test.js
- RUNS  ...List.test.js
-
-Test Suites: 49 passed, 49 of 83 total
-Tests:       323 passed, 323 total
-Snapshots:   4 passed, 4 total
-Time:        37s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
- RUNS  ...Input.test.js
- RUNS  ...Item.test.js
- RUNS  ...Form.test.js
- RUNS  ...Ul.test.js
- RUNS  ...A.test.js
- RUNS  ...index.test.js
- RUNS  ...List.test.js
-
-Test Suites: 49 passed, 49 of 83 total
-Tests:       323 passed, 323 total
-Snapshots:   4 passed, 4 total
-Time:        37s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
- RUNS  ...index.test.js
- RUNS  ...Item.test.js
- RUNS  ...selectors.test.js
- RUNS  ...Ul.test.js
- RUNS  ...A.test.js
- RUNS  ...index.test.js
- RUNS  ...List.test.js
-
-Test Suites: 51 passed, 51 of 83 total
-Tests:       331 passed, 331 total
-Snapshots:   4 passed, 4 total
-Time:        37s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
- RUNS  ...index.test.js
- RUNS  ...Item.test.js
- RUNS  ...selectors.test.js
- RUNS  ...Ul.test.js
- RUNS  ...A.test.js
- RUNS  ...index.test.js
- RUNS  ...List.test.js
-
-Test Suites: 51 passed, 51 of 83 total
-Tests:       331 passed, 331 total
-Snapshots:   4 passed, 4 total
-Time:        37s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
- RUNS  ...index.test.js
- RUNS  ...Item.test.js
- RUNS  ...selectors.test.js
- RUNS  ...Ul.test.js
- RUNS  ...A.test.js
- RUNS  ...index.test.js
- RUNS  ...List.test.js
-
-Test Suites: 51 passed, 51 of 83 total
-Tests:       331 passed, 331 total
-Snapshots:   4 passed, 4 total
-Time:        37s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
- RUNS  ...action.test.js
- RUNS  ...index.test.js
- RUNS  ...Circle.test.js
- RUNS  ...selectors.test.js
- RUNS  ...Ul.test.js
- RUNS  ...A.test.js
- RUNS  ...index.test.js
-
-Test Suites: 53 passed, 53 of 83 total
-Tests:       339 passed, 339 total
-Snapshots:   4 passed, 4 total
-Time:        37s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
- RUNS  ...action.test.js
- RUNS  ...index.test.js
- RUNS  ...Circle.test.js
- RUNS  ...selectors.test.js
- RUNS  ...Ul.test.js
- RUNS  ...A.test.js
- RUNS  ...index.test.js
-
-Test Suites: 53 passed, 53 of 83 total
-Tests:       339 passed, 339 total
-Snapshots:   4 passed, 4 total
-Time:        37s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
- RUNS  ...action.test.js
- RUNS  ...index.test.js
- RUNS  ...Circle.test.js
- RUNS  ...selectors.test.js
- RUNS  ...Ul.test.js
- RUNS  ...A.test.js
- RUNS  ...index.test.js
-
-Test Suites: 53 passed, 53 of 83 total
-Tests:       339 passed, 339 total
-Snapshots:   4 passed, 4 total
-Time:        37s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
- RUNS  ...action.test.js
- RUNS  ...index.test.js
- RUNS  ...Circle.test.js
- RUNS  ...selectors.test.js
- RUNS  ...Ul.test.js
- RUNS  ...A.test.js
- RUNS  ...index.test.js
-
-Test Suites: 53 passed, 53 of 83 total
-Tests:       339 passed, 339 total
-Snapshots:   4 passed, 4 total
-Time:        37s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
- RUNS  ...action.test.js
- RUNS  ...index.test.js
- RUNS  ...Circle.test.js
- RUNS  ...selectors.test.js
- RUNS  ...Ul.test.js
- RUNS  ...A.test.js
- RUNS  ...index.test.js
-
-Test Suites: 53 passed, 53 of 83 total
-Tests:       339 passed, 339 total
-Snapshots:   4 passed, 4 total
-Time:        37s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
- RUNS  ...action.test.js
- RUNS  ...index.test.js
- RUNS  ...Circle.test.js
- RUNS  ...selectors.test.js
- RUNS  ...index.test.js
- RUNS  ...index.test.js
- RUNS  ...reducer.test.js
-
-Test Suites: 1 failed, 55 passed, 56 of 83 total
-Tests:       2 failed, 348 passed, 350 total
-Snapshots:   4 passed, 4 total
-Time:        37s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
- RUNS  ...action.test.js
- RUNS  ...index.test.js
- RUNS  ...Circle.test.js
- RUNS  ...selectors.test.js
- RUNS  ...index.test.js
- RUNS  ...index.test.js
- RUNS  ...reducer.test.js
-
-Test Suites: 1 failed, 55 passed, 56 of 83 total
-Tests:       2 failed, 348 passed, 350 total
-Snapshots:   4 passed, 4 total
-Time:        38s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
- RUNS  ...action.test.js
- RUNS  ...index.test.js
- RUNS  ...Circle.test.js
- RUNS  ...selectors.test.js
- RUNS  ...index.test.js
- RUNS  ...index.test.js
- RUNS  ...reducer.test.js
-
-Test Suites: 1 failed, 55 passed, 56 of 83 total
-Tests:       2 failed, 348 passed, 350 total
-Snapshots:   4 passed, 4 total
-Time:        38s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
- RUNS  ...action.test.js
- RUNS  ...index.test.js
- RUNS  ...Circle.test.js
- RUNS  ...index.test.js
- RUNS  ...index.test.js
- RUNS  ...index.test.js
- RUNS  ...reducer.test.js
-
-Test Suites: 1 failed, 56 passed, 57 of 83 total
-Tests:       2 failed, 350 passed, 352 total
-Snapshots:   4 passed, 4 total
-Time:        38s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
- RUNS  ...action.test.js
- RUNS  ...index.test.js
- RUNS  ...Circle.test.js
- RUNS  ...index.test.js
- RUNS  ...index.test.js
- RUNS  ...index.test.js
- RUNS  ...reducer.test.js
-
-Test Suites: 1 failed, 56 passed, 57 of 83 total
-Tests:       2 failed, 350 passed, 352 total
-Snapshots:   4 passed, 4 total
-Time:        38s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
- RUNS  ...action.test.js
- RUNS  ...index.test.js
- RUNS  ...Circle.test.js
- RUNS  ...index.test.js
- RUNS  ...index.test.js
- RUNS  ...index.test.js
- RUNS  ...reducer.test.js
-
-Test Suites: 1 failed, 56 passed, 57 of 83 total
-Tests:       2 failed, 350 passed, 352 total
-Snapshots:   4 passed, 4 total
-Time:        38s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
- RUNS  ...index.test.js
- RUNS  ...Circle.test.js
- RUNS  ...store.test.js
- RUNS  ...index.test.js
- RUNS  ...index.test.js
- RUNS  ...index.test.js
- RUNS  ...reducer.test.js
-
-Test Suites: 1 failed, 58 passed, 59 of 83 total
-Tests:       2 failed, 353 passed, 355 total
-Snapshots:   4 passed, 4 total
-Time:        38s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
- RUNS  ...index.test.js
- RUNS  ...Circle.test.js
- RUNS  ...store.test.js
- RUNS  ...index.test.js
- RUNS  ...index.test.js
- RUNS  ...index.test.js
- RUNS  ...reducer.test.js
-
-Test Suites: 1 failed, 58 passed, 59 of 83 total
-Tests:       2 failed, 353 passed, 355 total
-Snapshots:   4 passed, 4 total
-Time:        38s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
- RUNS  ...index.test.js
- RUNS  ...index.test.js
- RUNS  ...store.test.js
- RUNS  ...index.test.js
- RUNS  ...index.test.js
- RUNS  ...index.test.js
- RUNS  ...reducer.test.js
-
-Test Suites: 1 failed, 59 passed, 60 of 83 total
-Tests:       2 failed, 356 passed, 358 total
-Snapshots:   4 passed, 4 total
-Time:        38s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
- RUNS  ...index.test.js
- RUNS  ...index.test.js
- RUNS  ...store.test.js
- RUNS  ...index.test.js
- RUNS  ...index.test.js
- RUNS  ...index.test.js
- RUNS  ...reducer.test.js
-
-Test Suites: 1 failed, 59 passed, 60 of 83 total
-Tests:       2 failed, 356 passed, 358 total
-Snapshots:   4 passed, 4 total
-Time:        38s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
- RUNS  ...index.test.js
- RUNS  ...index.test.js
- RUNS  ...store.test.js
- RUNS  ...index.test.js
- RUNS  ...index.test.js
- RUNS  ...index.test.js
- RUNS  ...reducer.test.js
-
-Test Suites: 1 failed, 59 passed, 60 of 83 total
-Tests:       2 failed, 356 passed, 358 total
-Snapshots:   4 passed, 4 total
-Time:        38s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
- RUNS  ...index.test.js
- RUNS  ...index.test.js
- RUNS  ...index.test.js
- RUNS  ...store.test.js
- RUNS  ...index.test.js
- RUNS  ...index.test.js
- RUNS  ...index.test.js
-
-Test Suites: 1 failed, 61 passed, 62 of 83 total
-Tests:       2 failed, 360 passed, 362 total
-Snapshots:   4 passed, 4 total
-Time:        38s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
- RUNS  ...index.test.js
- RUNS  ...index.test.js
- RUNS  ...index.test.js
- RUNS  ...store.test.js
- RUNS  ...index.test.js
- RUNS  ...index.test.js
- RUNS  ...index.test.js
-
-Test Suites: 1 failed, 61 passed, 62 of 83 total
-Tests:       2 failed, 360 passed, 362 total
-Snapshots:   4 passed, 4 total
-Time:        38s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
- RUNS  ...index.test.js
- RUNS  ...index.test.js
- RUNS  ...index.test.js
- RUNS  ...store.test.js
- RUNS  ...index.test.js
- RUNS  ...index.test.js
- RUNS  ...reducer.test.js
-
-Test Suites: 1 failed, 62 passed, 63 of 83 total
-Tests:       2 failed, 361 passed, 363 total
-Snapshots:   4 passed, 4 total
-Time:        39s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
- RUNS  ...index.test.js
- RUNS  ...index.test.js
- RUNS  ...index.test.js
- RUNS  ...store.test.js
- RUNS  ...index.test.js
- RUNS  ...index.test.js
- RUNS  ...reducer.test.js
-
-Test Suites: 1 failed, 62 passed, 63 of 83 total
-Tests:       2 failed, 361 passed, 363 total
-Snapshots:   4 passed, 4 total
-Time:        39s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
- RUNS  ...index.test.js
- RUNS  ...index.test.js
- RUNS  ...index.test.js
- RUNS  ...store.test.js
- RUNS  ...index.test.js
- RUNS  ...index.test.js
- RUNS  ...reducer.test.js
-
-Test Suites: 1 failed, 62 passed, 63 of 83 total
-Tests:       2 failed, 361 passed, 363 total
-Snapshots:   4 passed, 4 total
-Time:        39s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
- RUNS  ...index.test.js
- RUNS  ...index.test.js
- RUNS  ...index.test.js
- RUNS  ...store.test.js
- RUNS  ...index.test.js
- RUNS  ...index.test.js
- RUNS  ...reducer.test.js
-
-Test Suites: 1 failed, 62 passed, 63 of 83 total
-Tests:       2 failed, 361 passed, 363 total
-Snapshots:   4 passed, 4 total
-Time:        39s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
- RUNS  ...index.test.js
- RUNS  ...index.test.js
- RUNS  ...store.test.js
- RUNS  ...index.test.js
- RUNS  ...index.test.js
- RUNS  ...index.test.js
- RUNS  ...reducer.test.js
-
-Test Suites: 2 failed, 63 passed, 65 of 83 total
-Tests:       3 failed, 363 passed, 366 total
-Snapshots:   4 passed, 4 total
-Time:        39s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
- RUNS  ...index.test.js
- RUNS  ...index.test.js
- RUNS  ...store.test.js
- RUNS  ...index.test.js
- RUNS  ...index.test.js
- RUNS  ...index.test.js
- RUNS  ...reducer.test.js
-
-Test Suites: 2 failed, 63 passed, 65 of 83 total
-Tests:       3 failed, 363 passed, 366 total
-Snapshots:   4 passed, 4 total
-Time:        39s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
- RUNS  ...index.test.js
- RUNS  ...index.test.js
- RUNS  ...store.test.js
- RUNS  ...index.test.js
- RUNS  ...index.test.js
- RUNS  ...index.test.js
- RUNS  ...reducer.test.js
-
-Test Suites: 2 failed, 63 passed, 65 of 83 total
-Tests:       3 failed, 363 passed, 366 total
-Snapshots:   4 passed, 4 total
-Time:        39s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
- RUNS  ...actions.test.js
- RUNS  ...messages.test.js
- RUNS  ...index.test.js
- RUNS  ...index.test.js
- RUNS  ...index.test.js
- RUNS  ...index.test.js
- RUNS  ...reducer.test.js
-
-Test Suites: 2 failed, 65 passed, 67 of 83 total
-Tests:       3 failed, 367 passed, 370 total
-Snapshots:   4 passed, 4 total
-Time:        39s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
- RUNS  ...actions.test.js
- RUNS  ...messages.test.js
- RUNS  ...index.test.js
- RUNS  ...index.test.js
- RUNS  ...index.test.js
- RUNS  ...index.test.js
- RUNS  ...reducer.test.js
-
-Test Suites: 2 failed, 65 passed, 67 of 83 total
-Tests:       3 failed, 367 passed, 370 total
-Snapshots:   4 passed, 4 total
-Time:        39s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
- RUNS  ...actions.test.js
- RUNS  ...messages.test.js
- RUNS  ...index.test.js
- RUNS  ...index.test.js
- RUNS  ...index.test.js
- RUNS  ...index.test.js
- RUNS  ...reducer.test.js
-
-Test Suites: 2 failed, 65 passed, 67 of 83 total
-Tests:       3 failed, 367 passed, 370 total
-Snapshots:   4 passed, 4 total
-Time:        39s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
- RUNS  ...actions.test.js
- RUNS  ...messages.test.js
- RUNS  ...actions.test.js
- RUNS  ...selectors.test.js
- RUNS  ...index.test.js
- RUNS  ...index.test.js
- RUNS  ...reducer.test.js
-
-Test Suites: 2 failed, 67 passed, 69 of 83 total
-Tests:       3 failed, 371 passed, 374 total
-Snapshots:   4 passed, 4 total
-Time:        39s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
- RUNS  ...actions.test.js
- RUNS  ...messages.test.js
- RUNS  ...actions.test.js
- RUNS  ...selectors.test.js
- RUNS  ...index.test.js
- RUNS  ...index.test.js
- RUNS  ...reducer.test.js
-
-Test Suites: 2 failed, 67 passed, 69 of 83 total
-Tests:       3 failed, 371 passed, 374 total
-Snapshots:   4 passed, 4 total
-Time:        39s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
- RUNS  ...actions.test.js
- RUNS  ...messages.test.js
- RUNS  ...actions.test.js
- RUNS  ...selectors.test.js
- RUNS  ...index.test.js
- RUNS  ...index.test.js
- RUNS  ...index.test.js
-
-Test Suites: 2 failed, 68 passed, 70 of 83 total
-Tests:       3 failed, 373 passed, 376 total
-Snapshots:   4 passed, 4 total
-Time:        39s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
- RUNS  ...actions.test.js
- RUNS  ...messages.test.js
- RUNS  ...actions.test.js
- RUNS  ...selectors.test.js
- RUNS  ...index.test.js
- RUNS  ...index.test.js
- RUNS  ...index.test.js
-
-Test Suites: 2 failed, 68 passed, 70 of 83 total
-Tests:       3 failed, 373 passed, 376 total
-Snapshots:   4 passed, 4 total
-Time:        40s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
- RUNS  ...actions.test.js
- RUNS  ...messages.test.js
- RUNS  ...actions.test.js
- RUNS  ...selectors.test.js
- RUNS  ...index.test.js
- RUNS  ...index.test.js
- RUNS  ...index.test.js
-
-Test Suites: 2 failed, 68 passed, 70 of 83 total
-Tests:       3 failed, 373 passed, 376 total
-Snapshots:   4 passed, 4 total
-Time:        40s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
- RUNS  ...actions.test.js
- RUNS  ...messages.test.js
- RUNS  ...actions.test.js
- RUNS  ...selectors.test.js
- RUNS  ...index.test.js
- RUNS  ...index.test.js
- RUNS  ...index.test.js
-
-Test Suites: 2 failed, 68 passed, 70 of 83 total
-Tests:       3 failed, 373 passed, 376 total
-Snapshots:   4 passed, 4 total
-Time:        40s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
- RUNS  ...actions.test.js
- RUNS  ...messages.test.js
- RUNS  ...actions.test.js
- RUNS  ...selectors.test.js
- RUNS  ...index.test.js
- RUNS  ...index.test.js
- RUNS  ...index.test.js
-
-Test Suites: 2 failed, 68 passed, 70 of 83 total
-Tests:       3 failed, 373 passed, 376 total
-Snapshots:   4 passed, 4 total
-Time:        40s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
- RUNS  ...actions.test.js
- RUNS  ...messages.test.js
- RUNS  ...actions.test.js
- RUNS  ...selectors.test.js
- RUNS  ...index.test.js
- RUNS  ...index.test.js
- RUNS  ...index.test.js
-
-Test Suites: 2 failed, 68 passed, 70 of 83 total
-Tests:       3 failed, 373 passed, 376 total
-Snapshots:   4 passed, 4 total
-Time:        40s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
- RUNS  ...messages.test.js
- RUNS  ...index.test.js
- RUNS  ...index.test.js
- RUNS  ...index.test.js
- RUNS  ...index.test.js
- RUNS  ...index.test.js
- RUNS  ...index.test.js
-
-Test Suites: 2 failed, 72 passed, 74 of 83 total
-Tests:       3 failed, 1 skipped, 377 passed, 381 total
-Snapshots:   4 passed, 4 total
-Time:        40s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
- RUNS  ...messages.test.js
- RUNS  ...index.test.js
- RUNS  ...index.test.js
- RUNS  ...index.test.js
- RUNS  ...index.test.js
- RUNS  ...index.test.js
- RUNS  ...index.test.js
-
-Test Suites: 2 failed, 72 passed, 74 of 83 total
-Tests:       3 failed, 1 skipped, 377 passed, 381 total
-Snapshots:   4 passed, 4 total
-Time:        40s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
- RUNS  ...index.test.js
- RUNS  ...index.test.js
- RUNS  ...index.test.js
- RUNS  ...index.test.js
- RUNS  ...index.test.js
- RUNS  ...index.test.js
- RUNS  ...index.test.js
-
-Test Suites: 2 failed, 73 passed, 75 of 83 total
-Tests:       3 failed, 1 skipped, 378 passed, 382 total
-Snapshots:   4 passed, 4 total
-Time:        40s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
- RUNS  ...index.test.js
- RUNS  ...index.test.js
- RUNS  ...index.test.js
- RUNS  ...index.test.js
- RUNS  ...index.test.js
- RUNS  ...index.test.js
- RUNS  ...index.test.js
-
-Test Suites: 2 failed, 73 passed, 75 of 83 total
-Tests:       3 failed, 1 skipped, 378 passed, 382 total
-Snapshots:   4 passed, 4 total
-Time:        40s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
- RUNS  ...index.test.js
- RUNS  ...index.test.js
- RUNS  ...index.test.js
- RUNS  ...index.test.js
- RUNS  ...index.test.js
- RUNS  ...index.test.js
- RUNS  ...index.test.js
-
-Test Suites: 2 failed, 74 passed, 76 of 83 total
-Tests:       3 failed, 1 skipped, 379 passed, 383 total
-Snapshots:   4 passed, 4 total
-Time:        40s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
- RUNS  ...index.test.js
- RUNS  ...index.test.js
- RUNS  ...index.test.js
- RUNS  ...index.test.js
- RUNS  ...index.test.js
- RUNS  ...index.test.js
- RUNS  ...index.test.js
-
-Test Suites: 2 failed, 74 passed, 76 of 83 total
-Tests:       3 failed, 1 skipped, 379 passed, 383 total
-Snapshots:   4 passed, 4 total
-Time:        40s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
- RUNS  ...index.test.js
- RUNS  ...index.test.js
- RUNS  ...index.test.js
- RUNS  ...index.test.js
- RUNS  ...index.test.js
- RUNS  ...index.test.js
- RUNS  ...index.test.js
-
-Test Suites: 2 failed, 74 passed, 76 of 83 total
-Tests:       3 failed, 1 skipped, 379 passed, 383 total
-Snapshots:   4 passed, 4 total
-Time:        40s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
- RUNS  ...index.test.js
- RUNS  ...index.test.js
- RUNS  ...index.test.js
- RUNS  ...index.test.js
- RUNS  ...index.test.js
- RUNS  ...index.test.js
- RUNS  ...index.test.js
-
-Test Suites: 2 failed, 74 passed, 76 of 83 total
-Tests:       3 failed, 1 skipped, 379 passed, 383 total
-Snapshots:   4 passed, 4 total
-Time:        40s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
- RUNS  ...index.test.js
- RUNS  ...index.test.js
- RUNS  ...index.test.js
- RUNS  ...index.test.js
-
-Test Suites: 2 failed, 77 passed, 79 of 83 total
-Tests:       3 failed, 1 skipped, 382 passed, 386 total
-Snapshots:   4 passed, 4 total
-Time:        41s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
- RUNS  ...index.test.js
- RUNS  ...index.test.js
- RUNS  ...index.test.js
- RUNS  ...index.test.js
-
-Test Suites: 2 failed, 77 passed, 79 of 83 total
-Tests:       3 failed, 1 skipped, 382 passed, 386 total
-Snapshots:   4 passed, 4 total
-Time:        41s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
- RUNS  ...index.test.js
- RUNS  ...index.test.js
- RUNS  ...index.test.js
-
-Test Suites: 2 failed, 78 passed, 80 of 83 total
-Tests:       3 failed, 1 skipped, 383 passed, 387 total
-Snapshots:   4 passed, 4 total
-Time:        41s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
- RUNS  ...index.test.js
- RUNS  ...index.test.js
- RUNS  ...index.test.js
-
-Test Suites: 2 failed, 78 passed, 80 of 83 total
-Tests:       3 failed, 1 skipped, 383 passed, 387 total
-Snapshots:   4 passed, 4 total
-Time:        41s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
- RUNS  ...index.test.js
- RUNS  ...index.test.js
- RUNS  ...index.test.js
-
-Test Suites: 2 failed, 78 passed, 80 of 83 total
-Tests:       3 failed, 1 skipped, 383 passed, 387 total
-Snapshots:   4 passed, 4 total
-Time:        41s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
- RUNS  ...index.test.js
- RUNS  ...index.test.js
- RUNS  ...index.test.js
-
-Test Suites: 2 failed, 78 passed, 80 of 83 total
-Tests:       3 failed, 1 skipped, 383 passed, 387 total
-Snapshots:   4 passed, 4 total
-Time:        41s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
- RUNS  ...index.test.js
- RUNS  ...index.test.js
-
-Test Suites: 3 failed, 78 passed, 81 of 83 total
-Tests:       4 failed, 1 skipped, 383 passed, 388 total
-Snapshots:   4 passed, 4 total
-Time:        41s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
- RUNS  ...index.test.js
- RUNS  ...index.test.js
-
-Test Suites: 3 failed, 78 passed, 81 of 83 total
-Tests:       4 failed, 1 skipped, 383 passed, 388 total
-Snapshots:   4 passed, 4 total
-Time:        41s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
- RUNS  ...index.test.js
- RUNS  ...index.test.js
-
-Test Suites: 3 failed, 78 passed, 81 of 83 total
-Tests:       4 failed, 1 skipped, 383 passed, 388 total
-Snapshots:   4 passed, 4 total
-Time:        41s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
- RUNS  ...index.test.js
- RUNS  ...index.test.js
-
-Test Suites: 3 failed, 78 passed, 81 of 83 total
-Tests:       4 failed, 1 skipped, 383 passed, 388 total
-Snapshots:   4 passed, 4 total
-Time:        41s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A------------------------------------------------|----------|----------|----------|----------|----------------|
-File                                            |  % Stmts | % Branch |  % Funcs |  % Lines |Uncovered Lines |
-------------------------------------------------|----------|----------|----------|----------|----------------|
-All files                                       |    20.82 |    14.72 |    22.22 |    22.13 |                |
- app                                            |    96.15 |    85.71 |      100 |    96.15 |                |
-  global-styles.js                              |        0 |      100 |      100 |        0 |              1 |
-  i18n.js                                       |      100 |      100 |      100 |      100 |                |
-  reducers.js                                   |      100 |      100 |      100 |      100 |                |
-  store.js                                      |      100 |    66.67 |      100 |      100 |                |
- app/components/A                               |      100 |      100 |      100 |      100 |                |
-  index.js                                      |      100 |      100 |      100 |      100 |                |
- app/components/A/tests                         |        0 |        0 |        0 |        0 |                |
-  index.test.js                                 |        0 |        0 |        0 |        0 |... 46,47,48,49 |
- app/components/Button                          |      100 |      100 |      100 |      100 |                |
-  A.js                                          |      100 |      100 |      100 |      100 |                |
-  StyledButton.js                               |      100 |      100 |      100 |      100 |                |
-  Wrapper.js                                    |      100 |      100 |      100 |      100 |                |
-  buttonStyles.js                               |      100 |      100 |      100 |      100 |                |
-  index.js                                      |      100 |      100 |      100 |      100 |                |
- app/components/Button/tests                    |        0 |        0 |        0 |        0 |                |
-  A.test.js                                     |        0 |        0 |        0 |        0 |... 21,24,25,26 |
-  StyledButton.test.js                          |        0 |        0 |        0 |        0 |... 21,24,25,26 |
-  Wrapper.test.js                               |        0 |        0 |        0 |        0 |... 21,24,25,26 |
-  index.test.js                                 |        0 |        0 |        0 |        0 |... 53,54,55,56 |
- app/components/Footer                          |      100 |      100 |      100 |      100 |                |
-  Wrapper.js                                    |      100 |      100 |      100 |      100 |                |
-  index.js                                      |      100 |      100 |      100 |      100 |                |
-  messages.js                                   |      100 |      100 |      100 |      100 |                |
- app/components/Footer/tests                    |        0 |        0 |        0 |        0 |                |
-  Wrapper.test.js                               |        0 |        0 |        0 |        0 |... 21,24,25,26 |
-  index.test.js                                 |        0 |        0 |        0 |        0 |... 14,21,22,23 |
- app/components/H1                              |      100 |      100 |      100 |      100 |                |
-  index.js                                      |      100 |      100 |      100 |      100 |                |
- app/components/H1/tests                        |        0 |        0 |        0 |        0 |                |
-  index.test.js                                 |        0 |        0 |        0 |        0 |... 15,16,17,20 |
- app/components/H2                              |      100 |      100 |      100 |      100 |                |
-  index.js                                      |      100 |      100 |      100 |      100 |                |
- app/components/H2/tests                        |        0 |        0 |        0 |        0 |                |
-  index.test.js                                 |        0 |        0 |        0 |        0 |... 15,16,17,20 |
- app/components/H3                              |      100 |      100 |      100 |      100 |                |
-  index.js                                      |      100 |      100 |      100 |      100 |                |
- app/components/H3/tests                        |        0 |        0 |        0 |        0 |                |
-  index.test.js                                 |        0 |        0 |        0 |        0 |... 15,16,17,20 |
- app/components/Header                          |      100 |      100 |      100 |      100 |                |
-  A.js                                          |      100 |      100 |      100 |      100 |                |
-  HeaderLink.js                                 |      100 |      100 |      100 |      100 |                |
-  Img.js                                        |      100 |      100 |      100 |      100 |                |
-  NavBar.js                                     |      100 |      100 |      100 |      100 |                |
-  index.js                                      |      100 |      100 |      100 |      100 |                |
-  messages.js                                   |      100 |      100 |      100 |      100 |                |
- app/components/Header/tests                    |        0 |        0 |        0 |        0 |                |
-  A.test.js                                     |        0 |        0 |        0 |        0 |... 21,24,25,26 |
-  Img.test.js                                   |        0 |        0 |        0 |        0 |... 20,23,24,25 |
-  index.test.js                                 |        0 |        0 |        0 |        0 |     4,6,7,8,11 |
- app/components/Img                             |      100 |      100 |      100 |      100 |                |
-  index.js                                      |      100 |      100 |      100 |      100 |                |
- app/components/Img/tests                       |        0 |        0 |        0 |        0 |                |
-  index.test.js                                 |        0 |        0 |        0 |        0 |... 32,33,34,35 |
- app/components/IssueIcon                       |      100 |      100 |      100 |      100 |                |
-  index.js                                      |      100 |      100 |      100 |      100 |                |
- app/components/IssueIcon/tests                 |        0 |        0 |        0 |        0 |                |
-  index.test.js                                 |        0 |        0 |        0 |        0 |     4,6,7,8,11 |
- app/components/List                            |      100 |      100 |      100 |      100 |                |
-  Ul.js                                         |      100 |      100 |      100 |      100 |                |
-  Wrapper.js                                    |      100 |      100 |      100 |      100 |                |
-  index.js                                      |      100 |      100 |      100 |      100 |                |
- app/components/List/tests                      |        0 |        0 |        0 |        0 |                |
-  Ul.test.js                                    |        0 |        0 |        0 |        0 |... 21,24,25,26 |
-  Wrapper.test.js                               |        0 |        0 |        0 |        0 |... 21,24,25,26 |
-  index.test.js                                 |        0 |        0 |        0 |        0 |... 15,16,20,23 |
- app/components/ListItem                        |      100 |      100 |      100 |      100 |                |
-  Item.js                                       |      100 |      100 |      100 |      100 |                |
-  Wrapper.js                                    |      100 |      100 |      100 |      100 |                |
-  index.js                                      |      100 |      100 |      100 |      100 |                |
- app/components/ListItem/tests                  |        0 |        0 |        0 |        0 |                |
-  Item.test.js                                  |        0 |        0 |        0 |        0 |... 21,24,25,26 |
-  Wrapper.test.js                               |        0 |        0 |        0 |        0 |... 21,24,25,26 |
-  index.test.js                                 |        0 |        0 |        0 |        0 |... 12,13,14,17 |
- app/components/LoadingIndicator                |      100 |      100 |      100 |      100 |                |
-  Circle.js                                     |      100 |      100 |      100 |      100 |                |
-  Wrapper.js                                    |      100 |      100 |      100 |      100 |                |
-  index.js                                      |      100 |      100 |      100 |      100 |                |
- app/components/LoadingIndicator/tests          |        0 |        0 |        0 |        0 |                |
-  Circle.test.js                                |        0 |        0 |        0 |        0 |... 18,19,20,21 |
-  Wrapper.test.js                               |        0 |        0 |        0 |        0 |... 21,24,25,26 |
-  index.test.js                                 |        0 |        0 |        0 |        0 |     5,7,8,9,12 |
- app/components/LogoH1                          |      100 |      100 |      100 |      100 |                |
-  index.js                                      |      100 |      100 |      100 |      100 |                |
- app/components/Toggle                          |      100 |       50 |      100 |      100 |                |
-  Select.js                                     |      100 |      100 |      100 |      100 |                |
-  index.js                                      |      100 |       50 |      100 |      100 |                |
- app/components/Toggle/tests                    |        0 |        0 |        0 |        0 |                |
-  Select.test.js                                |        0 |        0 |        0 |        0 |... 21,24,25,26 |
-  index.test.js                                 |        0 |        0 |        0 |        0 |... 10,11,21,26 |
- app/components/ToggleOption                    |      100 |      100 |      100 |      100 |                |
-  index.js                                      |      100 |      100 |      100 |      100 |                |
- app/components/ToggleOption/tests              |        0 |        0 |        0 |        0 |                |
-  index.test.js                                 |        0 |        0 |        0 |        0 |... ,9,10,16,21 |
- app/components/UGBreadcrums                    |        0 |        0 |        0 |        0 |                |
-  index.js                                      |        0 |        0 |        0 |        0 |       1,6,9,16 |
- app/components/UGFeatureItem                   |      100 |      100 |      100 |      100 |                |
-  index.js                                      |      100 |      100 |      100 |      100 |                |
- app/components/UGFeatureItem/tests             |        0 |        0 |        0 |        0 |                |
-  index.test.js                                 |        0 |        0 |        0 |        0 |     5,7,8,9,12 |
- app/components/UGFooter                        |    85.71 |      100 |       50 |      100 |                |
-  BTNGotoUp.js                                  |    66.67 |      100 |        0 |      100 |                |
-  UGContainer.js                                |      100 |      100 |      100 |      100 |                |
-  UGFooter.js                                   |      100 |      100 |      100 |      100 |                |
-  UGGotoUp.js                                   |      100 |      100 |      100 |      100 |                |
-  index.js                                      |      100 |      100 |      100 |      100 |                |
-  messages.js                                   |      100 |      100 |      100 |      100 |                |
- app/components/UGFooter/tests                  |        0 |        0 |        0 |        0 |                |
-  index.test.js                                 |        0 |        0 |        0 |        0 |  9,11,12,13,16 |
- app/components/UGFooterSitemap                 |       50 |      100 |        0 |       50 |                |
-  UGFooterSitemap.js                            |      100 |      100 |      100 |      100 |                |
-  index.js                                      |        0 |      100 |        0 |        0 |              9 |
- app/components/UGFooterSitemap/tests           |        0 |        0 |        0 |        0 |                |
-  index.test.js                                 |        0 |        0 |        0 |        0 |     5,7,8,9,12 |
- app/components/UGHeader                        |        0 |      100 |        0 |        0 |                |
-  index.js                                      |        0 |      100 |        0 |        0 |             11 |
- app/components/UGMenuItem                      |    16.67 |        0 |        0 |    16.67 |                |
-  index.js                                      |    16.67 |        0 |        0 |    16.67 |   4,8,14,15,22 |
- app/components/UGNavBar                        |      100 |      100 |      100 |      100 |                |
-  CustomNavBar.js                               |      100 |      100 |      100 |      100 |                |
-  UGNavBarBrand.js                              |      100 |      100 |      100 |      100 |                |
-  UGNavLogo.js                                  |      100 |      100 |      100 |      100 |                |
-  UGNavParentItem.js                            |      100 |      100 |      100 |      100 |                |
-  index.js                                      |      100 |      100 |      100 |      100 |                |
- app/components/UGNavBar/tests                  |        0 |      100 |        0 |        0 |                |
-  index.test.js                                 |        0 |      100 |        0 |        0 |       7,8,9,10 |
- app/components/UGSlider                        |    78.57 |      100 |    66.67 |    76.92 |                |
-  index.js                                      |    90.91 |      100 |    66.67 |       90 |            100 |
-  list.js                                       |      100 |      100 |      100 |      100 |                |
-  list2.js                                      |        0 |      100 |      100 |        0 |            1,5 |
- app/components/UGSplash                        |        0 |        0 |        0 |        0 |                |
-  index.js                                      |        0 |        0 |        0 |        0 |         1,2,12 |
- app/components/UGSubpagesHeader                |      100 |      100 |      100 |      100 |                |
-  index.js                                      |      100 |      100 |      100 |      100 |                |
- app/containers/App                             |      100 |    85.71 |      100 |      100 |                |
-  actions.js                                    |      100 |      100 |      100 |      100 |                |
-  constants.js                                  |      100 |      100 |      100 |      100 |                |
-  index.js                                      |      100 |      100 |      100 |      100 |                |
-  reducer.js                                    |      100 |      100 |      100 |      100 |                |
-  selectors.js                                  |      100 |       50 |      100 |      100 |                |
- app/containers/App/tests                       |        0 |        0 |        0 |        0 |                |
-  actions.test.js                               |        0 |      100 |        0 |        0 |... 39,40,43,48 |
-  index.test.js                                 |        0 |        0 |        0 |        0 |... 26,29,30,33 |
-  reducer.test.js                               |        0 |      100 |        0 |        0 |... 49,50,53,57 |
-  selectors.test.js                             |        0 |      100 |        0 |        0 |... 79,80,83,86 |
- app/containers/BootStrap/BSButtonPrimaryBlock  |      100 |      100 |      100 |      100 |                |
-  index.js                                      |      100 |      100 |      100 |      100 |                |
- app/containers/BootStrap/BSCheckboxInline      |      100 |      100 |      100 |      100 |                |
-  index.js                                      |      100 |      100 |      100 |      100 |                |
- app/containers/BootStrap/BSClearFix            |      100 |      100 |      100 |      100 |                |
-  index.js                                      |      100 |      100 |      100 |      100 |                |
- app/containers/BootStrap/BSColumn3             |        0 |        0 |        0 |        0 |                |
-  index.js                                      |        0 |        0 |        0 |        0 |       1,4,6,10 |
- app/containers/BootStrap/BSColumn6             |      100 |      100 |      100 |      100 |                |
-  index.js                                      |      100 |      100 |      100 |      100 |                |
- app/containers/BootStrap/BSColumn8             |        0 |        0 |        0 |        0 |                |
-  index.js                                      |        0 |        0 |        0 |        0 |       1,4,6,10 |
- app/containers/BootStrap/BSColumnAll           |      100 |      100 |      100 |      100 |                |
-  index.js                                      |      100 |      100 |      100 |      100 |                |
- app/containers/BootStrap/BSColumnHalf          |      100 |      100 |      100 |      100 |                |
-  index.js                                      |      100 |      100 |      100 |      100 |                |
- app/containers/BootStrap/BSContainer           |      100 |      100 |      100 |      100 |                |
-  index.js                                      |      100 |      100 |      100 |      100 |                |
- app/containers/BootStrap/BSFooter              |      100 |      100 |      100 |      100 |                |
-  index.js                                      |      100 |      100 |      100 |      100 |                |
- app/containers/BootStrap/BSFooterSitemap       |      100 |      100 |      100 |      100 |                |
-  index.js                                      |      100 |      100 |      100 |      100 |                |
- app/containers/BootStrap/BSFormGroup           |      100 |      100 |      100 |      100 |                |
-  index.js                                      |      100 |      100 |      100 |      100 |                |
- app/containers/BootStrap/BSInputFormControl    |      100 |      100 |      100 |      100 |                |
-  index.js                                      |      100 |      100 |      100 |      100 |                |
- app/containers/BootStrap/BSInputGroup          |      100 |      100 |      100 |      100 |                |
-  index.js                                      |      100 |      100 |      100 |      100 |                |
- app/containers/BootStrap/BSInputGroupAddon     |      100 |      100 |      100 |      100 |                |
-  index.js                                      |      100 |      100 |      100 |      100 |                |
- app/containers/BootStrap/BSInputLag            |        0 |      100 |      100 |        0 |                |
-  index.js                                      |        0 |      100 |      100 |        0 |            1,6 |
- app/containers/BootStrap/BSNavBar              |    66.67 |      100 |        0 |      100 |                |
-  index.js                                      |    66.67 |      100 |        0 |      100 |                |
- app/containers/BootStrap/BSNavBarBrand         |    66.67 |      100 |        0 |      100 |                |
-  index.js                                      |    66.67 |      100 |        0 |      100 |                |
- app/containers/BootStrap/BSNavBarButton        |        0 |        0 |        0 |        0 |                |
-  index.js                                      |        0 |        0 |        0 |        0 |       1,4,6,10 |
- app/containers/BootStrap/BSNavBrand            |       75 |      100 |        0 |      100 |                |
-  index.js                                      |       75 |      100 |        0 |      100 |                |
- app/containers/BootStrap/BSNavCollapse         |    66.67 |      100 |        0 |    66.67 |                |
-  index.js                                      |    66.67 |      100 |        0 |    66.67 |              7 |
- app/containers/BootStrap/BSNavHeader           |    66.67 |      100 |        0 |      100 |                |
-  index.js                                      |    66.67 |      100 |        0 |      100 |                |
- app/containers/BootStrap/BSNavParentItem       |    66.67 |      100 |        0 |      100 |                |
-  index.js                                      |    66.67 |      100 |        0 |      100 |                |
- app/containers/BootStrap/BSNavWrapper          |    66.67 |      100 |        0 |      100 |                |
-  index.js                                      |    66.67 |      100 |        0 |      100 |                |
- app/containers/BootStrap/BSRow                 |      100 |      100 |      100 |      100 |                |
-  index.js                                      |      100 |      100 |      100 |      100 |                |
- app/containers/BootStrap/BSTextAreaFormControl |      100 |      100 |      100 |      100 |                |
-  index.js                                      |      100 |      100 |      100 |      100 |                |
- app/containers/BootStrap/BSTextCenter          |      100 |      100 |      100 |      100 |                |
-  index.js                                      |      100 |      100 |      100 |      100 |                |
- app/containers/BootStrap/BSTextDanger          |      100 |      100 |      100 |      100 |                |
-  index.js                                      |      100 |      100 |      100 |      100 |                |
- app/containers/BootStrap/UGAppContentWrapper   |      100 |      100 |      100 |      100 |                |
-  index.js                                      |      100 |      100 |      100 |      100 |                |
- app/containers/BootStrap/UGAppWrapper          |      100 |      100 |      100 |      100 |                |
-  index.js                                      |      100 |      100 |      100 |      100 |                |
- app/containers/BootStrap/UGBoxBody             |      100 |      100 |      100 |      100 |                |
-  index.js                                      |      100 |      100 |      100 |      100 |                |
- app/containers/BootStrap/UGBoxBodyWrapper      |      100 |      100 |      100 |      100 |                |
-  index.js                                      |      100 |      100 |      100 |      100 |                |
- app/containers/BootStrap/UGBoxTitle            |        0 |        0 |        0 |        0 |                |
-  index.js                                      |        0 |        0 |        0 |        0 |          1,4,6 |
- app/containers/BootStrap/UGFlatBorder          |      100 |      100 |      100 |      100 |                |
-  index.js                                      |      100 |      100 |      100 |      100 |                |
- app/containers/BootStrap/UGFooterStyle         |        0 |        0 |        0 |        0 |                |
-  index.js                                      |        0 |        0 |        0 |        0 |          1,7,9 |
- app/containers/BootStrap/UGFromGroupLabel      |      100 |      100 |      100 |      100 |                |
-  index.js                                      |      100 |      100 |      100 |      100 |                |
- app/containers/BootStrap/UGLoginPanel          |       75 |       50 |      100 |       75 |                |
-  index.js                                      |       75 |       50 |      100 |       75 |             16 |
- app/containers/BootStrap/UGLogo                |    66.67 |      100 |        0 |      100 |                |
-  index.js                                      |    66.67 |      100 |        0 |      100 |                |
- app/containers/BootStrap/UGMenuItemStyle       |        0 |        0 |        0 |        0 |                |
-  index.js                                      |        0 |        0 |        0 |        0 |         1,7,10 |
- app/containers/BootStrap/UGNavWrapper          |        0 |        0 |        0 |        0 |                |
-  index.js                                      |        0 |        0 |        0 |        0 |          1,5,8 |
- app/containers/FeaturePage                     |       80 |      100 |       50 |       80 |                |
-  List.js                                       |      100 |      100 |      100 |      100 |                |
-  ListItem.js                                   |      100 |      100 |      100 |      100 |                |
-  ListItemTitle.js                              |      100 |      100 |      100 |      100 |                |
-  index.js                                      |       50 |      100 |       50 |       50 |             21 |
-  messages.js                                   |      100 |      100 |      100 |      100 |                |
- app/containers/FeaturePage/tests               |        0 |        0 |        0 |        0 |                |
-  List.test.js                                  |        0 |        0 |        0 |        0 |... 21,24,25,26 |
-  ListItem.test.js                              |        0 |        0 |        0 |        0 |... 21,24,25,26 |
-  ListItemTitle.test.js                         |        0 |        0 |        0 |        0 |... 21,24,25,26 |
-  index.test.js                                 |        0 |        0 |        0 |        0 |   7,9,10,11,14 |
- app/containers/HomePage                        |    97.83 |    94.12 |      100 |    97.62 |                |
-  AtPrefix.js                                   |      100 |      100 |      100 |      100 |                |
-  CenteredSection.js                            |      100 |      100 |      100 |      100 |                |
-  Form.js                                       |      100 |      100 |      100 |      100 |                |
-  Input.js                                      |      100 |      100 |      100 |      100 |                |
-  Section.js                                    |      100 |      100 |      100 |      100 |                |
-  actions.js                                    |      100 |      100 |      100 |      100 |                |
-  constants.js                                  |      100 |      100 |      100 |      100 |                |
-  index.js                                      |      100 |    92.86 |      100 |      100 |                |
-  messages.js                                   |      100 |      100 |      100 |      100 |                |
-  reducer.js                                    |      100 |      100 |      100 |      100 |                |
-  sagas.js                                      |       90 |      100 |      100 |       90 |             48 |
-  selectors.js                                  |      100 |      100 |      100 |      100 |                |
- app/containers/HomePage/tests                  |        0 |        0 |        0 |        0 |                |
-  AtPrefix.test.js                              |        0 |        0 |        0 |        0 |... 21,24,25,26 |
-  CenteredSection.test.js                       |        0 |        0 |        0 |        0 |... 21,24,25,26 |
-  Form.test.js                                  |        0 |        0 |        0 |        0 |... 21,24,25,26 |
-  Input.test.js                                 |        0 |        0 |        0 |        0 |... 21,24,25,26 |
-  Section.test.js                               |        0 |        0 |        0 |        0 |... 21,24,25,26 |
-  actions.test.js                               |        0 |      100 |        0 |        0 |... 11,12,13,18 |
-  index.test.js                                 |        0 |        0 |        0 |        0 |... 109,110,111 |
-  reducer.test.js                               |        0 |      100 |        0 |        0 |... 20,21,22,24 |
-  sagas.test.js                                 |        0 |      100 |        0 |        0 |... 65,68,69,70 |
-  selectors.test.js                             |        0 |      100 |        0 |        0 |... 23,24,25,30 |
- app/containers/LanguageProvider                |      100 |      100 |      100 |      100 |                |
-  actions.js                                    |      100 |      100 |      100 |      100 |                |
-  constants.js                                  |      100 |      100 |      100 |      100 |                |
-  index.js                                      |      100 |      100 |      100 |      100 |                |
-  reducer.js                                    |      100 |      100 |      100 |      100 |                |
-  selectors.js                                  |      100 |      100 |      100 |      100 |                |
- app/containers/LanguageProvider/tests          |        0 |      100 |        0 |        0 |                |
-  actions.test.js                               |        0 |      100 |        0 |        0 |   8,9,10,11,15 |
-  index.test.js                                 |        0 |      100 |        0 |        0 |... 18,19,25,32 |
-  reducer.test.js                               |        0 |      100 |        0 |        0 |    7,8,9,14,15 |
-  selectors.test.js                             |        0 |      100 |        0 |        0 |  6,7,8,9,10,13 |
- app/containers/LocaleToggle                    |      100 |      100 |      100 |      100 |                |
-  Wrapper.js                                    |      100 |      100 |      100 |      100 |                |
-  index.js                                      |      100 |      100 |      100 |      100 |                |
-  messages.js                                   |      100 |      100 |      100 |      100 |                |
- app/containers/LocaleToggle/tests              |        0 |        0 |        0 |        0 |                |
-  Wrapper.test.js                               |        0 |        0 |        0 |        0 |... 21,24,25,26 |
-  index.test.js                                 |        0 |      100 |        0 |        0 |... 52,53,54,55 |
-  messages.test.js                              |        0 |      100 |        0 |        0 |    3,4,5,16,18 |
- app/containers/NotFoundPage                    |      100 |      100 |      100 |      100 |                |
-  index.js                                      |      100 |      100 |      100 |      100 |                |
-  messages.js                                   |      100 |      100 |      100 |      100 |                |
- app/containers/NotFoundPage/tests              |        0 |        0 |        0 |        0 |                |
-  index.test.js                                 |        0 |        0 |        0 |        0 | 10,12,13,14,17 |
- app/containers/RepoListItem                    |      100 |      100 |      100 |      100 |                |
-  IssueIcon.js                                  |      100 |      100 |      100 |      100 |                |
-  IssueLink.js                                  |      100 |      100 |      100 |      100 |                |
-  RepoLink.js                                   |      100 |      100 |      100 |      100 |                |
-  Wrapper.js                                    |      100 |      100 |      100 |      100 |                |
-  index.js                                      |      100 |      100 |      100 |      100 |                |
- app/containers/RepoListItem/tests              |        0 |        0 |        0 |        0 |                |
-  IssueIcon.test.js                             |        0 |        0 |        0 |        0 |... 21,24,25,26 |
-  IssueLink.test.js                             |        0 |        0 |        0 |        0 |... 21,24,25,26 |
-  RepoLink.test.js                              |        0 |        0 |        0 |        0 |... 21,24,25,26 |
-  Wrapper.test.js                               |        0 |        0 |        0 |        0 |... 21,24,25,26 |
-  index.test.js                                 |        0 |        0 |        0 |        0 |... 64,67,68,69 |
- app/containers/UGAddTourPage                   |    64.43 |    28.24 |    66.67 |    80.45 |                |
-  AddOnSpan.js                                  |        0 |        0 |        0 |        0 |          1,6,8 |
-  AddTourBox.js                                 |        0 |        0 |        0 |        0 |          1,5,7 |
-  AddTourBoxBody.js                             |      100 |      100 |      100 |      100 |                |
-  CheckboxInput.js                              |      100 |      100 |      100 |      100 |                |
-  DateInput.js                                  |      100 |      100 |      100 |      100 |                |
-  FileInput.js                                  |      100 |      100 |      100 |      100 |                |
-  Input.js                                      |      100 |      100 |      100 |      100 |                |
-  InputGroup.js                                 |        0 |        0 |        0 |        0 |          1,5,7 |
-  MainContainer.js                              |        0 |        0 |        0 |        0 |          1,6,8 |
-  PageBody.js                                   |        0 |        0 |        0 |        0 |          1,6,8 |
-  RightSpan.js                                  |      100 |      100 |      100 |      100 |                |
-  SpanButton.js                                 |      100 |      100 |      100 |      100 |                |
-  SubmitButton.js                               |      100 |      100 |      100 |      100 |                |
-  Textarea.js                                   |      100 |      100 |      100 |      100 |                |
-  TourBody.js                                   |        0 |        0 |        0 |        0 |          1,5,7 |
-  TourPanel.js                                  |        0 |        0 |        0 |        0 |          1,5,7 |
-  actions.js                                    |      100 |      100 |      100 |      100 |                |
-  addtourform.js                                |      100 |      100 |      100 |      100 |                |
-  constants.js                                  |      100 |      100 |      100 |      100 |                |
-  index.js                                      |        0 |        0 |        0 |        0 |  1,15,18,20,35 |
-  messages.js                                   |      100 |      100 |      100 |      100 |                |
-  reducer.js                                    |      100 |      100 |      100 |      100 |                |
-  selectors.js                                  |      100 |      100 |      100 |      100 |                |
- app/containers/UGAddTourPage/tests             |        0 |      100 |        0 |        0 |                |
-  actions.test.js                               |        0 |      100 |        0 |        0 |... 58,59,61,66 |
-  addtourform.test.js                           |        0 |      100 |        0 |        0 |... 180,181,182 |
-  reducer.test.js                               |        0 |      100 |        0 |        0 |... 152,153,154 |
-  selectors.test.js                             |        0 |      100 |        0 |        0 |... 213,214,221 |
- app/containers/UGBlogPage                      |        0 |        0 |        0 |        0 |                |
-  CommentForm.js                                |        0 |        0 |        0 |        0 | 1,7,9,10,18,70 |
-  index.js                                      |        0 |        0 |        0 |        0 |1,6,10,12,91,94 |
- app/containers/UGBlogPage/tests                |        0 |      100 |        0 |        0 |                |
-  index.test.js                                 |        0 |      100 |        0 |        0 |   8,9,10,11,16 |
- app/containers/UGClientListing                 |        0 |        0 |        0 |        0 |                |
-  constants.js                                  |        0 |      100 |      100 |        0 |... 7,8,9,10,11 |
-  index.js                                      |        0 |        0 |        0 |        0 |... 32,38,67,72 |
-  list.js                                       |        0 |        0 |        0 |        0 |         1,8,10 |
-  sample.js                                     |        0 |        0 |        0 |        0 |... 15,21,37,40 |
- app/containers/UGContactsPage                  |        0 |        0 |        0 |        0 |                |
-  index.js                                      |        0 |        0 |        0 |        0 |... ,13,119,122 |
- app/containers/UGFaqPage                       |        0 |        0 |        0 |        0 |                |
-  index.js                                      |        0 |        0 |        0 |        0 |... ,9,12,91,94 |
- app/containers/UGFeatureListing                |        0 |        0 |        0 |        0 |                |
-  index.js                                      |        0 |        0 |        0 |        0 |... 122,126,132 |
-  list.js                                       |        0 |        0 |        0 |        0 |          1,4,6 |
- app/containers/UGFeaturePage                   |        0 |        0 |        0 |        0 |                |
-  index.js                                      |        0 |        0 |        0 |        0 |     1,11,14,66 |
- app/containers/UGForgetPasswordPage            |    76.47 |    44.44 |    80.95 |     81.4 |                |
-  AddOnSpan.js                                  |      100 |      100 |      100 |      100 |                |
-  FPWrapper.js                                  |      100 |      100 |      100 |      100 |                |
-  ForgetPasswordBody.js                         |      100 |      100 |      100 |      100 |                |
-  ForgetPasswordPanel.js                        |      100 |      100 |      100 |      100 |                |
-  ForgetPasswordPanelBody.js                    |      100 |      100 |      100 |      100 |                |
-  Input.js                                      |        0 |        0 |        0 |        0 |          1,5,7 |
-  InputGroup.js                                 |        0 |        0 |        0 |        0 |          1,5,7 |
-  actions.js                                    |      100 |      100 |      100 |      100 |                |
-  constants.js                                  |      100 |      100 |      100 |      100 |                |
-  index.js                                      |      100 |      100 |      100 |      100 |                |
-  messages.js                                   |      100 |      100 |      100 |      100 |                |
-  reducer.js                                    |    81.82 |       75 |      100 |    81.82 |          29,35 |
-  selectors.js                                  |      100 |      100 |      100 |      100 |                |
- app/containers/UGForgetPasswordPage/tests      |        0 |        0 |        0 |        0 |                |
-  action.test.js                                |        0 |      100 |        0 |        0 |... 17,18,19,23 |
-  index.test.js                                 |        0 |        0 |        0 |        0 |... 81,82,83,84 |
-  reducer.test.js                               |        0 |      100 |        0 |        0 |... 31,32,33,36 |
-  selectors.test.js                             |        0 |      100 |        0 |        0 |... 39,40,41,46 |
- app/containers/UGHomePage                      |        0 |        0 |        0 |        0 |                |
-  constants.js                                  |        0 |      100 |      100 |        0 |           1,12 |
-  index.js                                      |        0 |        0 |        0 |        0 |... 21,23,37,40 |
-  messages.js                                   |        0 |      100 |      100 |        0 |              1 |
- app/containers/UGHomePage/tests                |        0 |        0 |        0 |        0 |                |
-  index.test.js                                 |        0 |        0 |        0 |        0 |     3,5,6,7,10 |
- app/containers/UGLoginPage                     |    27.92 |     7.06 |    34.62 |    37.25 |                |
-  AddOnSpan.js                                  |        0 |        0 |        0 |        0 |          1,6,8 |
-  Alert.js                                      |      100 |      100 |      100 |      100 |                |
-  FooterLinkPassword.js                         |      100 |      100 |      100 |      100 |                |
-  FooterLinkSignUp.js                           |      100 |      100 |      100 |      100 |                |
-  Input.js                                      |      100 |      100 |      100 |      100 |                |
-  InputButton.js                                |        0 |        0 |        0 |        0 |          1,6,8 |
-  InputGroup.js                                 |        0 |        0 |        0 |        0 |          1,5,7 |
-  List.js                                       |        0 |        0 |        0 |        0 |... 22,27,30,37 |
-  ListItem.js                                   |        0 |        0 |        0 |        0 |... 26,28,32,39 |
-  LoginBody.js                                  |        0 |        0 |        0 |        0 |          1,5,7 |
-  LoginFooter.js                                |      100 |      100 |      100 |      100 |                |
-  LoginPanel.js                                 |        0 |        0 |        0 |        0 |          1,6,8 |
-  LoginPanelBody.js                             |        0 |        0 |        0 |        0 |         1,7,11 |
-  LoginWrapper.js                               |        0 |        0 |        0 |        0 |          1,4,6 |
-  TitleH1.js                                    |      100 |      100 |      100 |      100 |                |
-  actions.js                                    |      100 |      100 |      100 |      100 |                |
-  constants.js                                  |      100 |      100 |      100 |      100 |                |
-  index.js                                      |        0 |        0 |        0 |        0 |... 46,47,49,81 |
-  loginform.js                                  |      100 |      100 |      100 |      100 |                |
-  messages.js                                   |      100 |      100 |      100 |      100 |                |
-  reducer.js                                    |      100 |      100 |      100 |      100 |                |
-  selectors.js                                  |    91.67 |      100 |     87.5 |    85.71 |             20 |
- app/containers/UGLoginPage/tests               |        0 |        0 |        0 |        0 |                |
-  actions.test.js                               |        0 |      100 |        0 |        0 |... 29,30,31,36 |
-  loginform.test.js                             |        0 |        0 |        0 |        0 |... 95,96,97,98 |
-  reducer.test.js                               |        0 |      100 |        0 |        0 |... 29,30,31,32 |
-  selectors.test.js                             |        0 |      100 |        0 |        0 |... 39,40,41,46 |
- app/containers/UGMenuBar                       |    14.29 |      100 |        0 |    14.29 |                |
-  index.js                                      |    14.29 |      100 |        0 |    14.29 |... 36,40,97,98 |
-  messages.js                                   |      100 |      100 |      100 |      100 |                |
- app/containers/UGPricingPage                   |        0 |        0 |        0 |        0 |                |
-  index.js                                      |        0 |        0 |        0 |        0 |       1,7,9,74 |
-  list.js                                       |        0 |      100 |      100 |        0 |            1,2 |
- app/containers/UGRegisterPage                  |    73.76 |    45.88 |    77.17 |    86.67 |                |
-  AddOnSpan.js                                  |      100 |      100 |      100 |      100 |                |
-  Input.js                                      |      100 |      100 |      100 |      100 |                |
-  InputButton.js                                |      100 |      100 |      100 |      100 |                |
-  InputGroup.js                                 |      100 |      100 |      100 |      100 |                |
-  RegisterBody.js                               |        0 |        0 |        0 |        0 |          1,5,7 |
-  RegisterPanel.js                              |        0 |        0 |        0 |        0 |          1,6,8 |
-  RegisterPanelBody.js                          |        0 |        0 |        0 |        0 |         1,7,11 |
-  RegisterWrapper.js                            |        0 |        0 |        0 |        0 |          1,4,6 |
-  actions.js                                    |      100 |      100 |      100 |      100 |                |
-  constants.js                                  |      100 |      100 |      100 |      100 |                |
-  index.js                                      |        0 |        0 |        0 |        0 |  1,18,20,21,40 |
-  messages.js                                   |      100 |      100 |      100 |      100 |                |
-  reducer.js                                    |    96.55 |    95.45 |      100 |    96.55 |            103 |
-  registerform.js                               |    95.24 |      100 |    90.91 |    95.24 |         33,348 |
-  selectors.js                                  |    96.49 |      100 |    94.74 |    94.59 |          58,89 |
- app/containers/UGRegisterPage/tests            |        0 |      100 |        0 |        0 |                |
-  actions.test.js                               |        0 |      100 |        0 |        0 |... 160,161,165 |
-  reducer.test.js                               |        0 |      100 |        0 |        0 |... 220,222,223 |
-  registerform.test.js                          |        0 |      100 |        0 |        0 |... 333,334,335 |
-  selectors.test.js                             |        0 |      100 |        0 |        0 |... 276,277,284 |
- app/tests                                      |        0 |        0 |        0 |        0 |                |
-  store.test.js                                 |        0 |        0 |        0 |        0 |... 17,21,22,23 |
- app/utils                                      |    96.55 |    93.33 |      100 |      100 |                |
-  asyncInjectors.js                             |    94.44 |    88.89 |      100 |      100 |                |
-  request.js                                    |      100 |      100 |      100 |      100 |                |
-  stringAdditions.js                            |      100 |      100 |      100 |      100 |                |
-  style-utils.js                                |      100 |      100 |      100 |      100 |                |
-  validationrule.js                             |      100 |      100 |      100 |      100 |                |
- app/utils/tests                                |        0 |        0 |        0 |        0 |                |
-  asyncInjectors.test.js                        |        0 |        0 |        0 |        0 |... 154,156,159 |
-  request.test.js                               |        0 |        0 |        0 |        0 |... 38,39,47,50 |
-------------------------------------------------|----------|----------|----------|----------|----------------|
