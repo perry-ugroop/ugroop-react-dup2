@@ -9,7 +9,16 @@ import { LinkContainer } from 'react-router-bootstrap';
 import { Authenticated, NotAuthenticated, LoginLink, LogoutLink } from 'react-stormpath';
 
 // import UGMenuBar from '../../containers/UGMenuBar';
-function UGNavBar() {
+function UGNavBar(props) {
+  const links = props.links;
+  const navLists = links.map((link, index) => {
+    const active = link.active ? 'active' : '';
+
+    return (<LinkContainer to={link.route}>
+      <NavItem className={active} eventKey={index} href="">{link.text}</NavItem>
+    </LinkContainer>);
+  });
+
   return (
     <div>
       <CustomNavBar collapseOnSelect className="customnav">
@@ -35,11 +44,16 @@ function UGNavBar() {
               </LinkContainer>
               <LoginLink />
             </NotAuthenticated>
+
           </UGNavParentItem>
         </Navbar.Collapse>
       </CustomNavBar>
     </div>
   );
 }
+
+UGNavBar.propTypes = {
+  links: React.PropTypes.array,
+};
 
 export default UGNavBar;
