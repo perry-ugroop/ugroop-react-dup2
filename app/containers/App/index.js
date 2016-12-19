@@ -13,6 +13,7 @@ import styled from 'styled-components';
 import UGNavBar from 'components/UGNavBar';
 import UGFooter from 'components/UGFooter';
 import UGFooterSitemap from '../../components/UGFooterSitemap';
+import { LINKS } from './navbar_define';
 
 const AppWrapper = styled.div` 
   margin: 0 auto;
@@ -30,6 +31,7 @@ const AppContentWrapper = styled.div`
 `;
 
 function App(props) {
+  const links = LINKS;
   return (
     <AppWrapper>
       <Helmet
@@ -39,7 +41,7 @@ function App(props) {
           { name: 'description', content: 'A React.js Boilerplate application' },
         ]}
       />
-      <UGNavBar />
+      <UGNavBar links={links} />
       <AppContentWrapper>
         {React.Children.toArray(props.children)}
       </AppContentWrapper>
