@@ -101,6 +101,7 @@ export class RegisterForm extends React.Component {
                 value={this.props.orgName}
                 onChange={this.props.onChangeOrgName}
                 onBlur={this.props.onBlurOrgName}
+                required="required"
               />
             </InputGroup>
             {this.wrapLocalValidationErrorMessage(orgErrorcontent)}
@@ -117,6 +118,7 @@ export class RegisterForm extends React.Component {
                 value={this.props.orgAddress}
                 onChange={this.props.onChangeAddressName}
                 onBlur={this.props.onBlurOrgAddress}
+                required="required"
               />
             </InputGroup>
             {this.wrapLocalValidationErrorMessage(orgAddressErrorContent)}
@@ -136,6 +138,7 @@ export class RegisterForm extends React.Component {
                 value={this.props.firstName}
                 onChange={this.props.onChangeFirstName}
                 onBlur={this.props.onBlurFirstName}
+                required="required"
               />
             </InputGroup>
             {this.wrapLocalValidationErrorMessage(firstNameErrorContent)}
@@ -152,6 +155,7 @@ export class RegisterForm extends React.Component {
                 value={this.props.lastName}
                 onChange={this.props.onChangeLastName}
                 onBlur={this.props.onBlurLastName}
+                required="required"
               />
             </InputGroup>
             {this.wrapLocalValidationErrorMessage(lastNameErrorContent)}
@@ -202,6 +206,7 @@ export class RegisterForm extends React.Component {
                 value={this.props.telephone}
                 onChange={this.props.onChangePhone}
                 onBlur={this.props.onBlurPhone}
+                required="required"
               />
             </InputGroup>
             {this.wrapLocalValidationErrorMessage(telephoneErrorContent)}
@@ -218,6 +223,7 @@ export class RegisterForm extends React.Component {
                 value={this.props.email}
                 onBlur={this.props.onBlurEmail}
                 onChange={this.props.onChangeEmail}
+                required="required"
               />
             </InputGroup>
             {this.wrapLocalValidationErrorMessage(emailErrorContent)}
@@ -237,6 +243,7 @@ export class RegisterForm extends React.Component {
                 onChange={this.props.onChangePassword}
                 onBlur={this.props.onBlurPassword}
                 value={this.props.password}
+                required="required"
               />
             </InputGroup>
             {this.wrapLocalValidationErrorMessage(passwordErrorContent)}
@@ -251,6 +258,7 @@ export class RegisterForm extends React.Component {
                 onChange={this.props.onChangeRetypePassword}
                 onBlur={this.props.onBlurReTypePassword}
                 value={this.props.retypePassword}
+                required="required"
               />
             </InputGroup>
             {this.wrapLocalValidationErrorMessage(retypePasswordErrorContent)}

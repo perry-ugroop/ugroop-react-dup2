@@ -12,6 +12,7 @@ const BSInputFormControl = (props) => <input
   value={props.value}
   onChange={props.onChange}
   onBlur={props.onBlur}
+  required={props.required}
 >
 </input>;
 
@@ -24,6 +25,7 @@ BSInputFormControl.propTypes = {
   onChange: React.PropTypes.any,
   onBlur: React.PropTypes.any,
   type: React.PropTypes.any,
+  required: React.PropTypes.any,
 };
 
 export default BSInputFormControl;
