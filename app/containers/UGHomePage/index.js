@@ -9,7 +9,7 @@ import Helmet from 'react-helmet';
 import FeatureListing from 'containers/UGFeatureListing';
 import ClientListing from 'containers/UGClientListing';
 import Slider from 'components/UGSlider';
-//import { selectShallLoginSuccessRedirect }from 'containers/App/Selectors';
+// import { selectShallLoginSuccessRedirect }from 'containers/App/Selectors';
 export class UGHomePage extends React.Component { // eslint-disable-line react/prefer-stateless-function
   static contextTypes = {
     authenticated: React.PropTypes.bool,
