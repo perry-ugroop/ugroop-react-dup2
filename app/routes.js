@@ -123,11 +123,13 @@ export default function createRoutes(store) {
       getComponent={(nextState, cb) => {
         const importModules = Promise.all([
           System.import('containers/UGForgetPasswordPage/reducer'),
+          System.import('containers/UGForgetPasswordPage/sagas'),
           System.import('containers/UGForgetPasswordPage'),
         ]);
         const renderRoute = loadModule(cb);
-        importModules.then(([reducer, component]) => {
+        importModules.then(([reducer, sagas, component]) => {
           injectReducer('forgetpassword', reducer.default);
+          injectSagas(sagas.default);
           renderRoute(component);
         });
         importModules.catch(errorLoading);
@@ -199,6 +201,21 @@ export default function createRoutes(store) {
       getComponent={(nextState, cb) => {
         const importModules = Promise.all([
           System.import('containers/UGVerifyEmailPage'),
+        ]);
+        const renderRoute = loadModule(cb);
+        importModules.then(([component]) => {
+          renderRoute(component);
+        });
+        importModules.catch(errorLoading);
+      }}
+    />,
+    <Route
+      path={'/changePassword'}
+      name={'changePassword'}
+      key={'changePassword'}
+      getComponent={(nextState, cb) => {
+        const importModules = Promise.all([
+          System.import('containers/UGChangePasswordPage'),
         ]);
         const renderRoute = loadModule(cb);
         importModules.then(([component]) => {

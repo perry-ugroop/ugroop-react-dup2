@@ -15,6 +15,7 @@ describe('forgetPageReducer', () => {
     state = fromJS({
       email: '',
       error: '',
+      resetEmailSent: false,
     });
   });
 

@@ -2,7 +2,7 @@
 //  * Created by Yang on 5/12/16.
 //  */
 // /**
-//  * Gets the repositories of the user from Github
+//  * User Org Sign up from Stormpath
 //  */
 //
 import { takeLatest } from 'redux-saga';

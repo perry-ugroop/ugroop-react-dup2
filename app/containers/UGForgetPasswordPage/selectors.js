@@ -15,8 +15,14 @@ const selectError = () => createSelector(
   (forgetPasswordState) => forgetPasswordState.get('error')
 );
 
+const selectResetEmailSent = () => createSelector(
+  selectForgetPasswordPage(),
+  (forgetPasswordState) => forgetPasswordState.get('resetEmailSent')
+);
+
 export {
   selectForgetPasswordPage,
   selectEmail,
   selectError,
+  selectResetEmailSent,
 };

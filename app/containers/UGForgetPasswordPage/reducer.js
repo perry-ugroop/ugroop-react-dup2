@@ -1,7 +1,7 @@
 /**
  * Created by Yang on 2/11/16.
  */
-import { CHANGE_EMAIL, VALID_EMAIL } from './constants';
+import { CHANGE_EMAIL, VALID_EMAIL, FORGETPASSWORD_REQUEST_SUCCESS } from './constants';
 import { fromJS } from 'immutable';
 import { isEmptyString } from '../../utils/stringAdditions';
 import defaultMessage from './messages';
@@ -10,6 +10,7 @@ import validationRule from '../../utils/validationrule';
 const initialState = fromJS({
   email: '',
   error: '',
+  resetEmailSent: false,
 });
 
 function forgetPageReducer(state = initialState, action) {
@@ -19,6 +20,9 @@ function forgetPageReducer(state = initialState, action) {
         .set('email', action.email);
     case VALID_EMAIL:
       return validEmail(action.email, state);
+    case FORGETPASSWORD_REQUEST_SUCCESS:
+      return state
+        .set('resetEmailSent', true);
     default:
       return state;
   }

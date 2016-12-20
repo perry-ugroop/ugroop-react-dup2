@@ -22,7 +22,7 @@ describe('UserOrgSignUpData Saga', () => {
 
   let forkDescriptor;
 
-  it('should asyncronously fork getLoginWatcher saga', () => {
+  it('should asyncronously fork getUserOrgSignUpWatcher saga', () => {
     forkDescriptor = registerData.next();
     expect(forkDescriptor.value).toEqual(fork(getUserOrgSignUpWatcher));
   });
