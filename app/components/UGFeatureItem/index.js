@@ -1,26 +1,32 @@
 /* ************************************************************************** */
 /* Created by Vince. Feature box in the homepage */
-/*  **************************************************************************** */
+/* ************************************************************************** */
 
 import React, { PropTypes } from 'react';
+import { Grid, Row, Col } from 'react-bootstrap';
+
+// import Img from '../../components/Img';
+import A from '../../components/A';
+import FeatureHeader from './FeatureHeader';
+import FeatureImage from './FeatureImage';
 
 function UGFeatureItem(props) {
   const item = (
-    <div className={'col-md-3 col-sm-6'}>
+    <Col md={3} sm={6}>
       <div className={'box-features'}>
         <div>
-          <p className={'text-center'}><img src={props.image} width="250" height="134" alt="" className={'img-responsive'} /></p>
-          <h3 className={'featured-header'}>{props.header}</h3>
+          <FeatureImage image={props.image} alt={props.header} url={props.link} />
+          <FeatureHeader className={'featured-header'}>{props.header}</FeatureHeader>
           <p>{props.content}</p>
         </div>
-        <a className={'btn btn-primary btn-allcapse btn-block'} href={props.link}>Learn more</a>
+        <A className={'btn btn-primary btn-allcapse btn-block'} href={props.link}>Learn more hello</A>
       </div>
-    </div>
+    </Col>
     );
   return (
-    <div>
+    <Grid><Row>
       {item}
-    </div>
+    </Row></Grid>
   );
 }
 

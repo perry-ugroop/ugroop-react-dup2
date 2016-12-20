@@ -4,27 +4,24 @@ import { injectGlobal } from 'styled-components';
 injectGlobal`
   html,
   body {
+    font-family: 'Titillium Web', 'Helvetica Neue', Helvetica, Arial, sans-serif !import;
     height: 100%;
     width: 100%;
   }
 
-  body {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  }
-
   body.fontLoaded {
-    font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: 'Titillium Web', 'Helvetica Neue', Helvetica, Arial, sans-serif !import;
   }
 
   #app {
-    background-color: #fafafa;
+    background-color: rgba(245,245,245,1.00) !important;
     min-height: 100%;
     min-width: 100%;
   }
 
   p,
   label {
-    font-family: Georgia, Times, 'Times New Roman', serif;
+    font-family: 'Titillium Web', Georgia, Times, 'Times New Roman', serif;
     line-height: 1.5em;
   }
 `;
