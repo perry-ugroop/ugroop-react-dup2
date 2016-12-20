@@ -62,7 +62,7 @@ describe('<AttendantTab />', () => {
     );
     expect(renderedComponent.find('AttendantAddPopover').length).toEqual(1);
   });
-  it('should render AttendantImportopover ', () => {
+  it('should render AttendantImportpopover ', () => {
     const mockStore = configureStore([]);
     const store = mockStore({});
     const renderedComponent = mount(
@@ -72,6 +72,6 @@ describe('<AttendantTab />', () => {
         </IntlProvider>
       </Provider>
     );
-    expect(renderedComponent.find('AttendantImportopover').length).toEqual(1);
+    expect(renderedComponent.find('AttendantImportpopover').length).toEqual(1);
   });
 });

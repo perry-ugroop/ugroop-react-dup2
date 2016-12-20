@@ -6,7 +6,7 @@ import A from 'components/A';
 import { OverlayTrigger, Popover } from 'react-bootstrap';
 import messages from './messages';
 
-function AttendantImportopover(props) {
+function AttendantImportpopover(props) {
   const tourId = props.tourId;
   const attendType = props.attendType;
   let title = '';
@@ -29,8 +29,8 @@ function AttendantImportopover(props) {
     </OverlayTrigger>
   );
 }
-AttendantImportopover.propTypes = {
-  tourId: React.PropTypes.string,
-  attendType: React.PropTypes.string,
+AttendantImportpopover.propTypes = {
+  tourId: React.PropTypes.any,
+  attendType: React.PropTypes.any,
 };
-export default AttendantImportopover;
+export default AttendantImportpopover;
