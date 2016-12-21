@@ -12,6 +12,7 @@ import UGBreadcrumbs from '../../components/UGBreadcrums';
 import UGSubpagesContainer from '../../components/UGSubpagesContainer';
 import { Col } from 'react-bootstrap';
 
+import UGGooglePlacesSuggest from '../UGAutocomplete/UGGooglePlacesSuggest';
 
 const FeatureList = featureList.map((item, index) =>
   <Col md={6} key={index}>
@@ -44,6 +45,7 @@ export class UGFeaturePage extends React.Component { // eslint-disable-line reac
 
         <UGSubpagesHeader title="Features" />
         <UGBreadcrumbs title="Features" />
+        <UGGooglePlacesSuggest className={'text-align:center'} />
         <UGSubpagesContainer> {FeatureList}</UGSubpagesContainer>
       </div>
     );

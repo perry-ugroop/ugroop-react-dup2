@@ -2,7 +2,7 @@
 import React from 'react';
 import UGFeatureBoxStyle from './UGFeatureBoxStyle';
 
-const UGFeatureBox = (props) => <div ${...props}>
+const UGFeatureBox = (props) => <div {...props}>
   <UGFeatureBoxStyle>
     {props.children}
   </UGFeatureBoxStyle>

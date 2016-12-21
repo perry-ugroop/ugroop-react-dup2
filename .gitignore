@@ -11,3 +11,5 @@ npm-debug.log
 .babelrc
 *.map
 *-compiled.js
+app/containers/UGLoginPage/tests/__snapshots__/sagas.test.js.snap
+app/containers/UGRegisterPage/tests/__snapshots__/sagas.test.js.snap

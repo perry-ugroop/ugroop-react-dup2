@@ -6,7 +6,7 @@
 import React from 'react';
 import UGClientListingBoxStyle from './UGClientListingBoxStyle';
 
-export const UGClientListingBox = (props) => <div ${...props}>
+export const UGClientListingBox = (props) => <div {...props}>
   <UGClientListingBoxStyle>
     {props.children}
   </UGClientListingBoxStyle>

@@ -14,7 +14,7 @@ function List(props) {
   // If we have items, render them
   if (props.items) {
     content = props.items.map((item, index) => (
-      <ComponentToRender key={`item-${index}`} item={item.content} icon={item.icon} />
+      <ComponentToRender key={index} item={item.content} icon={item.icon} />
     ));
   } else {
     // Otherwise render a single component
