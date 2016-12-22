@@ -1,34 +1,26 @@
 /* ************************************************************************** */
-/*  Description: :D Under development.
+/*  Created by: Vince (14-12-2016)
 /* ************************************************************************** */
-
 import React from 'react';
-import BSContainer from '../../containers/BootStrap/BSContainer';
+import { Grid, Breadcrumb } from 'react-bootstrap';
+import UGBreadcrumbStyle from './UGBreadcrumbStyle';
 
 function UGBreadcrumbs(props) {
   return (
-    <BSContainer>
-      {props.children}
-    </BSContainer>
+    <UGBreadcrumbStyle>
+      <Grid>
+        <Breadcrumb>
+          <Breadcrumb.Item href="/">Home</Breadcrumb.Item>
+          <Breadcrumb.Item href="#" active>{props.title}</Breadcrumb.Item>
+        </Breadcrumb>
+      </Grid>
+    </UGBreadcrumbStyle>
   );
 }
 
+
 UGBreadcrumbs.propTypes = {
-  children: React.PropTypes.any,
+  title: React.PropTypes.string,
 };
 
 export default UGBreadcrumbs;
-
-
-//  <div className={'breadcrumb-container'}>
-//           <div className={'container'}>
-//             <ol className={'breadcrumb'}>
-//               <li>
-//                 <a href="/">Home</a>
-//               </li>
-//               <li className={'active'}>
-//                 <a href="">Blogs</a>
-//               </li>
-//             </ol>
-//           </div>
-//         </div>

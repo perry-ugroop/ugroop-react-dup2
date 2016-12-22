@@ -5,14 +5,14 @@ import { mount } from 'enzyme';
 
 import React from 'react';
 import { IntlProvider } from 'react-intl';
-import { AttendantImportopover } from '../attendantimportpopover';
+import AttendantImportpopover from '../attendantimportpopover';
 import { PARTICIPANT_ATTENDANT, PARTICIPANT_ORGANIZER, PARTICIPANT_VIEWER } from '../constants';
 
 describe('<AttendantImportopover />', () => {
   it('should render participant attendant ', () => {
     const renderedComponent = mount(
       <IntlProvider locale="en">
-        <AttendantImportopover attendType={PARTICIPANT_ATTENDANT} />
+        <AttendantImportpopover attendType={PARTICIPANT_ATTENDANT} />
       </IntlProvider>
     );
     expect(renderedComponent.find('a').text()).toEqual('Import Participants');
@@ -21,7 +21,7 @@ describe('<AttendantImportopover />', () => {
   it('should render organizer attendant ', () => {
     const renderedComponent = mount(
       <IntlProvider locale="en">
-        <AttendantImportopover attendType={PARTICIPANT_ORGANIZER} />
+        <AttendantImportpopover attendType={PARTICIPANT_ORGANIZER} />
       </IntlProvider>
     );
     expect(renderedComponent.find('a').text()).toEqual('Import Organizer');
@@ -30,7 +30,7 @@ describe('<AttendantImportopover />', () => {
   it('should render viewer attendant ', () => {
     const renderedComponent = mount(
       <IntlProvider locale="en">
-        <AttendantImportopover attendType={PARTICIPANT_VIEWER} />
+        <AttendantImportpopover attendType={PARTICIPANT_VIEWER} />
       </IntlProvider>
     );
     expect(renderedComponent.find('a').text()).toEqual('Import Viewers');
