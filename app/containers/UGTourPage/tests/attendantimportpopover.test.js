@@ -8,7 +8,7 @@ import { IntlProvider } from 'react-intl';
 import AttendantImportpopover from '../attendantimportpopover';
 import { PARTICIPANT_ATTENDANT, PARTICIPANT_ORGANIZER, PARTICIPANT_VIEWER } from '../constants';
 
-describe('<AttendantImportpopover />', () => {
+describe('<AttendantImportopover />', () => {
   it('should render participant attendant ', () => {
     const renderedComponent = mount(
       <IntlProvider locale="en">
