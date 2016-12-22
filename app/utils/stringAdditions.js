@@ -8,9 +8,8 @@ function isEmptyString(str) {
 }
 
 function truncateAndToLowerCase(str, patterns, maxlength) {
-  const newStr = _.truncate(str, {
+  const newStr = _.truncate(_.replace(str, patterns, ''), {
     length: maxlength,
-    separator: patterns,
     omission: '',
   });
   return _.toLower(newStr);

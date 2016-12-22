@@ -18,7 +18,7 @@ import {
   VALIDATE_FIELD,
   ORGNAME_FIELD, ORGADDRESS_FIELD, FIRSTNAME_FIELD, LASTNAME_FIELD, EMAIL_FIELD, PASSWORD_FIELD, WEBSITE_FIELD,
   ROLE_FIELD, TELEPHONE_FIELD, RETYPE_PASSWORD_FIELD, USER_ORG_SIGNUP_SUCCESS,
-  USER_ORG_SIGNUP_ERROR, SERVER_VALIDATION_ERROR,
+  USER_ORG_SIGNUP_ERROR, SERVER_VALIDATION_ERROR, SUBMIT_REGISTERATION,
 } from './constants';
 import { fromJS } from 'immutable';
 import messages from './messages';
@@ -50,6 +50,7 @@ const initialState = fromJS({
     serverValidationError: '',
   }),
   isRegisterSuccess: false,
+  isLoading: false,
 });
 
 function registerReducer(state = initialState, action) {
@@ -88,13 +89,18 @@ function registerReducer(state = initialState, action) {
       return validateReTypePassword(action.password, state);
     case VALIDATE_FIELD:
       return validateText(action.text, action.field, action.regExps, state);
+    case SUBMIT_REGISTERATION:
+      return state
+        .set('isLoading', true);
     case USER_ORG_SIGNUP_SUCCESS:
       return state
-        .set('isRegisterSuccess', true);
+        .set('isRegisterSuccess', true)
+        .set('isLoading', false);
     case USER_ORG_SIGNUP_ERROR:
       return state
         .setIn([SIGNUP_ERROR_STATEKEY, SERVER_VALIDATION_ERROR], action.serverError)
-        .set('isRegisterSuccess', false);
+        .set('isRegisterSuccess', false)
+        .set('isLoading', false);
     default:
       return state;
   }

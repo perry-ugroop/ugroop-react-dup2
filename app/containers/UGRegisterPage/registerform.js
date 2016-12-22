@@ -268,7 +268,7 @@ export class RegisterForm extends React.Component {
             </InputGroup>
           </BSColumn6>
         </BSRow>
-        <InputButton><FormattedMessage {...messages.registerButton} /></InputButton>
+        <InputButton bsStyle={'primary'} block><FormattedMessage {...messages.registerButton} /></InputButton>
       </form>
     );
   }
