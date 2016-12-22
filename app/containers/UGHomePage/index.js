@@ -11,7 +11,33 @@ import ClientListing from '../../containers/UGClientListing';
 import Slider from 'components/UGSlider';
 
 export class UGHomePage extends React.Component { // eslint-disable-line react/prefer-stateless-function
+  static contextTypes = {
+    authenticated: React.PropTypes.bool,
+    user: React.PropTypes.object,
+    router: React.PropTypes.object.isRequired,
+  };
+
+  /**
+   * Changes the route
+   *
+   * @param  {string} route The route we want to go to
+   */
+  openRoute = (route) => {
+    this.context.router.push(route);
+  };
+
+  /**
+   * Changed route to our Future LoginHome Page
+   */
+  openLoginHomePage = () => {
+    this.openRoute('/Tour');
+  };
+
   render() {
+    if (this.context.authenticated) {
+      this.openLoginHomePage();
+    }
+
     return (
       <div>
         <Helmet
