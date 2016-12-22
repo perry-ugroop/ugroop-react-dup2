@@ -52,7 +52,7 @@ export class LoginForm extends React.Component {
    * Changed route to our Future LoginHome Page
    */
   openLoginHomePage = () => {
-    this.openRoute('/addTour');
+    this.openRoute('/Tour');
   }
 
   render() {
