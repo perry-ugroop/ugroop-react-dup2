@@ -13,6 +13,8 @@ ADD package.json .
 COPY .gitignore .
 COPY .gitattributes .
 COPY express-stormpath-ugroopextension-3.1.6.tgz .
+COPY stormpath.yml .
+
 EXPOSE 8080
 
 #Following step is for React-boilerplate project.
