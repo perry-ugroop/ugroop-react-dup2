@@ -13,8 +13,10 @@ import UGFooter from 'components/UGFooter';
 import UGFooterSitemap from '../../components/UGFooterSitemap';
 import UGAppWrapper from '../BootStrap/UGAppWrapper';
 import UGAppContentWrapper from '../BootStrap/UGAppContentWrapper';
+import { LINKS } from './navbar_define';
 
 function App(props) {
+  const links = LINKS;
   return (
     <UGAppWrapper>
       <Helmet
@@ -24,7 +26,7 @@ function App(props) {
           { name: 'description', content: 'A React.js Boilerplate application' },
         ]}
       />
-      <UGNavBar />
+      <UGNavBar links={links} />
       <UGAppContentWrapper>
         {React.Children.toArray(props.children)}
       </UGAppContentWrapper>

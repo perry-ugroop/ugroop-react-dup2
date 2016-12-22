@@ -11,7 +11,7 @@ import { selectOrgName, selectOrgAddress, selectFirstName,
 selectLastName, selectEmail, selectRole, selectWebsite, selectTelephone, selectPassword, selectReTypePassword,
 selectOrgAddressError, selectOrgNameError, selectFirstNameError, selectLastNameError, selectTelephoneError,
 selectReTypePasswordError, selectPasswordError, selectEmailError, selectServerValidationError,
-  selectIsRegisterSuccess } from './selectors';
+  selectIsRegisterSuccess, selectIsLoading } from './selectors';
 import { changeOrgName, changeOrgAddress, changeFirstName, changeLastName, changeWebsite,
 changeEmail, changeTelephone, changePassword, changeRetypePassword, changeRole,
 validText, validReTypePassword, submitUserSignUp } from './actions';
@@ -84,8 +84,14 @@ export class RegisterForm extends React.Component {
       retypePasswordErrorContent = { id: 'retypePasswordError', defaultMessage: this.props.retypePasswordError };
     }
 
+    let registerButton;
+    if (this.props.isLoading) {
+      registerButton = <FormattedMessage {...messages.loadingRegistergButtonText} />;
+    } else {
+      registerButton = <FormattedMessage {...messages.registerButton} />;
+    }
     return (
-      <form onSubmit={this.props.submitUserSignUp}>
+      <form>
         {this.wrapServerValidationErrorMessage(this.props.serverValidationError)}
         {/* First Row */}
         <BSRow>
@@ -268,7 +274,14 @@ export class RegisterForm extends React.Component {
             </InputGroup>
           </BSColumn6>
         </BSRow>
-        <InputButton bsStyle={'primary'} block><FormattedMessage {...messages.registerButton} /></InputButton>
+        <InputButton
+          bsStyle={'primary'}
+          block
+          disabled={this.props.isLoading}
+          onClick={!this.props.isLoading ? this.props.submitUserSignUp : null}
+        >
+          {registerButton}
+        </InputButton>
       </form>
     );
   }
@@ -313,6 +326,7 @@ RegisterForm.propTypes = {
   retypePasswordError: React.PropTypes.string,
   serverValidationError: React.PropTypes.any,
   submitUserSignUp: React.PropTypes.func,
+  isLoading: React.PropTypes.bool,
 };
 
 const mapStateToProps = createStructuredSelector({
@@ -336,6 +350,7 @@ const mapStateToProps = createStructuredSelector({
   retypePasswordError: selectReTypePasswordError(),
   serverValidationError: selectServerValidationError(),
   isRegisterSuccess: selectIsRegisterSuccess(),
+  isLoading: selectIsLoading(),
 });
 
 export function mapDispatchToProps(dispatch) {
