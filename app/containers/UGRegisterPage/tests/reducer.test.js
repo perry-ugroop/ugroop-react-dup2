@@ -16,6 +16,7 @@ import {
   validReTypePassword,
   validText,
   registerError,
+  submitUserSignUp,
 } from '../actions';
 import {
   SIGNUP_USER_STATEKEY,
@@ -25,6 +26,8 @@ import {
   EMAIL_FIELD,
   TELEPHONE_FIELD,
   PASSWORD_FIELD,
+  IS_LOADING_STATEKEY,
+  SERVER_VALIDATION_ERROR,
 } from '../constants';
 import validationRule from '../../../utils/validationrule';
 import messages from '../messages';
@@ -58,6 +61,7 @@ describe('registerReducer', () => {
         serverValidationError: '',
       }),
       isRegisterSuccess: false,
+      isLoading: false,
     });
   });
 
@@ -228,7 +232,14 @@ describe('registerReducer', () => {
   it('should set Server error correctly', () => {
     const serverError = 'error';
     const expectedResult = state
-      .setIn([SIGNUP_ERROR_STATEKEY, 'serverValidationError'], serverError);
+      .setIn([SIGNUP_ERROR_STATEKEY, SERVER_VALIDATION_ERROR], serverError);
     expect(registerReducer(state, registerError(serverError))).toEqual(expectedResult);
+  });
+  it('should set SUBMIT_REGISTERATION State correctly', () => {
+    const isRegisterSuccess = true;
+    const expectedResult = state
+      .set(IS_LOADING_STATEKEY, isRegisterSuccess)
+      .setIn([SIGNUP_ERROR_STATEKEY, SERVER_VALIDATION_ERROR], '');
+    expect(registerReducer(state, submitUserSignUp())).toEqual(expectedResult);
   });
 });

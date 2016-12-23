@@ -30,3 +30,5 @@ export const SERVER_VALIDATION_ERROR = 'serverValidationError';
 export const USER_ORG_SIGNUP_SUCCESS = 'ugroop/Register/userOrgSignUpSuccess';
 export const USER_ORG_SIGNUP_ERROR = 'ugroop/Register/userOrgSignUpError';
 export const SUBMIT_REGISTERATION = 'ugroop/Register/submitRegistration';
+export const IS_LOADING_STATEKEY = 'isLoading';
+export const IS_REGISTER_SUCCESS_STATEKEY = 'isRegisterSuccess';

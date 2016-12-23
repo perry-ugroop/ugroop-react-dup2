@@ -24,6 +24,7 @@ import { SUBMIT_REGISTERATION } from './constants';
 import { userOrgSignUpEndPoint } from './requestEndPoint';
 import _ from 'lodash';
 import { truncateAndToLowerCase } from '../../utils/stringAdditions';
+import defineMessages from '../../utils/validationrule';
 /**
  *  The way how to generate Org Key.
  ** com-{ORG_NAME_KEY}(Max30)-{ORG_ADDRESS_KEY}(TotalLength-3-Length of Org Name key)
@@ -36,7 +37,7 @@ const MAX_ORGNAME_LENGTH = 255;
  * Convert from Org Name and Org Address To Org Key
  */
 export function* convertToOrgKey(orgName, orgAddress) {
-  const reg = new RegExp(/[\W_]+/g);
+  const reg = new RegExp(defineMessages.alphaNumericOnlyValidation.defaultMessage);
   const allowedOrgNameLength = orgName.length > MAX_ORGNAMEKEY_LENGTH ? MAX_ORGNAMEKEY_LENGTH : orgName.length;
   const allowedOrgAddressLength = MAX_ORGKEY_LENGTH - allowedOrgNameLength;
   const trucateOrgName = truncateAndToLowerCase(orgName, reg, allowedOrgNameLength);
@@ -84,7 +85,7 @@ export function* userOrgSignUp() {
     status: 'ENABLED',
     accountCustomData,
     orgNameKey,
-    trimmedOrgName,
+    orgName: trimmedOrgName,
     orgStatus: 'ENABLED',
     orgCustomData,
   };
