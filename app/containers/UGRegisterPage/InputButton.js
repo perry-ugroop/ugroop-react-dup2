@@ -1,10 +1,11 @@
 /**
  * Created by Yang on 17/11/16.
  */
-import BSButtonPrimaryBlock from '../BootStrap/BSButtonPrimaryBlock';
+import { Button } from 'react-bootstrap';
 import UGFlatBorder from '../BootStrap/UGFlatBorder';
 import styled from 'styled-components';
-const InputButton = styled(BSButtonPrimaryBlock)`
+
+const RegisterButton = styled(Button)`
   ${UGFlatBorder}
   &&{
     background-color: #075EAB;
@@ -19,4 +20,4 @@ const InputButton = styled(BSButtonPrimaryBlock)`
   }
 `;
 
-export default InputButton;
+export default RegisterButton;

@@ -16,8 +16,9 @@ import {
   selectPassword, selectPasswordError,
   selectReTypePassword, selectReTypePasswordError,
   selectServerValidationError,
+  selectIsLoading,
+  selectIsRegisterSuccess,
 } from '../selectors';
-
 describe('selectRegisterpage', () => {
   const registerSelector = selectRegisterpage();
   it('should select the register state', () => {
@@ -302,17 +303,27 @@ describe('selectServerValidationeError', () => {
 });
 
 describe('selectIsRegisterSuccess', () => {
-  const selector = selectServerValidationError();
+  const selector = selectIsRegisterSuccess();
   it('should select the selectIsRegisterSuccess state', () => {
-    const expectedResult = 'error';
+    const expectedResult = false;
     const mockedState = fromJS({
       register: {
-        signUpError: fromJS({
-          serverValidationError: expectedResult,
-        }),
+        isRegisterSuccess: false,
       },
     });
     expect(selector(mockedState)).toEqual(expectedResult);
   });
 });
 
+describe('selectIsLoading', () => {
+  const selector = selectIsLoading();
+  it('should select the selectIsRegisterSuccess state', () => {
+    const expectedResult = false;
+    const mockedState = fromJS({
+      register: {
+        isLoading: false,
+      },
+    });
+    expect(selector(mockedState)).toEqual(expectedResult);
+  });
+});

@@ -64,4 +64,8 @@ export default defineMessages({
     id: 'ugroop.containers.RegisterPageForm.register.notMatch',
     defaultMessage: 'The password and confirmation password do not match.',
   },
+  loadingRegistergButtonText: {
+    id: 'ugroop.containers.RegisterPageForm.register.loadingRegister',
+    defaultMessage: 'Registering your account now, please wait...',
+  },
 });

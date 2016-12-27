@@ -109,6 +109,11 @@ const selectIsRegisterSuccess = () => createSelector(
   (registerState) => registerState.get('isRegisterSuccess')
 );
 
+const selectIsLoading = () => createSelector(
+  selectRegisterpage(),
+  (registerState) => registerState.get('isLoading')
+);
+
 export {
   selectRegisterpage,
   selectOrgName,
@@ -131,4 +136,5 @@ export {
   selectReTypePasswordError,
   selectServerValidationError,
   selectIsRegisterSuccess,
+  selectIsLoading,
 };
