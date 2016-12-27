@@ -100,7 +100,7 @@ describe('convertToOrgKey', () => {
     const address = '2123 Fillmore St (btwn California &amp; Sacramento St), San Francisco, CA 94115, United States';
     const convertKey = convertToOrgKey(name, address);
     const orgkey = convertKey.next().value;
-    expect(orgkey).toEqual('com-thisismyorgnameithinkthisiswor-2123fillmorestbtwncaliforniaam');
+    expect(orgkey).toEqual('com-thisismyorgnameithinkthisiswor-2123fillmorestbtwncalifornia');
   });
   it('should convert correct Org Key', () => {
     const name = 'uGroop';
@@ -108,6 +108,20 @@ describe('convertToOrgKey', () => {
     const convertKey = convertToOrgKey(name, address);
     const orgkey = convertKey.next().value;
     expect(orgkey).toEqual('com-ugroop-175millsstalbertpark3031');
+  });
+  it('should genereate', () => {
+    const name = 'uGroop';
+    const address = '175 Mills St, Albert Park, 3031';
+    const convertKey = convertToOrgKey(name, address);
+    const orgkey = convertKey.next().value;
+    expect(orgkey).toEqual('com-ugroop-175millsstalbertpark3031');
+  });
+  it('should genereate 63 chars', () => {
+    const name = randomString(63);
+    const address = randomString(63);
+    const convertKey = convertToOrgKey(name, address);
+    const orgkey = convertKey.next().value;
+    expect(orgkey.length).toEqual(63);
   });
 });
 
@@ -119,3 +133,24 @@ describe('trimOrgName', () => {
     expect(orgName).toEqual(name);
   });
 });
+
+
+/**
+ * RANDOM STRING GENERATOR
+ *
+ * Info:      http://stackoverflow.com/a/27872144/383904
+ * Use:       randomString(length [,"A"] [,"N"] );
+ * Default:   return a random alpha-numeric string
+ * Arguments: If you use the optional "A", "N" flags:
+ *            "A" (Alpha flag)   return random a-Z string
+ *            "N" (Numeric flag) return random 0-9 string
+ */
+function randomString(len) {
+  let str = '';                                         // String result
+  for (let i = 0; i < len; i += 1) {                             // Loop `len` times
+    let rand = Math.floor(Math.random() * 62);        // random: 0..61
+    const charCode = rand += rand > 9 ? (rand < 36 ? 55 : 61) : 48; // eslint-disable-line no-nested-ternary
+    str += String.fromCharCode(charCode);             // add Character to str
+  }
+  return str;       // After all loops are done, return the concatenated string
+}
