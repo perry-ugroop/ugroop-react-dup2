@@ -29,7 +29,7 @@ import defineMessages from '../../utils/validationrule';
  *  The way how to generate Org Key.
  ** com-{ORG_NAME_KEY}(Max30)-{ORG_ADDRESS_KEY}(TotalLength-3-Length of Org Name key)
  */
-const MAX_ORGKEY_LENGTH = 60;
+const MAX_ORGKEY_LENGTH = 58;
 const MAX_ORGNAMEKEY_LENGTH = 30;
 const MAX_ORGNAME_LENGTH = 255;
 
