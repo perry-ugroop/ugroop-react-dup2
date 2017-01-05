@@ -1,8 +1,8 @@
 /**
  * Created by Yang on 2/11/16.
  */
-import { changeEmail, validEmail } from '../actions';
-import { CHANGE_EMAIL, VALID_EMAIL } from '../constants';
+import { changeEmail, validEmail, submitForgetPassword } from '../actions';
+import { CHANGE_EMAIL, VALID_EMAIL, SUBMIT_FORGETPASSWORD } from '../constants';
 
 describe('changeEmail', () => {
   it('should return the correct type and the passed email', () => {
@@ -23,3 +23,13 @@ describe('changeEmail', () => {
     expect(validEmail(fixture)).toEqual(expectedResult);
   });
 });
+
+describe('forgetpassword request dispatch', () => {
+  it('should return the correct type and the passed email', () => {
+    const expectedResult = {
+      type: SUBMIT_FORGETPASSWORD,
+    };
+    expect(submitForgetPassword()).toEqual(expectedResult);
+  });
+});
+

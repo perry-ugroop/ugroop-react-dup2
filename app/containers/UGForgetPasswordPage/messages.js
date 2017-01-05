@@ -45,4 +45,13 @@ export default defineMessages({
     id: 'ugroop.containers.ForgetPasswordPage.noemptyemail',
     defaultMessage: 'The Email field is required.',
   },
+  resetEmailSuccssContent: {
+    id: 'ugroop.containers.ForgetPasswordPage.emailSuccessContent',
+    defaultMessage: 'We have sent a password reset link to the email address of the account that you specified. ' +
+    'Please check your email for this message, then click on the link.',
+  },
+  backtoLogin: {
+    id: 'ugroop.containers.ForgetPasswordPage.backtologin',
+    defaultMessage: 'Back to Login',
+  },
 });

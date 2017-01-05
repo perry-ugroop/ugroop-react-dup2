@@ -29,6 +29,18 @@ export default function createRoutes(store) {
     });
     importModules.catch(errorLoading);
   };
+  const dynamicLoadTour = (nextState, cb) => {
+    const importModules = Promise.all([
+      System.import('containers/UGTourPage/reducer'),
+      System.import('containers/UGTourPage'),
+    ]);
+    const renderRoute = loadModule(cb);
+    importModules.then(([reducer, component]) => {
+      injectReducer('Tour', reducer.default);
+      renderRoute(component);
+    });
+    importModules.catch(errorLoading);
+  };
   return ([
     <HomeRoute
       path={'/'}
@@ -92,10 +104,10 @@ export default function createRoutes(store) {
     />,
     <AuthenticatedRoute key={'authRoute'}>
       <HomeRoute
-        path={'/addTour'}
-        key={'addTour'}
-        name={'addTour'}
-        getComponent={dynamicLoadAddTour}
+        path={'/Tour'}
+        key={'Tour'}
+        name={'Tour'}
+        getComponent={dynamicLoadTour}
       />
       <Route
         path={'/addTour'}
@@ -111,11 +123,13 @@ export default function createRoutes(store) {
       getComponent={(nextState, cb) => {
         const importModules = Promise.all([
           System.import('containers/UGForgetPasswordPage/reducer'),
+          System.import('containers/UGForgetPasswordPage/sagas'),
           System.import('containers/UGForgetPasswordPage'),
         ]);
         const renderRoute = loadModule(cb);
-        importModules.then(([reducer, component]) => {
+        importModules.then(([reducer, sagas, component]) => {
           injectReducer('forgetpassword', reducer.default);
+          injectSagas(sagas.default);
           renderRoute(component);
         });
         importModules.catch(errorLoading);
@@ -175,6 +189,36 @@ export default function createRoutes(store) {
         importModules.then(([reducer, sagas, component]) => {
           injectReducer('register', reducer.default);
           injectSagas(sagas.default);
+          renderRoute(component);
+        });
+        importModules.catch(errorLoading);
+      }}
+    />,
+    <Route
+      path={'/verify'}
+      name={'verify'}
+      key={'verify'}
+      getComponent={(nextState, cb) => {
+        const importModules = Promise.all([
+          System.import('containers/UGVerifyEmailPage'),
+        ]);
+        const renderRoute = loadModule(cb);
+        importModules.then(([component]) => {
+          renderRoute(component);
+        });
+        importModules.catch(errorLoading);
+      }}
+    />,
+    <Route
+      path={'/changePassword'}
+      name={'changePassword'}
+      key={'changePassword'}
+      getComponent={(nextState, cb) => {
+        const importModules = Promise.all([
+          System.import('containers/UGChangePasswordPage'),
+        ]);
+        const renderRoute = loadModule(cb);
+        importModules.then(([component]) => {
           renderRoute(component);
         });
         importModules.catch(errorLoading);

@@ -29,4 +29,9 @@ export default defineMessages({
     description: 'Minimum 8 characters at least 1 Alphabet and 1 Number.',
     defaultMessage: '^(?=.*[A-Za-z])(?=.*\\d)[A-Za-z\\d]{8,}$', //eslint-disable-line no-useless-escape
   },
+  alphaNumericOnlyValidation: {
+    id: 'ugroop.utuks,validation.password',
+    description: 'Alphabet and Number only',
+    defaultMessage: /[\W_]+/g, //eslint-disable-line no-useless-escape
+  },
 });

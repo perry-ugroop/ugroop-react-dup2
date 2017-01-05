@@ -2,7 +2,7 @@
 //  * Created by Yang on 5/12/16.
 //  */
 // /**
-//  * Gets the repositories of the user from Github
+//  * User Org Sign up from Stormpath
 //  */
 //
 import { takeLatest } from 'redux-saga';
@@ -23,6 +23,35 @@ import { postJSONRequest } from '../../utils/request';
 import { SUBMIT_REGISTERATION } from './constants';
 import { userOrgSignUpEndPoint } from './requestEndPoint';
 import _ from 'lodash';
+import { truncateAndToLowerCase } from '../../utils/stringAdditions';
+import defineMessages from '../../utils/validationrule';
+/**
+ *  The way how to generate Org Key.
+ ** com-{ORG_NAME_KEY}(Max30)-{ORG_ADDRESS_KEY}(TotalLength-3-Length of Org Name key)
+ */
+const MAX_ORGKEY_LENGTH = 58;
+const MAX_ORGNAMEKEY_LENGTH = 30;
+const MAX_ORGNAME_LENGTH = 255;
+
+/**
+ * Convert from Org Name and Org Address To Org Key
+ */
+export function* convertToOrgKey(orgName, orgAddress) {
+  const reg = new RegExp(defineMessages.alphaNumericOnlyValidation.defaultMessage);
+  const allowedOrgNameLength = orgName.length > MAX_ORGNAMEKEY_LENGTH ? MAX_ORGNAMEKEY_LENGTH : orgName.length;
+  const allowedOrgAddressLength = MAX_ORGKEY_LENGTH - allowedOrgNameLength;
+  const trucateOrgName = truncateAndToLowerCase(orgName, reg, allowedOrgNameLength);
+  const trucateOrgAddress = truncateAndToLowerCase(orgAddress, reg, allowedOrgAddressLength);
+  return `com-${trucateOrgName}-${trucateOrgAddress}`;
+}
+
+export function* trimOrgName(orgName) {
+  return _.truncate(orgName, {
+    length: MAX_ORGNAME_LENGTH,
+    separator: '',
+  });
+}
+
 /**
  * User-Org-Register
  * StormPath
@@ -38,7 +67,8 @@ export function* userOrgSignUp() {
   const email = yield select(selectEmail());
   const password = yield select(selectPassword());
   // trim all whitespace in org address and connect to name to be the key
-  const orgNameKey = `${orgName}-${_.replace(orgAddress, ' ', '')}`;
+  const orgNameKey = yield convertToOrgKey(orgName, orgAddress);
+  const trimmedOrgName = yield trimOrgName(orgName);
   const accountCustomData = {
     role,
     website,
@@ -54,8 +84,8 @@ export function* userOrgSignUp() {
     givenName,
     status: 'ENABLED',
     accountCustomData,
-    orgName,
     orgNameKey,
+    orgName: trimmedOrgName,
     orgStatus: 'ENABLED',
     orgCustomData,
   };
