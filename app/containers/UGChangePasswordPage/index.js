@@ -8,7 +8,7 @@ export default class ChangePasswordPage extends React.Component {  // eslint-dis
   render() {
     const query = this.props.location.query;
 
-    yxreturn (
+    wyxreturn (
       <Grid>
         <Row>
           <Col xs={12} >
