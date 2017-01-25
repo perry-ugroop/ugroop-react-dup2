@@ -48,6 +48,7 @@ describe('registerReducer', () => {
         website: '',
         telephone: '',
         email: '',
+        newattribute: '',
       }),
       signUpError: fromJS({
         orgError: '',
