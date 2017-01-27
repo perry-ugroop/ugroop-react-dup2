@@ -8,7 +8,7 @@ import BSNavCollapse from '../../containers/BootStrap/BSNavCollapse';
 import BSNavHeader from '../../containers/BootStrap/BSNavHeader';
 
 function UGHeader() {
-  xyzreturn (
+  return (
     <BSNavWrapper>
       <BSNavHeader>
         <BSNavCollapse label="Toggle navigation" />
